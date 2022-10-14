@@ -10,9 +10,11 @@ import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import org.litote.kmongo.eq
 
 fun main() {
-    embeddedServer(Netty, 9090) {
+    val port = System.getenv("PORT")?.toInt() ?: 9090
+    embeddedServer(Netty, port) {
         install(ContentNegotiation) {
             json()
         }
@@ -38,15 +40,15 @@ fun main() {
             route(Monster.path) {
 
                 get {
-                    call.respond(monsterList)
+                    call.respond(collection.find().toList())
                 }
                 post {
-                    monsterList += call.receive<Monster>()
+                    collection.insertOne(call.receive<Monster>())
                     call.respond(HttpStatusCode.OK)
                 }
                 delete("/{id}") {
                     val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
-                    monsterList.removeIf { it.id == id }
+                    collection.deleteOne(Monster::id eq id)
                     call.respond(HttpStatusCode.OK)
                 }
             }
