@@ -83,7 +83,8 @@ val App = FC<Props> {
 }
 
 fun createMonsterFromInput(input:String):Monster{
-    return Monster(input.replace("!", ""), input.count { it == '!' })
+    return Monster(input.replace("!", ""), input.count { it == '!' },mapOf(Pair<Int,Int>(1,1),Pair<Int,Int>(2,3),Pair<Int,Int>(3,5)),
+    listDrops = mapOf(Pair<String,Int>("marteau",4),Pair<String,Int>("jambiere",5)),ames=90)
 }
 
 fun createArmeFromInput(input:String):Arme{
