@@ -56,3 +56,7 @@ suspend fun searchOneSpecificArme(nomSearched: String) :Arme?{
         return if (it.status != HttpStatusCode.NoContent) it.body<Arme>() else null
     }
 }
+
+suspend fun readFile(){
+
+}

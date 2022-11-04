@@ -9,7 +9,7 @@ import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.ul
 
 private val scope = MainScope()
-private val logger = KtorSimpleLogger("logger")
+val logger = KtorSimpleLogger("logger")
 
 val App = FC<Props> {
 
@@ -80,6 +80,16 @@ val App = FC<Props> {
         }
         + "Clear"
     }
+    button{
+        onClick = {
+            scope.launch {
+                uploadArmes(blob).forEach {
+                    logger.debug(it.toDescription())
+                }
+            }
+        }
+        + "readFile"
+    }
 }
 
 fun createMonsterFromInput(input:String):Monster{
@@ -90,4 +100,51 @@ fun createMonsterFromInput(input:String):Monster{
 fun createArmeFromInput(input:String):Arme{
     return Arme(input.replace("!", "").replace("*",""), input.count { it == '!' }.toString(),
         mapOf<String,List<Int>>(Pair("0",listOf(1,2)),Pair("1",listOf(3,4)),Pair("2",listOf(5,6))))
+}
+
+
+fun uploadArmes(string : String):List<Arme>{
+    val listArme = mutableListOf<Arme>()
+    string.split("\n").forEach {
+        val listCSV = it.split(";")
+
+        logger.debug("voici la ligne :$it")
+        //Seuils
+        val seuilsCSV = listCSV[2]
+        val listSeuils = mutableListOf<Int>()
+        val seuils = HashMap<String,List<Int>>()
+        logger.debug("ok on est avant seuil")
+        seuilsCSV.split("|").forEach{
+            logger.debug("un elemeznt de sueil $it")// TODO le it fait reference a la lambda exterieure
+            val listSeuilsParfFacteur =it.split("=")
+            listSeuilsParfFacteur.first().let{ itInutilise ->
+                logger.debug("on a les differents seuils $itInutilise")
+                itInutilise.split("/").forEach{itSeuils ->
+                    listSeuils.add(itSeuils.toInt())
+                }
+                seuils[listSeuilsParfFacteur.last()] = listSeuils
+                listSeuils.clear()
+            }
+        }
+        logger.debug("ok on est apres seuil")
+
+
+        listArme.add(
+            Arme(
+                listCSV[0],
+                listCSV[1],
+                seuils,
+                listCSV[3],
+                listCSV[4].toInt(),
+                listCSV[5].toInt(),
+                listCSV[6].toInt(),
+                listCSV[7].toInt(),
+                listCSV[8].toInt(),
+                listCSV[9].toInt(),
+                listCSV[10]
+            )
+        )
+    }
+
+    return listArme
 }
