@@ -40,15 +40,40 @@ fun main() {
             route(Monster.path) {
 
                 get {
-                    call.respond(collection.find().toList())
+                    call.respond(collectionMonster.find().toList())
+                }
+                get("/{nom}") {
+                    val nom = call.parameters["nom"] ?: "inconnu"
+                    val monsterFound = collectionMonster.findOne(Monster::nom eq nom)
+                    call.respond(monsterFound ?: HttpStatusCode.NoContent)
                 }
                 post {
-                    collection.insertOne(call.receive<Monster>())
+                    collectionMonster.insertOne(call.receive<Monster>())
                     call.respond(HttpStatusCode.OK)
                 }
                 delete("/{id}") {
                     val id = call.parameters["id"]?.toInt()
-                    collection.deleteOne(Monster::id eq id)
+                    collectionMonster.deleteOne(Monster::id eq id)
+                    call.respond(HttpStatusCode.OK)
+                }
+            }
+            route(Arme.path) {
+
+                get {
+                    call.respond(collectionArmes.find().toList())
+                }
+                get("/{nom}") {
+                    val nom = call.parameters["nom"] ?: "inconnu"
+                    val armeFound = collectionArmes.findOne(Arme::nom eq nom)
+                    call.respond(armeFound ?: HttpStatusCode.NoContent)
+                }
+                post {
+                    collectionArmes.insertOne(call.receive<Arme>())
+                    call.respond(HttpStatusCode.OK)
+                }
+                delete("/{id}") {
+                    val id = call.parameters["id"]?.toInt()
+                    collectionArmes.deleteOne(Arme::id eq id)
                     call.respond(HttpStatusCode.OK)
                 }
             }

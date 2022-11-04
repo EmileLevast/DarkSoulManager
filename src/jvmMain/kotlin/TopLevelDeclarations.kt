@@ -8,5 +8,6 @@ import org.litote.kmongo.reactivestreams.KMongo
 //)
 
 val client = KMongo.createClient().coroutine
-val database = client.getDatabase("MonsterList")
-val collection = database.getCollection<Monster>()
+val database = client.getDatabase("MonsterTest")
+val collectionMonster = database.getCollection<Monster>()
+val collectionArmes = database.getCollection<Arme>()

@@ -29,3 +29,18 @@ suspend fun addMonsterListItem(monsterItem: Monster) {
 suspend fun deleteMonsterListItem(monsterItem: Monster) {
     jsonClient.delete(endpoint + Monster.path + "/${monsterItem.id}")
 }
+
+suspend fun getArmesList(): List<Arme> {
+    return jsonClient.get(endpoint + Arme.path).body()
+}
+
+suspend fun addArmesListItem(armeItem: Arme) {
+    jsonClient.post(endpoint + Arme.path) {
+        contentType(ContentType.Application.Json)
+        setBody(armeItem)
+    }
+}
+
+suspend fun deleteArmesListItem(armeItem: Arme) {
+    jsonClient.delete(endpoint + Arme.path + "/${armeItem.id}")
+}
