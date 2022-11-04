@@ -30,6 +30,12 @@ suspend fun deleteMonsterListItem(monsterItem: Monster) {
     jsonClient.delete(endpoint + Monster.path + "/${monsterItem.id}")
 }
 
+suspend fun searchOneSpecificMonster(nomSearched: String) :Monster?{
+    jsonClient.get(endpoint + Monster.path + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<Monster>() else null
+    }
+}
+
 suspend fun getArmesList(): List<Arme> {
     return jsonClient.get(endpoint + Arme.path).body()
 }
@@ -43,4 +49,10 @@ suspend fun addArmesListItem(armeItem: Arme) {
 
 suspend fun deleteArmesListItem(armeItem: Arme) {
     jsonClient.delete(endpoint + Arme.path + "/${armeItem.id}")
+}
+
+suspend fun searchOneSpecificArme(nomSearched: String) :Arme?{
+    jsonClient.get(endpoint + Arme.path + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<Arme>() else null
+    }
 }

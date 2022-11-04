@@ -1,3 +1,4 @@
+import io.ktor.util.logging.*
 import react.*
 import kotlinx.coroutines.*
 import react.dom.html.ReactHTML.h1
@@ -5,8 +6,10 @@ import react.dom.html.ReactHTML.li
 import react.dom.html.ReactHTML.ul
 
 private val scope = MainScope()
+private val logger = KtorSimpleLogger("logger")
 
 val App = FC<Props> {
+
     var bddList:List<IListItem> by useState(emptyList<IListItem>())
 
     useEffectOnce {
@@ -20,7 +23,7 @@ val App = FC<Props> {
         +"Dark Soul List"
     }
     ul {
-        bddList.forEach { item ->
+        bddList.forEach { item : IListItem ->
             li {
                 key = item.toString()
 //                onClick = {
@@ -54,7 +57,19 @@ val App = FC<Props> {
     inputComponent {
         onSubmit = { input ->
             //Ici on va chercher les items dans la bdd
-
+            scope.launch {
+                val item: IListItem? = searchOneSpecificArme(input) ?: searchOneSpecificMonster(input)
+                logger.debug("Cherche un element $input : $item")
+                //
+                if (item != null)
+                {
+                    mutableListOf<IListItem>().let{
+                        it.addAll(bddList)
+                        it.add(item)
+                        bddList = it
+                    }
+                }
+            }
         }
     }
 }
@@ -64,5 +79,6 @@ fun createMonsterFromInput(input:String):Monster{
 }
 
 fun createArmeFromInput(input:String):Arme{
-    return Arme(input.replace("!", ""), input.count { it == '!' })
+    return Arme(input.replace("!", "").replace("*",""), input.count { it == '!' },
+        mapOf<String,List<Int>>(Pair("0",listOf(1,2)),Pair("1",listOf(3,4)),Pair("2",listOf(5,6))) as HashMap<String, List<Int>>)
 }
