@@ -47,7 +47,7 @@ fun main() {
                     call.respond(HttpStatusCode.OK)
                 }
                 delete("/{id}") {
-                    val id = call.parameters["id"]?.toInt() ?: error("Invalid delete request")
+                    val id = call.parameters["id"]?.toInt()
                     collection.deleteOne(Monster::id eq id)
                     call.respond(HttpStatusCode.OK)
                 }

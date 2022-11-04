@@ -6,6 +6,7 @@ val ktorVersion = "2.0.3"
 val logbackVersion = "1.2.11"
 val kotlinWrappersVersion = "1.0.0-pre.354"
 val kmongoVersion = "4.5.0"
+val uuidVersion = "0.0.17"
 
 plugins {
     kotlin("multiplatform") version "1.6.21"
@@ -34,6 +35,7 @@ kotlin {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
+                //implementation("app.softwork:kotlinx-uuid-core:$uuidVersion")
             }
         }
 

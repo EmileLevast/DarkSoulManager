@@ -28,7 +28,7 @@ val App = FC<Props> {
                         monsterList = getMonsterList()
                     }
                 }
-                +"[${item.life}] ${item.name} "
+                +"[${item.vie}] ${item.nom} "
             }
         }
     }
