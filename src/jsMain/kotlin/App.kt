@@ -1,8 +1,11 @@
 import io.ktor.util.logging.*
 import react.*
 import kotlinx.coroutines.*
+import react.dom.html.ReactHTML.button
+import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.li
+import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.ul
 
 private val scope = MainScope()
@@ -24,15 +27,14 @@ val App = FC<Props> {
     }
     ul {
         bddList.forEach { item : IListItem ->
-            li {
-                key = item.toString()
-//                onClick = {
-//                    scope.launch {
-//                        deleteMonsterListItem(item)
-//                        monsterList = getMonsterList()
-//                    }
-//                }
-                +item.toDescription()
+            val text = item.toDescription()
+            div {
+                text.split("\n").mapIndexed { index: Int, s: String ->
+                    div {
+                        key = index.toString()
+                        +s
+                    }
+                }
             }
         }
     }
@@ -72,6 +74,12 @@ val App = FC<Props> {
             }
         }
     }
+    button{
+        onClick = {
+            bddList = listOf()
+        }
+        + "Clear"
+    }
 }
 
 fun createMonsterFromInput(input:String):Monster{
@@ -80,5 +88,5 @@ fun createMonsterFromInput(input:String):Monster{
 
 fun createArmeFromInput(input:String):Arme{
     return Arme(input.replace("!", "").replace("*",""), input.count { it == '!' },
-        mapOf<String,List<Int>>(Pair("0",listOf(1,2)),Pair("1",listOf(3,4)),Pair("2",listOf(5,6))) as HashMap<String, List<Int>>)
+        mapOf<String,List<Int>>(Pair("0",listOf(1,2)),Pair("1",listOf(3,4)),Pair("2",listOf(5,6))))
 }
