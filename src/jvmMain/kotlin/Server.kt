@@ -11,6 +11,8 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import org.litote.kmongo.eq
+import java.io.File
+import java.io.InputStream
 
 fun main() {
     val port = System.getenv("PORT")?.toInt() ?: 9090
@@ -79,4 +81,54 @@ fun main() {
             }
         }
     }.start(wait = true)
+}
+
+fun uploadDatabase(){
+
+    uploadArmes(File("Armes.csv").inputStream())
+}
+
+fun uploadArmes(inputStream: InputStream):List<Arme>{
+    val reader = inputStream.bufferedReader()
+    val header = reader.readLine()
+    val listArme = mutableListOf<Arme>()
+    var line = reader.lineSequence()
+        .filter { it.isNotBlank() }
+        .map {
+            val listCSV = it.split(";")
+
+            //Seuils
+            val seuilsCSV = listCSV[2]
+            val listSeuils = mutableListOf<Int>()
+            val seuils = HashMap<String,List<Int>>()
+            seuilsCSV.split("|").forEach{
+                val listSeuilsParfFacteur =it.split("=")
+                listSeuilsParfFacteur.first().let{ itInutilise ->
+                    itInutilise.split("/").forEach{itSeuils ->
+                        listSeuils.add(itSeuils.toInt())
+                    }
+                    seuils[listSeuilsParfFacteur.last()] = listSeuils
+                    listSeuils.clear()
+                }
+            }
+
+            listArme.add(
+                Arme(
+                    listCSV[0],
+                    listCSV[1],
+                    seuils,
+                    listCSV[3],
+                    listCSV[4].toInt(),
+                    listCSV[5].toInt(),
+                    listCSV[6].toInt(),
+                    listCSV[7].toInt(),
+                    listCSV[8].toInt(),
+                    listCSV[9].toInt(),
+                    listCSV[10]
+                )
+            )
+
+        }
+
+    return listArme
 }

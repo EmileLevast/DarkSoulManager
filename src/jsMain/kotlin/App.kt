@@ -88,6 +88,6 @@ fun createMonsterFromInput(input:String):Monster{
 }
 
 fun createArmeFromInput(input:String):Arme{
-    return Arme(input.replace("!", "").replace("*",""), input.count { it == '!' },
+    return Arme(input.replace("!", "").replace("*",""), input.count { it == '!' }.toString(),
         mapOf<String,List<Int>>(Pair("0",listOf(1,2)),Pair("1",listOf(3,4)),Pair("2",listOf(5,6))))
 }
