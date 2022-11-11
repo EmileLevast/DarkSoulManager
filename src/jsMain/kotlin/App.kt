@@ -83,9 +83,9 @@ val App = FC<Props> {
     button{
         onClick = {
             scope.launch {
-                uploadArmes(blob).forEach {
-                    logger.debug(it.toDescription())
-                }
+//                uploadArmes(blob).forEach {
+//                    logger.debug(it.toDescription())
+//                }
             }
         }
         + "readFile"

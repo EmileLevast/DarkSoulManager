@@ -61,6 +61,10 @@ fun main() {
             }
             route(Arme.path) {
 
+                get("/updateArmes"){
+                    collectionArmes.insertMany(updateDatabase(call))
+                    call.respond(HttpStatusCode.OK)
+                }
                 get {
                     call.respond(collectionArmes.find().toList())
                 }
@@ -83,19 +87,30 @@ fun main() {
     }.start(wait = true)
 }
 
-fun uploadDatabase(){
+fun updateDatabase(call: ApplicationCall): List<Arme> {
+    val lines = File("src/jvmMain/resources/Armes.csv").readLines()
 
-    uploadArmes(File("Armes.csv").inputStream())
+    call.application.environment.log.info("Voici les lignes lues : $lines")
+
+    return uploadArmes(lines.asSequence(),call)
 }
 
-fun uploadArmes(inputStream: InputStream):List<Arme>{
-    val reader = inputStream.bufferedReader()
-    val header = reader.readLine()
+fun uploadArmes(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List<Arme>{
+
     val listArme = mutableListOf<Arme>()
-    var line = reader.lineSequence()
-        .filter { it.isNotBlank() }
-        .map {
+
+    var lineFiltered = sequenceLinesFile.drop(1)
+    lineFiltered = lineFiltered.filter{ it.isNotBlank() }
+
+    lineFiltered.forEach {
             val listCSV = it.split(";")
+
+            call.application.environment.log.info("Voici la ligne lue : $it")
+
+            //If the line is empty we pass it
+            if(listCSV.first().isBlank()){
+                return@forEach
+            }
 
             //Seuils
             val seuilsCSV = listCSV[2]
@@ -107,7 +122,7 @@ fun uploadArmes(inputStream: InputStream):List<Arme>{
                     itInutilise.split("/").forEach{itSeuils ->
                         listSeuils.add(itSeuils.toInt())
                     }
-                    seuils[listSeuilsParfFacteur.last()] = listSeuils
+                    seuils[listSeuilsParfFacteur.last()] = listSeuils.toList()
                     listSeuils.clear()
                 }
             }
@@ -118,12 +133,12 @@ fun uploadArmes(inputStream: InputStream):List<Arme>{
                     listCSV[1],
                     seuils,
                     listCSV[3],
-                    listCSV[4].toInt(),
-                    listCSV[5].toInt(),
-                    listCSV[6].toInt(),
-                    listCSV[7].toInt(),
-                    listCSV[8].toInt(),
-                    listCSV[9].toInt(),
+                    listCSV[4].run{ if(isNotBlank()) toInt() else{0} },
+                    listCSV[5].run{ if(isNotBlank()) toInt() else{0} },
+                    listCSV[6].run{ if(isNotBlank()) toInt() else{0} },
+                    listCSV[7].run{ if(isNotBlank()) toInt() else{0} },
+                    listCSV[8].run{ if(isNotBlank()) toInt() else{0} },
+                    listCSV[9].run{ if(isNotBlank()) toInt() else{0} },
                     listCSV[10]
                 )
             )

@@ -25,7 +25,7 @@ class Arme(
         "----Arme: $nom----\n" +
         "| Degats :$degat\n"+
         "| Seuils:\n" + textSeuils +
-        "| CC : $coupCritiques" +
+        "| CC : $coupCritiques\n" +
         "| Maximum énergie : $maximumEnergie\n" +
         "| Seuil de blocage : $seuilBlocage\n" +
         "| Baleur de blocage : $valeurBlocage\n" +
