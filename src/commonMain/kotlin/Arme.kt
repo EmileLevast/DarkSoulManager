@@ -9,7 +9,7 @@ class Arme(
     val maximumEnergie:Int=0,
     val seuilBlocage:Int=0,
     val valeurBlocage:Int=0,
-    val forceMinimum:Int=0,
+    val contraintes:String="Aucune",
     val fajMax:Int=0,
     val poids:Int=0,
     val capaciteSpeciale:String=""
@@ -30,7 +30,7 @@ class Arme(
         "| Seuil de blocage : $seuilBlocage\n" +
         "| Baleur de blocage : $valeurBlocage\n" +
         "| Force associee au jet : $fajMax\n" +
-        "| Force Minimum requise : $forceMinimum\n" +
+        "| $contraintes\n" +
         "| Poids : $poids\n" +
         "| $capaciteSpeciale\n" +
         "------------------\n"

@@ -136,7 +136,7 @@ fun uploadArmes(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List
                     listCSV[4].run{ if(isNotBlank()) toInt() else{0} },
                     listCSV[5].run{ if(isNotBlank()) toInt() else{0} },
                     listCSV[6].run{ if(isNotBlank()) toInt() else{0} },
-                    listCSV[7].run{ if(isNotBlank()) toInt() else{0} },
+                    listCSV[7],
                     listCSV[8].run{ if(isNotBlank()) toInt() else{0} },
                     listCSV[9].run{ if(isNotBlank()) toInt() else{0} },
                     listCSV[10]
