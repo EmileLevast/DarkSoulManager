@@ -35,7 +35,6 @@ longue dague;P:2;1/2=0|3/4/5/6=2;6=>x4;3;4;2;Niveau Minimum:4;8;1;Parade +1
 ceste en cuir;P:1;1=0|2/3/4=1|5=2|6=3;;2;3;0;Niveau Minimum:4;4;0;Peut parer : Energie 1, Seuil de parade 5+
 ceste en cuir leste;P:1;1=0|2/3/4=1|5/6=2;;2;4;1;Niveau Minimum:4;4;1;Peut parer : Energie 1, Seuil de parade 4+
 poignard surinant;P:2;1=0|2/3/4=1|5=2|6=4;5=>x4;2;6;1;Niveau Minimum:4;6;1;Acheveur : tuer un ennemi avec un coup critique regenere 3 pvs
-poignard crante;P:3;1=0|2/3/4=1|5=2|6=3;6=>x5;2;4;1;Niveau Minimum:4;6;1;"Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
-"
+poignard crante;P:3;1=0|2/3/4=1|5=2|6=3;6=>x5;2;4;1;Niveau Minimum:4;6;1;Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
 poignard crochet venimeux;P:2;1=0|2/3/4=1|5=2|6=4;Toxine 7+=>10 (non cumulable à l'autre effet toxine);3;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 8
 serre de volucre anthropophage;P:6;1/2/3/4=0|5=1|6=2;Ignore l'armure naturelle;3;6;2;Intelligence Minimum:8;13;2;Occulte 5
