@@ -1,23 +1,41 @@
 Nom;Degat;Seuils;Coups Critiques;Maximum Energie;Seuil blocage;blocage;Force Minimum;FAJ max;Poids;Spécial
-epee large;P4;1/2=0|3/4=1|5/6=2;;4;6;3;Force Minimum:4;8;2;
-epee ebrechee effilee;P2;1/2=0|3/4=1|5/6=2;Saigne +5 => 3;3;6;1;;5;1;
-epee lourde a deux mains;P7;1/2/3=0|4/5=1|6=2;5/6 => x2;5;6;3;Force Minimum:7;26;3;
-rapiere;P3;1/2=0|3=1|4/5/6=2;6=>x4;3;4;3;Niveau Minimum:3;9;2;Parade x1
-epee ebrechee;P2;1/2=0|3/4=1|5/6=2;4=>x2;3;6;1;;5;1;
-epee courte;P3;1/2=0|3/4=1|5/6=2;6 =>x3;2;4;1;Force Minimum:3;6;1;
-epee droite;P4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;7;2;
-epee longue;P4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;8;2;
-epee barbelee;P4;1/2=0|2=1|4/5/6=2;3=>x2;3;5;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4
-cimeterre;P4;1=0|2/3/4=1|5=2|6=0;6=>x3;3;4;4;Niveau Minimum:5;10;1;Saigne 5+ => 3
-epee lourde;P5;1/2/3=0|4/5=1|6=2;5/6=>x2;4;6;3;Force Minimum:5;12;2;
-epee a double tranchant;P3;1/2=0|3/4=1|5/6=2;6=>x4;3;6;5;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
-epee a deux mains;P5;1/2/3=0|4/5=1|6=2;P:6;5;6;3;Force Minimum:6;19;2;
-epee perche;P3;1=0|2/3=1|4/5=2|6=3;;5;6;3;Force Minimum:6;9;2;Perche : L’épée s’agrandit magiquement pour atteindre son adversaire, sa portée est ~5m
-epee traversante;P4;1/2=0|3=1|4/5/6=2;;2;4;2;Force Minimum:3;7;0;Traversante : cette épée traverse les alliés sans leur causer de dégâts, elle est assez grande pour frapper un ennemi derrière un allié.
-epee inegide;P3;1/2=0|3/4=1|5/6=2;;2;4;1;Force Minimum:3;11;1;Inégide : Il est impossible de bloquer une frappe de cet épée avec un bouclier
-epee du chevalier noir;P6;1/2=0|3/4=1|5=2|6=3;peut relancer tous les dés une fois par frappe;5;6;10;Force Minimum:10;16;5;
-epee ebrechee crenelee;P2;1/2=0|3/4=1|5/6=2;4=>x2;3;6;1;;5;1;Eventreur 4
-uchigatana;P2;1=0|2/3=2|4/5=3|6=5;3=>x3;3;5;5;Niveau Minimum:7;21;1;Saigne 7+ => 4
-torche febrile;F1;1/2=0|3/4/5/6=1;6=>x2;1;6;0;;;1;
-dague;P1;1=0|2/3/4/5=1|6=2;6=>x8;2;6;1;;;1;Backstab +1
-poignard brise;P1;1/2/3=0|4/5/6=1;6=>x2;2;6;1;;;;1
+epee large;P:4;1/2=0|3/4=1|5/6=2;;4;6;3;Force Minimum:4;8;2;
+epee ebrechee effilee;P:2;1/2=0|3/4=1|5/6=2;Saigne +5 => 3;3;6;1;;5;1;
+epee lourde a deux mains;P:7;1/2/3=0|4/5=1|6=2;5/6 => x2;5;6;3;Force Minimum:7;26;3;
+rapiere;P:3;1/2=0|3=1|4/5/6=2;6=>x4;3;4;3;Niveau Minimum:3;9;2;Parade x1
+epee ebrechee;P:2;1/2=0|3/4=1|5/6=2;4=>x2;3;6;1;;5;1;
+epee courte;P:3;1/2=0|3/4=1|5/6=2;6 =>x3;2;4;1;Force Minimum:3;6;1;
+epee droite;P:4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;7;2;
+epee longue;P:4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;8;2;
+epee barbelee;P:4;1/2=0|2=1|4/5/6=2;3=>x2;3;5;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4
+cimeterre;P:4;1=0|2/3/4=1|5=2|6=0;6=>x3;3;4;4;Niveau Minimum:5;10;1;Saigne 5+ => 3
+epee lourde;P:5;1/2/3=0|4/5=1|6=2;5/6=>x2;4;6;3;Force Minimum:5;12;2;
+epee a double tranchant;P:3;1/2=0|3/4=1|5/6=2;6=>x4;3;6;5;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
+epee a deux mains;P:5;1/2/3=0|4/5=1|6=2;P:6;5;6;3;Force Minimum:6;19;2;
+epee perche;P:3;1=0|2/3=1|4/5=2|6=3;;5;6;3;Force Minimum:6;9;2;Perche : L’épée s’agrandit magiquement pour atteindre son adversaire, sa portée est ~5m
+epee traversante;P:4;1/2=0|3=1|4/5/6=2;;2;4;2;Force Minimum:3;7;0;Traversante : cette épée traverse les alliés sans leur causer de dégâts, elle est assez grande pour frapper un ennemi derrière un allié.
+epee inegide;P:3;1/2=0|3/4=1|5/6=2;;2;4;1;Force Minimum:3;11;1;Inégide : Il est impossible de bloquer une frappe de cet épée avec un bouclier
+epee du chevalier noir;P:6;1/2=0|3/4=1|5=2|6=3;peut relancer tous les dés une fois par frappe;5;6;10;Force Minimum:10;16;5;
+epee ebrechee crenelee;P:2;1/2=0|3/4=1|5/6=2;4=>x2;3;6;1;;5;1;Eventreur 4
+uchigatana;P:2;1=0|2/3=2|4/5=3|6=5;3=>x3;3;5;5;Niveau Minimum:7;21;1;Saigne 7+ => 4
+torche febrile;F:1;1/2=0|3/4/5/6=1;6=>x2;1;6;0;;;1;
+fouet court;P:2;1/2/3=0|4/5/6=2;2/3=>x1;2;6;0;;6;1;Chaire à nue => x1
+laniere de feu;F:4;1/2=0|3/4/5=1|6=2;6=>x4;1;6;0;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme
+dague;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;6;1;;6;1;Backstab +1
+poignard brise;P:1;1/2/3=0|4/5/6=1;6=>x2;2;6;1;;4;;1
+stylet rituel inique;P:1|Ma:2;1=0|2/3/4/5=1|6=2;4/5=>x2;2;5;1;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dés pour résoudre l'effet d'un anneau inique, si porté.
+dague aiguisee;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;5;1;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
+poignard dent de rat;P:2;1=0|2/3/4=1|5=2|6=4;5=>x3;2;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 3
+longue dague ciselee;P:2;1/2=0|3/4/5/6=2;5/6=>x4;3;4;2;Niveau Minimum:5;8;1;Parade +1
+percemaille brulant;P:2|F:1;1=0|2=1|3/4/5/6=2;6=>x4;2;6;4;Niveau Minimum:4;7;1;Pour un coût de 1 énergie supplémentaire (avant le jet de dé) la frappe ignore l'armure de l'équipement
+dague crenelee;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;5;1;Niveau Minimum:2;6;1;Backstab +1. Eventreur 2
+longue dague crenelee;P:2;1/2=0|3/4/5/6=2;6=>x4;2;5;1;Niveau Minimum:6;8;1;Parade +1. Eventreur 3
+longue dague equilibree;P:2;1/2=0|3/4/5/6=2;5=>x3|6=>x4;3;3;3;Niveau Minimum:5;9;1;Parade +1
+longue dague;P:2;1/2=0|3/4/5/6=2;6=>x4;3;4;2;Niveau Minimum:4;8;1;Parade +1
+ceste en cuir;P:1;1=0|2/3/4=1|5=2|6=3;;2;3;0;Niveau Minimum:4;4;0;Peut parer : Energie 1, Seuil de parade 5+
+ceste en cuir leste;P:1;1=0|2/3/4=1|5/6=2;;2;4;1;Niveau Minimum:4;4;1;Peut parer : Energie 1, Seuil de parade 4+
+poignard surinant;P:2;1=0|2/3/4=1|5=2|6=4;5=>x4;2;6;1;Niveau Minimum:4;6;1;Acheveur : tuer un ennemi avec un coup critique regenere 3 pvs
+poignard crante;P:3;1=0|2/3/4=1|5=2|6=3;6=>x5;2;4;1;Niveau Minimum:4;6;1;"Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
+"
+poignard crochet venimeux;P:2;1=0|2/3/4=1|5=2|6=4;Toxine 7+=>10 (non cumulable à l'autre effet toxine);3;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 8
+serre de volucre anthropophage;P:6;1/2/3/4=0|5=1|6=2;Ignore l'armure naturelle;3;6;2;Intelligence Minimum:8;13;2;Occulte 5
