@@ -18,11 +18,11 @@ epee inegide;P:3;1/2=0|3/4=1|5/6=2;;2;4;1;Force Minimum:3;11;1;Inégide : Il est 
 epee du chevalier noir;P:6;1/2=0|3/4=1|5=2|6=3;peut relancer tous les dés une fois par frappe;5;6;10;Force Minimum:10;16;5;
 epee ebrechee crenelee;P:2;1/2=0|3/4=1|5/6=2;4=>x2;3;6;1;;5;1;Eventreur 4
 uchigatana;P:2;1=0|2/3=2|4/5=3|6=5;3=>x3;3;5;5;Niveau Minimum:7;21;1;Saigne 7+ => 4
-torche febrile;F:1;1/2=0|3/4/5/6=1;6=>x2;1;6;0;;;1;
+torche febrile;F:1;1/2=0|3/4/5/6=1;6=>x2;1;6;0;;4;1;
 fouet court;P:2;1/2/3=0|4/5/6=2;2/3=>x1;2;6;0;;6;1;Chaire à nue => x1
 laniere de feu;F:4;1/2=0|3/4/5=1|6=2;6=>x4;1;6;0;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme
 dague;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;6;1;;6;1;Backstab +1
-poignard brise;P:1;1/2/3=0|4/5/6=1;6=>x2;2;6;1;;4;;1
+poignard brise;P:1;1/2/3=0|4/5/6=1;6=>x2;2;6;1;;4;1;
 stylet rituel inique;P:1|Ma:2;1=0|2/3/4/5=1|6=2;4/5=>x2;2;5;1;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dés pour résoudre l'effet d'un anneau inique, si porté.
 dague aiguisee;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;5;1;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
 poignard dent de rat;P:2;1=0|2/3/4=1|5=2|6=4;5=>x3;2;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 3
