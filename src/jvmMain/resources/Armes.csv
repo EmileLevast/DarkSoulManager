@@ -38,3 +38,22 @@ poignard surinant;P:2;1=0|2/3/4=1|5=2|6=4;5=>x4;2;6;1;Niveau Minimum:4;6;1;Achev
 poignard crante;P:3;1=0|2/3/4=1|5=2|6=3;6=>x5;2;4;1;Niveau Minimum:4;6;1;Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
 poignard crochet venimeux;P:2;1=0|2/3/4=1|5=2|6=4;Toxine 7+=>10 (non cumulable à l'autre effet toxine);3;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 8
 serre de volucre anthropophage;P:6;1/2/3/4=0|5=1|6=2;Ignore l'armure naturelle;3;6;2;Intelligence Minimum:8;13;2;Occulte 5
+arbalete grossiere;P:4;;;2;6;0;Force Minimum:4;;2;Nécessite les 2 mains
+couteau de lancer;P:1;1/2=0|3/4/5=1|6=3;;1;;;Force Minimum:1;5;0;Pas besoin d'équiper
+arbalete a repercussion;P:3;;;1;5;1;Force Minimum:4|Intelligence Minimum:6;;0;Cette arbalète tire 3 carreaux simultanément: A chaque frappe avec cette arme. Vous pouvez faire 2 frappes supplémentaires, en reprenant le même nombre de dés, sans dépenser d’énergie supplémentaire. Impossible que ces frappes frappent 2x la même cible  (les carreaux partent dans des directions différentes).
+fleche empennee;P:3;1/2=0|3/4/5=1|6=2;;;;;;;;
+carreau simple;P:2;1/2=0|3/4/5=1|6=2;;;;;;;;
+fleche simple;P:2;1/2/3=0|4/5/6=1;;;;;;;;
+arc;P:1;;;2;6;0;Force Minimum:2;;1;
+sarbacane nanosinophile;P:1;;;1;6;0;;;0;
+flechette toxique;P:1;1=0|2/3/4/5/6=1;;;;;;;;Toxine 1+ => 5. Si FFC > 1 les joueurs sont touchés par le poison psychédélique
+bombe incendiaire;F:5;1/2/3/4=0|5=1|6=2;5=>x2;2;6;0;Force Minimum:1;;1;Pas besoin d'équiper
+spear;P:4;1/2/3=0|4/5/6=1;6=>x2;3;6;1;Force Minimum:4;7;3;
+winged spear;P:6;1/2/3=0|4/5/6=1;6=>x2;3;6;2;Niveau Minimum:6;8;1;
+fleau;P:3;1/2/3/4=0|5/6=3;;5;6;5;Force Minimum:5;17;3;Écacheur: ( si FFC>3 & si la cible bloque avec un bouclier )Si la cible réussi à bloquer mais qu’elle subit tout de même des dégâts  alors son bouclier est détruit. Si elle échoue à bloquer son bouclier lui échappe des mains.  
+masse d arme;P:3;1/2/3/4=0|5=2|6=3;5=>x3;5;6;1;Force Minimum:4;13;2;Saigne 6+=>2
+marteau du taureau;P:4;1/2/3=0|4/5=2|6=3;;4;6;1;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques
+zweihander;P:17;1/2=0|3/4/5/6=1;6=>2;9;6;5;Force Minimum:14;34;3;
+hache rouillee;P:7;1/2/3/4=0|5/6=1;4=>x1;3;6;1;Force Minimum:5;13;2;
+hachette double maudite;P:3;1/2=0|3/4/5/6=2;6=>x4|2pv en moins pour le porteur;4;4;3;Humanite Minimum:4;10;1;"Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
+"
