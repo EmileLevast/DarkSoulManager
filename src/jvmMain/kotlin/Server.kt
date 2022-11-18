@@ -11,8 +11,10 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import org.litote.kmongo.eq
+import org.litote.kmongo.regex
 import java.io.File
 import java.io.InputStream
+import java.util.regex.Pattern
 
 fun main() {
     val port = System.getenv("PORT")?.toInt() ?: 9090
@@ -70,7 +72,7 @@ fun main() {
                 }
                 get("/{nom}") {
                     val nom = call.parameters["nom"] ?: "inconnu"
-                    val armeFound = collectionArmes.findOne(Arme::nom eq nom)
+                    val armeFound = collectionArmes.find(Arme::nom regex ".*$nom.*").toList()
                     call.respond(armeFound ?: HttpStatusCode.NoContent)
                 }
                 post {
@@ -129,7 +131,7 @@ fun uploadArmes(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List
 
             listArme.add(
                 Arme(
-                    listCSV[0],
+                    listCSV[0].cleanupForDB(),
                     listCSV[1],
                     seuils,
                     listCSV[3],

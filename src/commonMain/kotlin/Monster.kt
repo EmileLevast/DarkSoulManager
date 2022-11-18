@@ -2,7 +2,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Monster(
-    val nom: String= "inconnu",
+    override val nom: String= "inconnu",
     val vie: Int=0,
     val force:Map<Int,Int> = mapOf(),
     val defense:Int = 0,

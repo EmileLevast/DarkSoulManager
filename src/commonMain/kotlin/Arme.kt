@@ -2,7 +2,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class Arme(
-    val nom:String="inconnu",
+    override val nom:String="inconnu",
     val degat:String="P:0",
     val seuils:Map<String,List<Int>> = mapOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
     val coupCritiques:String="",
@@ -20,7 +20,8 @@ class Arme(
     override fun toDescription(): String {
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   ${it.value.joinToString("/")} => x${it.key}\n"}
+            textSeuils += "|   ${it.value.joinToString("/")} => x${it.key}\n"
+        }
         return "\n" +
         "----Arme: $nom----\n" +
         "| Degats :$degat\n"+
@@ -35,7 +36,6 @@ class Arme(
         "| $capaciteSpeciale\n" +
         "------------------\n"
     }
-
 
     companion object {
         const val path = "/armes"

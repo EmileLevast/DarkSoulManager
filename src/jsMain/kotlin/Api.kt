@@ -51,12 +51,8 @@ suspend fun deleteArmesListItem(armeItem: Arme) {
     jsonClient.delete(endpoint + Arme.path + "/${armeItem.id}")
 }
 
-suspend fun searchOneSpecificArme(nomSearched: String) :Arme?{
+suspend fun searchArmes(nomSearched: String) :List<Arme>?{
     jsonClient.get(endpoint + Arme.path + "/${nomSearched}").let {
-        return if (it.status != HttpStatusCode.NoContent) it.body<Arme>() else null
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<Arme>>() else null
     }
-}
-
-suspend fun readFile(){
-
 }

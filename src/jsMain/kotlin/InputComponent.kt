@@ -17,7 +17,7 @@ val inputComponent = FC<InputProps> { props ->
     val submitHandler: FormEventHandler<HTMLFormElement> = {
         it.preventDefault()
         setText("")
-        props.onSubmit(text)
+        props.onSubmit(text.cleanupForDB())
     }
 
     val changeHandler: ChangeEventHandler<HTMLInputElement> = {
