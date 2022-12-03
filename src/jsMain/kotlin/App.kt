@@ -1,10 +1,9 @@
 import io.ktor.util.logging.*
 import react.*
 import kotlinx.coroutines.*
+import mui.material.Grid
 import react.dom.html.ReactHTML.button
-import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.h1
-import react.dom.html.ReactHTML.ul
 
 private val scope = MainScope()
 val logger = KtorSimpleLogger("logger")
@@ -22,19 +21,6 @@ val App = FC<Props> {
 
     h1 {
         +"Dark Soul List"
-    }
-    ul {
-        bddList.forEach { item : IListItem ->
-            val text = item.toDescription()
-            div {
-                text.split("\n").mapIndexed { index: Int, s: String ->
-                    div {
-                        key = index.toString()
-                        +s
-                    }
-                }
-            }
-        }
     }
     inputComponent {
         onSubmit = { input ->
@@ -56,7 +42,7 @@ val App = FC<Props> {
     }
     button{
         onClick = {
-            bddList = listOf()
+            bddList = bddList.filter{it.isAttached}
         }
         + "Clear"
     }
@@ -70,14 +56,11 @@ val App = FC<Props> {
         }
         + "readFile"
     }
-}
-
-fun createMonsterFromInput(input:String):Monster{
-    return Monster(input.replace("!", ""), input.count { it == '!' },mapOf(Pair<Int,Int>(1,1),Pair<Int,Int>(2,3),Pair<Int,Int>(3,5)),
-    listDrops = mapOf(Pair<String,Int>("marteau",4),Pair<String,Int>("jambiere",5)),ames=90)
-}
-
-fun createArmeFromInput(input:String):Arme{
-    return Arme(input.replace("!", "").replace("*",""), input.count { it == '!' }.toString(),
-        mapOf(Pair("0",listOf(1,2)),Pair("1",listOf(3,4)),Pair("2",listOf(5,6))))
+    Grid {
+        bddList.forEach {
+            itemListComponent{
+                listItem = it
+            }
+        }
+    }
 }

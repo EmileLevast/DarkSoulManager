@@ -35,7 +35,7 @@ kotlin {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
-                //implementation("app.softwork:kotlinx-uuid-core:$uuidVersion")
+                implementation(project.dependencies.enforcedPlatform("org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:$kotlinWrappersVersion"))
             }
         }
 
@@ -68,6 +68,10 @@ kotlin {
                 implementation(project.dependencies.enforcedPlatform("org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:$kotlinWrappersVersion"))
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-react")
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:v5.3.6-pre450")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-mui:v5.9.1-pre450")
+                implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion")
+
             }
         }
     }

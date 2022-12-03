@@ -15,7 +15,9 @@ class Arme(
     val capaciteSpeciale:String=""
     ) : IListItem {
 
+
     override val id = nom.hashCode()
+    override var isAttached = false
 
     override fun toDescription(): String {
         var textSeuils = ""
@@ -24,17 +26,34 @@ class Arme(
         }
         return "\n" +
         "----Arme: $nom----\n" +
-        "| Degats :$degat\n"+
+        "| ⚔ $degat\n"+
         "| Seuils:\n" + textSeuils +
-        "| CC : $coupCritiques\n" +
-        "| Maximum énergie : $maximumEnergie\n" +
-        "| Seuil de blocage : $seuilBlocage\n" +
-        "| Baleur de blocage : $valeurBlocage\n" +
-        "| Force associee au jet : $fajMax\n" +
+        "| \uD83D\uDCA2 $coupCritiques\n" +
+        "| \uD83D\uDD0B Max énergie : $maximumEnergie\n" +
+        "| \uD83D\uDEE1 Seuil de blocage : $seuilBlocage\n" +
+        "| Valeur de blocage : $valeurBlocage\n" +
+        "| \uD83D\uDCAA FAJ Max : $fajMax\n" +
         "| $contraintes\n" +
-        "| Poids : $poids\n" +
+        "| ⚖ : $poids\n" +
         "| $capaciteSpeciale\n" +
         "------------------\n"
+    }
+
+    override fun getStatsAsStrings():String{
+        var textSeuils = ""
+        seuils.forEach {
+            textSeuils += "|   ${it.value.joinToString("/")} => x${it.key}\n"
+        }
+        return  "$degat\n"+
+                "Seuils:\n" + textSeuils +
+                "CC : $coupCritiques\n" +
+                "Max énergie : $maximumEnergie\n" +
+                "Seuil de blocage : $seuilBlocage\n" +
+                "Valeur de blocage : $valeurBlocage\n" +
+                "FAJ Max : $fajMax\n" +
+                "$contraintes\n" +
+                "Poids : $poids\n" +
+                "$capaciteSpeciale\n"
     }
 
     companion object {

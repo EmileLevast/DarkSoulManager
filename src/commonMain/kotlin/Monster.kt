@@ -12,6 +12,8 @@ data class Monster(
 ) : IListItem{
 
     override val id = nom.hashCode()
+    override var isAttached = false
+
 
     override fun toDescription(): String {
         val textForceSeuils = constructForceSeuils()
@@ -50,6 +52,10 @@ data class Monster(
         }
 
         return listDroptext.toString()
+    }
+
+    override fun getStatsAsStrings(): String {
+        return "No stat"
     }
 
     companion object {
