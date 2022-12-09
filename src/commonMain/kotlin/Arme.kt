@@ -19,26 +19,6 @@ class Arme(
     override val id = nom.hashCode()
     override var isAttached = false
 
-    override fun toDescription(): String {
-        var textSeuils = ""
-        seuils.forEach {
-            textSeuils += "|   ${it.value.joinToString("/")} => x${it.key}\n"
-        }
-        return "\n" +
-        "----Arme: $nom----\n" +
-        "| ⚔ $degat\n"+
-        "| Seuils:\n" + textSeuils +
-        "| \uD83D\uDCA2 $coupCritiques\n" +
-        "| \uD83D\uDD0B Max énergie : $maximumEnergie\n" +
-        "| \uD83D\uDEE1 Seuil de blocage : $seuilBlocage\n" +
-        "| Valeur de blocage : $valeurBlocage\n" +
-        "| \uD83D\uDCAA FAJ Max : $fajMax\n" +
-        "| $contraintes\n" +
-        "| ⚖ : $poids\n" +
-        "| $capaciteSpeciale\n" +
-        "------------------\n"
-    }
-
     override fun getStatsAsStrings():String{
         var textSeuils = ""
         seuils.forEach {

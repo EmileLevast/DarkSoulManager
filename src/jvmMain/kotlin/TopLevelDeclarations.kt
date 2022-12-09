@@ -11,3 +11,4 @@ val client = KMongo.createClient().coroutine
 val database = client.getDatabase("MonsterTest")
 val collectionMonster = database.getCollection<Monster>()
 val collectionArmes = database.getCollection<Arme>()
+val collectionArmures = database.getCollection<Armure>()

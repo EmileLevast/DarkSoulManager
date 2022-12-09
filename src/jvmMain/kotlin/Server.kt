@@ -13,8 +13,6 @@ import io.ktor.server.routing.*
 import org.litote.kmongo.eq
 import org.litote.kmongo.regex
 import java.io.File
-import java.io.InputStream
-import java.util.regex.Pattern
 
 fun main() {
     val port = System.getenv("PORT")?.toInt() ?: 9090
@@ -64,7 +62,7 @@ fun main() {
             route(Arme.path) {
 
                 get(Arme.pathToUpdate){
-                    collectionArmes.insertMany(updateDatabase(call))
+                    collectionArmes.insertMany(parseArmes(File("src/jvmMain/resources/Armes.csv").readLines().asSequence(),call))
                     call.respond(HttpStatusCode.OK)
                 }
                 get {
@@ -85,19 +83,16 @@ fun main() {
                     call.respond(HttpStatusCode.OK)
                 }
             }
+            route(Armure.path){
+                get(Armure.pathToUpdate){
+                    collectionArmures.insertMany(parseArmure(File("src/jvmMain/resources/Armures.csv").readLines().asSequence(),call))
+                }
+            }
         }
     }.start(wait = true)
 }
 
-fun updateDatabase(call: ApplicationCall): List<Arme> {
-    val lines = File("src/jvmMain/resources/Armes.csv").readLines()
-
-    call.application.environment.log.info("Voici les lignes lues : $lines")
-
-    return uploadArmes(lines.asSequence(),call)
-}
-
-fun uploadArmes(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List<Arme>{
+fun parseArmes(sequenceLinesFile : Sequence<String>, call: ApplicationCall):List<Arme>{
 
     val listArme = mutableListOf<Arme>()
 
@@ -150,4 +145,8 @@ fun uploadArmes(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List
         }
 
     return listArme
+}
+
+fun parseArmure(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List<Armure>{
+    return listOf()
 }

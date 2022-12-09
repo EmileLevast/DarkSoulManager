@@ -15,7 +15,7 @@ data class Monster(
     override var isAttached = false
 
 
-    override fun toDescription(): String {
+    private fun toDescription(): String {
         val textForceSeuils = constructForceSeuils()
         return "\n" +
                 "----Monstre: $nom----\n" +
