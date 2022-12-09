@@ -26,7 +26,7 @@ val App = FC<Props> {
         onSubmit = { input ->
             //Ici on va chercher les items dans la bdd
             scope.launch {
-                val itemsFound: List<IListItem>? = searchArmes(input) ////TODO add fnction to call monsters ?: searchOneSpecificMonster(input)
+                val itemsFound: List<IListItem>? = searchAnything(input) ////TODO add fnction to call monsters ?: searchOneSpecificMonster(input)
                 logger.debug("Cherche un element $input : ${itemsFound?.joinToString { it.nom }}")
                 //
                 if (itemsFound != null)
@@ -49,15 +49,15 @@ val App = FC<Props> {
     button{
         onClick = {
             scope.launch {
-                uploadArmes()
+                uploadArmures()
             }
         }
-        + "readFile"
+        + "uploadArmures"
     }
     Grid {
         bddList.forEach {
             itemListComponent{
-                listItem = it
+                itemList = it
             }
         }
     }

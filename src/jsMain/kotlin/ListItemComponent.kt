@@ -8,7 +8,7 @@ import react.Props
 import react.useState
 
 external interface IListItemComponent:Props{
-    var listItem: IListItem
+    var itemList: IListItem
 
 }
 
@@ -20,12 +20,12 @@ inline var GridProps.xs: Int
 
 val itemListComponent = FC<IListItemComponent>{ props ->
 
-    var isCardAttached:Boolean by useState(props.listItem.isAttached)
+    var isCardAttached:Boolean by useState(props.itemList.isAttached)
 
   Grid {
       onClick = {
-          props.listItem.isAttached = !props.listItem.isAttached
-          isCardAttached = props.listItem.isAttached
+          props.itemList.isAttached = !props.itemList.isAttached
+          isCardAttached = props.itemList.isAttached
       }
       sx{
           display = inlineBlock
@@ -33,19 +33,19 @@ val itemListComponent = FC<IListItemComponent>{ props ->
       }
       Card {
           sx{
-              backgroundColor = NamedColor.lightgray
+              backgroundColor = convertClassToColor(props.itemList)
               width=400.px
           }
           CardContent {
               Typography{
                   variant = TypographyVariant.h4
-                  +props.listItem.nom
+                  +props.itemList.nom
                   if(isCardAttached){
                       +"📌"
                   }
               }
 
-              props.listItem.getStatsAsStrings().split("\n").mapIndexed { index: Int, s: String ->
+              props.itemList.getStatsAsStrings().split("\n").mapIndexed { index: Int, s: String ->
                   Typography {
                       variant = TypographyVariant.h6
                         +s

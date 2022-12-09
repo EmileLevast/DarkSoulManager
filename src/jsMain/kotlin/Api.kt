@@ -57,6 +57,24 @@ suspend fun searchArmes(nomSearched: String) :List<Arme>?{
     }
 }
 
+suspend fun searchArmures(nomSearched: String) :List<Armure>?{
+    jsonClient.get(endpoint + Armure.path + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<Armure>>() else null
+    }
+}
+
+suspend fun searchAnything(nomSearched: String) :List<IListItem>?{
+    val listResultsItems = mutableListOf<IListItem>()
+    searchArmes(nomSearched)?.let { listResultsItems.addAll(it) }
+    searchArmures(nomSearched)?.let { listResultsItems.addAll(it) }
+
+    return listResultsItems
+}
+
 suspend fun uploadArmes() {
     return jsonClient.get(endpoint + Arme.path+Arme.pathToUpdate).body()
+}
+
+suspend fun uploadArmures() {
+    return jsonClient.get(endpoint + Armure.path+Armure.pathToUpdate).body()
 }

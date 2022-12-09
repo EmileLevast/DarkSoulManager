@@ -1,4 +1,3 @@
-
 interface IListItem {
     val id:Int
     val nom:String
