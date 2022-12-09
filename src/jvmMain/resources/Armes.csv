@@ -1,4 +1,4 @@
-Nom;Degat;Seuils;Coups Critiques;Maximum Energie;Seuil blocage;blocage;Force Minimum;FAJ max;Poids;SpÈcial
+Nom;Degat;Seuils;Coups Critiques;Maximum Energie;Seuil blocage;blocage;Force Minimum;FAJ max;Poids;Sp√©cial
 epee large;P:4;1/2=0|3/4=1|5/6=2;;4;6;3;Force Minimum:4;8;2;
 epee ebrechee effilee;P:2;1/2=0|3/4=1|5/6=2;Saigne +5 => 3;3;6;1;;5;1;
 epee lourde a deux mains;P:7;1/2/3=0|4/5=1|6=2;5/6 => x2;5;6;3;Force Minimum:7;26;3;
@@ -7,27 +7,27 @@ epee ebrechee;P:2;1/2=0|3/4=1|5/6=2;4=>x2;3;6;1;;5;1;
 epee courte;P:3;1/2=0|3/4=1|5/6=2;6 =>x3;2;4;1;Force Minimum:3;6;1;
 epee droite;P:4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;7;2;
 epee longue;P:4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;8;2;
-epee barbelee;P:4;1/2=0|2=1|4/5/6=2;3=>x2;3;5;3;DÈfense Ph. Minimum:4;16;3;Saigne 5+ => 4
+epee barbelee;P:4;1/2=0|2=1|4/5/6=2;3=>x2;3;5;3;D√©fense Ph. Minimum:4;16;3;Saigne 5+ => 4
 cimeterre;P:4;1=0|2/3/4=1|5=2|6=0;6=>x3;3;4;4;Niveau Minimum:5;10;1;Saigne 5+ => 3
 epee lourde;P:5;1/2/3=0|4/5=1|6=2;5/6=>x2;4;6;3;Force Minimum:5;12;2;
-epee a double tranchant;P:3;1/2=0|3/4=1|5/6=2;6=>x4;3;6;5;Force Minimum:10;13;4;Si vous blessez votre ennemi vous rÈcupÈrez les pvs enlevÈs. Si vous tuez votre ennemi vous perdez les pvs enlevÈs.
+epee a double tranchant;P:3;1/2=0|3/4=1|5/6=2;6=>x4;3;6;5;Force Minimum:10;13;4;Si vous blessez votre ennemi vous r√©cup√©rez les pvs enlev√©s. Si vous tuez votre ennemi vous perdez les pvs enlev√©s.
 epee a deux mains;P:5;1/2/3=0|4/5=1|6=2;P:6;5;6;3;Force Minimum:6;19;2;
-epee perche;P:3;1=0|2/3=1|4/5=2|6=3;;5;6;3;Force Minimum:6;9;2;Perche : LíÈpÈe síagrandit magiquement pour atteindre son adversaire, sa portÈe est ~5m
-epee traversante;P:4;1/2=0|3=1|4/5/6=2;;2;4;2;Force Minimum:3;7;0;Traversante : cette ÈpÈe traverse les alliÈs sans leur causer de dÈg‚ts, elle est assez grande pour frapper un ennemi derriËre un alliÈ.
-epee inegide;P:3;1/2=0|3/4=1|5/6=2;;2;4;1;Force Minimum:3;11;1;InÈgide : Il est impossible de bloquer une frappe de cet ÈpÈe avec un bouclier
-epee du chevalier noir;P:6;1/2=0|3/4=1|5=2|6=3;peut relancer tous les dÈs une fois par frappe;5;6;10;Force Minimum:10;16;5;
+epee perche;P:3;1=0|2/3=1|4/5=2|6=3;;5;6;3;Force Minimum:6;9;2;Perche : L‚Äô√©p√©e s‚Äôagrandit magiquement pour atteindre son adversaire, sa port√©e est ~5m
+epee traversante;P:4;1/2=0|3=1|4/5/6=2;;2;4;2;Force Minimum:3;7;0;Traversante : cette √©p√©e traverse les alli√©s sans leur causer de d√©g√¢ts, elle est assez grande pour frapper un ennemi derri√®re un alli√©.
+epee inegide;P:3;1/2=0|3/4=1|5/6=2;;2;4;1;Force Minimum:3;11;1;In√©gide : Il est impossible de bloquer une frappe de cet √©p√©e avec un bouclier
+epee du chevalier noir;P:6;1/2=0|3/4=1|5=2|6=3;peut relancer tous les d√©s une fois par frappe;5;6;10;Force Minimum:10;16;5;
 epee ebrechee crenelee;P:2;1/2=0|3/4=1|5/6=2;4=>x2;3;6;1;;5;1;Eventreur 4
 uchigatana;P:2;1=0|2/3=2|4/5=3|6=5;3=>x3;3;5;5;Niveau Minimum:7;21;1;Saigne 7+ => 4
 torche febrile;F:1;1/2=0|3/4/5/6=1;6=>x2;1;6;0;;4;1;
-fouet court;P:2;1/2/3=0|4/5/6=2;2/3=>x1;2;6;0;;6;1;Chaire ‡ nue => x1
+fouet court;P:2;1/2/3=0|4/5/6=2;2/3=>x1;2;6;0;;6;1;Chaire √† nue => x1
 laniere de feu;F:4;1/2=0|3/4/5=1|6=2;6=>x4;1;6;0;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme
 dague;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;6;1;;6;1;Backstab +1
 poignard brise;P:1;1/2/3=0|4/5/6=1;6=>x2;2;6;1;;4;1;
-stylet rituel inique;P:1|Ma:2;1=0|2/3/4/5=1|6=2;4/5=>x2;2;5;1;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dÈs pour rÈsoudre l'effet d'un anneau inique, si portÈ.
+stylet rituel inique;P:1|Ma:2;1=0|2/3/4/5=1|6=2;4/5=>x2;2;5;1;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au d√©s pour r√©soudre l'effet d'un anneau inique, si port√©.
 dague aiguisee;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;5;1;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
 poignard dent de rat;P:2;1=0|2/3/4=1|5=2|6=4;5=>x3;2;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 3
 longue dague ciselee;P:2;1/2=0|3/4/5/6=2;5/6=>x4;3;4;2;Niveau Minimum:5;8;1;Parade +1
-percemaille brulant;P:2|F:1;1=0|2=1|3/4/5/6=2;6=>x4;2;6;4;Niveau Minimum:4;7;1;Pour un co˚t de 1 Ènergie supplÈmentaire (avant le jet de dÈ) la frappe ignore l'armure de l'Èquipement
+percemaille brulant;P:2|F:1;1=0|2=1|3/4/5/6=2;6=>x4;2;6;4;Niveau Minimum:4;7;1;Pour un co√ªt de 1 √©nergie suppl√©mentaire (avant le jet de d√©) la frappe ignore l'armure de l'√©quipement
 dague crenelee;P:1;1=0|2/3/4/5=1|6=2;6=>x8;2;5;1;Niveau Minimum:2;6;1;Backstab +1. Eventreur 2
 longue dague crenelee;P:2;1/2=0|3/4/5/6=2;6=>x4;2;5;1;Niveau Minimum:6;8;1;Parade +1. Eventreur 3
 longue dague equilibree;P:2;1/2=0|3/4/5/6=2;5=>x3|6=>x4;3;3;3;Niveau Minimum:5;9;1;Parade +1
@@ -35,24 +35,24 @@ longue dague;P:2;1/2=0|3/4/5/6=2;6=>x4;3;4;2;Niveau Minimum:4;8;1;Parade +1
 ceste en cuir;P:1;1=0|2/3/4=1|5=2|6=3;;2;3;0;Niveau Minimum:4;4;0;Peut parer : Energie 1, Seuil de parade 5+
 ceste en cuir leste;P:1;1=0|2/3/4=1|5/6=2;;2;4;1;Niveau Minimum:4;4;1;Peut parer : Energie 1, Seuil de parade 4+
 poignard surinant;P:2;1=0|2/3/4=1|5=2|6=4;5=>x4;2;6;1;Niveau Minimum:4;6;1;Acheveur : tuer un ennemi avec un coup critique regenere 3 pvs
-poignard crante;P:3;1=0|2/3/4=1|5=2|6=3;6=>x5;2;4;1;Niveau Minimum:4;6;1;Lame enfoncÈe: Une seule fois par frappe, avant de rÈsoudre la dÈfense, si FFC >  0 alors on peut ajouter de líÈnergie dans la frappe et lancer les dÈs supplÈmentaires associÈs.
-poignard crochet venimeux;P:2;1=0|2/3/4=1|5=2|6=4;Toxine 7+=>10 (non cumulable ‡ l'autre effet toxine);3;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 8
+poignard crante;P:3;1=0|2/3/4=1|5=2|6=3;6=>x5;2;4;1;Niveau Minimum:4;6;1;Lame enfonc√©e: Une seule fois par frappe, avant de r√©soudre la d√©fense, si FFC >  0 alors on peut ajouter de l‚Äô√©nergie dans la frappe et lancer les d√©s suppl√©mentaires associ√©s.
+poignard crochet venimeux;P:2;1=0|2/3/4=1|5=2|6=4;Toxine 7+=>10 (non cumulable √† l'autre effet toxine);3;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 8
 serre de volucre anthropophage;P:6;1/2/3/4=0|5=1|6=2;Ignore l'armure naturelle;3;6;2;Intelligence Minimum:8;13;2;Occulte 5
-arbalete grossiere;P:4;;;2;6;0;Force Minimum:4;;2;NÈcessite les 2 mains
-couteau de lancer;P:1;1/2=0|3/4/5=1|6=3;;1;;;Force Minimum:1;5;0;Pas besoin d'Èquiper
-arbalete a repercussion;P:3;;;1;5;1;Force Minimum:4|Intelligence Minimum:6;;0;Cette arbalËte tire 3 carreaux simultanÈment: A chaque frappe avec cette arme. Vous pouvez faire 2 frappes supplÈmentaires, en reprenant le mÍme nombre de dÈs, sans dÈpenser díÈnergie supplÈmentaire. Impossible que ces frappes frappent 2x la mÍme cible  (les carreaux partent dans des directions diffÈrentes).
+arbalete grossiere;P:4;;;2;6;0;Force Minimum:4;;2;N√©cessite les 2 mains
+couteau de lancer;P:1;1/2=0|3/4/5=1|6=3;;1;;;Force Minimum:1;5;0;Pas besoin d'√©quiper
+arbalete a repercussion;P:3;;;1;5;1;Force Minimum:4|Intelligence Minimum:6;;0;Cette arbal√®te tire 3 carreaux simultan√©ment: A chaque frappe avec cette arme. Vous pouvez faire 2 frappes suppl√©mentaires, en reprenant le m√™me nombre de d√©s, sans d√©penser d‚Äô√©nergie suppl√©mentaire. Impossible que ces frappes frappent 2x la m√™me cible  (les carreaux partent dans des directions diff√©rentes).
 fleche empennee;P:3;1/2=0|3/4/5=1|6=2;;;;;;;;
 carreau simple;P:2;1/2=0|3/4/5=1|6=2;;;;;;;;
 fleche simple;P:2;1/2/3=0|4/5/6=1;;;;;;;;
 arc;P:1;;;2;6;0;Force Minimum:2;;1;
 sarbacane nanosinophile;P:1;;;1;6;0;;;0;
-flechette toxique;P:1;1=0|2/3/4/5/6=1;;;;;;;;Toxine 1+ => 5. Si FFC > 1 les joueurs sont touchÈs par le poison psychÈdÈlique
-bombe incendiaire;F:5;1/2/3/4=0|5=1|6=2;5=>x2;2;6;0;Force Minimum:1;;1;Pas besoin d'Èquiper
+flechette toxique;P:1;1=0|2/3/4/5/6=1;;;;;;;;Toxine 1+ => 5. Si FFC > 1 les joueurs sont touch√©s par le poison psych√©d√©lique
+bombe incendiaire;F:5;1/2/3/4=0|5=1|6=2;5=>x2;2;6;0;Force Minimum:1;;1;Pas besoin d'√©quiper
 spear;P:4;1/2/3=0|4/5/6=1;6=>x2;3;6;1;Force Minimum:4;7;3;
 winged spear;P:6;1/2/3=0|4/5/6=1;6=>x2;3;6;2;Niveau Minimum:6;8;1;
-fleau;P:3;1/2/3/4=0|5/6=3;;5;6;5;Force Minimum:5;17;3;…cacheur: ( si FFC>3 & si la cible bloque avec un bouclier )Si la cible rÈussi ‡ bloquer mais quíelle subit tout de mÍme des dÈg‚ts  alors son bouclier est dÈtruit. Si elle Èchoue ‡ bloquer son bouclier lui Èchappe des mains.  
+fleau;P:3;1/2/3/4=0|5/6=3;;5;6;5;Force Minimum:5;17;3;√âcacheur: ( si FFC>3 & si la cible bloque avec un bouclier )Si la cible r√©ussi √† bloquer mais qu‚Äôelle subit tout de m√™me des d√©g√¢ts  alors son bouclier est d√©truit. Si elle √©choue √† bloquer son bouclier lui √©chappe des mains.  
 masse d arme;P:3;1/2/3/4=0|5=2|6=3;5=>x3;5;6;1;Force Minimum:4;13;2;Saigne 6+=>2
-marteau du taureau;P:4;1/2/3=0|4/5=2|6=3;;4;6;1;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de líarmure ennemie est ajoutÈe aux degats physiques
+marteau du taureau;P:4;1/2/3=0|4/5=2|6=3;;4;6;1;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l‚Äôarmure ennemie est ajout√©e aux degats physiques
 zweihander;P:17;1/2=0|3/4/5/6=1;6=>2;9;6;5;Force Minimum:14;34;3;
 hache rouillee;P:7;1/2/3/4=0|5/6=1;4=>x1;3;6;1;Force Minimum:5;13;2;
-hachette double maudite;P:3;1/2=0|3/4/5/6=2;6=>x4|2pv en moins pour le porteur;4;4;3;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dÈg‚ts magiques aux dÈg‚ts totaux des frappes.
+hachette double maudite;P:3;1/2=0|3/4/5/6=2;6=>x4|2pv en moins pour le porteur;4;4;3;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 d√©g√¢ts magiques aux d√©g√¢ts totaux des frappes.
