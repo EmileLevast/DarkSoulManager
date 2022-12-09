@@ -56,3 +56,7 @@ suspend fun searchArmes(nomSearched: String) :List<Arme>?{
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Arme>>() else null
     }
 }
+
+suspend fun uploadArmes() {
+    return jsonClient.get(endpoint + Arme.path+Arme.pathToUpdate).body()
+}

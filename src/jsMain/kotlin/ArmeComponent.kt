@@ -34,7 +34,6 @@ val itemListComponent = FC<IListItemComponent>{ props ->
       Card {
           sx{
               backgroundColor = NamedColor.lightgray
-              height=600.px
               width=400.px
           }
           CardContent {

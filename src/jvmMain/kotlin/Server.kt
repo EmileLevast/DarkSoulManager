@@ -63,7 +63,7 @@ fun main() {
             }
             route(Arme.path) {
 
-                get("/updateArmes"){
+                get(Arme.pathToUpdate){
                     collectionArmes.insertMany(updateDatabase(call))
                     call.respond(HttpStatusCode.OK)
                 }
@@ -73,7 +73,7 @@ fun main() {
                 get("/{nom}") {
                     val nom = call.parameters["nom"] ?: "inconnu"
                     val armeFound = collectionArmes.find(Arme::nom regex ".*$nom.*").toList()
-                    call.respond(armeFound ?: HttpStatusCode.NoContent)
+                    call.respond(armeFound.ifEmpty { HttpStatusCode.NoContent })
                 }
                 post {
                     collectionArmes.insertOne(call.receive<Arme>())
@@ -118,14 +118,16 @@ fun uploadArmes(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List
             val seuilsCSV = listCSV[2]
             val listSeuils = mutableListOf<Int>()
             val seuils = HashMap<String,List<Int>>()
-            seuilsCSV.split("|").forEach{
-                val listSeuilsParfFacteur =it.split("=")
-                listSeuilsParfFacteur.first().let{ itInutilise ->
-                    itInutilise.split("/").forEach{itSeuils ->
-                        listSeuils.add(itSeuils.toInt())
+            if(seuilsCSV.isNotEmpty()){
+                seuilsCSV.split("|").forEach{
+                    val listSeuilsParfFacteur =it.split("=")
+                    listSeuilsParfFacteur.first().let{ itInutilise ->
+                        itInutilise.split("/").forEach{itSeuils ->
+                            listSeuils.add(itSeuils.toInt())
+                        }
+                        seuils[listSeuilsParfFacteur.last()] = listSeuils.toList()
+                        listSeuils.clear()
                     }
-                    seuils[listSeuilsParfFacteur.last()] = listSeuils.toList()
-                    listSeuils.clear()
                 }
             }
 

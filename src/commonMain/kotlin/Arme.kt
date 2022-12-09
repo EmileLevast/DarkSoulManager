@@ -58,5 +58,6 @@ class Arme(
 
     companion object {
         const val path = "/armes"
+        const val pathToUpdate ="/updateArmes"
     }
 }
