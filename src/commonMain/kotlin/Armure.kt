@@ -1,3 +1,6 @@
+import kotlinx.serialization.Serializable
+
+@Serializable
 class Armure(
     override val nom: String,
     val defense:Map<EffectType,String> = mapOf(),

@@ -85,7 +85,19 @@ fun main() {
             }
             route(Armure.path){
                 get(Armure.pathToUpdate){
-                    collectionArmures.insertMany(parseArmure(File("src/jvmMain/resources/Armures.csv").readLines().asSequence(),call))
+                    collectionArmures.insertMany(parseArmure(File("src/jvmMain/resources/Armures.csv").readLines().asSequence()))
+                }
+                get("/{nom}") {
+                    val nom = call.parameters["nom"] ?: "inconnu"
+                    val armureFound = collectionArmures.find(Armure::nom regex ".*$nom.*").toList()
+                    call.respond(armureFound.ifEmpty { HttpStatusCode.NoContent })
+                }
+                get {
+                    call.respond(collectionArmures.find().toList())
+                }
+                post {
+                    collectionArmures.insertOne(call.receive<Armure>())
+                    call.respond(HttpStatusCode.OK)
                 }
             }
         }
@@ -147,7 +159,7 @@ fun parseArmes(sequenceLinesFile : Sequence<String>, call: ApplicationCall):List
     return listArme
 }
 
-fun parseArmure(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List<Armure>{
+fun parseArmure(sequenceLinesFile : Sequence<String>):List<Armure>{
     val listArmure = mutableListOf<Armure>()
     var lineFiltered = sequenceLinesFile.drop(1)
 
@@ -163,7 +175,7 @@ fun parseArmure(sequenceLinesFile : Sequence<String>,call: ApplicationCall):List
         }
 
         //DefenseType
-        val listDefenseTypeCSV = listCSV[2]
+        val listDefenseTypeCSV = listCSV[1]
         val mapDefenseType = mutableMapOf<EffectType,String>()
 
         if(listDefenseTypeCSV.isNotEmpty()){
