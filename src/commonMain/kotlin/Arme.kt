@@ -26,12 +26,12 @@ class Arme(
         }
         return  "$degat\n"+
                 "Seuils:\n" + textSeuils +
-                "CC : $coupCritiques\n" +
+                (if(coupCritiques.isNotBlank())"CC : $coupCritiques\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
                 "Seuil de blocage : $seuilBlocage\n" +
                 "Valeur de blocage : $valeurBlocage\n" +
                 "FAJ Max : $fajMax\n" +
-                "$contraintes\n" +
+                (if(contraintes.isNotBlank())"$contraintes\n" else "") +
                 "Poids : $poids\n" +
                 "$capaciteSpeciale\n"
     }
