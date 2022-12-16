@@ -2,15 +2,15 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class Armure(
-    override val nom: String,
+    override val nom: String ="inconnu",
     val defense:Map<EffectType,String> = mapOf(),
     val contraintes:String="Aucune contraintes",
     val poids:Int=0,
     val capaciteSpeciale:String=""
 )
-    :IListItem {
-    override val id: Int = nom.hashCode()
+    :ApiableItem(){
 
+    override val id: Int = nom.hashCode()
     override var isAttached: Boolean = false
 
     override fun getStatsAsStrings(): String {
@@ -22,10 +22,6 @@ class Armure(
                 capaciteSpeciale
     }
 
-    companion object {
-        const val path = "/armures"
-        const val pathToUpdate ="/updateArmures"
-    }
 }
 
 enum class EffectType(val shortname:String){

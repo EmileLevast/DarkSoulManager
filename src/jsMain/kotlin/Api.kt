@@ -15,66 +15,18 @@ val jsonClient = HttpClient {
     }
 }
 
-suspend fun getMonsterList(): List<Monster> {
-    return jsonClient.get(endpoint + Monster.path).body()
-}
-
-suspend fun addMonsterListItem(monsterItem: Monster) {
-    jsonClient.post(endpoint + Monster.path) {
-        contentType(ContentType.Application.Json)
-        setBody(monsterItem)
-    }
-}
-
-suspend fun deleteMonsterListItem(monsterItem: Monster) {
-    jsonClient.delete(endpoint + Monster.path + "/${monsterItem.id}")
-}
-
-suspend fun searchOneSpecificMonster(nomSearched: String) :Monster?{
-    jsonClient.get(endpoint + Monster.path + "/${nomSearched}").let {
-        return if (it.status != HttpStatusCode.NoContent) it.body<Monster>() else null
-    }
-}
-
-suspend fun getArmesList(): List<Arme> {
-    return jsonClient.get(endpoint + Arme.path).body()
-}
-
-suspend fun addArmesListItem(armeItem: Arme) {
-    jsonClient.post(endpoint + Arme.path) {
-        contentType(ContentType.Application.Json)
-        setBody(armeItem)
-    }
-}
-
-suspend fun deleteArmesListItem(armeItem: Arme) {
-    jsonClient.delete(endpoint + Arme.path + "/${armeItem.id}")
-}
-
-suspend fun searchArmes(nomSearched: String) :List<Arme>?{
-    jsonClient.get(endpoint + Arme.path + "/${nomSearched}").let {
-        return if (it.status != HttpStatusCode.NoContent) it.body<List<Arme>>() else null
-    }
-}
-
-suspend fun searchArmures(nomSearched: String) :List<Armure>?{
-    jsonClient.get(endpoint + Armure.path + "/${nomSearched}").let {
-        return if (it.status != HttpStatusCode.NoContent) it.body<List<Armure>>() else null
-    }
-}
-
-suspend fun searchAnything(nomSearched: String) :List<IListItem>?{
+suspend fun searchAnything(nomSearched: String) : List<IListItem> {
     val listResultsItems = mutableListOf<IListItem>()
-    searchArmes(nomSearched)?.let { listResultsItems.addAll(it) }
-    searchArmures(nomSearched)?.let { listResultsItems.addAll(it) }
-
+    unmutableListApiItemDefinition.forEach {
+        searchSomething(nomSearched, it)?.let { elementFound ->
+            listResultsItems.addAll(elementFound)
+        }
+    }
     return listResultsItems
 }
 
-suspend fun uploadArmes() {
-    return jsonClient.get(endpoint + Arme.path+Arme.pathToUpdate).body()
-}
-
-suspend fun uploadArmures() {
-    return jsonClient.get(endpoint + Armure.path+Armure.pathToUpdate).body()
+suspend fun <T:ApiableItem> searchSomething(nomSearched: String, objectDefinitionSearched:T) :List<T>?{
+    jsonClient.get(endpoint +"/"+ objectDefinitionSearched.path + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<T>>() else null
+    }
 }

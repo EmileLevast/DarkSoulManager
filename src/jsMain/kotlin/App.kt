@@ -26,10 +26,9 @@ val App = FC<Props> {
         onSubmit = { input ->
             //Ici on va chercher les items dans la bdd
             scope.launch {
-                val itemsFound: List<IListItem>? = searchAnything(input)
-                logger.debug("Cherche un element $input : ${itemsFound?.joinToString { it.nom }}")
-                //
-                if (itemsFound != null)
+                val itemsFound: List<IListItem> = searchAnything(input.cleanupForDB())
+                logger.debug("Cherche un element $input : ${itemsFound.joinToString { it.nom }}")
+                if (itemsFound.isNotEmpty())
                 {
                     mutableListOf<IListItem>().let{
                         it.addAll(bddList)

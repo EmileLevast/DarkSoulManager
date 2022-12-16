@@ -13,7 +13,7 @@ class Arme(
     val fajMax:Int=0,
     val poids:Int=0,
     val capaciteSpeciale:String=""
-    ) : IListItem {
+    ) : ApiableItem() {
 
 
     override val id = nom.hashCode()
@@ -34,10 +34,5 @@ class Arme(
                 (if(contraintes.isNotBlank())"$contraintes\n" else "") +
                 "Poids : $poids\n" +
                 "$capaciteSpeciale\n"
-    }
-
-    companion object {
-        const val path = "/armes"
-        const val pathToUpdate ="/updateArmes"
     }
 }

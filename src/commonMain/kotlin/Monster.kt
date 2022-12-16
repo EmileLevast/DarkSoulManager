@@ -8,8 +8,8 @@ data class Monster(
     val defense:Int = 0,
     val energie:Int = 0,
     val listDrops:Map<String,Int> = mapOf(),
-    val ames:Int,
-) : IListItem{
+    val ames:Int=0,
+) : ApiableItem(){
 
     override val id = nom.hashCode()
     override var isAttached = false
@@ -56,9 +56,5 @@ data class Monster(
 
     override fun getStatsAsStrings(): String {
         return "No stat"
-    }
-
-    companion object {
-        const val path = "/monster"
     }
 }
