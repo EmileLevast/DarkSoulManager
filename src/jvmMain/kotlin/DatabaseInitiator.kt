@@ -18,6 +18,6 @@ val collectionsApiableItem:MutableMap<String,CoroutineCollection<out ApiableItem
 
 fun createCollectionTables(){
     unmutableListApiItemDefinition.forEach {
-        collectionsApiableItem[it.path!!] = database.getCollection(it.path)
+        collectionsApiableItem[it.nameForApi!!] = database.getCollection(it.nameForApi)
     }
 }

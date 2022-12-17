@@ -22,6 +22,48 @@ class Armure(
                 capaciteSpeciale
     }
 
+    override fun parseFromCSV(sequenceLinesFile : Sequence<String>): List<ApiableItem> {
+        val listArmure = mutableListOf<Armure>()
+        var lineFiltered = sequenceLinesFile.drop(1)
+
+        lineFiltered = lineFiltered.filter{ it.isNotBlank() }
+
+        lineFiltered.forEach {
+            val listCSV = it.split(";")
+
+
+            //If the line is empty we pass it
+            if(listCSV.first().isBlank()){
+                return@forEach
+            }
+
+            //DefenseType
+            val listDefenseTypeCSV = listCSV[1]
+            val mapDefenseType = mutableMapOf<EffectType,String>()
+
+            if(listDefenseTypeCSV.isNotEmpty()){
+                listDefenseTypeCSV.split("|").forEach { currentDefense ->
+                    currentDefense.split(":").let{ currentEffectType ->
+                        //on check si le type correspond bien a un vrai type
+                        mapDefenseType[EffectType.values().find { enumEffectType ->enumEffectType.shortname == currentEffectType.first() }!!] =
+                            currentEffectType.last()
+                    }
+                }
+            }
+
+            listArmure.add(Armure(
+                listCSV[0].cleanupForDB(),
+                mapDefenseType,
+                listCSV[2],
+                listCSV[3].run{ if(isNotBlank()) toInt() else{0} },
+                listCSV[4]
+            ))
+
+        }
+
+
+        return listArmure
+    }
 }
 
 enum class EffectType(val shortname:String){

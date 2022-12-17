@@ -1,4 +1,9 @@
+import kotlinx.serialization.Serializable
+
+@Serializable
 abstract class ApiableItem : IListItem{
-        val path = this::class.simpleName
-        val updatePath = "update$path"
+        val nameForApi = this::class.simpleName
+        val updateNameForApi = "update$nameForApi"
+
+        abstract fun parseFromCSV(sequenceLinesFile : Sequence<String>):List<ApiableItem>
 }

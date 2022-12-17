@@ -57,4 +57,8 @@ data class Monster(
     override fun getStatsAsStrings(): String {
         return "No stat"
     }
+
+    override fun parseFromCSV(sequenceLinesFile : Sequence<String>): List<ApiableItem> {
+        return listOf()
+    }
 }

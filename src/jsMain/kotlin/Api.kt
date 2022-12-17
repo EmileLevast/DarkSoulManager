@@ -26,7 +26,7 @@ suspend fun searchAnything(nomSearched: String) : List<IListItem> {
 }
 
 suspend fun <T:ApiableItem> searchSomething(nomSearched: String, objectDefinitionSearched:T) :List<T>?{
-    jsonClient.get(endpoint +"/"+ objectDefinitionSearched.path + "/${nomSearched}").let {
+    jsonClient.get(endpoint +"/"+ objectDefinitionSearched.nameForApi + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<T>>() else null
     }
 }
