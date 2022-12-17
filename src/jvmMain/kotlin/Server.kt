@@ -9,6 +9,7 @@ import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import org.litote.kmongo.coroutine.CoroutineCollection
 import org.litote.kmongo.eq
 import org.litote.kmongo.regex
 import java.io.File
@@ -49,7 +50,7 @@ fun main() {
                     }
                     get("/{nom}") {
                         val nom = call.parameters["nom"] ?: "inconnu"
-                        val itemFound = collectionsApiableItem[itapiable.nameForApi]!!.find(ApiableItem::nom regex ".*$nom.*").toList()
+                        val itemFound = getCollectionElements(itapiable,nom)
                         call.respond(itemFound.ifEmpty { HttpStatusCode.NoContent })
                     }
                     get("/"+ itapiable.updateNameForApi) {

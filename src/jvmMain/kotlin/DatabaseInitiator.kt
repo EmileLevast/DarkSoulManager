@@ -1,6 +1,7 @@
 import org.litote.kmongo.coroutine.CoroutineCollection
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.reactivestreams.KMongo
+import org.litote.kmongo.regex
 
 //val monsterList = mutableListOf<Monster>(
 //    Monster("Carcasse",11),
@@ -20,4 +21,16 @@ fun createCollectionTables(){
     unmutableListApiItemDefinition.forEach {
         collectionsApiableItem[it.nameForApi!!] = database.getCollection(it.nameForApi)
     }
+}
+
+suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem, nameOfItemSearched:String):List<ApiableItem>{
+    return when(instanceOfCollectionItemDefinition.nameForApi){
+        Arme::class.simpleName -> getElementAccordingToType<Arme>(nameOfItemSearched, instanceOfCollectionItemDefinition)
+        Armure::class.simpleName -> getElementAccordingToType<Arme>(nameOfItemSearched, instanceOfCollectionItemDefinition)
+        else-> getElementAccordingToType<Arme>(nameOfItemSearched, instanceOfCollectionItemDefinition)
+    }
+}
+
+suspend inline fun <reified T:ApiableItem> getElementAccordingToType(nameOfItemWanted:String, instanceOfCollectionItemDefinition:ApiableItem):List<T>{
+    return database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom regex ".*$nameOfItemWanted.*").toList()
 }
