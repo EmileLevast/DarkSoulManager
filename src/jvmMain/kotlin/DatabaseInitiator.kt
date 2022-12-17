@@ -23,6 +23,7 @@ fun createCollectionTables(){
     }
 }
 
+//TODO ajouter ici une ligne dans le when a chaque fois qu'eun nouvelle collection dans la bdd est cree
 suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem, nameOfItemSearched:String):List<ApiableItem>{
     return when(instanceOfCollectionItemDefinition.nameForApi){
         Arme::class.simpleName -> getElementAccordingToType<Arme>(nameOfItemSearched, instanceOfCollectionItemDefinition)

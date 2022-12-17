@@ -45,9 +45,6 @@ fun main() {
             }
             unmutableListApiItemDefinition.forEach { itapiable ->
                 route("/"+itapiable.nameForApi!!){
-                    get {
-                        call.respond(collectionsApiableItem[itapiable.nameForApi]!!.find().toList())
-                    }
                     get("/{nom}") {
                         val nom = call.parameters["nom"] ?: "inconnu"
                         val itemFound = getCollectionElements(itapiable,nom)
@@ -62,7 +59,6 @@ fun main() {
                             //si le fichier existe pas on retourne une liste vide
                             listOf()
                         }
-
                         //send data to database
                         collectionsApiableItem[itapiable.nameForApi]!!.insertMany(parsedData)
                         call.respond(parsedData)
