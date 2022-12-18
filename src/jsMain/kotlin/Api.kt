@@ -18,8 +18,14 @@ val jsonClient = HttpClient {
 suspend fun searchAnything(nomSearched: String) : List<IListItem> {
     val listResultsItems = mutableListOf<IListItem>()
     unmutableListApiItemDefinition.forEach {
-        searchSomething(nomSearched, it)?.let { elementFound ->
-            listResultsItems.addAll(elementFound)
+        val res = when(it){
+            //TODO ajouter le cast ici quand on cree une table
+            is Arme -> searchArme(nomSearched)
+            is Armure -> searchArmure(nomSearched)
+            else -> null
+        }
+        if (res != null){
+            listResultsItems.addAll(res)
         }
     }
     return listResultsItems
@@ -28,5 +34,17 @@ suspend fun searchAnything(nomSearched: String) : List<IListItem> {
 suspend fun <T:ApiableItem> searchSomething(nomSearched: String, objectDefinitionSearched:T) :List<T>?{
     jsonClient.get(endpoint +"/"+ objectDefinitionSearched.nameForApi + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<T>>() else null
+    }
+}
+
+suspend fun searchArme(nomSearched: String) :List<Arme>?{
+    jsonClient.get(endpoint +"/"+ Arme().nameForApi + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<Arme>>() else null
+    }
+}
+
+suspend fun searchArmure(nomSearched: String) :List<Armure>?{
+    jsonClient.get(endpoint +"/"+ Armure().nameForApi + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<Armure>>() else null
     }
 }

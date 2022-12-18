@@ -25,13 +25,13 @@ fun createCollectionTables(){
 
 //TODO ajouter ici une ligne dans le when a chaque fois qu'eun nouvelle collection dans la bdd est cree
 suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem, nameOfItemSearched:String):List<ApiableItem>{
-    return when(instanceOfCollectionItemDefinition.nameForApi){
-        Arme::class.simpleName -> getElementAccordingToType<Arme>(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        Armure::class.simpleName -> getElementAccordingToType<Arme>(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        else-> getElementAccordingToType<Arme>(nameOfItemSearched, instanceOfCollectionItemDefinition)
+    return when(instanceOfCollectionItemDefinition){
+        is Arme -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
+        is Armure -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
+        else-> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition as Monster)
     }
 }
 
-suspend inline fun <reified T:ApiableItem> getElementAccordingToType(nameOfItemWanted:String, instanceOfCollectionItemDefinition:ApiableItem):List<T>{
+suspend inline fun <reified T:ApiableItem> getElementAccordingToType(nameOfItemWanted:String, instanceOfCollectionItemDefinition:T):List<T>{
     return database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom regex ".*$nameOfItemWanted.*").toList()
 }
