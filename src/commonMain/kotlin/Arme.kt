@@ -22,7 +22,7 @@ class Arme(
     override fun getStatsAsStrings():String{
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   ${it.value.joinToString("/")} => x${it.key}\n"
+            textSeuils += "|   ${it.value.joinToString("/")} =>×${it.key}\n"
         }
         return  "$degat\n"+
                 "Seuils:\n" + textSeuils +

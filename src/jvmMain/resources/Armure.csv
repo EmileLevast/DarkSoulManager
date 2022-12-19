@@ -1,0 +1,32 @@
+Nom;Defense;Contraintes;Poids;Effet Special
+armure de cuir de carcasse;Ph:4;Force Minimum:1;1;
+armure de maille calcinee;Ph:5|F:4;Force Minimum:4;2;Si le joueur est blessé par des dégâts de feu au corps à corps, alors l’attaquant subit 4 de degat de feu.
+armure maudite;Ph:6|Ma:6;Force Minimum:1;2;A chaque tour ou le joueur porte l’armure il doit jeter un dé. Si le résultat de son dé plus son intelligence ne dépasse pas 10 alors :le joueur passe sous le contrôle du MJ jusqu’à ce qu’il meurt.
+armure rapiecee du taureau;Ph:6|Ma:5;Force Minimum:8;3;A chaque fois que le porteur subit des degats de magie sans être blessé, alors il regagne les degats de magie subit en point de vie.
+armure de maille;Ph:9;Force Minimum:4;2;
+armure de carcasse;Ph:6;Force Minimum:3;3;
+armure de clerc d elite;Ph:1|Ma:4|Po:3;Niveau Minimum:3;1;
+cape de bretteur;Ph:3|Ma:5;Intelligence Minimum:4;0;lors d’une esquive, si la roulade rate alors la cape tire le porteur en arrière, celui-ci prend les dégâts de la frappe mais n’est pas considéré en coup critique. De plus il perd une action à se relever à son prochain tour.
+justaucorps tisse;Ph:4|Po:3;Force Minimum:1;0;Si le porteur est un voleur le seuil de réussite de roulades est diminuée de 1.
+armure lourde de carcasse;Ph:8;Force Minimum:4;4;
+robe d aruspice;Ph:10|Ma:7|F:4;Intelligence Minimum:7;1;
+armure d oswald;Ph:16|F:3;Force Minimum:9;4;
+plastron de clerc;Ph:10|Ma:thaumaturge;Force Minimum:6;4;Thaumaturge : lorsque le porteur équipe une main spirituelle: défense magique = Intelligence/2.Pour un maximum de 7.
+justaucorps du vil bandit;Ph:3|Po:4;Force Minimum:1;0;Si le porteur est un voleur il bénéficie d’une énergie gratuite pour faire des roulades. (Il peut donc faire des roulades en dépensant 1 énergie uniquement)
+armure lourde du taureau;Ph:10|Ma:11;Force Minimum:9;5;A chaque fois que le porteur subit des degats de magie sans être blessé, alors il regagne les degats de magie subit en point de vie.
+armure de chevalier;Ph:11;Force Minimum:6;4;
+sarau du vil bandit;Ph:4|F:1;Force Minimum:2;0;Si le porteur est un voleur le seuil de réussite de backstabs est diminué de 2 , sinon de 1.
+plastron de clerc beni;Ph:10|Ma:thaumaturge;Intelligence Minimum:10;4;Thaumaturge : lorsque le porteur équipe une main spirituelle: défense magique = Intelligence. Pour un maximum de 16.
+sarau tisse;Ph:4|F:1;Force Minimum:2;0;Si le porteur est un voleur le seuil de réussite de la course est diminué de 2 , sinon de 1.
+armure de taureau;Ph:8|Ma:8;Force Minimum:9;4;A chaque fois que le porteur subit des degats de magie sans être blessé, alors il regagne les degats de magie subit en point de vie.
+armure de chevalier noir;Ph:15|F:10;Force Minimum:8;4;Diminue de 1 FFC les attaques en coups critiques.
+armure de cuir en lambeaux;Ph:3;Force Minimum:1;1;
+tunique dechiree;Ph:1;;0;
+ailes de volucre anthropophage;Ma:5|Po:1|F:-3;Intelligence Minimum:5;-1;Eclamé:Lors d’une chute le joueur peut planer. Cela diminue la taille de la chute de 10m et permet d’avancer de 1m horizontalement par mètre  de chute. 
+guenilles du sournois;Ph:2|Po:6;;0;Lorsqu’un coup vous blesse, vous pouvez vous faire passer pour mort en dépensant votre énergie restante. Les ennemis d’une intelligence 0 ne vous frapperont pas. Cela dure tant que vous ne faites absolument rien. Vous relever coûte 1 action.
+tunique du sournois;Ma:3|Po:3;;1;Thuriféraire : lors de l’utilisation  de la marque sombre, conserver les âmes sur 4+
+armure cuir taillee;Ph:5|F:4;Force Minimum:1;1;Le porteur ne peut pas être pris pour cible d’un backstab
+cuir de gobelin;Ph:3|Po:3;Force Minimum:1;1;Pue terriblement. Les tentatives pour se d�placer discr�tement ont un malus de 1
+cuirasse de gobelin;Ph:5|Po:3;Force Minimum:3;2;Pue terriblement. Les tentatives pour se d�placer discr�tement ont un malus de 1
+lourde cotte de gobelin;Ph:7|Po:2|F:3;Force Minimum:6;4;Pue terriblement. Les tentatives pour se d�placer discr�tement ont un malus de 1
+peau de loup;Ph:1|Po:3|Ma:2;Niveau Minimum:4;0;Camoufle enti�rement le visage derri�re les crocs et les m�choires du loup effrayant : le porteur n'est pas reconnaissable par les PNJ et cause une peur tacite.
