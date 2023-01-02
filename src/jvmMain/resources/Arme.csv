@@ -25,7 +25,7 @@ dague;P:1;1=0|2/3/4/5=1|6=2;6=>×8;2;6;1;;6;1;Backstab +1
 poignard brise;P:1;1/2/3=0|4/5/6=1;6=>×2;2;6;1;;4;1;
 stylet rituel inique;P:1|Ma:2;1=0|2/3/4/5=1|6=2;4/5=>×2;2;5;1;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dés pour résoudre l'effet d'un anneau inique, si porté.
 dague aiguisee;P:1;1=0|2/3/4/5=1|6=2;6=>×8;2;5;1;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
-poignard dent de rat;P:2;1=0|2/3/4=1|5=2|6=4;5=>×3;2;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 3
+poignard dent de rat;P:2;1=0|2/3/4=1|5=2|6=4;5=>×3;2;4;1;Niveau Minimum:4;6;1;Toxine 4+ => 2
 longue dague ciselee;P:2;1/2=0|3/4/5/6=2;5/6=>×4;3;4;2;Niveau Minimum:5;8;1;Parade +1
 percemaille brulant;P:2|F:1;1=0|2=1|3/4/5/6=2;6=>×4;2;6;4;Niveau Minimum:4;7;1;Pour un coût de 1 énergie supplémentaire (avant le jet de dé) la frappe ignore l'armure de l'équipement
 dague crenelee;P:1;1=0|2/3/4/5=1|6=2;6=>×8;2;5;1;Niveau Minimum:2;6;1;Backstab +1. Eventreur 2
@@ -36,7 +36,7 @@ ceste en cuir;P:1;1=0|2/3/4=1|5=2|6=3;;2;3;0;Niveau Minimum:4;4;0;Peut parer : E
 ceste en cuir leste;P:1;1=0|2/3/4=1|5/6=2;;2;4;1;Niveau Minimum:4;4;1;Peut parer : Energie 1, Seuil de parade 4+
 poignard surinant;P:2;1=0|2/3/4=1|5=2|6=4;5=>×4;2;6;1;Niveau Minimum:4;6;1;Acheveur : tuer un ennemi avec un coup critique regenere 3 pvs
 poignard crante;P:3;1=0|2/3/4=1|5=2|6=3;6=>×5;2;4;1;Niveau Minimum:4;6;1;Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
-poignard crochet venimeux;P:2;1=0|2/3/4=1|5=2|6=4;Toxine 7+=>10 (non cumulable à l'autre effet toxine);3;4;1;Niveau Minimum:4;6;1;Toxine 5+ => 8
+poignard crochet venimeux;P:2;1=0|2/3/4=1|5=2|6=4;Venin 5+=>4 (non cumulable à l'autre effet venin);3;4;1;Niveau Minimum:4;6;1;Venin 5+ => 3
 serre de volucre anthropophage;P:6;1/2/3/4=0|5=1|6=2;Ignore l'armure naturelle;3;6;2;Intelligence Minimum:8;13;2;Occulte 5
 arbalete grossiere;P:4;;;2;6;0;Force Minimum:4;;2;Nécessite les 2 mains
 couteau de lancer;P:1;1/2=0|3/4/5=1|6=3;;1;;;Force Minimum:1;5;0;Pas besoin d'équiper
@@ -46,15 +46,15 @@ carreau simple;P:2;1/2=0|3/4/5=1|6=2;;;;;;;;
 fleche simple;P:2;1/2/3=0|4/5/6=1;;;;;;;;
 arc;P:1;;;2;6;0;Force Minimum:2;;1;
 sarbacane nanosinophile;P:1;;;1;6;0;;;0;
-flechette toxique;P:1;1=0|2/3/4/5/6=1;;;;;;;;Toxine 1+ => 5. Si FFC > 1 les joueurs sont touchés par le poison psychédélique
+flechette toxique;P:1;1=0|2/3/4/5/6=1;;;;;;;;Toxine 1+ => 4. Si FFC > 1 les joueurs sont touchés par le poison psychédélique
 bombe incendiaire;F:5;1/2/3/4=0|5=1|6=2;5=>×2;2;6;0;Force Minimum:1;;1;Pas besoin d'équiper
 spear;P:4;1/2/3=0|4/5/6=1;6=>×2;3;6;1;Force Minimum:4;7;3;
 winged spear;P:6;1/2/3=0|4/5/6=1;6=>×2;3;6;2;Niveau Minimum:6;8;1;
-lance de gobelin;P:5;1/2/3=0|4/5/6=1;6=>×2;3;6;1;Force Minimum:5;7;2;Toxine 2+ => 3
+lance de gobelin;P:5;1/2/3=0|4/5/6=1;6=>×2;3;6;1;Force Minimum:5;7;2;Toxine 2+ => 1
 fleau;P:3;1/2/3/4=0|5/6=3;;5;6;5;Force Minimum:5;17;3;Écacheur: ( si FFC>3 & si la cible bloque avec un bouclier )Si la cible réussi à bloquer mais qu’elle subit tout de même des dégâts  alors son bouclier est détruit. Si elle échoue à bloquer son bouclier lui échappe des mains.  
 masse d arme;P:3;1/2/3/4=0|5=2|6=3;5=>×3;5;6;1;Force Minimum:4;13;2;Saigne 6+=>2
 marteau du taureau;P:4;1/2/3=0|4/5=2|6=3;;4;6;1;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques
 zweihander;P:17;1/2=0|3/4/5/6=1;6=>2;9;6;5;Force Minimum:14;34;3;
 hache rouillee;P:7;1/2/3/4=0|5/6=1;4=>×1;3;6;1;Force Minimum:5;13;2;
 hachette double maudite;P:3;1/2=0|3/4/5/6=2;6=>×4|2pv en moins pour le porteur;4;4;3;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
-Labrys gobeline;P:6;1/2/3/4=0|5/6=1;4=>×1;3;6;1;Force Minimum:5;13;2;Backswing:Si port�e � deux mains et que le coup a un FCC inf�rieur ou �gal � 0, alors tous les d�s des prochaines frappes de ce tour sont augment�s de 1. Toxine 3+ => 3  
+Labrys gobeline;P:6;1/2/3/4=0|5/6=1;4=>×1;3;6;1;Force Minimum:5;13;2;Backswing:Si port�e � deux mains et que le coup a un FCC inf�rieur ou �gal � 0, alors tous les d�s des prochaines frappes de ce tour sont augment�s de 1. Toxine 3+ => 2  
