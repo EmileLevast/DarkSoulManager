@@ -30,3 +30,6 @@ cuir de gobelin;Ph:3|Po:3;Force Minimum:1;1;Pue terriblement. Les tentatives pou
 cuirasse de gobelin;Ph:5|Po:3;Force Minimum:3;2;Pue terriblement. Les tentatives pour se déplacer discrètement ont un malus de 1
 lourde cotte de gobelin;Ph:7|Po:2|F:3;Force Minimum:6;4;Pue terriblement. Les tentatives pour se déplacer discrètement ont un malus de 1
 peau de loup;Ph:1|Po:3|Ma:2;Niveau Minimum:4;0;Camoufle entièrement le visage derrière les crocs et les mâchoires du loup effrayant : le porteur n'est pas reconnaissable par les PNJ et cause une peur tacite.
+Robe de pyrobelin;F:10|Po:3|Ma:-1  ;Niveau Minimum:9;1;Protege du froid peu importe la temperature exterieure.
+Robe de scîn;F:2|Po:-1|Ma:20:|Ph:4  ;Niveau Minimum:10;2;Permet au porteur de lancer des sorts de magie et nécromancie par les yeux, sans équiper de bâton.
+Robe de zaïrzan;Ph:2|F:10|Po:3|Ma:-2 ;Niveau Minimum:9;1;Bulle de feu protectrice : Après une frappe, et avant de résoudre la défense, le porteur peut dépenser 1 énergie : cela annule tous les dégâts physique de la frappe.

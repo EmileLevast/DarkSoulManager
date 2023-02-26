@@ -5,29 +5,16 @@ data class Monster(
     override val nom: String= "inconnu",
     val vie: Int=0,
     val force:Map<Int,Int> = mapOf(),
-    val defense:Int = 0,
+    val defense:Map<EffectType,String> = mapOf(),
+    val intelligence:Int = 0,
     val energie:Int = 0,
     val listDrops:Map<String,Int> = mapOf(),
     val ames:Int=0,
+    val capaciteSpeciale:String=""
 ) : ApiableItem(){
 
     override val id = nom.hashCode()
     override var isAttached = false
-
-
-    private fun toDescription(): String {
-        val textForceSeuils = constructForceSeuils()
-        return "\n" +
-                "----Monstre: $nom----\n" +
-                "| Vie : $vie\n"+
-                "| Force : $textForceSeuils\n"+
-                "| Defense:" + defense +"\n"+
-                "| Energie : $energie\n" +
-                "| Drops: \n" +
-                constructListDropsString() +
-                "| Ames : $ames\n" +
-                "------------------\n"
-    }
 
     private fun constructForceSeuils():String{
         val textFinalForce =StringBuilder()
@@ -48,17 +35,36 @@ data class Monster(
     private fun constructListDropsString():String{
         val listDroptext = StringBuilder()
         listDrops.forEach {
-            listDroptext.append("|  ${it.key} / ${it.value}+\n")
+            listDroptext.append("  ${it.key} / ${it.value}+\n")
         }
 
         return listDroptext.toString()
     }
 
     override fun getStatsAsStrings(): String {
-        return "No stat"
+        val textForceSeuils = constructForceSeuils()
+        return "Vie : $vie\n"+
+                "Force : $textForceSeuils\n"+
+                "Defense:" + defense +"\n"+
+                "Intelligence:" + intelligence +"\n"+
+                "Energie : $energie\n" +
+                "Drops: \n" +
+                constructListDropsString() +
+                "Ames : $ames\n"+
+                "$capaciteSpeciale\n"
     }
 
-    override fun parseFromCSV(sequenceLinesFile : Sequence<String>): List<ApiableItem> {
-        return listOf()
+    override fun parseFromCSV(listCSVElement : List<String>):ApiableItem {
+        return Monster(
+            listCSVElement[0].cleanupForDB(),
+            listCSVElement[1].toInt(),
+            parseSeuilsForce(listCSVElement[2]),
+            parseDefense(listCSVElement[3]),
+            listCSVElement[4].toInt(),
+            listCSVElement[5].toInt(),
+            parseDrops(listCSVElement[6]),
+            listCSVElement[7].toInt(),
+            listCSVElement[8]
+        )
     }
 }

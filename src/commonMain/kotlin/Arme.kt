@@ -36,56 +36,22 @@ class Arme(
                 "$capaciteSpeciale\n"
     }
 
-    override fun parseFromCSV(sequenceLinesFile : Sequence<String>): List<ApiableItem> {
+    override fun parseFromCSV(listCSVElement : List<String>):ApiableItem{
 
-        val listArme = mutableListOf<Arme>()
+        return Arme(
+            listCSVElement[0].cleanupForDB(),
+            listCSVElement[1],
+            parseSeuils(listCSVElement[2]),
+            listCSVElement[3],
+            listCSVElement[4].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[5].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[6].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[7],
+            listCSVElement[8].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[10]
+        )
 
-        var lineFiltered = sequenceLinesFile.drop(1)
-        lineFiltered = lineFiltered.filter{ it.isNotBlank() }
 
-        lineFiltered.forEach {
-            val listCSV = it.split(";")
-
-            //If the line is empty we pass it
-            if(listCSV.first().isBlank()){
-                return@forEach
-            }
-
-            //Seuils
-            val seuilsCSV = listCSV[2]
-            val listSeuils = mutableListOf<Int>()
-            val seuils = HashMap<String,List<Int>>()
-            if(seuilsCSV.isNotEmpty()){
-                seuilsCSV.split("|").forEach{
-                    val listSeuilsParfFacteur =it.split("=")
-                    listSeuilsParfFacteur.first().let{ itInutilise ->
-                        itInutilise.split("/").forEach{itSeuils ->
-                            listSeuils.add(itSeuils.toInt())
-                        }
-                        seuils[listSeuilsParfFacteur.last()] = listSeuils.toList()
-                        listSeuils.clear()
-                    }
-                }
-            }
-
-            listArme.add(
-                Arme(
-                    listCSV[0].cleanupForDB(),
-                    listCSV[1],
-                    seuils,
-                    listCSV[3],
-                    listCSV[4].run{ if(isNotBlank()) toInt() else{0} },
-                    listCSV[5].run{ if(isNotBlank()) toInt() else{0} },
-                    listCSV[6].run{ if(isNotBlank()) toInt() else{0} },
-                    listCSV[7],
-                    listCSV[8].run{ if(isNotBlank()) toInt() else{0} },
-                    listCSV[9].run{ if(isNotBlank()) toInt() else{0} },
-                    listCSV[10]
-                )
-            )
-
-        }
-
-        return listArme
     }
 }
