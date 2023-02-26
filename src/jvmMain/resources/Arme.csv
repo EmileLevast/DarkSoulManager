@@ -5,7 +5,7 @@ epee lourde a deux mains;P:7;1/2/3=0|4/5=1|6=2;5/6=>×2;5;6;3;Force Minimum:7;26
 rapiere;P:3;1/2=0|3=1|4/5/6=2;6=>×4;3;4;3;Niveau Minimum:3;9;2;Parade ×1
 epee ebrechee;P:2;1/2=0|3/4=1|5/6=2;4=>×2;3;6;1;;5;1;
 epee courte;P:3;1/2=0|3/4=1|5/6=2;6=>×3;2;4;1;Force Minimum:3;6;1;
-epee droite;P:3;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;7;2;
+epee droite;P:3;1=0|2/3=1|4/5/6=2;4=>×2;4;6;2;Force Minimum:2;7;1;
 epee longue;P:4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;8;2;
 epee barbelee;P:4;1/2=0|2=1|4/5/6=2;3=>×2;3;5;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4
 cimeterre;P:4;1=0|2/3/4=1|5=2|6=0;6=>×3;3;4;4;Niveau Minimum:5;10;1;Saigne 5+ => 3
