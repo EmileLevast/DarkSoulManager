@@ -8,7 +8,7 @@ abstract class ApiableItem : IListItem{
         @Transient
         val updateNameForApi = "update$nameForApi"
 
-        private fun decomposeCSV(sequenceLinesFile: Sequence<String>):List<ApiableItem> {
+        fun decomposeCSV(sequenceLinesFile: Sequence<String>):List<ApiableItem> {
                 val listApiableItem = mutableListOf<ApiableItem>()
                 var lineFiltered = sequenceLinesFile.drop(1)
 
@@ -93,5 +93,5 @@ abstract class ApiableItem : IListItem{
                 return mapSeuils
         }
 
-        abstract fun parseFromCSV(listCSVElement : List<String>):ApiableItem
+        protected abstract fun parseFromCSV(listCSVElement : List<String>):ApiableItem
 }

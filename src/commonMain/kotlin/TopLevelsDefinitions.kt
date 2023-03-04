@@ -3,15 +3,18 @@
 //TODO ajouter ici un element instancie dans cette liste a chaque creation d'une nouvelle classe
 val unmutableListApiItemDefinition = listOf<ApiableItem>(Arme(),Armure(),Monster())
 
-enum class EffectType(val shortname:String){
-    FIRE("F"),
-    MAGIC("Ma"),
-    POISON("Po"),
-    PHYSICAL("Ph")
+enum class EffectType(val shortname:String, val symbol:String){
+    FIRE("F","🔥"),
+    MAGIC("Ma","✨"),
+    POISON("Po","\uD83E\uDDEA"),
+    PHYSICAL("Ph","⚔");
 }
 
 fun convertEffectTypeStatsToString(statsToConvert:Map<EffectType,String> ) :String {
-    var textDefenseByType = ""
-    statsToConvert.forEach { textDefenseByType+= it.key.shortname+":"+it.value+" | " }
-    return textDefenseByType
+    val listMapDefense = StringBuilder()
+    statsToConvert.forEach {
+        listMapDefense.append("${it.key.symbol}:${it.value}")
+    }
+
+    return listMapDefense.toString()
 }

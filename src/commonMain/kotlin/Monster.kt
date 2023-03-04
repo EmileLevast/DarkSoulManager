@@ -22,7 +22,7 @@ data class Monster(
 
         force.forEach {
             for(i in 0 until it.key){
-                textForceSeuilsTemp.append("*")
+                textForceSeuilsTemp.append("\uD83C\uDFB2")
             }
             textForceSeuilsTemp.append(":${it.value} ")
 
@@ -35,7 +35,7 @@ data class Monster(
     private fun constructListDropsString():String{
         val listDroptext = StringBuilder()
         listDrops.forEach {
-            listDroptext.append("  ${it.key} / ${it.value}+\n")
+            listDroptext.append("  ${it.key} ${if(it.value == 0 ){"∅"}else{"/ ${it.value}+"}}\n")
         }
 
         return listDroptext.toString()
@@ -45,7 +45,7 @@ data class Monster(
         val textForceSeuils = constructForceSeuils()
         return "Vie : $vie\n"+
                 "Force : $textForceSeuils\n"+
-                "Defense:" + defense +"\n"+
+                "Defense:" + convertEffectTypeStatsToString(defense) +"\n"+
                 "Intelligence:" + intelligence +"\n"+
                 "Energie : $energie\n" +
                 "Drops: \n" +

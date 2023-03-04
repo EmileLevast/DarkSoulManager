@@ -21,7 +21,8 @@ suspend fun searchAnything(nomSearched: String) : List<IListItem> {
         val res = when(it){
             //TODO ajouter le cast ici quand on cree une table
             is Arme -> searchArme(nomSearched)
-            is Armure -> searchArmure(nomSearched)
+            is Armure -> searchArmure(nomSearched)//TODO ajouter la methode de recherche
+            is Monster -> searchMonster(nomSearched)
             else -> null
         }
         if (res != null){
@@ -46,5 +47,11 @@ suspend fun searchArme(nomSearched: String) :List<Arme>?{
 suspend fun searchArmure(nomSearched: String) :List<Armure>?{
     jsonClient.get(endpoint +"/"+ Armure().nameForApi + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Armure>>() else null
+    }
+}
+
+suspend fun searchMonster(nomSearched: String) :List<Monster>?{
+    jsonClient.get(endpoint +"/"+ Monster().nameForApi + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<Monster>>() else null
     }
 }

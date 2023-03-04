@@ -53,7 +53,7 @@ fun main() {
                     get("/"+ itapiable.updateNameForApi) {
                         //retrieve the data from csv file
                         val parsedData = try {
-                            itapiable.parseFromCSV(File("src/jvmMain/resources/${itapiable.nameForApi}.csv").readLines()
+                            itapiable.decomposeCSV(File("src/jvmMain/resources/${itapiable.nameForApi}.csv").readLines()
                                 .asSequence()) as List<Nothing>
                         } catch (e: FileNotFoundException) {
                             //si le fichier existe pas on retourne une liste vide
