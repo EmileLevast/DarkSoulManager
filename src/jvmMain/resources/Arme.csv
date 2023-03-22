@@ -68,3 +68,6 @@ coups de sabots;P:4;1/2/3=0|4/5=1|6=2;4/5=>Ã—4;2;6;0;;16;0;
 morsure venimeuse;P:4;1/2/3=0|4/5=1|6=2;;2;6;0;;8;0;Venin 3+=>5
 charge catoblépas;P:2;1/2=0|3/4/5/6=3;;3;0;0;;20;0;
 croc fauglir;P:3;1/2=0|3/4=2|5/6=4;;4;6;0;Force Minimum:1;15;0;Saigne 3+ => 4
+croc chien enragé;P:2;1=0|2/3/4/5=2|6=3;;2;6;0;Force Minimum:1;15;0;
+hache;P:6;1/2/3=0|4/5/6=1;6=>Ã—2;3;5;2;Force Minimum:5;16;2;
+drain de magie;Ma:4;1=0|2/3/4/5=2|6=3;;2;6;0;Force Minimum:1;10;0;
