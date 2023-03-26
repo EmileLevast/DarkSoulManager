@@ -25,7 +25,6 @@ abstract class ApiableItem : IListItem{
                         listApiableItem.add(parseFromCSV(listCSVElementOnLine))
                 }
                 return listApiableItem
-
         }
 
         fun parseDefense(inputElement:String): MutableMap<EffectType, String>{

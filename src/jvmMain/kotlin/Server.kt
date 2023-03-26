@@ -63,69 +63,9 @@ fun main() {
                         collectionsApiableItem[itapiable.nameForApi]!!.insertMany(parsedData)
                         call.respond(parsedData)
                     }
+
                 }
             }
-//            route(Monster.path) {
-//
-//                get {
-//                    call.respond(collectionMonster.find().toList())
-//                }
-//                get("/{nom}") {
-//                    val nom = call.parameters["nom"] ?: "inconnu"
-//                    val monsterFound = collectionMonster.findOne(Monster::nom eq nom)
-//                    call.respond(monsterFound ?: HttpStatusCode.NoContent)
-//                }
-//                post {
-//                    collectionMonster.insertOne(call.receive<Monster>())
-//                    call.respond(HttpStatusCode.OK)
-//                }
-//                delete("/{id}") {
-//                    val id = call.parameters["id"]?.toInt()
-//                    collectionMonster.deleteOne(Monster::id eq id)
-//                    call.respond(HttpStatusCode.OK)
-//                }
-//            }
-//            route(Arme.path) {
-//
-//                get(Arme.pathToUpdate){
-//                    collectionArmes.insertMany(parseArmes(File("src/jvmMain/resources/Arme.csv").readLines().asSequence(),call))
-//                    call.respond(HttpStatusCode.OK)
-//                }
-//                get {
-//                    call.respond(collectionArmes.find().toList())
-//                }
-//                get("/{nom}") {
-//                    val nom = call.parameters["nom"] ?: "inconnu"
-//                    val armeFound = collectionArmes.find(Arme::nom regex ".*$nom.*").toList()
-//                    call.respond(armeFound.ifEmpty { HttpStatusCode.NoContent })
-//                }
-//                post {
-//                    collectionArmes.insertOne(call.receive<Arme>())
-//                    call.respond(HttpStatusCode.OK)
-//                }
-//                delete("/{id}") {
-//                    val id = call.parameters["id"]?.toInt()
-//                    collectionArmes.deleteOne(Arme::id eq id)
-//                    call.respond(HttpStatusCode.OK)
-//                }
-//            }
-//            route(Armure.path){
-//                get(Armure.pathToUpdate){
-//                    collectionArmures.insertMany(parseArmure(File("src/jvmMain/resources/Armure.csv").readLines().asSequence()))
-//                }
-//                get("/{nom}") {
-//                    val nom = call.parameters["nom"] ?: "inconnu"
-//                    val armureFound = collectionArmures.find(Armure::nom regex ".*$nom.*").toList()
-//                    call.respond(armureFound.ifEmpty { HttpStatusCode.NoContent })
-//                }
-//                get {
-//                    call.respond(collectionArmures.find().toList())
-//                }
-//                post {
-//                    collectionArmures.insertOne(call.receive<Armure>())
-//                    call.respond(HttpStatusCode.OK)
-//                }
-//            }
         }
     }.start(wait = true)
 }

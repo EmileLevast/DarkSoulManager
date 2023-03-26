@@ -1,6 +1,9 @@
 import csstype.*
 import mui.material.*
 import csstype.Display.Companion.inlineBlock
+import react.dom.html.ReactHTML.button
+
+import kotlinx.css.button
 import mui.material.styles.TypographyVariant
 import mui.system.sx
 import react.FC
@@ -16,6 +19,12 @@ inline var GridProps.xs: Int
     get() = TODO("Prop is write-only!")
     set(value) {
         asDynamic().xs = value
+    }
+
+inline var TabsProps.ariaLabel: String
+    get() = TODO("Prop is write-only!")
+    set(value) {
+        asDynamic()["aria-label"] = value
     }
 
 val itemListComponent = FC<IListItemComponent>{ props ->
@@ -51,6 +60,13 @@ val itemListComponent = FC<IListItemComponent>{ props ->
                         +s
                     }
                 }
+
+              button{
+                  onClick = {
+
+                  }
+                  + "Edit"
+              }
             }
       }
   }
