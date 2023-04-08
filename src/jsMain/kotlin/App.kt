@@ -31,7 +31,12 @@ Box{
     TabContext{
         value = activeTab
         Box{
-            TabList{
+            Tabs{
+                onChange = { _, newValue -> activeTab = newValue }
+                ariaLabel = "wrapped label tabs example"
+
+
+
                 Tab{
                     label = ReactNode("1")
                     value = "1"
@@ -45,6 +50,10 @@ Box{
         TabPanel{
             value = "1"
             +"Bonjour"
+        }
+        TabPanel{
+            value = "2"
+            +"Aurevoir"
         }
     }
 }
