@@ -39,11 +39,11 @@ val App = FC<Props> {
 
 
                     Tab {
-                        label = ReactNode("1")
+                        label = ReactNode("Recherche")
                         value = "1"
                     }
                     Tab {
-                        label = ReactNode("2")
+                        label = ReactNode("Edition")
                         value = "2"
                     }
                 }
