@@ -22,6 +22,8 @@ val App = FC<Props> {
 
     var activeTab by useState("1")
 
+    var navigateToEditTab : () -> Unit = {activeTab="2"}
+
     useEffectOnce {
         scope.launch {
             //monsterList = getMonsterList()
@@ -36,8 +38,6 @@ val App = FC<Props> {
                     onChange = { _, newValue -> activeTab = newValue }
                     ariaLabel = "wrapped label tabs example"
 
-
-
                     Tab {
                         label = ReactNode("Recherche")
                         value = "1"
@@ -51,7 +51,7 @@ val App = FC<Props> {
             TabPanel {
                 value = "1"
                 h1 {
-                    +"Dark Soul List"
+                    +"Dark Soul Recherche"
                 }
                 inputComponent {
                     onSubmit = { input ->
@@ -80,34 +80,20 @@ val App = FC<Props> {
                     bddList.forEach {
                         itemListComponent{
                             itemList = it
+                            navigateToEditTablistener=navigateToEditTab
                         }
                     }
                 }
             }
             TabPanel {
                 value = "2"
-                +"Aurevoir"
+                h1 {
+                    +"Dark Soul Edition"
+                }
             }
         }
     }
-//    <Box sx={{ width: "100%", typography: "body1" }}>
-//    <TabContext value={value}>
-//    <Box sx={{ borderBottom: 1,
-//    borderColor: "divider" }}>
-//    <TabList
-//    onChange={handleChange}
-//    aria-label="lab API tabs example"
-//    >
-//    <Tab label="Tutorial 1" value="1" />
-//    <Tab label="Tutorial 2" value="2" />
-//    <Tab label="Tutorial 3" value="3" />
-//    </TabList>
-//    </Box>
-//    <TabPanel value="1">Data Structures</TabPanel>
-//    <TabPanel value="2">Algorithms</TabPanel>
-//    <TabPanel value="3">Web Development</TabPanel>
-//    </TabContext>
-//    </Box>
+
 
 
 }

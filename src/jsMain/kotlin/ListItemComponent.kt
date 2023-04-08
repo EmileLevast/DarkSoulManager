@@ -12,6 +12,7 @@ import react.useState
 
 external interface IListItemComponent:Props{
     var itemList: IListItem
+    var navigateToEditTablistener:()->Unit
 
 }
 
@@ -30,12 +31,10 @@ inline var TabsProps.ariaLabel: String
 val itemListComponent = FC<IListItemComponent>{ props ->
 
     var isCardAttached:Boolean by useState(props.itemList.isAttached)
+    val editionListener:()->Unit = props.navigateToEditTablistener
 
   Grid {
-      onClick = {
-          props.itemList.isAttached = !props.itemList.isAttached
-          isCardAttached = props.itemList.isAttached
-      }
+
       sx{
           display = inlineBlock
           margin = 10.px
@@ -46,6 +45,13 @@ val itemListComponent = FC<IListItemComponent>{ props ->
               width=400.px
           }
           CardContent {
+              button{
+                  onClick = {
+                      props.itemList.isAttached = !props.itemList.isAttached
+                      isCardAttached = props.itemList.isAttached
+                  }
+                  + "Pin"
+              }
               Typography{
                   variant = TypographyVariant.h4
                   +props.itemList.nom
@@ -63,7 +69,7 @@ val itemListComponent = FC<IListItemComponent>{ props ->
 
               button{
                   onClick = {
-
+                      editionListener()
                   }
                   + "Edit"
               }
