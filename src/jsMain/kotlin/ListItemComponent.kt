@@ -12,7 +12,7 @@ import react.useState
 
 external interface IListItemComponent:Props{
     var itemList: IListItem
-    var navigateToEditTablistener:()->Unit
+    var navigateToEditTablistener:(IListItem)->Unit
 
 }
 
@@ -31,7 +31,7 @@ inline var TabsProps.ariaLabel: String
 val itemListComponent = FC<IListItemComponent>{ props ->
 
     var isCardAttached:Boolean by useState(props.itemList.isAttached)
-    val editionListener:()->Unit = props.navigateToEditTablistener
+    val editionListener:(IListItem)->Unit = props.navigateToEditTablistener
 
   Grid {
 
@@ -69,7 +69,7 @@ val itemListComponent = FC<IListItemComponent>{ props ->
 
               button{
                   onClick = {
-                      editionListener()
+                      editionListener(props.itemList)
                   }
                   + "Edit"
               }

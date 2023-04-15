@@ -3,5 +3,6 @@ interface IListItem {
     val nom:String
     var isAttached:Boolean
     fun getStatsAsStrings():String
+    fun getParsingRulesAttributesAsList():List<String>
 }
 

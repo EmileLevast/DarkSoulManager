@@ -69,4 +69,18 @@ data class Monster(
             listCSVElement[8]
         )
     }
+
+    override fun getParsingRulesAttributesAsList(): List<String> {
+        return listOf(
+            "Nom: Chaine de caractères",
+            "Vie: Entier",
+            "Force : Format = Int:Int|Int:Int... ",
+            "Defense : Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
+            "Intelligence : Int",
+            "Energie : Int",
+            "Drops : Format = String:Int|String:Int... ",
+            "Ames : Int",
+            "Capacite speciale : String"
+            )
+    }
 }

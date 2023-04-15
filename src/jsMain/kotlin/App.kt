@@ -4,25 +4,28 @@ import kotlinx.coroutines.*
 import mui.lab.TabContext
 import mui.lab.TabList
 import mui.lab.TabPanel
-import mui.material.Box
+import mui.material.*
 
-import mui.material.Grid
-import mui.material.Tab
-import mui.material.Tabs
 import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.h1
+import react.dom.html.ReactHTML.p
 
 private val scope = MainScope()
 val logger = KtorSimpleLogger("logger")
 
 val App = FC<Props> {
 
+    var currentSelectedItem: IListItem by useState(Monster())
+
     var bddList: List<IListItem> by useState(emptyList<IListItem>())
 
     var activeTab by useState("1")
 
-    var navigateToEditTab : () -> Unit = {activeTab="2"}
+    fun navigateToEditTab(selectedItem: IListItem){
+        currentSelectedItem = selectedItem
+        activeTab="2"
+    }
 
     useEffectOnce {
         scope.launch {
@@ -80,7 +83,7 @@ val App = FC<Props> {
                     bddList.forEach {
                         itemListComponent{
                             itemList = it
-                            navigateToEditTablistener=navigateToEditTab
+                            navigateToEditTablistener=::navigateToEditTab
                         }
                     }
                 }
@@ -88,7 +91,10 @@ val App = FC<Props> {
             TabPanel {
                 value = "2"
                 h1 {
-                    +"Dark Soul Edition"
+                    +"Dark Soul Edition\n ${currentSelectedItem.nom}"
+                }
+                TextField{
+                    helperText = ReactNode("Veuillez rentrer quelque chose")
                 }
             }
         }
