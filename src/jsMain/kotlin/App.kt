@@ -91,10 +91,10 @@ val App = FC<Props> {
             TabPanel {
                 value = "2"
                 h1 {
-                    +"Dark Soul Edition\n ${currentSelectedItem.nom}"
+                    +"${currentSelectedItem.nom}"
                 }
-                TextField{
-                    helperText = ReactNode("Veuillez rentrer quelque chose")
+                tabTextFieldComponent{
+                    itemList = currentSelectedItem
                 }
             }
         }

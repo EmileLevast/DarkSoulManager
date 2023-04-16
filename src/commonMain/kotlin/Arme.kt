@@ -51,7 +51,21 @@ class Arme(
             listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
             listCSVElement[10]
         )
+    }
 
-
+    override fun getParsingRulesAttributesAsList(): List<String> {
+        return listOf(
+            "Nom: String",
+            "Degats: Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
+            "Seuils: Format = Int/Int=Int|Int/Int=Int... ",
+            "Coups critiques :String",
+            "Maximum Energie : Int",
+            "Seuil Blocage : Int",
+            "Valeur Blocage : Int",
+            "Contraintes : String",
+            "FAJ Max : Int",
+            "Poids : Int",
+            "Capacite speciale : String"
+        )
     }
 }

@@ -29,5 +29,15 @@ class Armure(
                listCSVElement[4]
             )
     }
+
+    override fun getParsingRulesAttributesAsList(): List<String> {
+        return listOf(
+            "Nom: String",
+            "Defense : Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
+            "Contraintes : String",
+            "Poids : Int",
+            "Capacite speciale : String"
+        )
+    }
 }
 
