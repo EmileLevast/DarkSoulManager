@@ -16,6 +16,7 @@ import react.useState
 
 external interface TabTextFieldProps : Props {
     var itemList: IListItem
+    var saveModifiedItem:(List<String>)->Unit
 }
 
 val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
@@ -24,14 +25,14 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
 
     Stack{
         props.itemList.getParsingRulesAttributesAsList().forEachIndexed { index, formatRule ->
-            val (text, setText) = useState("")
+            val (text, setText) = useState(listDeparsedAttributes[index])
             val changeHandler: FormEventHandler<HTMLDivElement> = {
                 setText(((it.target) as HTMLInputElement).value)
             }
 
             TextField{
                 helperText = ReactNode(formatRule)
-                value = listDeparsedAttributes[index]
+                defaultValue = listDeparsedAttributes[index]
                 onChange = changeHandler
             }
 
@@ -40,11 +41,9 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
 
         button{
             onClick = {
-                listModifiedAttribute.forEach {
-                    logger.debug(">$it")
-                }
+                props.saveModifiedItem(listModifiedAttribute)
             }
-            + "Lecture"
+            +"Save"
         }
     }
 }

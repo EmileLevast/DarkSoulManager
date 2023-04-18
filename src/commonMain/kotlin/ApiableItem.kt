@@ -7,6 +7,8 @@ abstract class ApiableItem : IListItem{
         val nameForApi = this::class.simpleName
         @Transient
         val updateNameForApi = "update$nameForApi"
+        @Transient
+        val uploadFileForApi = "uploadFile$nameForApi"
 
         fun decomposeCSV(sequenceLinesFile: Sequence<String>):List<ApiableItem> {
                 val listApiableItem = mutableListOf<ApiableItem>()
@@ -129,5 +131,5 @@ abstract class ApiableItem : IListItem{
                 return res.removeSuffix("|")
         }
 
-        protected abstract fun parseFromCSV(listCSVElement : List<String>):ApiableItem
+        abstract fun parseFromCSV(listCSVElement : List<String>):ApiableItem
 }

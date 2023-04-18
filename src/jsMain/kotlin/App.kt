@@ -27,6 +27,12 @@ val App = FC<Props> {
         activeTab="2"
     }
 
+    fun saveEditedItem(listAttributesAsString: List<String>){
+        scope.launch {
+            updateItem((currentSelectedItem as ApiableItem).parseFromCSV(listAttributesAsString))
+        }
+    }
+
     useEffectOnce {
         scope.launch {
             //monsterList = getMonsterList()
@@ -95,6 +101,7 @@ val App = FC<Props> {
                 }
                 tabTextFieldComponent{
                     itemList = currentSelectedItem
+                    saveModifiedItem = ::saveEditedItem
                 }
             }
         }

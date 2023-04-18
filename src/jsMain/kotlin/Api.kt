@@ -55,3 +55,10 @@ suspend fun searchMonster(nomSearched: String) :List<Monster>?{
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Monster>>() else null
     }
 }
+
+suspend fun updateItem(itemSelected:ApiableItem){
+    jsonClient.post(endpoint +"/"+ itemSelected.nameForApi){
+        contentType(ContentType.Application.Json)
+        setBody(itemSelected)
+    }
+}
