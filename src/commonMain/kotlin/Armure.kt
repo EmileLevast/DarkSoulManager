@@ -39,5 +39,15 @@ class Armure(
             "Capacite speciale : String"
         )
     }
+
+    override fun getDeparsedAttributes(): List<String> {
+        return listOf(
+            nom,
+            deparseDefense(defense),
+            contraintes,
+            poids.toString(),
+            capaciteSpeciale
+        )
+    }
 }
 

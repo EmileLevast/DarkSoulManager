@@ -3,7 +3,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 class Arme(
     override val nom:String="inconnu",
-    val degat:String="P:0",
+    val degat:String="Ph:0",
     val seuils:Map<String,List<Int>> = mapOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
     val coupCritiques:String="",
     val maximumEnergie:Int=0,
@@ -66,6 +66,22 @@ class Arme(
             "FAJ Max : Int",
             "Poids : Int",
             "Capacite speciale : String"
+        )
+    }
+
+    override fun getDeparsedAttributes(): List<String> {
+        return listOf<String>(
+            nom,
+            degat,
+            deparseSeuils(seuils),
+            coupCritiques,
+            maximumEnergie.toString(),
+            seuilBlocage.toString(),
+            valeurBlocage.toString(),
+            contraintes,
+            fajMax.toString(),
+            poids.toString(),
+            capaciteSpeciale
         )
     }
 }

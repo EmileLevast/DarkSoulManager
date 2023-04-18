@@ -20,20 +20,18 @@ external interface TabTextFieldProps : Props {
 
 val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
     var listModifiedAttribute = mutableListOf<String>()
-
-
-
+    val listDeparsedAttributes = props.itemList.getDeparsedAttributes()
 
     Stack{
-        props.itemList.getParsingRulesAttributesAsList().forEach {
-
+        props.itemList.getParsingRulesAttributesAsList().forEachIndexed { index, formatRule ->
             val (text, setText) = useState("")
             val changeHandler: FormEventHandler<HTMLDivElement> = {
                 setText(((it.target) as HTMLInputElement).value)
             }
 
             TextField{
-                helperText = ReactNode(it)
+                helperText = ReactNode(formatRule)
+                value = listDeparsedAttributes[index]
                 onChange = changeHandler
             }
 

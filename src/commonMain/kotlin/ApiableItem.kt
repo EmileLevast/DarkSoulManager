@@ -92,5 +92,42 @@ abstract class ApiableItem : IListItem{
                 return mapSeuils
         }
 
+        fun deparseSeuils(seuils:Map<String,List<Int>>):String{
+                var res = ""
+                seuils.forEach { seuil ->
+                        seuil.value.forEach {
+                                res+= "$it/"
+                        }
+                        res=res.removeSuffix("/")
+                        res+="="+seuil.key+"|"
+                }
+
+                return res.removeSuffix("|")
+        }
+
+        fun deparseDefense(defense:Map<EffectType,String>):String{
+                var res = ""
+                defense.forEach {
+                        res+=it.key.shortname+":"+it.value+"|"
+                }
+                return res.removeSuffix("|")
+        }
+
+        fun deparseForce(defense:Map<Int,Int>):String{
+                var res = ""
+                defense.forEach {
+                        res+=it.key.toString()+":"+it.value+"|"
+                }
+                return res.removeSuffix("|")
+        }
+
+        fun deparseListDrops(drops:Map<String,Int>):String{
+                var res = ""
+                drops.forEach {
+                        res+=it.key+":"+it.value+"|"
+                }
+                return res.removeSuffix("|")
+        }
+
         protected abstract fun parseFromCSV(listCSVElement : List<String>):ApiableItem
 }

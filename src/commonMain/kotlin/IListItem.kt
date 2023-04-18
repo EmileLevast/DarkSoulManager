@@ -4,5 +4,6 @@ interface IListItem {
     var isAttached:Boolean
     fun getStatsAsStrings():String
     fun getParsingRulesAttributesAsList():List<String>
+    fun getDeparsedAttributes():List<String>
 }
 

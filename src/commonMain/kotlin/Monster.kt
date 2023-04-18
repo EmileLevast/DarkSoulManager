@@ -83,4 +83,18 @@ data class Monster(
             "Capacite speciale : String"
             )
     }
+
+    override fun getDeparsedAttributes(): List<String> {
+        return listOf(
+            nom,
+            vie.toString(),
+            deparseForce(force),
+            deparseDefense(defense),
+            intelligence.toString(),
+            energie.toString(),
+            deparseListDrops(listDrops),
+            ames.toString(),
+            capaciteSpeciale
+        )
+    }
 }

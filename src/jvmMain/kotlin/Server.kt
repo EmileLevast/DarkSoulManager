@@ -63,6 +63,9 @@ fun main() {
                         collectionsApiableItem[itapiable.nameForApi]!!.insertMany(parsedData)
                         call.respond(parsedData)
                     }
+                    put {
+
+                    }
 
                 }
             }
