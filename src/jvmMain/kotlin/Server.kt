@@ -1,5 +1,4 @@
 import com.mongodb.client.model.UpdateOptions
-import com.mongodb.client.result.UpdateResult
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.engine.*
@@ -13,9 +12,7 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.util.logging.*
-import org.bson.Document
 import org.litote.kmongo.eq
-import org.litote.kmongo.json
 import java.io.File
 import java.io.FileNotFoundException
 
@@ -70,7 +67,6 @@ fun main() {
                         call.respond(parsedData)
                     }
                     post("/"+ itapiable.updateForApi) {
-                        var option = UpdateOptions().upsert(true)
                         logger.debug("post en cours")
                         //TODO ajouter une ligne dans le when quand on ajoute un table dans la bdd
                         val postedElement:ApiableItem = when(itapiable){
@@ -89,10 +85,21 @@ fun main() {
                         }
 
                         collectionsApiableItem[itapiable.nameForApi]!!.deleteOne(ApiableItem::nom eq postedElement.nom)
-                        collectionsApiableItem[itapiable.nameForApi]!!.insertMany(listOf(postedElement) as List<Nothing>)
+                        val resInsert = collectionsApiableItem[itapiable.nameForApi]!!.insertMany(listOf(postedElement) as List<Nothing>)
 
-                        call.respond(HttpStatusCode.OK)
-
+                        if(resInsert.wasAcknowledged()){
+                            call.respond(HttpStatusCode.OK)
+                        }else{
+                            call.respond(HttpStatusCode.ExpectationFailed)
+                        }
+                    }
+                    post("/"+ itapiable.deleteForApi+"/{nom}"){
+                        val nom = call.parameters["nom"] ?: "inconnu"
+                        if(collectionsApiableItem[itapiable.nameForApi]!!.deleteOne(ApiableItem::nom eq nom).wasAcknowledged()){
+                            call.respond(HttpStatusCode.OK)
+                        }else{
+                            call.respond(HttpStatusCode.ExpectationFailed)
+                        }
                     }
 
                 }

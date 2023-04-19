@@ -22,14 +22,37 @@ val App = FC<Props> {
 
     var activeTab by useState("1")
 
+    var (openSnack, setOpenSnack) = useState(false)
+    var (textSnack, setTextSnack) = useState("Nothing")
+
+
     fun navigateToEditTab(selectedItem: IListItem){
         currentSelectedItem = selectedItem
         activeTab="2"
     }
 
-    fun saveEditedItem(listAttributesAsString: List<String>){
+    fun saveEditedItem(listAttributesAsString: List<String>, isDeleting:Boolean=false){
         scope.launch {
-            updateItem((currentSelectedItem as ApiableItem).parseFromCSV(listAttributesAsString))
+            try {
+                val itemParsed = (currentSelectedItem as ApiableItem).parseFromCSV(listAttributesAsString)
+                if(isDeleting){
+                    if(deleteItem(itemParsed)){
+                        setTextSnack("${itemParsed.nom} Supprimé")
+                    }else{
+                        setTextSnack("Erreur - ${itemParsed.nom} suppression impossible")
+                    }
+                }else{
+                    if(updateItem(itemParsed)){
+                        setTextSnack("${itemParsed.nom} mis à jour")
+                    }else{
+                        setTextSnack("Erreur - ${itemParsed.nom} mise à jour impossible")
+                    }
+                }
+            } catch (e: Exception) {
+                logger.debug("Erreur parsing ${e.stackTraceToString()}")
+                setTextSnack(e.message.toString())
+            }
+            setOpenSnack(true)
         }
     }
 
@@ -104,6 +127,12 @@ val App = FC<Props> {
                     saveModifiedItem = ::saveEditedItem
                 }
             }
+        }
+        Snackbar{
+            open = openSnack
+            onClose = {_,_->setOpenSnack(false)}
+            message = ReactNode(textSnack)
+            autoHideDuration = 5000
         }
     }
 

@@ -56,9 +56,18 @@ suspend fun searchMonster(nomSearched: String) :List<Monster>?{
     }
 }
 
-suspend fun updateItem(itemSelected:ApiableItem){
+suspend fun updateItem(itemSelected:ApiableItem):Boolean{
     jsonClient.post(endpoint +"/"+ itemSelected.nameForApi+"/${itemSelected.updateForApi}"){
         contentType(ContentType.Application.Json)
         setBody(itemSelected)
+    }.let{
+        return it.status== HttpStatusCode.OK
+    }
+}
+
+suspend fun deleteItem(itemSelected:ApiableItem):Boolean{
+    jsonClient.post(endpoint +"/"+ itemSelected.nameForApi+"/${itemSelected.deleteForApi}/${itemSelected.nom}"){
+    }.let{
+        return it.status== HttpStatusCode.OK
     }
 }
