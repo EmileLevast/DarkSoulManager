@@ -57,7 +57,7 @@ suspend fun searchMonster(nomSearched: String) :List<Monster>?{
 }
 
 suspend fun updateItem(itemSelected:ApiableItem){
-    jsonClient.post(endpoint +"/"+ itemSelected.nameForApi){
+    jsonClient.post(endpoint +"/"+ itemSelected.nameForApi+"/${itemSelected.updateForApi}"){
         contentType(ContentType.Application.Json)
         setBody(itemSelected)
     }

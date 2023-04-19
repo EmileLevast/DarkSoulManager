@@ -1,6 +1,9 @@
+import com.mongodb.client.model.UpdateOptions
+import com.mongodb.client.result.UpdateResult
 import io.ktor.server.application.*
 import org.litote.kmongo.coroutine.CoroutineCollection
 import org.litote.kmongo.coroutine.coroutine
+import org.litote.kmongo.eq
 import org.litote.kmongo.reactivestreams.KMongo
 import org.litote.kmongo.regex
 
@@ -36,4 +39,19 @@ suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem
 
 suspend inline fun <reified T:ApiableItem> getElementAccordingToType(nameOfItemWanted:String, instanceOfCollectionItemDefinition:T):List<T>{
     return database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom regex ".*$nameOfItemWanted.*").toList()
+}
+
+//TODO ajouter ici une ligne dans le when a chaque fois qu'une nouvelle collection dans la bdd est cree
+suspend fun updateCollection(instanceOfCollectionItemDefinition:ApiableItem):UpdateResult{
+    return when(instanceOfCollectionItemDefinition){
+        is Arme -> updateElementInDatabase(instanceOfCollectionItemDefinition)
+        is Armure -> updateElementInDatabase( instanceOfCollectionItemDefinition)
+        is Monster -> updateElementInDatabase(instanceOfCollectionItemDefinition)
+        else-> updateElementInDatabase( instanceOfCollectionItemDefinition as Monster)
+    }
+}
+
+suspend inline fun <reified T:ApiableItem> updateElementInDatabase(instanceOfCollectionItemDefinition:T):UpdateResult{
+    var option = UpdateOptions().upsert(true)
+    return database.getCollection<T>(T::class.simpleName!!).updateOne(ApiableItem::nom eq instanceOfCollectionItemDefinition.nom,instanceOfCollectionItemDefinition,option)
 }

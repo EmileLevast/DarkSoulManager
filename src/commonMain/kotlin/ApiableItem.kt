@@ -6,9 +6,9 @@ abstract class ApiableItem : IListItem{
         @Transient
         val nameForApi = this::class.simpleName
         @Transient
-        val updateNameForApi = "update$nameForApi"
-        @Transient
         val uploadFileForApi = "uploadFile$nameForApi"
+        @Transient
+        val updateForApi = "update$nameForApi"
 
         fun decomposeCSV(sequenceLinesFile: Sequence<String>):List<ApiableItem> {
                 val listApiableItem = mutableListOf<ApiableItem>()
