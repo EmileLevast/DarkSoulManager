@@ -26,3 +26,4 @@ Elfe nu;20;1:1|2:2|3:3;Ph:1|Ma:6|Po:1|F:1;20;3;1 humanite:4|2 humanites:5;115;Té
 Minautore;80;1:6|2:8|3:10;Po:3|F:8|Ph:17|Ma:3;1;4;hache:5|Armure lourde du taureau:6;145;Puissant : si tous les dés utilisés dans le bloquage réussisse, le minautore repousse ses ennemis ceux-ci tombent par terre leur tour est terminé
 Smith le dragon rouge;300;1:6|2:8|3:12;Ph:20|Po:10|F:50|Ma:-10;25;5;armure du chevalier:3|ignivome:4|epee lourde a deux mains:5|3 Humanite:6;2000;
 oblex;100;1:1|2:1|3:1;Ma:20|F:-20|Ph:50|Po:50;50;3;drain de magie:0|sort nul:4|sort moyen:5|tres bon sort:6;400;Sens la présence des êtres intelligents de très loin et n'a de cesse que de les pourchasser pour les dévorer.
+Necrozétètes;20;1:1|2:1|3:1;Ma:25|F:-3|Ph:5|Po:10;10;1;exhumation mortelle:4|relique necrozététique:5|relique necroalgos:6 ;170;Obsédé par les cadavres ne prêtent attention aux vivants que si ceux-ci l'embêtent ou dispose d'au moins une humanité.
