@@ -33,3 +33,4 @@ peau de loup;Ph:1|Po:3|Ma:2;Niveau Minimum:4;0;Camoufle entièrement le visage de
 Robe de pyrobelin;F:10|Po:3|Ma:-1  ;Niveau Minimum:9;1;Protege du froid peu importe la temperature exterieure.
 Robe de scîn;F:2|Po:-1|Ma:20:|Ph:4  ;Niveau Minimum:10;2;Permet au porteur de lancer des sorts de magie et nécromancie par les yeux, sans équiper de bâton.
 Robe de zaïrzan;Ph:2|F:10|Po:3|Ma:-2 ;Niveau Minimum:9;1;Bulle de feu protectrice : Après une frappe, et avant de résoudre la défense, le porteur peut dépenser 1 énergie : cela annule tous les dégâts physique de la frappe.
+Encéphale zététique;Ph:-3|Po:4|Ma:15 ;Intelligence Minimum:3;0;lorsque le porteur voit un être mourir (vivant ou mort) il peut se plonger dans son âme et lire une partie ou l'entièreté de ses souvenirs. Plus l'être est intelligent plus les souvenirs sont complexes et flous 
