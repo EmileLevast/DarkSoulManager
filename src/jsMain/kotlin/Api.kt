@@ -23,6 +23,7 @@ suspend fun searchAnything(nomSearched: String) : List<IListItem> {
             is Arme -> searchArme(nomSearched)
             is Armure -> searchArmure(nomSearched)//TODO ajouter la methode de recherche
             is Monster -> searchMonster(nomSearched)
+            is Bouclier -> searchBouclier(nomSearched)
             else -> null
         }
         if (res != null){
@@ -47,6 +48,12 @@ suspend fun searchArme(nomSearched: String) :List<Arme>?{
 suspend fun searchArmure(nomSearched: String) :List<Armure>?{
     jsonClient.get(endpoint +"/"+ Armure().nameForApi + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Armure>>() else null
+    }
+}
+
+suspend fun searchBouclier(nomSearched: String) :List<Bouclier>?{
+    jsonClient.get(endpoint +"/"+ Bouclier().nameForApi + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<Bouclier>>() else null
     }
 }
 

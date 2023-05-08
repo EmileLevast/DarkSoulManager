@@ -79,6 +79,9 @@ fun main() {
                             is Armure -> {
                                 call.receive<Armure>()
                             }
+                            is Bouclier -> {
+                                call.receive<Bouclier>()
+                            }
                             else -> {
                                 call.receive<Armure>()
                             }
