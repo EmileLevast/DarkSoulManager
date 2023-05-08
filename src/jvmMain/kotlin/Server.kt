@@ -60,6 +60,7 @@ fun main() {
                                 .asSequence()) as List<Nothing>
                         } catch (e: FileNotFoundException) {
                             //si le fichier existe pas on retourne une liste vide
+                            logger.error(e.stackTraceToString())
                             listOf()
                         }
                         //send data to database
