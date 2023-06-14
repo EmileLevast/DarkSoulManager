@@ -1,4 +1,3 @@
-import com.mongodb.client.model.UpdateOptions
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.engine.*
@@ -49,9 +48,9 @@ fun main() {
             unmutableListApiItemDefinition.forEach { itapiable ->
                 route("/"+itapiable.nameForApi!!){
                     get("/{nom}") {
-                        val nom = call.parameters["nom"] ?: "inconnu"
-                        val itemFound = getCollectionElements(itapiable,nom)
-                        call.respond(itemFound.ifEmpty { HttpStatusCode.NoContent })
+                        val nom = call.parameters["nom"] ?: ""
+                        val itemsFound = getCollectionElements(itapiable,nom)
+                        call.respond(itemsFound.ifEmpty { HttpStatusCode.NoContent })
                     }
                     get("/"+ itapiable.uploadFileForApi) {
                         //retrieve the data from csv file
@@ -105,7 +104,20 @@ fun main() {
                             call.respond(HttpStatusCode.ExpectationFailed)
                         }
                     }
-
+                    get("/"+itapiable.downloadForApi) {
+                        val itemsFound = getCollectionElements(itapiable,".*")
+                        val stringFileCSV = itemsFound.first().getParsingRulesAttributesAsList()
+                            .joinToString(";") { it.split(":").first() } + "\n"
+                                itemsFound.map { it.getDeparsedAttributes().joinToString(";") }.joinToString ("\n")
+                        val filename = "${itapiable.nameForApi}.csv"
+                        val file = File("files/")
+                        call.response.header(
+                            HttpHeaders.ContentDisposition,
+                            ContentDisposition.Attachment.withParameter(ContentDisposition.Parameters.FileName, "${itapiable.nameForApi}.csv")
+                                .toString()
+                        )
+                        call.respondFile(file)
+                    }
                 }
             }
         }

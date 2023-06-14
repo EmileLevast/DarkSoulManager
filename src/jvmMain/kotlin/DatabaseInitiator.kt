@@ -39,5 +39,6 @@ suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem
 }
 
 suspend inline fun <reified T:ApiableItem> getElementAccordingToType(nameOfItemWanted:String, instanceOfCollectionItemDefinition:T):List<T>{
-    return database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom regex ".*$nameOfItemWanted.*").toList()
+    val regexp = if(nameOfItemWanted.contains('*')) nameOfItemWanted else ".*$nameOfItemWanted.*"
+    return database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom regex regexp).toList()
 }
