@@ -1,31 +1,31 @@
-Nom;Vie;Force;Defense;Intelligence;Energie;Drops;Ames;
-guerrier gobelin;17;1:2|2:3|3:5;Ph:3|Po:3;1;3;cuir de gobelin:3|fouet, lance de gobelin:4|humanite:6;105;Il s’agit d’un peuple intelligent et organisé, ils frappent tous le même joueur, celui qui a le moins de vie. Ils peuvent s’enfuir. Ils sont nyctalopes et cavernicoles
-homme damne de sulath;50;1:1|2:1|3:1;Ma:-15|F:-15;0;3;humanite:2;350;Lorsqu’il frappe leurs armes voient leur dégâts physiques transformés en dégâts magiques.
+Nom;Vie;Force ;Defense ;Intelligence ;Energie ;Drops ;Ames ;Capacite speciale 
+guerrier gobelin;17;1:2|2:3|3:5;Ph:3|Po:3;1;3;cuir de gobelin:3|fouet, lance de gobelin:4|humanite:6;105;Il s'agit d'un peuple intelligent et organisÃ©, ils frappent tous le mÃªme joueur, celui qui a le moins de vie. Ils peuvent s'enfuir. Ils sont nyctalopes et cavernicoles
+homme damne de sulath;50;1:1|2:1|3:1;Ma:-15|F:-15;0;3;humanite:2;350;Lorsqu'il frappe leurs armes voient leur dÃ©gÃ¢ts physiques transformÃ©s en dÃ©gÃ¢ts magiques.
 pyrobelin;30;1:1|2:2|3:2;Ph:3|Po:3|Ma:5;9;4;anneau de l eclipse:2|main de pyromancie:3|immolation endogene:4|robe de pyrobelin, brise braisee:5|humanite:6;175;
-lampadophore gobelin;22;1:2|2:4|3:5;Ph:3|Po:3|F:1;2;3;cuir de gobelin:3|torche:4|longue dague:4|humanite:6;120;Il s’agit d’un peuple intelligent et organisé, ils frappent tous le même joueur, celui qui a le moins de vie. Ils peuvent s’enfuir. Ils sont nyctalopes et cavernicoles
-garde gobelin;20;1:1|2:2|3:4;Ph:4|Po:3;1;3;lourde cotte de gobelin:3|labrys gobeline:4|humanite:6;120;Il s’agit d’un peuple intelligent et organisé, ils frappent tous le même joueur, celui qui a le moins de vie. Ils peuvent s’enfuir. Ils sont nyctalopes et cavernicoles
-gobelours;35;1:3|2:5|3:7;Ph:5|Po:3|F:1|Ma:-3;3;3;armure de chevalier:3|fleau:4|humanite:6;160;Implacable : Lorsqu’ils se défendent avec de l’énergie, ils ne perdent de l’énergie que si le coup blesse. 
-cuisinier gobelin;20;1:2|2:4|3:6;Ph:6|Po:1;1;3;cuir de gobelin:3|2x poignard crante:4|humanite:6;115;Il s’agit d’un peuple intelligent et organisé, ils frappent tous le même joueur, celui qui a le moins de vie. Ils peuvent s’enfuir. Ils sont nyctalopes et cavernicoles
-svinerfblin;30;1:1|2:2;Ph:4|Po:2;2;3;tunique dechiree:3|pioche:4|humanite:5;60;Sont habitués à être esclave, ils pleurent et geignent quand ils se prennent un coup. Ne frappe que si leur maître l’exige.
-dragon rampant;100;1:5|2:7|3:10;Ph:20|Po:30|F:2|Ma:-15;1;5;vomi acide:0;1200;Tunnel : fuit la lumière, déboule soudainement sur les joueurs, très difficile à surprendre.
+lampadophore gobelin;22;1:2|2:4|3:5;Ph:3|Po:3|F:1;2;3;cuir de gobelin:3|torche:4|longue dague:4|humanite:6;120;Il s'agit d'un peuple intelligent et organisÃ©, ils frappent tous le mÃªme joueur, celui qui a le moins de vie. Ils peuvent s'enfuir. Ils sont nyctalopes et cavernicoles
+garde gobelin;20;1:1|2:2|3:4;Ph:4|Po:3;1;3;lourde cotte de gobelin:3|labrys gobeline:4|humanite:6;120;Il s'agit d'un peuple intelligent et organisÃ©, ils frappent tous le mÃªme joueur, celui qui a le moins de vie. Ils peuvent s'enfuir. Ils sont nyctalopes et cavernicoles
+gobelours;35;1:3|2:5|3:7;Ph:5|Po:3|F:1|Ma:-3;3;3;armure de chevalier:3|fleau:4|humanite:6;160;Implacable : Lorsqu'ils se dÃ©fendent avec de l'Ã©nergie, ils ne perdent de l'Ã©nergie que si le coup blesse. 
+cuisinier gobelin;20;1:2|2:4|3:6;Ph:6|Po:1;1;3;cuir de gobelin:3|2x poignard crante:4|humanite:6;115;Il s'agit d'un peuple intelligent et organisÃ©, ils frappent tous le mÃªme joueur, celui qui a le moins de vie. Ils peuvent s'enfuir. Ils sont nyctalopes et cavernicoles
+svinerfblin;30;1:1|2:2;Ph:4|Po:2;2;3;tunique dechiree:3|pioche:4|humanite:5;60;Sont habituÃ©s Ã  Ãªtre esclave, ils pleurent et geignent quand ils se prennent un coup. Ne frappe que si leur maÃ®tre l'exige.
+dragon rampant;100;1:5|2:7|3:10;Ph:20|Po:30|F:2|Ma:-15;1;5;vomi acide:0;1200;Tunnel : fuit la lumiÃ¨re, dÃ©boule soudainement sur les joueurs, trÃ¨s difficile Ã  surprendre.
 humain nu;15;1:1|2:2;Ph:2;2;2;1 humanite:4|2 humanites:5;90;
 lombric de pierre;4;1:1|2:1;Ph:5|F:-1;0;2;croc acide:0;10;
 fauglir;50;1:5|2:6|3:7;Ph:10|Ma:4;2;3;croc fauglir:0|humanite:4;120;
 rat;5;1:1|2:2;Ph:2|Po:4;0;2;croc poison:0|humanite:4;20;
-catoblepas;30;03:04;Ph:5;0;3;1 humanite:5|2 huamites:6;60;Regard délétère: Leur tête traîne jusqu’à terre, si un personnage croise leur regard d’une manière ou d’une autre la mort est instantanée. Charge : si un catoblépas charge un joueur il inflige une frappe de « charge catoblépas » avec 3 énergie. Monture : parcours 1 distance 
+catoblepas;30;3:4;Ph:5;0;3;1 humanite:5|2 huamites:6;60;Regard dÃ©lÃ©tÃ¨re: Leur tÃªte traÃ®ne jusqu'Ã  terre, si un personnage croise leur regard d'une maniÃ¨re ou d'une autre la mort est instantanÃ©e. Charge : si un catoblÃ©pas charge un joueur il inflige une frappe de charge catoblÃ©pas avec 3 Ã©nergie. Monture : parcours 1 distance 
 fshire;60;1:3|2:3|3:3;Ma:1|F:8|Po:-4|Ph:2;7;3;coups de sabots:0|1 humanite:5|2 huamites:6;150;Vol : peut voler. Monture : parcours 1 distance 
-serpent aile;17;1:3|2:3|3:3;Po:11|F:-2|Ph:4;1;2;morsure venimeuse:0;125;Vol : peut frapper pendant son action de mouvement.Vif: peut virevolter pour éviter les coups (équivalent d’une roulade avec 1 dé)
+serpent aile;17;1:3|2:3|3:3;Po:11|F:-2|Ph:4;1;2;morsure venimeuse:0;125;Vol : peut frapper pendant son action de mouvement.Vif: peut virevolter pour Ã©viter les coups (Ã©quivalent dï¿½une roulade avec 1 dÃ©)
 armure vivante;30;1:4|2:5|3:6;Po:15|F:9|Ph:13|Ma:-3;0;3;epee barbelee:5|Armure de chevalier(non equipee mais droppable):6;145;Inconsistent: coups critiques impossible contre l'armure vivante
-Krun;13;1:1|2:2|3:3;Ph:3|Po:3;1;2;peau de loup:3|lance de gobelin:4|humanite:5;95;Amical: Si un de ses alliés proche va subir une frappe, sur 4+ il se jette devant et prends le coup.
-Zaïrzan;70;1:1|2:2|3:4;Ph:3|Po:5|F:5|Ma:10;16;6;anneau de l eclipse:2|main de pyromancie:3|immolation endogene:4|robe de zaïrzan:5|javelots de feu:5|2 Humanite:6;1500;
-Scîn;60;1:3|2:4|3:7;Ph:7|Po:-1|F:2|Ma:10;25;4;anneau de l eclipse:1|anneau apotropaïque:2|Eclairs:4|robe de scin:5|grand sort d'ubiquite:5|2 humanites:6|rapiere:6;2000;Humanite : il peut utiliser une humanité max quand il le souhaite (capacité régénérée si les joueurs vont au feu)
-Sarah;15;1:3|2:4;Ph:2;3;3;2 dagues aiguisees:3|1 humanite:4|2 humanites:6;150;Précise : elle peut tenter un backstab n’importe quand. Disparition : Si elle a 5 pv au début de son tour, sur 4+ elle se camoufle et disparaît de l’endroit
-Scînat;10;1:3|2:4|3:5;F:10|Ma:12;10;2;sauvetage cendre:4;400; S’il réussit, scînat reste sur place et scîn est téléporté..Sauveur : si scîn va subir une frappe, scînat peut utiliser son sort sauvetage cendré avant. Si celui-ci rate scîn peut toujours tenter de se défendre. Parlant : Scînat peut parler à son porteur. Porteur: scînat peut changer de porteur sans soucis, il change alors de nom. <nomPorteur>+<at>
+krun;13;1:1|2:2|3:3;Ph:3|Po:3;1;2;peau de loup:3|lance de gobelin:4|humanite:5;95;Amical: Si un de ses alliÃ©s proche va subir une frappe, sur 4+ il se jette devant et prends le coup.
+zaÃ¯rzan;70;1:1|2:2|3:4;Ph:3|Po:5|F:5|Ma:10;16;6;anneau de l eclipse:2|main de pyromancie:3|immolation endogene:4|robe de zaÃ¯rzan:5|javelots de feu:5|2 Humanite:6;1500;
+scÃ®n;60;1:3|2:4|3:7;Ph:7|Po:-1|F:2|Ma:10;25;4;anneau de l eclipse:1|anneau apotropaÃ¯que:2|Eclairs:4|robe de scin:5|grand sort d'ubiquite:5|2 humanites:6|rapiere:6;2000;Humanite : il peut utiliser une humanitÃ© max quand il le souhaite (capacitÃ© rÃ©gÃ©nÃ©rÃ©e si les joueurs vont au feu)
+sarah;15;1:3|2:4;Ph:2;3;3;2 dagues aiguisees:3|1 humanite:4|2 humanites:6;150;PrÃ©cise : elle peut tenter un backstab n'importe quand. Disparition : Si elle a 5 pv au dÃ©but de son tour, sur 4+ elle se camoufle et disparaÃ®t de l'endroit
+scÃ®nat;10;1:3|2:4|3:5;F:10|Ma:12;10;2;sauvetage cendre:4;400; S'il rÃ©ussit, scÃ®nat reste sur place et scin est tÃ©lÃ©portÃ©..Sauveur : si scÃ®n va subir une frappe, scÃ®nat peut utiliser son sort sauvetage cendrÃ© avant. Si celui-ci rate scÃ®n peut toujours tenter de se dÃ©fendre. Parlant : ScÃ®nat peut parler Ã  son porteur. Porteur: scÃ®nat peut changer de porteur sans soucis, il change alors de nom. <nomPorteur>+<at>
 chien enrage;15;1:2|2:3;Ph:5;1;2;croc chien enrage:0|humanite:4;30;
-Elfe nu;20;1:1|2:2|3:3;Ph:1|Ma:6|Po:1|F:1;20;3;1 humanite:4|2 humanites:5;115;Télépathe de premier niveau. Peut deviner vaguement ce que veulent les joueurs.
-Minautore;80;1:6|2:8|3:10;Po:3|F:8|Ph:17|Ma:3;1;4;hache:5|Armure lourde du taureau:6;145;Puissant : si tous les dés utilisés dans le bloquage réussisse, le minautore repousse ses ennemis ceux-ci tombent par terre leur tour est terminé
-Smith le dragon rouge;300;1:6|2:8|3:12;Ph:20|Po:10|F:50|Ma:-10;25;5;armure du chevalier:3|ignivome:4|epee lourde a deux mains:5|3 Humanite:6;2000;
-oblex;100;1:1|2:1|3:1;Ma:20|F:-20|Ph:50|Po:50;50;3;drain de magie:0|sort nul:4|sort moyen:5|tres bon sort:6;400;Sens la présence des êtres intelligents de très loin et n'a de cesse que de les pourchasser pour les dévorer.
-Necrozétètes;20;1:1|2:1|3:1;Ma:25|F:-3|Ph:5|Po:10;10;1;exhumation mortelle:4|relique necrozététique:5|relique necroalgos:6 ;170;Obsédé par les cadavres ne prêtent attention aux vivants que si ceux-ci l'embêtent ou dispose d'au moins une humanité.
+elfe nu;20;1:1|2:2|3:3;Ph:1|Ma:6|Po:1|F:1;20;3;1 humanite:4|2 humanites:5;115;TÃ©lÃ©pathe de premier niveau. Peut deviner vaguement ce que veulent les joueurs.
+smith le dragon rouge;300;1:6|2:8|3:12;Ph:20|Po:10|F:50|Ma:-10;25;5;armure du chevalier:3|ignivome:4|epee lourde a deux mains:5|3 Humanite:6;2000;
+oblex;100;1:1|2:1|3:1;Ma:20|F:-20|Ph:50|Po:50;50;3;drain de magie:0|sort nul:4|sort moyen:5|tres bon sort:6;400;Sens la prÃ©sence des Ãªtres intelligents de trÃ¨s loin et n'a de cesse que de les pourchasser pour les dÃ©vorer.
+minautore;80;1:6|2:8|3:10;Po:3|F:8|Ph:17|Ma:3;1;4;hache:5|Armure lourde du taureau:6;220;Puissant : si tous les dÃ©s utilisÃ©s dans le bloquage rÃ©ussisse, le minautore repousse ses ennemis ceux-ci tombent par terre leur tour est terminÃ©
+carcasse de chevalier;35;1:2|2:4|3:6;Po:-6|F:4|Ph:8|Ma:-2;0;4;bouclier de chevalier:4|epee a double tranchant:5|Armure de chevalier:6;200;Compte comme tenant ses armes Ã  2 mains mÃªme si tenues Ã  1 main
 carcasse armee;11;1:1|2:2;Ph:0;0;2;epee ebrechee:5;22;
-carcasse;11;1:1|2:2;Ph:0;0;2;poignard brise:4;22;
+carcasse;11;1:1|2:2;Ph:0;0;2;poignard brise, cailloux, baton...:4;22;
