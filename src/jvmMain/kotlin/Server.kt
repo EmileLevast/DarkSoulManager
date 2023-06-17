@@ -107,13 +107,14 @@ fun main() {
                     get("/"+itapiable.downloadForApi) {
                         val itemsFound = getCollectionElements(itapiable,".*")
                         val stringFileCSV = itemsFound.first().getParsingRulesAttributesAsList()
-                            .joinToString(";") { it.split(":").first() } + "\n"
+                            .joinToString(";") { it.split(":").first() } + "\n"+
                                 itemsFound.map { it.getDeparsedAttributes().joinToString(";") }.joinToString ("\n")
                         val filename = "${itapiable.nameForApi}.csv"
-                        val file = File("files/")
+                        val file = File(filename)
+                        file.writeText(stringFileCSV)
                         call.response.header(
                             HttpHeaders.ContentDisposition,
-                            ContentDisposition.Attachment.withParameter(ContentDisposition.Parameters.FileName, "${itapiable.nameForApi}.csv")
+                            ContentDisposition.Attachment.withParameter(ContentDisposition.Parameters.FileName, "${filename}")
                                 .toString()
                         )
                         call.respondFile(file)
