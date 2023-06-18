@@ -6,7 +6,7 @@ rapiere;P:3;1/2=0|3=1|4/5/6=2;6=>×4;3;4;3;Niveau Minimum:3;9;2;Parade ×1
 epee ebrechee;P:2;1/2=0|3/4=1|5/6=2;4=>×2;3;6;1;;5;1;
 epee courte;P:3;1/2=0|3/4=1|5/6=2;6=>×3;2;4;1;Force Minimum:3;6;1;
 epee longue;P:4;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;8;2;
-epee barbelee;P:4;1/2=0|2=1|4/5/6=2;3=>×2;3;5;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4
+epee barbelee;P:4;1/2=0|3=1|4/5/6=2;3=>×2;3;5;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4
 cimeterre;P:4;6=0|2/3/4=1|5=2;6=>×3;3;4;4;Niveau Minimum:5;10;1;Saigne 5+ => 3
 epee lourde;P:5;1/2/3=0|4/5=1|6=2;5/6=>×2;4;6;3;Force Minimum:5;12;2;
 epee a double tranchant;P:3;1/2=0|3/4=1|5/6=2;6=>×4;3;6;5;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
@@ -59,7 +59,7 @@ hachette double maudite;P:3;1/2=0|3/4/5/6=2;6=>×4|2pv en moins pour le porteur;
 labrys gobeline;P:6;1/2/3/4=0|5/6=1;4=>×1;3;6;1;Force Minimum:5;13;2;Backswing:Si portée à deux mains et que le coup a un FCC inférieur ou égal à 0, alors tous les dés des prochaines frappes de ce tour sont augmentés de 1. Toxine 3+ => 2  
 torche;F:2;1/2=0|3/4/5/6=1;6=>×2;1;6;0;;4;1;
 epee acide;Po:3;1=0|2/3=1|4/5/6=2;;3;5;2;Force Minimum:5;7;2;
-pioche;P:5;1/2/3=0|4/5/6=1;3=>×1;3;6;1;Force Minimum:3;7;2;Foreur : la force de l'arme passe � 10 lorsque la cible est faite de pierre 
+pioche;P:5;1/2/3=0|4/5/6=1;3=>×1;3;6;1;Force Minimum:3;7;2;Foreur : la force de l'arme passe à 10 lorsque la cible est faite de pierre 
 vomi acide;Po:4;1=0|2/3/4/5=2|6=3;;2;6;0;Force Minimum:1;10;0;Toxine 1+ => 2. Devore 3+
 croc poison;P:1;1=0|2/3/4/5=2|6=6;Toxine 5+ => 5;2;6;0;Force Minimum:1;15;0;Toxine 5+ => 4
 croc acide;P:1;1=0|2/3/4/5=1|6=6;4/5=>×4;2;6;0;Force Minimum:1;15;0;Devore 5+
@@ -73,3 +73,5 @@ drain de magie;Ma:4;1=0|2/3/4/5=2|6=3;;2;6;0;Force Minimum:1;10;0;
 epee droite;P:3;1=0|2/3/4=1|5/6=2;4=>×2;4;6;2;Force Minimum:2;7;1;
 main nue;P:1;1/2/3=0|4/5/6=1;6=>×2;2;1;0;;4;1;-2 sur le dé
 os coupant;P:1;1/2=0|3/4/5/6=1;6=>×2;2;6;1;;4;1;-1 sur le dé
+ronce de jais;P:2;1/2=0|3/4/5=2|6=4;4/5=>×3;2;6;0;;10;0;Saigne 3+ => 4
+echgul;P:6;1/2=0|3/4/5=1|6=2;;3;5;5;Vie Minimum:22;12;3;Lorsqu'une frappe a un FFC superieur à 0 mais ne fait aucun dégâts (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du FFC, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...).
