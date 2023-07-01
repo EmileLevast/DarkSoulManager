@@ -98,6 +98,10 @@ abstract class ApiableItem : IListItem{
                 return mapSeuils
         }
 
+        fun parseSpellType(inputElement:String):SpellType{
+                return SpellType.values().find { it.shortname == inputElement }?: SpellType.AME
+        }
+
         fun deparseSeuils(seuils:Map<String,List<Int>>):String{
                 var res = ""
                 seuils.forEach { seuil ->

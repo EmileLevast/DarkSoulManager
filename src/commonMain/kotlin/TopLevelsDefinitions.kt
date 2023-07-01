@@ -15,6 +15,13 @@ fun convertEffectTypeStatsToString(statsToConvert:Map<EffectType,String> ) :Stri
     statsToConvert.forEach {
         listMapDefense.append("${it.key.symbol}:${it.value}")
     }
-
     return listMapDefense.toString()
+}
+
+enum class SpellType(val shortname:String, val symbol:String){
+    AME("ame","✨"),
+    PYROMANCIE("pyromancie","\uD83D\uDD25"),
+    PSIONIQUE("psionique","\uD83E\uDD2F"),
+    MIRACLE("miracle","\uD83D\uDC50"),
+    NECROMANCIE("necromancie","\uD83D\uDC80");
 }
