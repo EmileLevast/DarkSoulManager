@@ -7,6 +7,7 @@ fun convertClassToColor(item:IListItem):NamedColor{
         is Arme -> NamedColor.lightgray
         is Monster -> NamedColor.red
         is Bouclier -> NamedColor.cornflowerblue
+        is Sort -> NamedColor.mediumpurple
         else -> NamedColor.white
     }
 }

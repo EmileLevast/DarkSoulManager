@@ -34,6 +34,7 @@ suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem
         is Armure -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
         is Monster -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
         is Bouclier -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
+        is Sort -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
         else-> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition as Monster)
     }
 }
