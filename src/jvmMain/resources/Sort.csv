@@ -1,11 +1,210 @@
-nom;type;utilisation;cout;intelligence minimum;contraintes;degats;seuils;coup critique;iaj;description
-Arme magique;ame;5;Ne coûte pas d'action;4;Distance et Cac;;;;;Ne coûte rien. Ajoute 2 de dégât magique aux dégâts totaux de vos frappes pour l’arme de votre choix.Vous ne pouvez pas désigner l’arme d’un compagnon. L’effet se termine à la fin de votre tour.
-Eclairs;ame;3;;9;Distance. Max energie : 2;Ma:4;1=0|2/3/4/5=1|6=3;;23;Après la frappe jetez un dé:\n6 => la cible et 2 autres ennemis\n5 => la cible et 1 autre ennemi \n3/4 => la cible uniquement\n2 => la cible et un allié\n1 => un allié.\nLe résultat détermine qui subit la frappe.Le MJ détermine les cibles ennemies, le lanceur détermine les cibles alliées.
-Nyctalopie;ame;2;Energies au choix;6;Minimum energie : 1;;;;;Jetez 1 dé par énergie:Si un dé dépasse 4, alors le joueur voit dans le noir et ne voit pas dans la lumière.Sinon si un dé = 1, alors le joueur est aveugle pendant 2 tours.
-Petite fleche d ame;ame;13;Energies et ames;6;Maximum energie : 2;Ma:2;1/2=0|3/4/5/6=1;6=>x2;10;Le lanceur peut décider de sacrifier 50 âmes pour ajouter 1 de dégât magique aux dégâts totaux. Il peut ainsi ajouter jusqu’à 3 points de dégâts maximum par frappe.
-Neurasthénisant;ame;2;1 énergie;6;Minimum energie : 1. Seuil de réussite : 4+;;;;;Dépenser 1 d’énergie pour cibler un être vivant. Celui-ci voit sa caractéristique d’énergie chuter à 1 jusqu’au début du prochain tour du lanceur. Et son énergie ne peut pas dépasser 1. Nécessaire d’avoir au moins autant d’intelligence que la cible.
-Ubiquité;ame;1;1 énergie;7;Minimum energie : 1;;;;;Dépensez une énergie et jetez un dé. Sur 3+ le sort est réussit. A ce moment une réplique identique(sauf pour les âmes et l’humanité qui ne sont pas répliqués, le sort d’ubiquité n’est pas répliqué non plus)  du personnage du lanceur est créé à une position au choix du joueur. Celle-ci fera exactement les mêmes choses que le joueur jusqu’au début du prochain tour de celui-ci où elle disparaîtra. Ainsi si le joueur frappe la réplique frappe aussi droit devant elle (sans relancer les dés, le coup est le même).
-Fulgurance I;ame;4;1 énergie. Ne coûte pas d'action;3;;;;;;A utiliser n’importe quand pendant le tour d’un autre joueur ou le tour du MJ, entre 2 actions (pas pendant une action). Le lanceur peut effectuer une frappe immédiatement, puis le tour de jeu reprend son cours normal.
-Dissipateur;ame;3;;3;;;;;;Le sort permet de produire un souffle avec la main, celui-ci n’est pas violent mais parfaitement sain et cela permet principalement de remplacer l’air ambiant par un air plus appréciable.
-Givrant;ame;6;;4;;;;;;Le sort permet de faire fortement diminuer la température,  assez pour qu’une falque d’eau se transforme en plaque de verglas par exemple.
-Retour;ame;1;;4;;;;;;Renvoie au dernier feu. Revient au feu avec toutes ses âmes (considère qu’il est mort)
+Nom;Type;Utilisation ;Cout ;Intelligence Min ;contraintes ;Degats;Seuils;Coups critiques ;IAJ Max ;Description 
+arme magique;AME;5;Ne coûte pas d'action;4;Distance et Cac;;;;0;Ne coûte rien. Ajoute 2 de dégât magique aux dégâts totaux de vos frappes pour l’arme de votre choix.Vous ne pouvez pas désigner l’arme d’un compagnon. L’effet se termine à la fin de votre tour.
+eclairs;AME;3;;9;Distance. Max energie : 2;Ma:4;1=0|2/3/4/5=1|6=3;;23;Après la frappe jetez un dé:\n6 => la cible et 2 autres ennemis\n5 => la cible et 1 autre ennemi \n3/4 => la cible uniquement\n2 => la cible et un allié\n1 => un allié.\nLe résultat détermine qui subit la frappe.Le MJ détermine les cibles ennemies, le lanceur détermine les cibles alliées.
+nyctalopie;AME;2;Energies au choix;6;Minimum energie : 1;;;;0;Jetez 1 dé par énergie:Si un dé dépasse 4, alors le joueur voit dans le noir et ne voit pas dans la lumière.Sinon si un dé = 1, alors le joueur est aveugle pendant 2 tours.
+petite fleche d ame;AME;13;Energies et ames;6;Maximum energie : 2;Ma:2;1/2=0|3/4/5/6=1;6=>x2;10;Le lanceur peut décider de sacrifier 50 âmes pour ajouter 1 de dégât magique aux dégâts totaux. Il peut ainsi ajouter jusqu’à 3 points de dégâts maximum par frappe.
+neurasthenisant;AME;2;1 énergie;6;Minimum energie : 1. Seuil de réussite : 4+;;;;0;Dépenser 1 d’énergie pour cibler un être vivant. Celui-ci voit sa caractéristique d’énergie chuter à 1 jusqu’au début du prochain tour du lanceur. Et son énergie ne peut pas dépasser 1. Nécessaire d’avoir au moins autant d’intelligence que la cible.
+dissipateur;AME;3;;3;;;;;0;Le sort permet de produire un souffle avec la main, celui-ci n’est pas violent mais parfaitement sain et cela permet principalement de remplacer l’air ambiant par un air plus appréciable.
+givrant;AME;6;;4;;;;;0;Le sort permet de faire fortement diminuer la température,  assez pour qu’une falque d’eau se transforme en plaque de verglas par exemple.
+retour;AME;1;;4;;;;;0;Renvoie au dernier feu. Revient au feu avec toutes ses âmes (considère qu’il est mort)
+ubiquite;AME;1;1 énergie;7;Minimum energie : 1;;;;0;Dépensez une énergie et jetez un dé. Sur 3+ le sort est réussit. A ce moment une réplique identique(sauf pour les âmes et l’humanité qui ne sont pas répliqués, le sort d’ubiquité n’est pas répliqué non plus)  du personnage du lanceur est créé à une position au choix du joueur. Celle-ci fera exactement les mêmes choses que le joueur jusqu’au début du prochain tour de celui-ci où elle disparaîtra. Ainsi si le joueur frappe la réplique frappe aussi droit devant elle (sans relancer les dés, le coup est le même).
+pressif;AME;1;;11;;;;;0;Le sort influe magiquement sur la pesanteur dans un rayon de ~20m (aucune loi physique n’est respectée). 
+Le sort dure tant que le lanceur dispose d’une énergie.
+Lancer 1 dé :
+6 => tous les être vivants (sauf le lanceur) ayant une force inférieure à 6 se sentent cloué au sol, incapable de frapper et de bouger.
+3+=>tous les être vivants (sauf le lanceur) ayant une force inférieure à 5 se sentent cloué au sol, incapable de bouger mais peuvent frapper.
+2=>La pesanteur se relâche soudainement pour les ennemis. Tous leurs déplacements sont facilités ( grands sauts, longues distances…)
+1=>Le lanceur subit la pesanteur violente d’un autre astre et il projeté vers le ciel à 15 mètres puis retombe. S’il y a un plafond il subit les dégâts de chute vers le plafond puis vers le sol. S’il n’y a pas de plafond il subit les 15mètres en dégâts de chute. Dans tous les cas il passe son prochain tour.
+morti-pressif;AME;1;;16;;;;;0;Le sort influe magiquement sur la pesanteur dans un rayon de ~20m (aucune loi physique n’est respectée). 
+Le sort dure tant que le lanceur dispose d’une énergie.
+Lancer 1 dé :
+6 => tous les être vivants (sauf le lanceur) ayant une force inférieure à 6 implosent (ils meurent peu importe leur vie).
+3+=>tous les être vivants (sauf le lanceur) ayant une force inférieure à 3 implosent (ils meurent peu importe leur vie)
+2=>La pesanteur se relâche soudainement pour les ennemis. Tous leurs déplacements sont facilités ( grands sauts, longues distances…)
+1=>Le lanceur subit la pesanteur violente d’un autre astre et il projeté vers le ciel à l’infini et fini par mourir dans l’espace. Ses âmes sont irrécupérables.
+neodyme;AME;2;;12;;;;;0;Le sort permet de créer une forte attraction magnétique au niveau de la main du lanceur. Le champ magnétique porte jusqu’à ~10m.
+Jeter un dé :
+6 => (Pareil que pour le niveau 4+) sauf que cela attire aussi les gros objets en métal (une porte sortira de ses gonds, les armures s’envolent…)
+4+=>Tous les objets légers en métal (clés, armes, casseroles...), y compris les armes tenus en mains par des monstres ayant une force inférieure à l’intelligence du lanceur, sont amassés au pied du lanceur. 
+2+=>Seul les petits objets traînants par terre volent vers le joueur
+1=> Tous les petits objets virevoltent violemment sur le joueur et lui inflige des dégâts de projectile. Son tour se termine.
+brouillard;AME;3;;5;;;;;0;Le sort crée une nappe de brouillard épaisse autour du lanceur qui couvre les dizaines de mètres à la ronde. La visibilité est réduite.
+transport;AME;3;20 âmes;13;Seuil de réussite : 3+;;;;0;Le lanceur peut instantanément se téléporter à un endroit qu’il a  lui-même déjà visité.
+
+levitation;AME;4;2 énergies;7;Seuil de réussite : 4+;;;;0;Le lanceur peut voler sur ~15m dans la direction de son choix.
+sauvetage cendre;AME;1;;8;Seuil réussite : 3+ (Peut dépenser 1 énergie pour faire chuter le seuil à 2+, à décider avant le jet de dé).;;;;0;Le lanceur disparaît dans une grande flamme, seul un tas de cendres subsiste
+
+Si le lanceur subit une frappe qui peut le tuer, il peut alors utiliser ce sort à la place de parer ou faire une roulade.
+S’il dépasse le seuil de réussite il peut se téléporter dans n’importe quel endroit qu’il a déjà visité, sinon il subit la frappe en coup critique.
+
+milles epees;AME;4;;10;;;;;0;Le lanceur fait apparaître une multitude d’épée autour de sa cible qui la crible de coups.
+
+Dur jusqu’au début du prochain tour du lanceur.
+Pour chacune des frappes que le lanceur fait avec une arme il relance 2x les dés de la frappe et celle-ci sont considérées comme des frappes à part, que la cible doit gérer en plus.
+
+le coup inamissible;AME;6;;9;;;;;0;L’arme du lanceur semble être animée d’une vie propre et canalise sa haine sur son ennemi.
+
+Dur jusqu’au début du prochain tour du lanceur.
+Lorsque le lanceur fait une frappe avec son arme la frappe touche l’ennemi même si celui-ci réussit une roulade. 
+De plus si le FFC = 0 alors on considère que le jet de dés de la frappe a donné un FFC = 1.
+l arme felonne;AME;3;;9;;;;;0;L’arme de la cible semble être animée d’une vie propre et canalise sa haine sur son porteur.
+
+Le lanceur choisit une arme tenue en main par un ennemi ou un allié ou lui-même.
+Il peut alors faire une frappe avec l’arme sur le porteur de celle-ci.
+Le lanceur peut choisir quelle quantité d’énergie mettre dans la frappe en respectant les critères de l’arme.
+On considère que tous les critères minimum d’utilisation sont remplis en ce qui considère l’arme.
+De plus l’IAJ du lanceur est utilisé pour faire office de FAJ lors de la résolution des dégâts.
+arme felonne superieur ;AME;8;;15;;;;;0;L’arme de la cible semble être animée d’une vie propre et canalise sa haine sur son porteur.
+
+Le lanceur choisit une arme tenue en main par un ennemi ou un allié ou lui-même.
+Il peut alors faire plusieurs frappes avec l’arme sur le porteur de celle-ci ou une seule frappe en coup critique.
+Le lanceur peut choisir quelle quantité d’énergie mettre dans la frappe en respectant les critères de l’arme.
+On considère que tous les critères minimum d’utilisation sont remplis en ce qui considère l’arme.
+De plus l’IAJ du lanceur est utilisé pour faire office de FAJ lors de la résolution des dégâts.
+
+milles epees superieur;AME;4;;15;;;;;0;Le lanceur fait apparaître une multitude d’épée autour de sa cible qui la crible de coups.
+
+Dur jusqu’au début du prochain tour du lanceur.
+Pour chacune des frappes que le lanceur fait avec une arme il relance 5x les dés de la frappe et celle-ci sont considérées comme des frappes à part, que la cible doit gérer en plus.
+
+fleche d ame;AME;8;Energies et ames;9;Maximum energie : 2;Ma:3;1/2=0|3/4/5/6=1;6=>x2;10;Le lanceur peut décider de sacrifier 50 âmes pour ajouter 1 de dégât magique aux dégâts totaux. Il peut ainsi ajouter jusqu’à 4 points de dégâts maximum par frappe.
+ubiquite superieur;AME;1;;16;Minimum énergie : 1;;;;0;Dépensez une énergie et jetez un dé. Sur 3+ le sort est réussit.
+A ce moment une réplique identique(sauf pour les âmes et l’humanité qui ne sont pas répliqués, les effets de braises ne sont pas réplqiués) du personnage du lanceur est créé à une position au choix du joueur. Celle-ci compte comme un nouveau joueur, qui joue juste après le tour du lanceur.
+Cette réplique disparaît au début du prochain tour du lanceur.
+Il est possible de multiplier les clonages si les clones utilisent à leur tour leur grand sort d’ubiquité.
+Le clone ne peut pas se séparer des items.
+Il est copié avec l’énergie qu’il reste après le coup du sort.
+entrave leger;AME;2;1 énergie;2;Minimum énergie : 1;;;;0;Le lanceur choisit un objet qui d’une certaine manière s’ouvre et se ferme (porte, cadenas, menottes, chaînes…). L’objet se verrouille alors magiquement, il peut toujours être cassé ou déverouillé via n’importe quel contre-sort d’entrave.
+entrave;AME;1;1 énergie;4;Minimum énergie : 1;;;;0;Le lanceur choisit un objet qui d’une certaine manière s’ouvre et se ferme (porte, cadenas, menottes, chaînes…). L’objet se verrouille alors magiquement. Il peut toujours être cassé ou déverouillé via un contre-sort d’entrave exécuté par un magicien qui a au moins la même intelligence.
+
+depetrant;AME;2;1 énergie;2;Minimum énergie : 1;;;;0;Le lanceur choisit un objet qui a été verrouillé magiquement par un sort d’entrave léger. 
+Celui-ci est déverouillé.
+Dans le cas d’un sort d’entrave il faut que le niveau d’intelligence du lanceur soit égale ou supérieur au niveau d’intelligence de la personne qui a verrouillée.
+
+fulgurance superieur;AME;3;;3;Il n’est pas nécessaire de posséder un bâton de pouvoir.;;;;0;A n’importe quel moment du jeu, même lorsque ce n’est pas son tour, le joueur peut interrompre le jeu et effectuer une action de combat immédiatement avec l’énergie qu’il lui reste. Puis le jeu reprends son cours.
+
+fulgurance;AME;3;;2;Il n’est pas nécessaire de posséder un bâton de pouvoir.;;;;0;A n’importe quel moment du jeu, même lorsque ce n’est pas son tour, le joueur peut interrompre le jeu et effectuer une frappe immédiatement avec l’énergie qu’il lui reste. Puis le jeu reprends son cours.
+soin palliatif;MIRACLE;6;;1;;;;;0;Permet de voler jusqu’à 5 pv d’un allié. Vous gagnez les pvs, lui les perds.
+
+encaissement;MIRACLE;3;1 énergie;7;;;;;0;Accorde +10 en défense physique jusqu’au prochain tour au joueur ou à un personnage visé. 
+
+vie moisie;MIRACLE;1;;3;;;;;0;Choisissez un membre de l’équipe à sacrifier, ne peut être le lanceur lui-même. Désignez ensuite un membre de l’équipe qui revient à la vie avec la moitié de sa vie. 
+Ensuite il faut déterminer quel est le degré de sacrifice, impossible pour le sacrifié de se défendre.
+Jetez un dé:
+6 => Rien.
+5 => sacrifié prend 1 dégâts Magique
+4 => sacrifié prend 3 dégâts Magique
+3 => sacrifié prend 3 dégâts Magique et perds 100 âmes.
+2 => La vie du sacrifié chute à 1, et il perds toutes ses âmes.
+1 => le sacrifié meurt et la vie du ressuscité chute à 1.
+grand soin;MIRACLE;2;;6;;;;;0;restaure 15 pvs.
+solidite;MIRACLE;3;;8;;;;;0;Il faut au moins 1 énergie en réserve pour lancer le sort.
+Accorde +10 en poids et une insensibilité aux attaques qui visent à déstabiliser jusqu’à ce que le joueur n’ait plus d’énergie.
+repoussoir;MIRACLE;4;;6;;;;;0;Repousse les ennemis.
+redemption;MIRACLE;1;1 humanite;10;;;;;0;Cibler un ennemi.
+Si l’ennemi a moins d’intelligence que le lanceur, alors il devient soudainement inoffensif et ce jusqu’à la prochaine rencontre ou jusqu’à ce qu’elle subisse des dégâts.
+Dans le cas contraire la cible s’enrage et peut jouer un tour gratuitement immédiatement
+ereintant;MIRACLE;2;2 actions;10;;;;;0;Cibler un ennemi. Jeter un dé. 
+4+ : l’ennemi ciblé subit le sort, à chaque fois qu’il frappera il perdra toute son énergie. 
+0+ : aucun effet
+
+Le sort dure tant que le lanceur consacre ses 2 actions à maintenir le sort.
+soin;MIRACLE;6;;4;;;;;0;Restaure l’intelligence du lanceur divisée par 2 en pvs à une cible au choix (peut etre lui-même) pour un maximum de 6 pvs restaurés.
+annatar;MIRACLE;4;;10;;;;;0;Lorsqu’un joueur meurt, le lanceur peut redonner les points de vie qu’il avait avant le coup fatal, au joueur de son choix
+oblativite supreme;MIRACLE;1;;12;;;;;0;Le lanceur meurt, mais tous les autres joueurs regagnent l’entièreté de leurs points de vie.
+vigueur;MIRACLE;10;1 énergie;5;;;;;0;Le lanceur choisit une cible( qui peut être lui-même), celle-ci récupère 2 énergie sans pouvoir dépasser  sa réserve d’énergie maximale.
+verdeur;MIRACLE;3;1 énergie;8;;;;;0;Le lanceur choisit une cible( qui peut être lui-même), celle-ci récupère 4 énergie et peut ainsi dépasser sa réserve d’énergie maximale.
+leger repos;MIRACLE;8;;7;;;;;0;Si le joueur dispose d’au moins 3 humanités. Il peut dépenser 2 d’énergie pour regagner un pv.
+grand repos;MIRACLE;1;;13;;;;;0;Tant que le sort est équipé et que le joueur dispose d’au moins 2 humanités. Il peut dépenser 2 d’énergie pour regagner 2 pvs.
+repos;MIRACLE;1;;10;;;;;0;Tant que le sort est équipé et que le joueur dispose d’au moins 2 humanités. Il peut dépenser 2 d’énergie pour regagner un pv.
+contris;MIRACLE;4;10 âmes;12;;;;;0;Lors de la fin d’une action de n’importe qui (lui-même, allié, ennemi…) d’un autre joueur le lanceur peut exécuter ce sort sans dépenser d’action ni d’énergie.
+Cela a pour conséquence que l’entièreté de l’action est annulée, la cible reprend son tour de jeu au début de l’action et peut décider de faire quelque chose de complètement différent avec cette action. Il est de la responsabilité du lanceur de se souvenir du déroulé de l’action pour l’annuler correctement, sinon le sort est sans effet.
+restauration supreme;MIRACLE;1;1 humanite;14;;;;;0;Le lanceur resuscite un joueur mort. Celui-ci réapparaît à côté du lanceur avec la moitié de ses points de vie
+allegement;MIRACLE;4;1 énergie. Ne coûte pas d'action.;6;;;;;0;Le lanceur cible un équipement tenu en main par un des joueurs (y compris lui), jusqu’au début du prochain tour du lanceur  la force minimale requise par l’equipement passe à 1.
+
+duplication;MIRACLE;7;1 énergie;13;Seuil de réussite : 4+;;;;0;Le lanceur cible une arme tenue en main par un allié ou un ennemi, il crée alors dans sa main spirituelle une réplique exacte de cette arme, cette réplique disparaîtra au début de son prochain tour
+
+grand allegement ;MIRACLE;3;1 énergie. Ne coûte pas d'action.;15;;;;;0;Le lanceur cible un équipement tenu en main par un des joueurs (y compris lui), jusqu’au début du prochain tour du lanceur  toutes les statistiques minimales requises par l’arme passe à 1, ainsi que le poids.
+tirith sûl;MIRACLE;8;;7;;;;;0;Le lanceur lance un vent tourbillonnant pour dévier un coup.
+Le lanceur peut utiliser ce sort sans dépenser d’action lorsqu’un joueur allié ou lui-même va subir une frappe (il peut déclarer utiliser le sort une fois que les dés de la frappe ont été lancés).
+Le lanceur déclare alors le nombre d’énergies qu’il va utiliser pour le sort et on considère qu’il pare la frappe avec les statistiques ci-contre (les énergies utilisées et qui réussissent la parade ne sont pas économisées):
+Seuil blocage: 3+
+blocage: IAJ du lanceur (max 8)
+
+Si la frappe n’était pas dirigée contre le lanceur alors l’allié frappé peut se défendre en plus du blocage ajouté par le lanceur du miracle.
+dereliction;MIRACLE;3;2 energies;9;;;;;0;Le lanceur choisit une cible, alliée ou ennemie, celle-ci ne pourra pas être considérée comme étant en coup critique même si elle n’a plus d’énergie. Le sort dure jusqu’au début du prochain tour du lanceur.
+engourdissement;MIRACLE;3;2 energies;6;;;;;0;Cibler un ennemi. Jeter un dé. 
+3+ : l’ennemi ciblé subit le sort, il ne dispose plus que d’une action par tour. 
+0+ : aucun effet
+
+Le sort dure tant que le lanceur consacre une action par tour à maintenir le sort.
+vigueur generale;MIRACLE;8;2 energies;9;;;;;0;Tous les joueurs visible par le lanceur récupère 2 énergies sans pouvoir dépasser  leur réserve d’énergies maximale.
+semitique;MIRACLE;1;2 energies;9;;;;;0;Le lanceur cible un personnage qui vend des items dans le jeu et jette un dé :
+6+ : le vendeur propose un item (au choix du joueur) gratuit en échange d’un autre
+5+ : le vendeur propose une réduction de 10% sur tous les produits
+4+ : le vendeur propose une réduction de 5% sur tous les produits
+3+ : Le vendeur augmente de 5% la valeur de tous ses produits
+2+ : le vendeur oblige les joueurs à acheter quelque chose de suite, sous peine de déclencher un combat
+1+ : le vendeur augmente la valeur de tous ses produits de 10%
+
+Le sort n’est effectuable qu’une seule fois par vendeur. L’effet du sort est définitif.
+pied leger;MIRACLE;2;2 energies. Ne coûte pas d'actions;8;;;;;0;Le miracle ne coûte pas d’action à lancer. Le lanceur cible un joueur, celui-ci voit son poids diminuer de 10 (pour un minimum de 0). Cela dure jusqu’à ce qu’un des joueurs meurt.
+gorgee bienfaitrice;MIRACLE;15;;2;;;;;0;Le lanceur doit servir de l'eau au personne autour de la table (y compris le MJ) et y compris lui-même il regagne le nombre de verres d'eau servis en points de vie + 1.
+Il faut que le verre des joueurs soit vide, impossible de sortir de nouveaux verre, impossible pour les joueurs d'avoir plus d'un verre et impossible de vider le liquide actuellement présent dans les verres des joueurs.
+Il faut servir des verres normaux (~20cL).
+ignivome;PYROMANCIE;4;;8;Maximum energie:1.
+Distance (1 ou 2 m) et Cac.;F:4;1/2/3=0|4/5/6=4;;22;Pour les seuils, un dé faisant 1 fait chuter également l'énergie du lanceur à 0.
+boule de feu;PYROMANCIE;9;;7;Maximum energie:2
+Distance.;F:2;1/2/3=0|4=1|5/6=2;Embrasement si FFC >4;16;Embrasement: si l’ennemi possède une armure faite de tissu qui ne possède pas de défense en feu, celle-ci prends feu et disparaît définitivement.
+paume incadescente;PYROMANCIE;0;;3;Minimum energie :1
+Distance.;;1/2/3=0|4=1|5/6=2;Embrasement si FFC >4;16;Le joueur libère une faible lumière avec sa main, qui permet à celui-ci, uniquement, de percer les ombres proches de lui. 
+
+Le sort dure tant que le joueur dispose de 1 d’énergie en réserve, et que la main de pyromancie
+est équipée.
+paume incandescente;PYROMANCIE;0;;3;Minimum energie :1
+Distance.;;;;0;Le joueur libère une faible lumière avec sa main, qui permet à celui-ci, uniquement, de percer les ombres proches de lui. 
+
+Le sort dure tant que le joueur dispose de 1 d’énergie en réserve, et que la main de pyromancie
+est équipée.
+main enflammee;PYROMANCIE;12;;5;Maximum energie:2
+Cac.;F:3;1=0|2/3/4=1|5=2|6=3;;11;
+propiation par le feu;PYROMANCIE;1;;15;;;;;0;Le lanceur s’enflamme en entier et prends 10 de dégâts de feu à chacun de ses tours. A chacun du début de ses tours suivants, le lanceur jette un dé sur 5+ le sort s’arrête.
+
+Pendant qu’il est en feu, tout être qu’il touche, ou qui le touche/frappe prends 15 de dégâts de feu
+invoque laniere de feu;PYROMANCIE;1;;9;;;;;0;Le joueur récupère une lanière de feu dans sa main équipant la main de pyromancie. Cf Armes. La lanière de feu reste tant que l’énergie du sorcier ne tombe pas à 0.
+immolation endogene;PYROMANCIE;1;;12;Maximum energie:1
+;F:10;1=0|2/3/4/5/6=1;;18;La cible brûle de l’intérieur. 
+L’armure équipement de la cible n’est pas prise en compte lors de la résolution des dégâts.
+flamme aspirante;PYROMANCIE;2;1 énergie;16;;;;;0;Le joueur fait apparaître une flamme bleue dans sa main qui semble absorber les autres flammes.
+Le lanceur jette un dé:
+1=> la flamme bleue grandit de manière incontrôlée et enflamme le joueur, il subit son intelligence en degat de feu
+2+=>tant que le joueur ne perds pas de points de vie, tout attaque de feu lui redonne en points de vie les dégâts de feu de la frappe (avant d’y soustraire l’armure)
+souffle propanique;PYROMANCIE;2;1 énergie;17;Seuil de reussite:4+;;;;0;Le lanceur exhale du propane en soufflant.
+Si le lanceur est dans un endroit clos alors la pièce se remplie de propane, sinon le sort est sans effet.
+Il faut ensuite attendre qu’ un élément tierce enflamme le propane.
+Si tel est le cas, une explosion énorme se produit dans toute la pièce et tout être à l’intérieur (hormis le lanceur) est projeté violemment et subit : 20 Ph, 20 F. 
+Si le propane s’enflamme avant le début du prochain tour du lanceur alors on considère qu’il y a un retour de flamme.
+
+Retour de flamme: un filet de gaz qui s’échappe encore des lèvres du lanceur s’enflamme et la flamme remonte le filet de gaz pour incinérer le lanceur de l’intérieur qui subit: 20F.
+brise braisee;PYROMANCIE;10;;6;;;;;8;Le pyromancien projette un nuage de braise sur une large zone devant lui (~7m), les braises virevoltent et brûle légèrement les ennemis.
+
+Dégâts => 1 F
+Seuils :
+6 => x2 | frappe les ennemis dans un rayon de 7m devant, baissent leur bouclier s’ils en ont.
+5=>x2 | frappe les ennemis dans un rayon de 7m devant
+4=>x1 | frappe les ennemis dans un rayon de 7m devant
+3=> x1 | frappe alliés et ennemis dans un rayon de 7m devant
+2 =>x2 | frappe les alliés dans un rayon de 7m devant
+1=> x5 | frappe le lanceur uniquement, il se débat et doit se libérer une main pour chasser les braises. Son tour est terminé.
+pluie brulante;PYROMANCIE;1;1 énergie;11;Seuil de reussite:2+;;;;0;Le lanceur doit être à l’air libre pour lancer le sort. Une pluie de goutte de feu s’abat alors dans un rayon de ~15m autour du lanceur.
+Chacun des êtres présents dans cette zone doit jeter un dé pour déterminer les dégâts de feu subits:
+1/2 => 0
+3 => 3
+4/5=> 4
+6 => 5 + embrasement 
+
+Embrasement: si l’ennemi possède une armure faite de tissu qui ne possède pas de défense en feu, celle-ci prends feu et disparaît 
+traits de feu;PYROMANCIE;5;;9;Maximum energie:3
+Distance.;F:3|Ph:1;1/2/3/4=0|5/6=3;Embrasement si FFC >4;11;
+grands traits de feu;PYROMANCIE;4;;11;Maximum energie:4
+Distance.;F:3|Ph:3;1/2/3/4=0|5/6=3;Embrasement si FFC >4;16;
