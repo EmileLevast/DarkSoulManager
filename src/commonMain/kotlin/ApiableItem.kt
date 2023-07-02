@@ -99,7 +99,7 @@ abstract class ApiableItem : IListItem{
         }
 
         fun parseSpellType(inputElement:String):SpellType{
-                return SpellType.values().find { it.shortname == inputElement }?: SpellType.AME
+                return SpellType.values().find { it.name == inputElement }?: SpellType.AME
         }
 
         fun deparseSeuils(seuils:Map<String,List<Int>>):String{

@@ -35,6 +35,7 @@ val App = FC<Props> {
         scope.launch {
             try {
                 val itemParsed = (currentSelectedItem as ApiableItem).parseFromCSV(listAttributesAsString)
+
                 if(isDeleting){
                     if(deleteItem(itemParsed)){
                         setTextSnack("${itemParsed.nom} Supprimé")

@@ -45,7 +45,7 @@ class Sort(
                 "Cout : $cout\n" +
                 "Intelligence Minimum : $intelligenceMin\n" +
                 (if(contraintes.isNotBlank())"$contraintes\n" else "") +
-                convertEffectTypeStatsToString(degats)+
+                convertEffectTypeStatsToString(degats)+"\n"+
                 "Seuils:\n" + textSeuils +
                 (if(coupCritiques.isNotBlank())"CC : $coupCritiques\n" else "") +
                 "IAJ Max : $iajMax\n" +
@@ -70,7 +70,7 @@ class Sort(
     override fun getDeparsedAttributes(): List<String> {
         return listOf<String>(
             nom,
-            type.shortname,
+            type.name,
             utilisation.toString(),
             cout,
             intelligenceMin.toString(),

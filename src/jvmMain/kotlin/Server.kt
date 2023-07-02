@@ -83,7 +83,7 @@ fun main() {
                                 call.receive<Bouclier>()
                             }
                             is Sort -> {
-                                call.receive<Bouclier>()
+                                call.receive<Sort>()
                             }
                             else -> {
                                 call.receive<Armure>()

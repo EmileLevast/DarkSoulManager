@@ -1,16 +1,23 @@
+import kotlinx.html.TEXTAREA
 import mui.material.*
 import mui.material.styles.TypographyVariant
+import org.w3c.dom.HTMLAreaElement
 import org.w3c.dom.HTMLDivElement
 import org.w3c.dom.HTMLInputElement
+import org.w3c.dom.HTMLTextAreaElement
 import react.FC
 import react.Props
 import react.ReactNode
 import react.dom.events.ChangeEventHandler
 import react.dom.events.FormEventHandler
+import react.dom.html.InputType
 import react.dom.html.ReactHTML
+import react.dom.html.ReactHTML.textarea
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.dialog
 import react.dom.html.ReactHTML.h4
+import react.dom.html.ReactHTML.input
+import react.dom.html.ReactHTML.p
 import react.dom.onChange
 import react.useState
 
@@ -28,12 +35,14 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
     Stack{
         props.itemList.getParsingRulesAttributesAsList().forEachIndexed { index, formatRule ->
             val (text, setText) = useState(listDeparsedAttributes[index])
-            val changeHandler: FormEventHandler<HTMLDivElement> = {
-                setText(((it.target) as HTMLInputElement).value)
+            val changeHandler: ChangeEventHandler<HTMLTextAreaElement> = {
+                setText((it.target as HTMLTextAreaElement).value)
             }
 
-            TextField{
-                helperText = ReactNode(formatRule)
+            p{
+                +formatRule
+            }
+            ReactHTML.textarea{
                 defaultValue = listDeparsedAttributes[index]
                 onChange = changeHandler
             }
