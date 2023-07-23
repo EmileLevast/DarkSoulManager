@@ -16,20 +16,37 @@ abstract class ApiableItem : IListItem{
 
         fun decomposeCSV(sequenceLinesFile: Sequence<String>):List<ApiableItem> {
                 val listApiableItem = mutableListOf<ApiableItem>()
-                var lineFiltered = sequenceLinesFile.drop(1)
+                val numberOfSemiColonByLine = sequenceLinesFile.first().count{it == ';'}
+                var lineFiltered = sequenceLinesFile.drop(1).toList()
 
                 lineFiltered = lineFiltered.filter { it.isNotBlank() }
 
-                lineFiltered.forEach {
-                        val listCSVElementOnLine = it.split(";")
+                var i = 0
+                while(i<lineFiltered.size){
+                        var currentLine = lineFiltered[i]
 
-                        //If the line is empty we pass it
-                        if(listCSVElementOnLine.first().isBlank()){
-                                return@forEach
+                        //recontruire la ligne si elle est ecrite sur plusieurs lignes
+                        //Soit la ligne actuelle ne compte pas assez de points virgule (y'a un bout de texte qui deborde au milieu de la ligne
+                        //Soit la ligne suivante ne compte pas de ; alors c'est la description qui deborde)
+                        while((i < lineFiltered.size && currentLine.count{it == ';'}<numberOfSemiColonByLine) ||
+                                (i+1<lineFiltered.size && lineFiltered[i+1].count{it==';'} == 0)
+                                ){
+                                //alors on cumule avec la ligne suivante
+                                i++
+                                currentLine+="\n"+lineFiltered[i]
                         }
 
-                        listApiableItem.add(parseFromCSV(listCSVElementOnLine))
+                        val listCSVElementOnLine = currentLine.split(";")
+
+                        //If the line is empty we pass it
+                        if(!listCSVElementOnLine.first().isBlank()){
+                                listApiableItem.add(parseFromCSV(listCSVElementOnLine))
+                        }
+
+                        i++
                 }
+
+
                 return listApiableItem
         }
 
