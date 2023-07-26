@@ -74,5 +74,8 @@ epee droite;P:3;1=0|2/3/4=1|5/6=2;4=>×2;4;6;2;Force Minimum:2;7;1;
 main nue;P:1;1/2/3=0|4/5/6=1;6=>×2;2;1;0;;4;1;-2 sur le dé
 os coupant;P:1;1/2=0|3/4/5/6=1;6=>×2;2;6;1;;4;1;-1 sur le dé
 ronce de jais;P:2;1/2=0|3/4/5=2|6=4;4/5=>×3;2;6;0;;10;0;Saigne 3+ => 4
-echgul;P:6;1/2=0|3/4/5=1|6=2;;3;5;5;Vie Minimum:22;12;3;Lorsqu'une frappe a un FFC superieur à 0 mais ne fait aucun dégâts (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du FFC, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...).
 canine de fauve;P:1;1/2=0|3/4/5/6=1;6=>×2;2;6;1;;4;1;saignement 3+ => 1
+ichgul;P:6;1/2=0|3/4/5=1|6=2;;3;5;5;Vie Minimum:22;12;3;Lorsqu'une frappe a un FFC superieur à 0 mais ne fait aucun dégâts (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du FFC, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...). 
+Compte comme arme double si utilisé avec Echgul.
+echgul;P:6;1/2=0|3/4/5=1|6=2;;3;5;5;Vie Minimum:22;12;3;Lorsqu'une frappe a un FFC superieur à 0 mais ne fait aucun dégâts (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du FFC, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...).
+Compte comme arme double si utilisée avec Ichgul.

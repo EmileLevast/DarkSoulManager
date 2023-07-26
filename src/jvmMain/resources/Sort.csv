@@ -208,3 +208,44 @@ traits de feu;PYROMANCIE;5;;9;Maximum energie:3
 Distance.;F:3|Ph:1;1/2/3/4=0|5/6=3;Embrasement si FFC >4;11;
 grands traits de feu;PYROMANCIE;4;;11;Maximum energie:4
 Distance.;F:3|Ph:3;1/2/3/4=0|5/6=3;Embrasement si FFC >4;16;
+regard de feu;PYROMANCIE;8;;7;Maximum energie:3
+Distance.;F:2;1/2/3/4=0|5=2|6=3;;9;
+grand regard de feu;PYROMANCIE;5;;12;Maximum energie:3
+Distance.;F:3;1/2/3/4=0|5=2|6=4;;11;
+javelots de feu;PYROMANCIE;5;;8;Maximum energie:1
+Distance uniquement;F:4;1/2/3/4=0|5=2|6=3;;19;Transperce si FFC >2. le javelot ressort derrière la cible et continue sa course et infligera la même quantité de dégâts à une cible qu’il rencontre (ne pas relancer les dés). Transperce ne fonctionne que sur la cible originale.
+etreinte brulante;PYROMANCIE;10;;2;Maximum energie:2;F:1;1=0|2/3/4/5=1|6=3;;4;L’intérieur de la paume de la main chauffe à très haute température. Le sorcier peut enflammer des objets qu’il tient dans la main.
+grande etreinte brulante;PYROMANCIE;6;;5;Maximum energie:3;F:1;1=0|2/3/4/5=2|6=3;;9;Le corps entier du lanceur chauffe à très haute température. Le sorcier peut enflammer des objets qu’il étreint.
+asservissement;NECROMANCIE;3;1 énergie;15;;;;;0;Le joueur cible un autre personnage qui vient de mourir dans un rayon de 15m depuis son dernier tour. Celui-ci revient à la vie, avec la moitié de ses pvs et passe sous le contrôle du lanceur (le lanceur joue le ressuscité juste après son tour)
+exhumation mortelle;NECROMANCIE;7;;9;;;;;0;Jetez un dé 100 (si 0 le sort est sans effet), diviser le nombre d’âme de la cible par le résultat du dé arrondi au supérieur pour un min de 1.
+Le nombre obtenu est plafonné à 50.
+
+La cible subit ce nombre en dégât magique.
+La cible perds ce nombre d’âmes (perdu aussi sur la récompense d’âme)
+petite exhumation mortelle;NECROMANCIE;10;;7;;;;;0;Jetez un dé 100 (si 0 le sort est sans effet), diviser le nombre d’âme de la cible par le résultat du dé arrondi au supérieur pour un min de 1.
+Le nombre obtenu est plafonné à 30.
+
+La cible subit ce nombre en dégât magique.
+La cible perds ce nombre d’âmes (perdu aussi sur la récompense d’âme)
+grande exhumation mortelle;NECROMANCIE;5;;17;;;;;0;Jetez un dé 100 (si 0 le sort est sans effet), diviser le nombre d’âme de la cible par le résultat du dé arrondi au supérieur pour un min de 1.
+Le nombre obtenu est plafonné à 100.
+
+La cible subit ce nombre en dégât magique.
+La cible perds ce nombre d’âmes (perdu aussi sur la récompense d’âme)
+lichisation;NECROMANCIE;1;8 actions;30;;;;;0;Il faut qu’un autre joueur/pnj se sacrifie volontairement. Il meurt à la fin du sort, peu importe si celui-ci réussit ou non.
+
+La cible doit consacrer 8 actions consécutives sans rien faire d’autre à se transformer en liche.
+A la fin de chacun de ses tours consacrés entièrement au sort, le lanceur jette un dé s’il fait 1 alors le sort rate et il se transforme en demi-liche.
+Le sort est perdu dans tous les cas.
+oubli;PSIONIQUE;1;1 énergie;6;;;;;0;Si le lanceur a une intelligence strictement plus élevée que la cible, alors celle-ci oublie instantanément toute intéraction qu’elle a eu précédemment avec un personnage au choix du lanceur (peut être lui-même).
+Les effets sont permanents même après un feu.
+grand oubli;PSIONIQUE;3;1 énergie;8;;;;;0;Si le lanceur a une intelligence strictement plus élevée que la cible, alors les joueurs proposent 3 choses différentes au MJ que la cible peut oublier. Le MJ décide 1 des 3 choses que la cible oublie.
+En revanche si la cible a plus d’intelligence alors le lanceur oublie ce sort (et ne peut donc plus l’utiliser à moins de le retrouver).
+La cible de l’oubli II peut regagner la connaissance oubliée selon le déroulement du jeu.
+sondage cerebral;PSIONIQUE;4;2 actions;7;;;;;0;Le lanceur et la cible choisisse tous les deux un nombre d’énergie (sans se le dire) et jette simultanément autant de D6 que d’énergie. Comptez chaque dé faisant 4 ou plus, mulitplier ce nombre par l’intelligence : c’est le résultat.
+Si le lanceur a un résultat strictement supérieur à la cible. Alors celle-ci doit décrire instantanément et précisément ce qu’elle fera à son tour prochain et s’y tenir autant que possible. 
+
+
+Sinon si la cible l’emporte le pouvoir s’inverse et c’est le lanceur qui doit indiquer précisément ce qu’il fera à son prochain tour.
+petit sort arme diaphane;AME;2;Ne coute pas d'action;6;;;;;0;Le lanceur peut viser une arme tenue en main par n'importe qui à la portée de son regard. L'arme devient parfois intangible, les rayons de la lumiere passent au travers comme si elle était transparente. Cela a pour effet qu'il est impossible de bloquer avec cette arme, et il est impossible de bloquer/parer cette arme. Par ailleurs cette arme peut briser les pierres miroitantes. L’effet se termine à la fin de votre tour.
+sort arme diaphane;AME;3;Ne coute pas d'action;6;;;;;0;Le lanceur peut viser une arme tenue en main par n'importe qui à la portée de son regard. L'arme devient intangible, les rayons de la lumiere passent au travers comme si elle était transparente. Cela a pour effet qu'il est impossible de bloquer avec cette arme, et il est impossible de bloquer/parer cette arme. L'armure physique équipement est ignorée aussi. Par ailleurs cette arme peut briser les pierres miroitantes. L’effet se termine à la fin de votre tour.
