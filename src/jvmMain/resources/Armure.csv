@@ -1,4 +1,4 @@
-Nom;Defense;Contraintes;Poids;Effet Special
+Nom;Defense ;Contraintes ;Poids ;Capacite speciale 
 armure de cuir de carcasse;Ph:4;Force Minimum:1;1;
 armure de maille calcinee;Ph:5|F:4;Force Minimum:4;2;Si le joueur est blessé par des dégâts de feu au corps à corps, alors l’attaquant subit 4 de degat de feu.
 armure maudite;Ph:6|Ma:6;Force Minimum:1;2;A chaque tour ou le joueur porte l’armure il doit jeter un dé. Si le résultat de son dé plus son intelligence ne dépasse pas 10 alors :le joueur passe sous le contrôle du MJ jusqu’à ce qu’il meurt.
@@ -31,7 +31,9 @@ cuirasse de gobelin;Ph:5|Po:3;Force Minimum:3;2;Pue terriblement. Les tentatives
 lourde cotte de gobelin;Ph:7|Po:2|F:3;Force Minimum:6;4;Pue terriblement. Les tentatives pour se déplacer discrètement ont un malus de 1
 peau de loup;Ph:1|Po:3|Ma:2;Niveau Minimum:4;0;Camoufle entièrement le visage derrière les crocs et les mâchoires du loup effrayant : le porteur n'est pas reconnaissable par les PNJ et cause une peur tacite.
 robe de pyrobelin;F:10|Po:3|Ma:-1  ;Niveau Minimum:9;1;Protege du froid peu importe la temperature exterieure.
-robe de scîn;F:2|Po:-1|Ma:20:|Ph:4  ;Niveau Minimum:10;2;Permet au porteur de lancer des sorts de magie et nécromancie par les yeux, sans équiper de bâton.
 robe de zaïrzan;Ph:2|F:10|Po:3|Ma:-2 ;Niveau Minimum:9;1;Bulle de feu protectrice : Après une frappe, et avant de résoudre la défense, le porteur peut dépenser 1 énergie : cela annule tous les dégâts physique de la frappe.
-encéphale zététique;Ph:-3|Po:4|Ma:15 ;Intelligence Minimum:3;0;lorsque le porteur voit un être mourir (vivant ou mort) il peut se plonger dans son âme et lire une partie ou l'entièreté de ses souvenirs. Plus l'être est intelligent plus les souvenirs sont complexes et flous 
-armure de roncières de jais;Ph:10|F:12|Ma:12|Po:12;Intelligence Minimum:7;3;a chaque fois qu'un ennemi attaque avec une arme de courte portee (lame de ~20 cm: dague, couteau, poignard...) l'ennemi subit 1 frappe de 1 énergie de ronce de jais, la riposte de ronce de jais arrive après la frappe de l'attaquant (pour permettre des ripostes avec coup critique) .Fonctionne même si le porteur n'a plus d'énergie.
+encephale zetetique;Ph:-3|Po:4|Ma:15 ;Intelligence Minimum:3;0;lorsque le porteur voit un être mourir (vivant ou mort) il peut se plonger dans son âme et lire une partie ou l'entièreté de ses souvenirs. Plus l'être est intelligent plus les souvenirs sont complexes et flous 
+armure de roncieres de jais;Ph:10|F:12|Ma:12|Po:12;Intelligence Minimum:7;3;a chaque fois qu'un ennemi attaque avec une arme de courte portee (lame de ~20 cm: dague, couteau, poignard...) l'ennemi subit 1 frappe de 1 énergie de ronce de jais, fonctionne même si le porteur n'a plus d'énergie.
+tablier ignifuge;Ph:1|Po:1|F:10;;0;Les tentatives de backstab bénéficie de +1 au dé contre le porteur
+chapeau d ôm;F:3|Po:-1|Ma:14|Ph:1;Intelligence Minimum:10;0;On peut y cacher des objets (non vivants) à l'infini, comme le sac de Mary poppins.
+robe de scîn;F:2|Po:-1|Ma:6|Ph:4  ;Niveau Minimum:10;2;Permet au porteur de lancer des sorts de magie et nécromancie par les yeux, sans équiper de bâton.
