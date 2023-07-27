@@ -4,9 +4,8 @@ import kotlinx.serialization.Serializable
 class Bouclier(
     override val nom: String ="inconnu",
     val seuilParade:Int = 0,
-    val energie:Int = 0,
     val seuilBlocage:Int = 0,
-    val blocage:Map<EffectType,String> = mapOf(),
+    val defense:Map<EffectType,String> = mapOf(),
     val contraintes:String="Aucune contraintes",
     val poids:Int=0,
     val capaciteSpeciale:String=""
@@ -17,10 +16,9 @@ class Bouclier(
     override var isAttached: Boolean = false
 
     override fun getStatsAsStrings(): String {
-        return "Seuil parade:${seuilParade}\n"+
-                "Energie:$energie\n"+
+        return "Defense: ${convertEffectTypeStatsToString(defense)}"+"\n" +
                 "Seuil Blocage:$seuilBlocage\n"+
-                "Blocage: ${convertEffectTypeStatsToString(blocage)}"+"\n" +
+                "Seuil parade:${seuilParade}\n"+
                 contraintes+"\n" +
                 "Poids:$poids"+"\n"+
                 capaciteSpeciale
@@ -31,11 +29,10 @@ class Bouclier(
                listCSVElement[0].cleanupForDB(),
                listCSVElement[1].run{ if(isNotBlank()) toInt() else{0} },
                listCSVElement[2].run{ if(isNotBlank()) toInt() else{0} },
-               listCSVElement[3].run{ if(isNotBlank()) toInt() else{0} },
-               parseDefense(listCSVElement[4]),
-               listCSVElement[5],
-               listCSVElement[6].run{ if(isNotBlank()) toInt() else{0} },
-               listCSVElement[7]
+               parseDefense(listCSVElement[3]),
+               listCSVElement[4],
+               listCSVElement[5].run{ if(isNotBlank()) toInt() else{0} },
+               listCSVElement[6]
             )
     }
 
@@ -43,9 +40,8 @@ class Bouclier(
         return listOf(
             "Nom: String",
             "Seuil parade: Int",
-            "Energie: Int",
             "Seuil Blocage: Int",
-            "Blocage : Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
+            "Defense : Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
             "Contraintes : String",
             "Poids : Int",
             "Capacite speciale : String"
@@ -56,9 +52,8 @@ class Bouclier(
         return listOf(
             nom,
             seuilParade.toString(),
-            energie.toString(),
             seuilBlocage.toString(),
-            deparseDefense(blocage),
+            deparseDefense(defense),
             contraintes,
             poids.toString(),
             capaciteSpeciale

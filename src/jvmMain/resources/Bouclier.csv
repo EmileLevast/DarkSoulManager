@@ -1,15 +1,15 @@
-Nom;seuilParade;Energie;seuilBlocage;blocage;contraintes;poids;capaciteSpeciale
-bouclier cible;4;1;6;Ph:6;Force Minimum:1;1;
-bouclier de chevalier;5;2;4;Ph:11;Force Minimum:7;3;
-bouclier chauffant;5;1;5;Ph:12;Force Minimum:3;2;
-bouclier carcasse;6;2;5;Ph:10;Force Minimum:3;2;
-bouclier de bois;6;1;5;Ph:9;Force Minimum:1;2;
-pavois;6;3;3;Ph:15|F:7;Force Minimum:7;3;Couvert : pour un coût de 1 action le pavois peut être posé  et ainsi être utilisé simultanément avec une arme à 2 mains. Les autres règles s’appliquent normalement.
-pavois leger;6;3;3;Ph:12|F:4;Force Minimum:5;2;Couvert : pour un coût de 1 action le pavois peut être posé  et ainsi être utilisé simultanément avec une arme à 2 mains. Les autres règles s’appliquent normalement.
-pavois en bois;5;3;4;Ph:10|F:5|Po:5;Force Minimum:5;2;Repli : Si lors d’une frappe le joueur blesse l’ennemi, alors le pavois en bois reste levé s’il l’était.
-bouclier rond;4;2;4;Ph:16|Po:6;Force Minimum:4;2;
-bouclier d if;4;1;5;Ph:7;Force Minimum:4;1;
-bouclier de bretteur;5;2;5;Ph:5;Force Minimum:2;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.
-bouclier equilibre de bretteur;4;2;5;Ph:7;Force Minimum:3;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.
-bouclier de chevalier noir;6;4;6;Ph:15|F:10|Ma:7;Force Minimum:10;4;Si le porteur est plus lourd que l’attaquant alors la caractéristique « Energie » est augmentée de 1.
-bouclier de poignet;3;1;6;Ph:3;Force Minimum:0;0;Audace : Pour effectuer une parade, il faut qu’il vous reste au moins 2 d’énergie. 
+Nom;Seuil parade;Seuil Blocage;Defense ;Contraintes ;Poids ;Capacite speciale 
+bouclier cible;4;6;Ph:6;Force Minimum:1;1;
+bouclier de chevalier;5;4;Ph:11;Force Minimum:7;3;
+bouclier chauffant;5;5;Ph:12;Force Minimum:3;2;
+bouclier carcasse;6;5;Ph:10;Force Minimum:3;2;
+pavois;6;3;Ph:15|F:7;Force Minimum:7;3;Couvert : pour un coût de 1 action le pavois peut être posé  et ainsi être utilisé simultanément avec une arme à 2 mains. Les autres règles s’appliquent normalement.
+pavois leger;6;3;Ph:12|F:4;Force Minimum:5;2;Couvert : pour un coût de 1 action le pavois peut être posé  et ainsi être utilisé simultanément avec une arme à 2 mains. Les autres règles s’appliquent normalement.
+bouclier rond;4;4;Ph:16|Po:6;Force Minimum:4;2;
+bouclier de bretteur;5;5;Ph:5;Force Minimum:2;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.
+bouclier equilibre de bretteur;4;5;Ph:7;Force Minimum:3;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.
+bouclier de poignet;3;6;Ph:3;Force Minimum:0;0;Audace : Pour effectuer une parade, il faut qu’il vous reste au moins 2 d’énergie.
+bouclier de chevalier noir;6;6;Ph:15|F:10|Ma:7;Force Minimum:10;4;Si le porteur est plus lourd que l’attaquant alors la première énergie dépensée pour bloquer est automatiquement conservée sans jet de dé de blocage.
+pavois en bois;5;4;Ph:10|F:-5|Po:5;Force Minimum:5;2;Repli : Si lors d’une frappe le joueur blesse l’ennemi, alors le pavois en bois reste levé s’il l’était.
+bouclier de bois;6;5;Ph:9|F:-4;Force Minimum:1;2;
+bouclier d if;4;5;Ph:7|Po:3;Force Minimum:4;1;
