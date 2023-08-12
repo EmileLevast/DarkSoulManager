@@ -1,2 +1,209 @@
-Nom;Type;capacite
-avilissant;ANNEAU;Cet anneau permet au joueur de diminuer de 1 son seuil de réussite de son action de backstab. (pour un minimum de 2+)
+Nom;Type;Capacite speciale 
+anneau de recuperation;ANNEAU;Cet anneau permet au porteur de ne pas voir sa récupération d’énergie diminuée de 1 lorsqu’il lève son bouclier ou qu’il a fait une roulade.
+
+anneau de nyctalopie;ANNEAU;Avec cet anneau, le joueur voit dans le noir et ne voit pas dans la lumière.
+anneau du cacochyme;ANNEAU;En défense, si vous mourrez vous pouvez rediriger toutes les blessures vers un allié proche de votre choix (celui-ci les soustraits directement les blessures à ses points de vies). Non chaînable avec plusieurs anneaux.
+anneau hematophage;ANNEAU;Cet anneau permet au porteur de regagner en point de vie toutes les blessures qu’il a infligé par saignement.
+anneau de l’eclipse;ANNEAU;Permet d’avoir 2 sorts actifs. 
+En revanche si cet anneau est équipé aucun autre anneau ne peut être équipé.
+anneau de deuil suicidant;ANNEAU;Si un de vos alliés meurt vous pouvez, immédiatement, choisir de mourir à sa place. L’allié ressuscite en conservant ses âmes et avec la vie qu’il vous restait (sans dépasser son max de vie).
+anneau du funeste initiateur;ANNEAU;Si vous mourrez en premier, vous ne perdez pas vos âmes. Si un de vos coéquipier meurt alors que vous êtes en vie, les âmes du mort sont irrécupérables. Si vous mourrez en même temps qu’un coéquipier alors les 2 effets s’appliquent.
+anneau du vengeur ;ANNEAU;Si vous tuez l’ennemi qui vient de tuer un de vos coéquipier durant ce tour alors celui-ci ressuscite avec 50% de sa vie et sans ses âmes. En revanche si vos coéquipiers ne tuent pas l’ennemi qui vient de vous tuer, dans le même tour, alors l’allié avec le plus de vie meurt.
+anneau du desespoir;ANNEAU;Si vous aller mourir et que vous possédez au moins 1 humanité alors vous pouvez décider de sacrifier toutes vos humanités pour éviter entièrement et magiquement tous les dégâts du coup qui était censé vous tuer.
+anneau deshumanisant;ANNEAU;Vous pouvez utiliser l’humanité d’un allié, sans son consentement, pour regénérer votre vie entièrement.
+anneau susceptible;ANNEAU;Si 2 joueur ou plus vous insultent pour le même motif dans une courte intervalle de temps, alors vous pouvez leur faire perdre jusqu’à 5 pv chacun.
+anneau turpide;ANNEAU;A chaque fois que vous blessez un ennemi vous gagnez 10 âmes. Si vous tuez un ennemi vous perdez 5 âmes (si on le tue on le blesse pas).
+anneau de transfert hasardeux;ANNEAU;Durant votre tour vous pouvez dépenser une action pour téléporter un coéquipier, qui équipe un autre exemplaire de cet anneau, près de vous.
+Jetez un dé
+3+ => Votre coéquipier est téléporté
+2 => vous êtes téléporté vers votre coéquipier
+1 => vous êtes téléporté vers votre coéquipier et votre tour se termine.
+moyen anneau du prescient;ANNEAU;Les tests d’observations ne vous donne plus d’information sur l’environnement mais indique vaguement le niveau de danger dans lequel vous vous trouvez. Si le test d’observation donne 1, alors le mj peut raconter n’importe quoi.
+anneau de l’imposteur pernicieux;ANNEAU;Lorsque vous équipez cet anneau vous ne tenez pas compte de la limite minimale d’intelligence pour lancer un sort. Cependant (parce que c’est un peu pété quand même), tous vos alliés vivants jettent un dé: 
+Si celui qui fait le plus petit score a strictement moins d’intelligence que le lanceur alors il perds définitivement 1 en statistique de force.
+Si celui qui fait le plus gros score a strictement plus d’intelligence que le lanceur alors il perds définitivement 1 à sa statistique d’intelligence.
+anneau de persecution;ANNEAU;Avec cet anneau, si le porteur réussit une parade avec un bouclier alors il bénéficie de +1 au FFC de sa contre attaque.
+anneau du lâche;ANNEAU;Au début d’un combat avant que les premiers coups ne soient donnés. Les ennemis préfèreront attaquer vos alliés plutôt que vous.
+anneau du provocateur;ANNEAU;Avant d’aborder un personnage quelconque (monstre ou pnj…)
+Le joueur peut essayer de jauger le caractère de son interlocuteur pour un jet de dé :
+6 => Le MJ décris fidèlement le caractère du personnage.
+4/5 => le MJ décris brièvement l’humeur du personnage
+3 => le joueur appelle le personnage involontairement.
+2 => le joueur insulte haut et fort le personnage.
+1 => le joueur vocifère et jette un cailloux à la figure du personnage.
+anneau d’extrême onction;ANNEAU;Lorsque le porteur subit une frappe d’un FFC supérieur à 1, et qui est fatal. Alors le FCC de la frappe reçue diminue de 1. Ne fonctionne qu’une fois par action de combat.
+anneau du prescient;ANNEAU;Les tests d’observations ne vous donne plus d’information sur l’environnement mais indique vaguement le niveau de danger dans lequel vous vous trouvez. Si le test d’observation donne 1, alors l’anneau disparaît.
+anneau de precipitation;ANNEAU;Si vous êtes le premier à entamer les points de vie d’un adversaire, alors c’est vous qui récupérez les âmes à sa mort, sauf si vous êtes mort. En revanche la récompense d’âmes est diminuée par 2 quand vous tuez un adversaire.
+anneaux iniques;ANNEAU;Ne fonctionne que si un seul autre membre du groupe possède un anneau inique.
+Jetez un dé lorsque vous tuez un adversaire:
+6 => vous recevez 2x la récompense d’âmes
+5=> vous recevez 100 âmes en plus.
+Votre jumeau inique perds 50 âmes.
+3/4=>vous recevez la moitié de la récompense d’âmes. Votre jumeau inique reçoit l’autre moitié.
+2 =>vous ne recevez pas la récompense d’âmes. Votre jumeau inique reçoit la moitié de celle-ci.
+1=>la récompense d’âme est perdue. 
+
+Le premier des 2 qui enlève l’anneau perds toutes ses âmes.
+anneau opportuniste;ANNEAU;Lorsque vous réussissez une parade, vous pouvez investir autant de votre énergie restante que vous le souhaitez dans votre contre-attaque.
+( Exemple vous avez 2 d’énergie restant, vous parez avec 1, alors vous pouvez contre attaquer avec un maximum de 2).
+anneau perforant;ANNEAU;Tous les coups critiques réussis bénéficient de 
+Saignement 3+ => 2
+Seulement si l’arme ne bénéficie pas de saignement.
+anneau oblatif;ANNEAU;Avec cet anneau, tous les dés d’une frappe donnant 1 se transforme en 6. En revanche tous les 6 retirent 2 pv au joueur (y compris les 6 issus des 1 transformés).
+anneau felide;ANNEAU;Permet de comprendre et de parler le langage des chats. Cet anneau permet aussi de se faire facilement accepter des plus primitifs.
+anneau du traître;ANNEAU;Seul le porteur à connaissance de son effet. Si un de ses alliés proches meurt, alors il restaure toute sa vie. En revanche si lui meurt alors ses âmes sont maudites et si un joueur les récupère alors celui-ci perds toutes ses âmes et ses humanités instantanément.
+anneau de loyaute;ANNEAU;Si vous subissez des dégâts alliés alors l’émetteur les subits aussi.
+anneau feulide.;ANNEAU;Tant que le joueur dispose d’au moins 1 d’énergie, 
+il bénéficie de +20 défense de feu.
+Si le joueur subit tout de meme des degats de feu, alors l’anneau disparaît.
+anneau du charognard sournois;ANNEAU;Seul le porteur à connaissance de son effet. Si un de ses alliés proches meurt, alors il peut échanger n’importe quoi de l’équipement du joueur contre n’importe quoi de son propre équipement.
+anneau de dexterite;ANNEAU;Avec cet anneau l’énergie minimale nécessaire pour frapper avec une arme est diminuée de 1. Effet non cumulable avec le fait de prendre l’arme à 2 mains
+anneau d’alienation;ANNEAU;Si vous êtes mort et qu’un de vos équipier vient à mourir, alors vous revenez à la vie immédiatement, à l’endroit de la mort de votre 
+coéquipier.
+anneau obviant;ANNEAU;La valeur de blocage de l’arme portée est multipliée par 2. Ne fonctionne pas avec les boucliers.
+anneau deviant;ANNEAU;Tous les dégâts bloqués sont renvoyés à l’adversaire, qui ne peut pas les parer ou bloquer. Ne fonctionne pas avec les boucliers
+anneau apotropaïque;ANNEAU;Permet de parer ou de bloquer un sort offensif. Le type de dégât que l’arme peut parer devient alors (le temps de l’action de défense) le type de dégâts principal du sort.
+anneau protecteur;ANNEAU;Le seuil de blocage de l’arme est diminué de 2. Pour un minimum de 2+.
+anneau caligineux;ANNEAU;En arrivant rapidement environné d’ un brouillard vous surprenez l’ennemi à la gorge.
+Si un ennemi ne vous a pas remarqué au début de son tour, vous pouvez tenter de faire un backstab même en arrivant de face.
+anneau moratoire
+;ANNEAU;Vous pouvez déclarer faire une parade après que les dés de l’adversaire aient été lancés.
+anneau du detrousseur;ANNEAU;Le porteur de cet anneau peut voler un item d’un ennemi au corps à corps. Cela se déroule de la même manière qu’une action de « fouille » de cadavres, si ce n’est que la fouille est considérée comme réussie et qu’il faut juste jeter un dé pour savoir quel item est volé.
+talisman de carcasse [nbr];TALISMAN;Procure +[Nbr] de vie au porteur
+talisman de thorolund [nbr];TALISMAN;Procure +[Nbr] intelligence au porteur
+talisman de protection [type] [nbr];TALISMAN;Procure +[Nbr] défense en [type]
+talisman de [type] [nbr];TALISMAN;Procure +[Nbr] de dégât  [type] au dégâts totaux à une frappe qui effectue au moins 1 dégât de [type] (arme et sort confondus)
+talisman de force [nbr];TALISMAN;Procure +[Nbr] en force
+talisman de vedka;TALISMAN;Procure de la défense naturelle supplémentaire.
+Ma : +6
+Po:  +2
+F: +2
+Intelligence minimum : 10
+talisman spirituel [nbr];TALISMAN;Procure +[Nbr] Intelligence
+Procure +[Nbr] défense magique
+
+Intelligence minimum : 6
+dent de  [nbr];TALISMAN;Procure +[Nbr] Intelligence
+Procure +[Nbr] défense magique
+
+Intelligence minimum : 6
+talisman de chasseur de feu;TALISMAN;Donne la direction dans laquelle se trouve les autres joueurs
+
+Intelligence minimum : 1
+main de pyromancie;OUTIL;Permet de lancer des sorts de pyromancie.
+Max Energie : 3
+Seuil Blocage : 5+
+Blocage : 0
+main spirituelle;OUTIL;Permet de lancer des miracles
+Max Energie : 3
+Seuil Blocage : 6+
+Blocage : 1
+Poids : 1
+bâton de cedre;OUTIL;Permet de lancer des sorts de magie.
+Max Energie : 4
+Seuil Blocage : 5+
+Blocage : 2
+Poids : 1
+fiole d’estus;OUTIL;Restaure toute la vie.
+
+Utilisation : 1
+Coût : 1 action spéciale
+fiole de poison;OUTIL;Ajoute Toxine 2+ => 4 sur l’arme tenue pour la prochaine frappe uniquement. 
+Ne fonctionne pas sur les armes disposant déjà de Toxine.
+
+Utilisation : 5
+gemme d’invasion
+;OUTIL;Utilisation : 1
+Permet d’envahir une partie de jdr dark soul à laquelle vous ne participez pas. 
+fiole d’antidote;OUTIL;Réinitialise le compteur de poison.
+
+Utilisation : 1
+Coût : 1 action spéciale
+ambre sombre;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés : 
+Si FFC>0, la valeur du dé s’ajoute au FCC.
+ambre sanguine;AMBRE;Jetez un dé 12 faces, lors d’une frappe uniquement, en plus des autres dés :
+Si FFC>0 la cible perds ce nombre de PV avant la résolution de la frappe.
+ambre incandescente;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés. 
+Les dégâts totaux de la frappe sont convertis en dégâts :
+4:Magique
+3:Feu
+2:Poison
+1:Physique
+ambre noire;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés : 
+Les dégâts totaux de la frappe sont multipliés par la valeur du dés.
+ambre pâle;AMBRE;Jetez un dé 100 faces pendant une frappe uniquement, gagnez le double du dé en nombre d’âme.
+ambre suprême;AMBRE;Jetez un dé 20 faces, lors d’une frappe uniquement, en plus des autres dés :
+Si FFC>0 la cible perds ce nombre de PV avant la résolution de la frappe.
+ambre nitide;AMBRE;Jetez un dé 100 faces pour un coût de 1 action spéciale. Le joueur dispose d’autant de seconde pour regarder le script du MJ. Il peut chercher où il le souhaite dans le document.
+Le script est susceptible de diverger du contenu actuel du jeu.
+ambre rose;AMBRE;A consommer au début du tour d’un autre joueur.
+Jetez un dé 12 faces  celui-ci restaure ce nombre de points de vie.
+ambre topaz;AMBRE;A consommer au début du tour du MJ. Jetez un dé 100 faces,
+Le MJ ne dispose que de ce nombre de secondes pour jouer ses monstres et PNJ .Cela limite les actions et temps de réflexion des PNJ et monstres, mais les descriptifs et effets de l’environnement ne sont pas impactés.
+A la fin toute action entamée doit être terminée (une action est entamée lorsqu’un dé a commencé à tourner)
+ambre doree;AMBRE;A consommer au début du tour d’un autre joueur (si le MJ, cela s’applique pour tous ses pnj et monstres à jouer).
+Jetez un dé 4 faces cela représente le nombre de tours dont dispose le joueur avant de passer au joueur suivant.
+ambre de tenebres;AMBRE;
+Jeter un dé 4 faces, parmi les monstres et PNJ visibles par le joueur , le joueur peut en désigner autant qu’indiqué par le dé et ceux désignés ayant 50 pvs restants ou moins disparaissent imédiatement. Aucune récompense d’âme ou fouille possible.
+Ils réapparaissent lors d’un repos au feu.
+ambre argentee;AMBRE;En début de tour.
+Jetez un dé 4 faces cela représente le nombre d’énergie supplémentaires dont vous disposez pour le tour. La caractéristique du nombre d’énergie totale du joueur peut-être dépassée mais le surplus est perdu en fin de tour.
+braise noire;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : Rien
+8 : donne 1 humanité au joueur
+braise rouge;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : restaure 1 pvs
+8 : restaure 2 pvs
+braise verte;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : diminue de 1 le compteur de poison
+8 : diminue de 2 le compteur de poison
+braise blanche;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : + 50 âmes
+8 : + 80 âmes
+braise;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : Rien
+8 : Rien
+braise amethyste;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : Lors d’une frappe:+1 au FFC
+8 : Lors d’une frappe:+2 au FFC
+braise de reviviscence;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : Rien
+8 : Rien
+
+Si le joueur meurt durant l’effet de la braise, ses âmes ne se répandent pas par terre. Il passe un tour mort, et revit le début de son tour d’après avec toute sa vie, humanité et âmes.
+De plus la braise s’échappe en fumée et indique la position du feu le plus proche.
+menotte annihilatrice;OUTIL;Vie: 20
+Def : Ph:10|Po:5|F:5
+
+Le porteur ne peut plus faire de magie. 
+relique de necroalgos;OUTIL;Utilisation : Apposer la relique sur un cadavre frais.
+le joueur doit lancer 1 dé 1à faces. Le résultat cumulé à l’intelligence du joueur doit dépasser 9.
+
+Le cadavre se réveille dans des spasmes de douleurs et des cris terribles
+
+Effet réussite : le joueur récupère la moitié des âmes et humanités que le cadavre avait avant de mourir.
+
+Effet échec : le cadavre se réveille avec ses statistiques de pleine forme et n’a que de la haine pour le joueur qu’il cherche à tuer immédiattement. Inraisonnable le cadavre joue immédiattement et remeurt au bout de 3 tours.
+Aucune récompense ni drop possible.
+relique necrozetetique;OUTIL;Utilisation :  le joueur doit lancer 1 dé 1à faces. Le résultat cumulé à l’intelligence du joueur doit dépasser 5.
+
+Effet Réussite : 
+Dans un nuage de fumée rouge, le joueur est téléporté au cadavre le plus proche sans que cela ne lui coûte d’action. Le cadavre doit être plus ou moins frais. C’est pas une science exacte.
+L’item disparaît après utilisation.
+
+Effet échec : un trait de fumée rouge part du joueur et s’échappe et relie le joueur à l’être le plus mauvais des environs qui se mets immédiattement à chasser le joueur en remontant le trait de fumée rouge. Le trait de fumée rouge suit le joueur mais disparaît à la mort ou si le joueur regagne des pvs.
+
+L’item disparaît après utilisation.
+anneau avilissant;ANNEAU;Cet anneau permet au joueur de diminuer de 1 son seuil de réussite de son action de backstab. (pour un minimum de 2+)
+anneau sacrificiel;ANNEAU;Le joueur ne perd pas ses
+Ames lors de la mort.
+Ou alors peut récupérer automatiquement les âmes d’un allier proche venant de mourir.
+1 usage.
+anneau malchanceux;ANNEAU;Avec cet anneau, 1x par tour pour une frappe d’au moins 2 d’énergie, vous pouvez relancer le meilleur dé. Seul le dernier résultat compte .

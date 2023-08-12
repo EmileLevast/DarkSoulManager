@@ -19,7 +19,7 @@ fun convertClassToColor(item:IListItem):NamedColor{
         is Special -> {
             return when(item.itemType){
                 SpecialItemType.OUTIL-> NamedColor.saddlebrown
-                SpecialItemType.AMBRE -> NamedColor.lightpink
+                SpecialItemType.AMBRE -> NamedColor.navajowhite
                 SpecialItemType.ANNEAU -> NamedColor.yellow
                 SpecialItemType.BRAISE -> NamedColor.orangered
                 SpecialItemType.TALISMAN -> NamedColor.lightgreen
