@@ -85,6 +85,9 @@ fun main() {
                             is Sort -> {
                                 call.receive<Sort>()
                             }
+                            is Special -> {
+                                call.receive<Special>()
+                            }
                             else -> {
                                 call.receive<Armure>()
                             }

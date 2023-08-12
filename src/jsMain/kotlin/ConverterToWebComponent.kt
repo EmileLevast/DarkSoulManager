@@ -16,6 +16,15 @@ fun convertClassToColor(item:IListItem):NamedColor{
                 else ->  NamedColor.pink //necromancie
             }
         }
+        is Special -> {
+            return when(item.itemType){
+                SpecialItemType.OUTIL-> NamedColor.saddlebrown
+                SpecialItemType.AMBRE -> NamedColor.lightpink
+                SpecialItemType.ANNEAU -> NamedColor.yellow
+                SpecialItemType.BRAISE -> NamedColor.orangered
+                SpecialItemType.TALISMAN -> NamedColor.lightgreen
+            }
+        }
         else -> NamedColor.white
     }
 }

@@ -1,7 +1,7 @@
 
 //Update this list whenever you want to add a specific item to the database don't change it during execution
 //TODO ajouter ici un element instancie dans cette liste a chaque creation d'une nouvelle classe
-val unmutableListApiItemDefinition = listOf<ApiableItem>(Arme(),Armure(),Monster(),Bouclier(),Sort())
+val unmutableListApiItemDefinition = listOf<ApiableItem>(Arme(),Armure(),Monster(),Bouclier(),Sort(),Special())
 
 enum class EffectType(val shortname:String, val symbol:String){
     FIRE("F","🔥"),
@@ -24,4 +24,12 @@ enum class SpellType(val shortname:String, val symbol:String){
     PSIONIQUE("psionique","\uD83E\uDD2F"),
     MIRACLE("miracle","\uD83D\uDC50"),
     NECROMANCIE("necromancie","\uD83D\uDC80");
+}
+
+enum class SpecialItemType{
+    ANNEAU,
+    TALISMAN,
+    AMBRE,
+    BRAISE,
+    OUTIL;
 }
