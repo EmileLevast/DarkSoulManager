@@ -36,12 +36,6 @@ suspend fun searchAnything(nomSearched: String) : List<IListItem> {
     return listResultsItems
 }
 
-suspend fun <T:ApiableItem> searchSomething(nomSearched: String, objectDefinitionSearched:T) :List<T>?{
-    jsonClient.get(endpoint +"/"+ objectDefinitionSearched.nameForApi + "/${nomSearched}").let {
-        return if (it.status != HttpStatusCode.NoContent) it.body<List<T>>() else null
-    }
-}
-
 suspend fun searchArme(nomSearched: String) :List<Arme>?{
     jsonClient.get(endpoint +"/"+ Arme().nameForApi + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Arme>>() else null

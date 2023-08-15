@@ -1,16 +1,28 @@
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 
 @Serializable
 class Joueur(
     override val nom:String="inconnu",
-    val listEquipement:MutableList<ApiableItem> = mutableListOf()
+    @Transient
+    var listEquipement:MutableList<String> = mutableListOf()
     ) : ApiableItem() {
 
     override val id = nom.hashCode()
     override var isAttached = false
 
+    var chaineEquipementSerialisee=""
+
+    fun serializeEquipementToString(){
+        chaineEquipementSerialisee = listEquipement.joinToString{";"}
+    }
+
+    fun deserializeEquipementToString(){
+        listEquipement = chaineEquipementSerialisee.split(";").toMutableList()
+    }
+
     override fun getStatsAsStrings():String{
-        return listEquipement.map { it.nom }.joinToString {"\n"}
+        return listEquipement.map { it }.joinToString {"\n"}
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem{

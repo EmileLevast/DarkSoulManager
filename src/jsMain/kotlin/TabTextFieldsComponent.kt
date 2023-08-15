@@ -9,9 +9,7 @@ import mui.material.*
 import mui.material.styles.TypographyVariant
 import mui.system.sx
 import org.w3c.dom.*
-import react.FC
-import react.Props
-import react.ReactNode
+import react.*
 import react.dom.events.ChangeEventHandler
 import react.dom.events.FormEventHandler
 import react.dom.html.InputType
@@ -25,7 +23,6 @@ import react.dom.html.ReactHTML.input
 import react.dom.html.ReactHTML.label
 import react.dom.html.ReactHTML.p
 import react.dom.onChange
-import react.useState
 
 external interface TabTextFieldProps : Props {
     var itemList: IListItem
@@ -40,8 +37,10 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
 
     var listJoueurs: List<Joueur> by useState(emptyList<Joueur>())
 
-    scope.launch {
-        listJoueurs = searchJoueur(".*") ?: listOf<Joueur>(Joueur())
+    useEffectOnce {
+        scope.launch {
+            listJoueurs = searchJoueur(".*") ?: listOf<Joueur>(Joueur())
+        }
     }
 
     Stack{
@@ -60,7 +59,17 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
                         }
                         CardContent{
                             Checkbox{
-
+                                onChange = { _,checkedRes ->
+                                    if(checkedRes){
+                                        it.listEquipement.add(props.itemList.nom)
+                                    }else{
+                                        it.listEquipement.removeAll { it == props.itemList.nom }
+                                    }
+                                    scope.launch {
+                                        updateItem(it)
+                                    }
+                                }
+                                defaultChecked = it.listEquipement.contains(props.itemList.nom)
                             }
                             ReactHTML.h6{
                                 +it.nom
