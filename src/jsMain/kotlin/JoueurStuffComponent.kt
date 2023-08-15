@@ -22,15 +22,16 @@ val joueurStuffComponent = FC<JoueurStuffComponentProps> { props ->
     }
 
     Stack {
-        Button{
+        Button {
             onClick = {
                 scope.launch {
                     listJoueurs = searchJoueur(".*") ?: listOf<Joueur>()
                     tempList.clear()
-                    joueurSelected = listJoueurs.first{it.nom == joueurSelected.nom}
-                    joueurSelected.chaineEquipementSerialisee.split("$CHAR_SEP_EQUIPEMENT$CHAR_SEP_EQUIPEMENT").forEach { itemSearched ->
-                        tempList.add(searchAnything(itemSearched.replace("|","")).first())
-                    }
+                    joueurSelected = listJoueurs.first { it.nom == joueurSelected.nom }
+                    joueurSelected.chaineEquipementSerialisee.split("$CHAR_SEP_EQUIPEMENT$CHAR_SEP_EQUIPEMENT")
+                        .forEach { itemSearched ->
+                            tempList.add(searchAnything(itemSearched.replace("|", "")).first())
+                        }
                     listItem = tempList.toList()
                 }
             }
@@ -42,8 +43,7 @@ val joueurStuffComponent = FC<JoueurStuffComponentProps> { props ->
             value = joueurSelected.nom
             label = ReactNode("Nom")
             onChange = { event, _ ->
-                    joueurSelected = listJoueurs.first { it.nom == event.target.value }
-                }
+                joueurSelected = listJoueurs.first { it.nom == event.target.value }
             }
 
             listJoueurs.forEach {
@@ -53,6 +53,9 @@ val joueurStuffComponent = FC<JoueurStuffComponentProps> { props ->
                 }
             }
         }
+
+
+
         Grid {
             listItem.forEach {
                 itemListComponent {
