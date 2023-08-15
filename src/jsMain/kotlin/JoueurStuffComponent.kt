@@ -16,6 +16,7 @@ val joueurStuffComponent = FC<JoueurStuffComponentProps> { props ->
         scope.launch {
             listJoueurs = searchJoueur(".*") ?: listOf<Joueur>()
         }
+        listJoueurs.forEach { it.deserializeStringToEquipment() }
     }
 
     var joueurSelected by useState(Joueur())

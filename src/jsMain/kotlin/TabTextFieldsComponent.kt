@@ -41,6 +41,9 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
         scope.launch {
             listJoueurs = searchJoueur(".*") ?: listOf<Joueur>(Joueur())
         }
+        listJoueurs.forEach {
+            it.deserializeStringToEquipment()
+        }
     }
 
     Stack{
@@ -65,6 +68,7 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
                                     }else{
                                         it.listEquipement.removeAll { it == props.itemList.nom }
                                     }
+                                    it.serializeEquipementToString()
                                     scope.launch {
                                         updateItem(it)
                                     }

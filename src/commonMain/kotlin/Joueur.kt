@@ -17,7 +17,7 @@ class Joueur(
         chaineEquipementSerialisee = listEquipement.joinToString{";"}
     }
 
-    fun deserializeEquipementToString(){
+    fun deserializeStringToEquipment(){
         listEquipement = chaineEquipementSerialisee.split(";").toMutableList()
     }
 
