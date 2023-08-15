@@ -4,42 +4,34 @@ import kotlinx.serialization.Transient
 @Serializable
 class Joueur(
     override val nom:String="inconnu",
-    @Transient
-    var listEquipement:MutableList<String> = mutableListOf()
-    ) : ApiableItem() {
+    var chaineEquipementSerialisee: String =""
+) : ApiableItem() {
 
     override val id = nom.hashCode()
     override var isAttached = false
 
-    var chaineEquipementSerialisee=""
-
-    fun serializeEquipementToString(){
-        chaineEquipementSerialisee = listEquipement.joinToString{";"}
-    }
-
-    fun deserializeStringToEquipment(){
-        listEquipement = chaineEquipementSerialisee.split(";").toMutableList()
-    }
-
     override fun getStatsAsStrings():String{
-        return listEquipement.map { it }.joinToString {"\n"}
+        return chaineEquipementSerialisee.replace(CHAR_SEP_EQUIPEMENT+CHAR_SEP_EQUIPEMENT,"\n")
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem{
         return Joueur(
-            listCSVElement[0].cleanupForDB()
-        )//TODO il manque le deparsing des joueurs mais pas necessaires en soi
+            listCSVElement[0].cleanupForDB(),
+            listCSVElement[1]
+        )
     }
 
     override fun getParsingRulesAttributesAsList(): List<String> {
         return listOf(
-            "Nom: String"
+            "Nom: String",
+            "equipement : ${CHAR_SEP_EQUIPEMENT}String$CHAR_SEP_EQUIPEMENT${CHAR_SEP_EQUIPEMENT}String${CHAR_SEP_EQUIPEMENT}"
         )
     }
 
     override fun getDeparsedAttributes(): List<String> {
         return listOf<String>(
-            nom
+            nom,
+            chaineEquipementSerialisee
         )
     }
 }

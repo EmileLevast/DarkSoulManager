@@ -2,7 +2,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
 
 @Serializable
-sealed class ApiableItem : IListItem{
+abstract class ApiableItem : IListItem{
         @Transient
         val nameForApi = this::class.simpleName
         @Transient

@@ -3,6 +3,8 @@
 //TODO ajouter ici un element instancie dans cette liste a chaque creation d'une nouvelle classe
 val unmutableListApiItemDefinition = listOf<ApiableItem>(Arme(),Armure(),Monster(),Bouclier(),Sort(),Special(),Joueur())
 
+const val CHAR_SEP_EQUIPEMENT = "|"
+
 enum class EffectType(val shortname:String, val symbol:String){
     FIRE("F","🔥"),
     MAGIC("Ma","✨"),

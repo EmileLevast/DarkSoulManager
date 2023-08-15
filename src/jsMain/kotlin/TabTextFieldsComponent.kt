@@ -33,6 +33,8 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
     var listModifiedAttribute = mutableListOf<String>()
     val listDeparsedAttributes = props.itemList.getDeparsedAttributes()
 
+    var itemJoueurToList:MutableList<String>
+
     var isOpeningDialog by useState(false)
 
     var listJoueurs: List<Joueur> by useState(emptyList<Joueur>())
@@ -41,14 +43,12 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
         scope.launch {
             listJoueurs = searchJoueur(".*") ?: listOf<Joueur>(Joueur())
         }
-        listJoueurs.forEach {
-            it.deserializeStringToEquipment()
-        }
     }
 
     Stack{
         Grid{
-            listJoueurs.forEach {
+            listJoueurs.forEach { it ->
+
                 Grid{
                     sx{
                         display = Display.inlineBlock
@@ -63,17 +63,17 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
                         CardContent{
                             Checkbox{
                                 onChange = { _,checkedRes ->
-                                    if(checkedRes){
-                                        it.listEquipement.add(props.itemList.nom)
-                                    }else{
-                                        it.listEquipement.removeAll { it == props.itemList.nom }
-                                    }
-                                    it.serializeEquipementToString()
+
                                     scope.launch {
+                                        if(checkedRes){
+                                            it.chaineEquipementSerialisee += CHAR_SEP_EQUIPEMENT+props.itemList.nom+CHAR_SEP_EQUIPEMENT
+                                        }else{
+                                            it.chaineEquipementSerialisee = it.chaineEquipementSerialisee.replace("${CHAR_SEP_EQUIPEMENT}${props.itemList.nom}$CHAR_SEP_EQUIPEMENT","")
+                                        }
                                         updateItem(it)
                                     }
                                 }
-                                defaultChecked = it.listEquipement.contains(props.itemList.nom)
+                                defaultChecked = it.chaineEquipementSerialisee.contains("${CHAR_SEP_EQUIPEMENT}${props.itemList.nom}$CHAR_SEP_EQUIPEMENT")
                             }
                             ReactHTML.h6{
                                 +it.nom
