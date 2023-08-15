@@ -26,6 +26,7 @@ suspend fun searchAnything(nomSearched: String) : List<IListItem> {
             is Bouclier -> searchBouclier(nomSearched)
             is Sort -> searchSort(nomSearched)
             is Special -> searchSpecial(nomSearched)
+            is Joueur -> searchJoueur(nomSearched)
             else -> null
         }
         if (res != null){
@@ -74,6 +75,12 @@ suspend fun searchSpecial(nomSearched: String) :List<Special>?{
 suspend fun searchMonster(nomSearched: String) :List<Monster>?{
     jsonClient.get(endpoint +"/"+ Monster().nameForApi + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Monster>>() else null
+    }
+}
+
+suspend fun searchJoueur(nomSearched: String) :List<Joueur>?{
+    jsonClient.get(endpoint +"/"+ Joueur().nameForApi + "/${nomSearched}").let {
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<Joueur>>() else null
     }
 }
 

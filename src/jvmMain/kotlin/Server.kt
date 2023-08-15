@@ -88,6 +88,9 @@ fun main() {
                             is Special -> {
                                 call.receive<Special>()
                             }
+                            is Joueur -> {
+                                call.receive<Joueur>()
+                            }
                             else -> {
                                 call.receive<Armure>()
                             }

@@ -25,6 +25,6 @@ fun convertClassToColor(item:IListItem):NamedColor{
                 SpecialItemType.TALISMAN -> NamedColor.lightgreen
             }
         }
-        else -> NamedColor.white
+        else -> NamedColor.darkgoldenrod
     }
 }

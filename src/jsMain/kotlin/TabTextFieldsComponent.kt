@@ -1,10 +1,14 @@
+import csstype.Display
+import csstype.NamedColor
+import csstype.px
+import kotlinx.coroutines.launch
+import kotlinx.css.Color
+import kotlinx.css.Color.Companion.aliceBlue
 import kotlinx.html.TEXTAREA
 import mui.material.*
 import mui.material.styles.TypographyVariant
-import org.w3c.dom.HTMLAreaElement
-import org.w3c.dom.HTMLDivElement
-import org.w3c.dom.HTMLInputElement
-import org.w3c.dom.HTMLTextAreaElement
+import mui.system.sx
+import org.w3c.dom.*
 import react.FC
 import react.Props
 import react.ReactNode
@@ -16,7 +20,9 @@ import react.dom.html.ReactHTML.textarea
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.dialog
 import react.dom.html.ReactHTML.h4
+import react.dom.html.ReactHTML.h6
 import react.dom.html.ReactHTML.input
+import react.dom.html.ReactHTML.label
 import react.dom.html.ReactHTML.p
 import react.dom.onChange
 import react.useState
@@ -32,7 +38,42 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
 
     var isOpeningDialog by useState(false)
 
+    var listJoueurs: List<Joueur> by useState(emptyList<Joueur>())
+
+    scope.launch {
+        listJoueurs = searchJoueur(".*") ?: listOf<Joueur>(Joueur())
+    }
+
     Stack{
+        Grid{
+            listJoueurs.forEach {
+                Grid{
+                    sx{
+                        display = Display.inlineBlock
+                        margin = 10.px
+                    }
+                    Card{
+                        sx{
+                            backgroundColor = convertClassToColor(props.itemList)
+                            height=100.px
+                            width=100.px
+                        }
+                        CardContent{
+                            Checkbox{
+
+                            }
+                            ReactHTML.h6{
+                                +it.nom
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+
         props.itemList.getParsingRulesAttributesAsList().forEachIndexed { index, formatRule ->
             val (text, setText) = useState(listDeparsedAttributes[index])
             val changeHandler: ChangeEventHandler<HTMLTextAreaElement> = {

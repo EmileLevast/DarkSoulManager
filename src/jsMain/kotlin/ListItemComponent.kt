@@ -11,6 +11,7 @@ import react.Props
 import react.useState
 
 external interface IListItemComponent:Props{
+    var editMode:Boolean
     var itemList: IListItem
     var navigateToEditTablistener:(IListItem)->Unit
 
@@ -45,17 +46,19 @@ val itemListComponent = FC<IListItemComponent>{ props ->
               width=400.px
           }
           CardContent {
-              button{
-                  onClick = {
-                      props.itemList.isAttached = !props.itemList.isAttached
-                      isCardAttached = props.itemList.isAttached
+              if(props.editMode){
+                  button{
+                      onClick = {
+                          props.itemList.isAttached = !props.itemList.isAttached
+                          isCardAttached = props.itemList.isAttached
+                      }
+                      + "Pin"
                   }
-                  + "Pin"
               }
               Typography{
                   variant = TypographyVariant.h4
                   +props.itemList.nom
-                  if(isCardAttached){
+                  if(isCardAttached&&props.editMode){
                       +"📌"
                   }
               }
@@ -67,11 +70,14 @@ val itemListComponent = FC<IListItemComponent>{ props ->
                     }
                 }
 
-              button{
-                  onClick = {
-                      editionListener(props.itemList)
+              if(props.editMode)
+              {
+                  button{
+                      onClick = {
+                          editionListener(props.itemList)
+                      }
+                      + "Edit"
                   }
-                  + "Edit"
               }
             }
       }

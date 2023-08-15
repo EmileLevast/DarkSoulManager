@@ -11,7 +11,7 @@ import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.p
 
-private val scope = MainScope()
+val scope = MainScope()
 val logger = KtorSimpleLogger("logger")
 
 val App = FC<Props> {
@@ -19,6 +19,8 @@ val App = FC<Props> {
     var currentSelectedItem: IListItem by useState(Monster())
 
     var bddList: List<IListItem> by useState(emptyList<IListItem>())
+
+    var joueurNom by useState("Test")
 
     var activeTab by useState("1")
 
@@ -79,6 +81,10 @@ val App = FC<Props> {
                         label = ReactNode("Edition")
                         value = "2"
                     }
+                    Tab {
+                        label = ReactNode("Joueur")
+                        value = "3"
+                    }
                 }
             }
             TabPanel {
@@ -112,6 +118,7 @@ val App = FC<Props> {
                 Grid {
                     bddList.forEach {
                         itemListComponent{
+                            editMode = true
                             itemList = it
                             navigateToEditTablistener=::navigateToEditTab
                         }
@@ -126,6 +133,15 @@ val App = FC<Props> {
                 tabTextFieldComponent{
                     itemList = currentSelectedItem
                     saveModifiedItem = ::saveEditedItem
+                }
+            }
+            TabPanel {
+                value = "3"
+                h1 {
+                    +"Joueur"
+                }
+                joueurStuffComponent{
+                    editMode = false
                 }
             }
         }
