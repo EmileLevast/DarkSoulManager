@@ -61,9 +61,7 @@ val App = FC<Props> {
     }
 
     useEffectOnce {
-        scope.launch {
-            setSimpleRules(true)
-        }
+        setSimpleRules(true)
     }
     Box {
         TabContext {
@@ -94,6 +92,7 @@ val App = FC<Props> {
                 }
                 Checkbox{
                     onChange = {_ ,checkedres-> setSimpleRules(checkedres)}
+                    defaultChecked = true
                 }
                 inputComponent {
                     onSubmit = { input ->
