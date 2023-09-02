@@ -12,7 +12,6 @@ import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.p
 
 val scope = MainScope()
-val logger = KtorSimpleLogger("logger")
 
 val App = FC<Props> {
 
@@ -26,6 +25,8 @@ val App = FC<Props> {
 
     var (openSnack, setOpenSnack) = useState(false)
     var (textSnack, setTextSnack) = useState("Nothing")
+
+    var (simpleRules, setSimpleRules) = useState(false)
 
 
     fun navigateToEditTab(selectedItem: IListItem){
@@ -92,6 +93,9 @@ val App = FC<Props> {
                 h1 {
                     +"Dark Soul Recherche"
                 }
+                Checkbox{
+                    onChange = {_ ,checkedres-> setSimpleRules(checkedres)}
+                }
                 inputComponent {
                     onSubmit = { input ->
                         //Ici on va chercher les items dans la bdd
@@ -119,6 +123,7 @@ val App = FC<Props> {
                     bddList.forEach {
                         itemListComponent{
                             editMode = true
+                            simpleRulesOn = simpleRules
                             itemList = it
                             navigateToEditTablistener=::navigateToEditTab
                         }

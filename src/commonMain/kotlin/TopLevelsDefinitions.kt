@@ -1,3 +1,4 @@
+import io.ktor.util.logging.*
 
 //Update this list whenever you want to add a specific item to the database don't change it during execution
 //TODO ajouter ici un element instancie dans cette liste a chaque creation d'une nouvelle classe
@@ -35,3 +36,5 @@ enum class SpecialItemType{
     BRAISE,
     OUTIL;
 }
+
+val logger = KtorSimpleLogger("logger")

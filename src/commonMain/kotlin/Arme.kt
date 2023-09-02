@@ -1,3 +1,4 @@
+import io.ktor.util.logging.*
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -30,6 +31,61 @@ class Arme(
                 "Max énergie : $maximumEnergie\n" +
                 "Seuil de blocage : $seuilBlocage\n" +
                 "Valeur de blocage : $valeurBlocage\n" +
+                "FAJ Max : $fajMax\n" +
+                (if(contraintes.isNotBlank())"$contraintes\n" else "") +
+                "Poids : $poids\n" +
+                "$capaciteSpeciale\n"
+    }
+
+    override fun getStatsSimplifiedAsStrings(): String {
+        var textSeuils = ""
+
+        val temp = parseDefense(degat.replace("P:","Ph:"))
+
+        var parseDegats =temp.mapValues {
+            try {
+                it.value.toInt()
+            } catch (e: Exception) {
+                -1
+            }
+        }
+
+
+        var facteur = 0
+        var degatFinaux = mapOf<EffectType,Int>()
+        seuils.forEach {
+            try {
+                facteur = it.key.toInt()
+            } catch (e: Exception) {
+                facteur = -1
+            }
+
+
+            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * facteur }
+
+            val listDegatFinaux = degatFinaux.map{type->type.key.shortname+":"+type.value}
+
+            textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString ("|" )}\n"
+
+        }
+
+        var coupcCritiquesCalcules=""
+        if(coupCritiques.isNotBlank() && coupCritiques.first().isDigit()){
+            val ccSplit = coupCritiques.split("=>×")
+            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * try {
+                ccSplit.last().toInt()
+            } catch (e: Exception) {
+                -1
+            }
+            }
+            coupcCritiquesCalcules = ccSplit.first() + "=>" + degatFinaux.map{type->type.key.shortname+":"+type.value}.joinToString ("|" )
+        }else{
+            coupcCritiquesCalcules = coupCritiques
+        }
+
+        return  "Seuils:\n" + textSeuils +
+                (if(coupCritiques.isNotBlank())"CC : $coupcCritiquesCalcules\n" else "") +
+                "Max énergie : $maximumEnergie\n" +
                 "FAJ Max : $fajMax\n" +
                 (if(contraintes.isNotBlank())"$contraintes\n" else "") +
                 "Poids : $poids\n" +

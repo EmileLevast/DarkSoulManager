@@ -161,4 +161,8 @@ abstract class ApiableItem : IListItem{
         }
 
         abstract fun parseFromCSV(listCSVElement : List<String>):ApiableItem
+
+        override fun getStatsSimplifiedAsStrings(): String {
+                return getStatsAsStrings()
+        }
 }

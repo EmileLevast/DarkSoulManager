@@ -12,6 +12,7 @@ import react.useState
 
 external interface IListItemComponent:Props{
     var editMode:Boolean
+    var simpleRulesOn:Boolean
     var itemList: IListItem
     var navigateToEditTablistener:(IListItem)->Unit
 
@@ -32,6 +33,7 @@ inline var TabsProps.ariaLabel: String
 val itemListComponent = FC<IListItemComponent>{ props ->
 
     var isCardAttached:Boolean by useState(props.itemList.isAttached)
+    var simplifiedRulesActive:Boolean by useState(props.simpleRulesOn)
     val editionListener:(IListItem)->Unit = props.navigateToEditTablistener
 
   Grid {
@@ -63,7 +65,16 @@ val itemListComponent = FC<IListItemComponent>{ props ->
                   }
               }
 
-              props.itemList.getStatsAsStrings().split("\n").mapIndexed { index: Int, s: String ->
+              val statsArme = if(simplifiedRulesActive){
+                  try {
+                      props.itemList.getStatsSimplifiedAsStrings()
+                  } catch (e: Exception) {
+                    "Erreur parsing ${e.stackTraceToString()}"
+                  }
+              }else{
+                  props.itemList.getStatsAsStrings()
+              }
+              statsArme.split("\n").mapIndexed { index: Int, s: String ->
                   Typography {
                       variant = TypographyVariant.h6
                         +s
