@@ -40,16 +40,76 @@ class Sort(
         seuils.forEach {
             textSeuils += "|   ${it.value.joinToString("/")} =>×${it.key}\n"
         }
+        val contraintesParsed = strSimplify(contraintes,false)
+        val coupCritiquesParsed = strSimplify(coupCritiques,false)
         return  type.symbol+"\n"+
                 "Utilisations : $utilisation\n" +
                 "Cout : $cout\n" +
                 "Intelligence Minimum : $intelligenceMin\n" +
-                (if(contraintes.isNotBlank())"$contraintes\n" else "") +
+                (if(contraintesParsed.isNotBlank())"$contraintesParsed\n" else "") +
                 convertEffectTypeStatsToString(degats)+"\n"+
                 "Seuils:\n" + textSeuils +
-                (if(coupCritiques.isNotBlank())"CC : $coupCritiques\n" else "") +
+                (if(coupCritiquesParsed.isNotBlank())"CC : $coupCritiquesParsed\n" else "") +
                 "IAJ Max : $iajMax\n" +
-                "$description\n"    }
+                "${strSimplify(description,false)}\n"
+    }
+
+    override fun getStatsSimplifiedAsStrings(): String {
+
+        var textSeuils = ""
+
+        val parseDegats =degats.mapValues {
+            try {
+                it.value.toInt()
+            } catch (e: Exception) {
+                -1
+            }
+        }
+
+
+        var facteur = 0
+        var degatFinaux = mapOf<EffectType,Int>()
+        seuils.forEach {
+            try {
+                facteur = it.key.toInt()
+            } catch (e: Exception) {
+                facteur = -1
+            }
+
+
+            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * facteur }
+
+            val listDegatFinaux = degatFinaux.map{type->type.key.shortname+":"+type.value}
+
+            textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString ("|" )}\n"
+
+        }
+
+        val contraintesParsed = strSimplify(contraintes,true)
+
+        var coupcCritiquesCalcules=strSimplify(coupCritiques,true)
+        if(coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()){
+            val ccSplit = coupcCritiquesCalcules.split("=>×")
+            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * try {
+                ccSplit.last().toInt()
+            } catch (e: Exception) {
+                -1
+            }
+            }
+            coupcCritiquesCalcules = ccSplit.first() + "=>" + degatFinaux.map{type->type.key.shortname+":"+type.value}.joinToString ("|" )
+        }
+
+        return  type.symbol+"\n"+
+                "Utilisations : $utilisation\n" +
+                "Cout : $cout\n" +
+                "Intelligence Minimum : $intelligenceMin\n" +
+                (if(contraintesParsed.isNotBlank())"$contraintesParsed\n" else "") +
+                convertEffectTypeStatsToString(degats)+"\n"+
+                "Seuils:\n" + textSeuils +
+                (if(coupcCritiquesCalcules.isNotBlank())"CC : $coupcCritiquesCalcules\n" else "") +
+                "IAJ Max : $iajMax\n" +
+                "${strSimplify(description,true)}\n"
+    }
 
     override fun getParsingRulesAttributesAsList(): List<String> {
         return listOf(

@@ -53,7 +53,20 @@ data class Monster(
                 "Drops: \n" +
                 constructListDropsString() +
                 "Ames : $ames\n"+
-                "$capaciteSpeciale\n"
+                "${strSimplify(capaciteSpeciale,false)}\n"
+    }
+
+    override fun getStatsSimplifiedAsStrings(): String {
+        val textForceSeuils = constructForceSeuils()
+        return "Vie : $vie\n"+
+                "Force : $textForceSeuils\n"+
+                "Defense:" + convertEffectTypeStatsToString(defense) +"\n"+
+                "Intelligence:" + intelligence +"\n"+
+                "Energie : $energie\n" +
+                "Drops: \n" +
+                constructListDropsString() +
+                "Ames : $ames\n"+
+                "${strSimplify(capaciteSpeciale,true)}\n"
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem {

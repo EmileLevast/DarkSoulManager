@@ -19,9 +19,16 @@ class Bouclier(
         return "Defense: ${convertEffectTypeStatsToString(defense)}"+"\n" +
                 "Seuil Blocage:$seuilBlocage\n"+
                 "Seuil parade:${seuilParade}\n"+
-                contraintes+"\n" +
+                strSimplify(contraintes,false)+"\n" +
                 "Poids:$poids"+"\n"+
-                capaciteSpeciale
+                strSimplify(capaciteSpeciale,false)
+    }
+
+    override fun getStatsSimplifiedAsStrings(): String {
+        return "Defense: ${convertEffectTypeStatsToString(defense)}"+"\n" +
+                strSimplify(contraintes,true)+"\n" +
+                "Poids:$poids"+"\n"+
+                strSimplify(capaciteSpeciale,true)
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem {

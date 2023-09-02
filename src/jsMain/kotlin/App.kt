@@ -62,8 +62,7 @@ val App = FC<Props> {
 
     useEffectOnce {
         scope.launch {
-            //monsterList = getMonsterList()
-            //bddList = getBddList()
+            setSimpleRules(true)
         }
     }
     Box {
@@ -147,6 +146,7 @@ val App = FC<Props> {
                 }
                 joueurStuffComponent{
                     editMode = false
+                    simpleRulesOn = simpleRules
                 }
             }
         }

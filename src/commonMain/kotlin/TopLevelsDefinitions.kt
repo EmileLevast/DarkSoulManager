@@ -5,6 +5,7 @@ import io.ktor.util.logging.*
 val unmutableListApiItemDefinition = listOf<ApiableItem>(Arme(),Armure(),Monster(),Bouclier(),Sort(),Special(),Joueur())
 
 const val CHAR_SEP_EQUIPEMENT = "|"
+const val BALISE_SIMPLE_RULES = "[SIMPLE]"
 
 enum class EffectType(val shortname:String, val symbol:String){
     FIRE("F","🔥"),
@@ -19,6 +20,21 @@ fun convertEffectTypeStatsToString(statsToConvert:Map<EffectType,String> ) :Stri
         listMapDefense.append("${it.key.symbol}:${it.value}")
     }
     return listMapDefense.toString()
+}
+
+fun strSimplify(str:String, isSimpleRulesOn:Boolean):String{
+    return if(str.contains(BALISE_SIMPLE_RULES) && isSimpleRulesOn){
+        val indexFin = str.indexOf(BALISE_SIMPLE_RULES)+BALISE_SIMPLE_RULES.length
+        if(indexFin == str.length){
+            str
+        }else{
+            str.substring(indexFin)
+        }
+    }else if(str.contains(BALISE_SIMPLE_RULES)){
+        str.substring(0,str.indexOf(BALISE_SIMPLE_RULES))
+    }else{
+        str
+    }
 }
 
 enum class SpellType(val shortname:String, val symbol:String){

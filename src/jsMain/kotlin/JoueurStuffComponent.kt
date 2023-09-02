@@ -4,6 +4,7 @@ import react.*
 
 external interface JoueurStuffComponentProps : Props {
     var editMode: Boolean
+    var simpleRulesOn:Boolean
 }
 
 
@@ -60,6 +61,7 @@ val joueurStuffComponent = FC<JoueurStuffComponentProps> { props ->
             listItem.forEach {
                 itemListComponent {
                     itemList = it
+                    simpleRulesOn = props.simpleRulesOn
                     navigateToEditTablistener = { _ -> Unit }
                 }
             }

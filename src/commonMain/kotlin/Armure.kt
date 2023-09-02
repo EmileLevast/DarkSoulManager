@@ -15,9 +15,16 @@ class Armure(
 
     override fun getStatsAsStrings(): String {
         return convertEffectTypeStatsToString(defense)+"\n" +
-                contraintes+"\n" +
+                strSimplify(contraintes,false)+"\n" +
                 "Poids:$poids"+"\n"+
-                capaciteSpeciale
+                strSimplify(capaciteSpeciale,false)
+    }
+
+    override fun getStatsSimplifiedAsStrings(): String {
+        return convertEffectTypeStatsToString(defense)+"\n" +
+                strSimplify(contraintes,true)+"\n" +
+                "Poids:$poids"+"\n"+
+                strSimplify(capaciteSpeciale,true)
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem {

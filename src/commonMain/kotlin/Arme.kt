@@ -27,14 +27,14 @@ class Arme(
         }
         return  "$degat\n"+
                 "Seuils:\n" + textSeuils +
-                (if(coupCritiques.isNotBlank())"CC : $coupCritiques\n" else "") +
+                (if(coupCritiques.isNotBlank())"CC : ${strSimplify(coupCritiques,false)}\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
                 "Seuil de blocage : $seuilBlocage\n" +
                 "Valeur de blocage : $valeurBlocage\n" +
                 "FAJ Max : $fajMax\n" +
-                (if(contraintes.isNotBlank())"$contraintes\n" else "") +
+                (if(contraintes.isNotBlank())" ${strSimplify(contraintes,false)}\n" else "") +
                 "Poids : $poids\n" +
-                "$capaciteSpeciale\n"
+                "${strSimplify(capaciteSpeciale,false)}\n"
     }
 
     override fun getStatsSimplifiedAsStrings(): String {
@@ -69,9 +69,9 @@ class Arme(
 
         }
 
-        var coupcCritiquesCalcules=""
-        if(coupCritiques.isNotBlank() && coupCritiques.first().isDigit()){
-            val ccSplit = coupCritiques.split("=>×")
+        var coupcCritiquesCalcules=strSimplify(coupCritiques,true)
+        if(coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()){
+            val ccSplit = coupcCritiquesCalcules.split("=>×")
             degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * try {
                 ccSplit.last().toInt()
             } catch (e: Exception) {
@@ -79,17 +79,15 @@ class Arme(
             }
             }
             coupcCritiquesCalcules = ccSplit.first() + "=>" + degatFinaux.map{type->type.key.shortname+":"+type.value}.joinToString ("|" )
-        }else{
-            coupcCritiquesCalcules = coupCritiques
         }
 
         return  "Seuils:\n" + textSeuils +
                 (if(coupCritiques.isNotBlank())"CC : $coupcCritiquesCalcules\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
                 "FAJ Max : $fajMax\n" +
-                (if(contraintes.isNotBlank())"$contraintes\n" else "") +
+                (if(contraintes.isNotBlank())"${strSimplify(contraintes,true)}\n" else "") +
                 "Poids : $poids\n" +
-                "$capaciteSpeciale\n"
+                "${strSimplify(capaciteSpeciale,true)}\n"
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem{

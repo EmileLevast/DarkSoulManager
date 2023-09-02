@@ -11,7 +11,11 @@ class Special(
     override var isAttached = false
 
     override fun getStatsAsStrings():String{
-        return "${itemType.name}\n$capaciteSpeciale\n"
+        return "${itemType.name}\n${strSimplify(capaciteSpeciale,false)}\n"
+    }
+
+    override fun getStatsSimplifiedAsStrings(): String {
+        return "${itemType.name}\n${strSimplify(capaciteSpeciale,true)}\n"
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem{
