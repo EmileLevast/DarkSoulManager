@@ -84,7 +84,7 @@ class Arme(
         return  "Seuils:\n" + textSeuils +
                 (if(coupCritiques.isNotBlank())"CC : $coupcCritiquesCalcules\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
-                "FAJ Max : $fajMax\n" +
+                "Force Max : $fajMax\n" +
                 (if(contraintes.isNotBlank())"${strSimplify(contraintes,true)}\n" else "") +
                 "Poids : $poids\n" +
                 "${strSimplify(capaciteSpeciale,true)}\n"

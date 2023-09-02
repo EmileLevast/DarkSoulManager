@@ -107,7 +107,7 @@ class Sort(
                 convertEffectTypeStatsToString(degats)+"\n"+
                 "Seuils:\n" + textSeuils +
                 (if(coupcCritiquesCalcules.isNotBlank())"CC : $coupcCritiquesCalcules\n" else "") +
-                "IAJ Max : $iajMax\n" +
+                "Intelligence Max : $iajMax\n" +
                 "${strSimplify(description,true)}\n"
     }
 
