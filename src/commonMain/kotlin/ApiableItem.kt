@@ -165,4 +165,15 @@ abstract class ApiableItem : IListItem{
         override fun getStatsSimplifiedAsStrings(): String {
                 return getStatsAsStrings()
         }
+
+        protected fun computeCoupCritiqueToStringSimplifie(ccStr:String, parseDegat:Map<EffectType, Int>):String{
+                val ccSplit = ccStr.split("=>×")
+                var degatFinaux = parseDegat.mapValues { degatSeuil -> degatSeuil.value * try {
+                        ccSplit.last().toInt()
+                } catch (e: Exception) {
+                        -1
+                }
+                }
+                return ccSplit.first() + "=>" + degatFinaux.map{type->type.key.shortname+":"+type.value}.joinToString ("|" )
+        }
 }

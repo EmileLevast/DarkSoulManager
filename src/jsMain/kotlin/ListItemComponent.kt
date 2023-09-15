@@ -45,6 +45,7 @@ val itemListComponent = FC<IListItemComponent>{ props ->
       Card {
           sx{
               backgroundColor = convertClassToColor(props.itemList)
+
               width=400.px
           }
           CardContent {
@@ -57,8 +58,12 @@ val itemListComponent = FC<IListItemComponent>{ props ->
                       + "Pin"
                   }
               }
+
               Typography{
                   variant = TypographyVariant.h4
+                  if((props.itemList as? Sort)?.type ==  SpellType.ARACHNOMANCIE){
+
+                  }
                   +props.itemList.nom
                   if(isCardAttached&&props.editMode){
                       +"📌"

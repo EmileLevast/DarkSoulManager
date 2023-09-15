@@ -29,7 +29,7 @@ class Special(
     override fun getParsingRulesAttributesAsList(): List<String> {
         return listOf(
             "Nom: String",
-            "Type: SpellType = (ANNEAU, TALISMAN, OUTIL, BRAISE, AMBRE) ",
+            "Type: SpellType = (ANNEAU, TALISMAN, OUTIL, BRAISE, AMBRE, TECHNIQUE) ",
             "Capacite speciale : String"
         )
     }

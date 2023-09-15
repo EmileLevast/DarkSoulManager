@@ -3,46 +3,46 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class Arme(
-    override val nom:String="inconnu",
-    val degat:String="Ph:0",
-    val seuils:Map<String,List<Int>> = mapOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
-    val coupCritiques:String="",
-    val maximumEnergie:Int=0,
-    val seuilBlocage:Int=0,
-    val valeurBlocage:Int=0,
-    val contraintes:String="Aucune",
-    val fajMax:Int=0,
-    val poids:Int=0,
-    val capaciteSpeciale:String=""
-    ) : ApiableItem() {
+    override val nom: String = "inconnu",
+    val degat: String = "Ph:0",
+    val seuils: Map<String, List<Int>> = mapOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
+    val coupCritiques: String = "",
+    val maximumEnergie: Int = 0,
+    val seuilBlocage: Int = 0,
+    val valeurBlocage: Int = 0,
+    val contraintes: String = "Aucune",
+    val fajMax: Int = 0,
+    val poids: Int = 0,
+    val capaciteSpeciale: String = "",
+) : ApiableItem() {
 
 
     override val id = nom.hashCode()
     override var isAttached = false
 
-    override fun getStatsAsStrings():String{
+    override fun getStatsAsStrings(): String {
         var textSeuils = ""
         seuils.forEach {
             textSeuils += "|   ${it.value.joinToString("/")} =>×${it.key}\n"
         }
-        return  "$degat\n"+
+        return "$degat\n" +
                 "Seuils:\n" + textSeuils +
-                (if(coupCritiques.isNotBlank())"CC : ${strSimplify(coupCritiques,false)}\n" else "") +
+                (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, false)}\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
                 "Seuil de blocage : $seuilBlocage\n" +
                 "Valeur de blocage : $valeurBlocage\n" +
                 "FAJ Max : $fajMax\n" +
-                (if(contraintes.isNotBlank())" ${strSimplify(contraintes,false)}\n" else "") +
+                (if (contraintes.isNotBlank()) " ${strSimplify(contraintes, false)}\n" else "") +
                 "Poids : $poids\n" +
-                "${strSimplify(capaciteSpeciale,false)}\n"
+                "${strSimplify(capaciteSpeciale, false)}\n"
     }
 
     override fun getStatsSimplifiedAsStrings(): String {
         var textSeuils = ""
 
-        val temp = parseDefense(degat.replace("P:","Ph:"))
+        val temp = parseDefense(degat.replace("P:", "Ph:"))
 
-        var parseDegats =temp.mapValues {
+        var parseDegats = temp.mapValues {
             try {
                 it.value.toInt()
             } catch (e: Exception) {
@@ -52,7 +52,7 @@ class Arme(
 
 
         var facteur = 0
-        var degatFinaux = mapOf<EffectType,Int>()
+        var degatFinaux = mapOf<EffectType, Int>()
         seuils.forEach {
             try {
                 facteur = it.key.toInt()
@@ -63,46 +63,70 @@ class Arme(
 
             degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * facteur }
 
-            val listDegatFinaux = degatFinaux.map{type->type.key.shortname+":"+type.value}
+            val listDegatFinaux = degatFinaux.map { type -> type.key.shortname + ":" + type.value }
 
-            textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString ("|" )}\n"
+            textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString("|")}\n"
 
         }
 
-        var coupcCritiquesCalcules=strSimplify(coupCritiques,true)
-        if(coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()){
-            val ccSplit = coupcCritiquesCalcules.split("=>×")
-            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * try {
-                ccSplit.last().toInt()
-            } catch (e: Exception) {
-                -1
+        var coupcCritiquesCalcules = strSimplify(coupCritiques, true)
+        if (coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()) {
+
+            if (coupcCritiquesCalcules.contains("|")) {
+                val tempSplit = coupcCritiquesCalcules.split("|")
+                coupcCritiquesCalcules = ""
+                tempSplit.forEach {
+                    coupcCritiquesCalcules += computeCoupCritiqueToStringSimplifie(it, parseDegats) + "|"
+                }
+            } else {
+                coupcCritiquesCalcules = computeCoupCritiqueToStringSimplifie(coupcCritiquesCalcules, parseDegats)
             }
-            }
-            coupcCritiquesCalcules = ccSplit.first() + "=>" + degatFinaux.map{type->type.key.shortname+":"+type.value}.joinToString ("|" )
         }
 
-        return  "Seuils:\n" + textSeuils +
-                (if(coupCritiques.isNotBlank())"CC : $coupcCritiquesCalcules\n" else "") +
+
+
+        return "Seuils:\n" + textSeuils +
+                (if (coupCritiques.isNotBlank()) "CC : $coupcCritiquesCalcules\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
                 "Force Max : $fajMax\n" +
-                (if(contraintes.isNotBlank())"${strSimplify(contraintes,true)}\n" else "") +
+                (if (contraintes.isNotBlank()) "${strSimplify(contraintes, true)}\n" else "") +
                 "Poids : $poids\n" +
-                "${strSimplify(capaciteSpeciale,true)}\n"
+                "${strSimplify(capaciteSpeciale, true)}\n"
     }
 
-    override fun parseFromCSV(listCSVElement : List<String>):ApiableItem{
+    override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
 
         return Arme(
             listCSVElement[0].cleanupForDB(),
             listCSVElement[1],
             parseSeuils(listCSVElement[2]),
             listCSVElement[3],
-            listCSVElement[4].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[5].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[6].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[4].run {
+                if (isNotBlank()) toInt() else {
+                    0
+                }
+            },
+            listCSVElement[5].run {
+                if (isNotBlank()) toInt() else {
+                    0
+                }
+            },
+            listCSVElement[6].run {
+                if (isNotBlank()) toInt() else {
+                    0
+                }
+            },
             listCSVElement[7],
-            listCSVElement[8].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[8].run {
+                if (isNotBlank()) toInt() else {
+                    0
+                }
+            },
+            listCSVElement[9].run {
+                if (isNotBlank()) toInt() else {
+                    0
+                }
+            },
             listCSVElement[10]
         )
     }

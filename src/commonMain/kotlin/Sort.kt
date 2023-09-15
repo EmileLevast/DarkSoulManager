@@ -87,16 +87,18 @@ class Sort(
 
         val contraintesParsed = strSimplify(contraintes,true)
 
-        var coupcCritiquesCalcules=strSimplify(coupCritiques,true)
-        if(coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()){
-            val ccSplit = coupcCritiquesCalcules.split("=>×")
-            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * try {
-                ccSplit.last().toInt()
-            } catch (e: Exception) {
-                -1
+        var coupcCritiquesCalcules = strSimplify(coupCritiques, true)
+        if (coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()) {
+
+            if (coupcCritiquesCalcules.contains("|")) {
+                val tempSplit = coupcCritiquesCalcules.split("|")
+                coupcCritiquesCalcules = ""
+                tempSplit.forEach {
+                    coupcCritiquesCalcules += computeCoupCritiqueToStringSimplifie(it, parseDegats) + "|"
+                }
+            } else {
+                coupcCritiquesCalcules = computeCoupCritiqueToStringSimplifie(coupcCritiquesCalcules, parseDegats)
             }
-            }
-            coupcCritiquesCalcules = ccSplit.first() + "=>" + degatFinaux.map{type->type.key.shortname+":"+type.value}.joinToString ("|" )
         }
 
         return  type.symbol+"\n"+

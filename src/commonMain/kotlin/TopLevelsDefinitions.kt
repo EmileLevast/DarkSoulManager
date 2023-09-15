@@ -42,7 +42,8 @@ enum class SpellType(val shortname:String, val symbol:String){
     PYROMANCIE("pyromancie","\uD83D\uDD25"),
     PSIONIQUE("psionique","\uD83E\uDD2F"),
     MIRACLE("miracle","\uD83D\uDC50"),
-    NECROMANCIE("necromancie","\uD83D\uDC80");
+    NECROMANCIE("necromancie","\uD83D\uDC80"),
+    ARACHNOMANCIE("arachnomancie","\uD83D\uDD77");
 }
 
 enum class SpecialItemType{
@@ -50,6 +51,7 @@ enum class SpecialItemType{
     TALISMAN,
     AMBRE,
     BRAISE,
+    TECHNIQUE,
     OUTIL;
 }
 

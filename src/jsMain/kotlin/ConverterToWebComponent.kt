@@ -13,6 +13,7 @@ fun convertClassToColor(item:IListItem):NamedColor{
                 SpellType.MIRACLE -> NamedColor.aliceblue
                 SpellType.PYROMANCIE -> NamedColor.orange
                 SpellType.PSIONIQUE -> NamedColor.mediumpurple
+                SpellType.ARACHNOMANCIE -> NamedColor.darkslateblue
                 else ->  NamedColor.pink //necromancie
             }
         }
@@ -23,6 +24,7 @@ fun convertClassToColor(item:IListItem):NamedColor{
                 SpecialItemType.ANNEAU -> NamedColor.yellow
                 SpecialItemType.BRAISE -> NamedColor.orangered
                 SpecialItemType.TALISMAN -> NamedColor.lightgreen
+                SpecialItemType.TECHNIQUE -> NamedColor.darkkhaki
             }
         }
         else -> NamedColor.darkgoldenrod
