@@ -9,7 +9,7 @@ val kmongoVersion = "4.5.0"
 val uuidVersion = "0.0.17"
 
 plugins {
-    kotlin("multiplatform") version "1.6.21"
+    kotlin("multiplatform") version "1.9.0"
     application //to run JVM part
     kotlin("plugin.serialization") version "1.6.21"
 }
@@ -19,6 +19,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven")
 }
 
 kotlin {
