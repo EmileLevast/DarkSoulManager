@@ -1,7 +1,5 @@
 Nom;Degats;Seuils;Coups critiques ;Maximum Energie ;Seuil Blocage ;Valeur Blocage ;Contraintes ;FAJ Max ;Poids ;Capacite speciale 
-epee large;P:4;1/2=0|3/4=1|5/6=2;;4;6;3;Force Minimum:4;8;2;
 epee ebrechee effilee;P:2;1/2=0|3/4=1|5/6=2;Saigne +5 => 3;3;6;1;;5;1;
-epee lourde a deux mains;P:7;1/2/3=0|4/5=1|6=2;5/6=>×2;5;6;3;Force Minimum:7;26;3;
 rapiere;P:3;1/2=0|3=1|4/5/6=2;6=>×4;3;4;3;Niveau Minimum:3;9;2;Parade ×1
 epee ebrechee;P:2;1/2=0|3/4=1|5/6=2;4=>×2;3;6;1;;5;1;
 epee courte;P:3;1/2=0|3/4=1|5/6=2;6=>×3;2;4;1;Force Minimum:3;6;1;
@@ -10,7 +8,6 @@ epee barbelee;P:4;1/2=0|3=1|4/5/6=2;3=>×2;3;5;3;Défense Ph. Minimum:4;16;3;Sai
 cimeterre;P:4;6=0|2/3/4=1|5=2;6=>×3;3;4;4;Niveau Minimum:5;10;1;Saigne 5+ => 3
 epee lourde;P:5;1/2/3=0|4/5=1|6=2;5/6=>×2;4;6;3;Force Minimum:5;12;2;
 epee a double tranchant;P:3;1/2=0|3/4=1|5/6=2;6=>×4;3;6;5;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
-epee a deux mains;P:5;1/2/3=0|4/5=1|6=2;P:6;5;6;3;Force Minimum:6;19;2;
 epee perche;P:3;1=0|2/3=1|4/5=2|6=3;;5;6;3;Force Minimum:6;9;2;Perche : L’épée s’agrandit magiquement pour atteindre son adversaire, sa portée est ~5m
 epee traversante;P:4;1/2=0|3=1|4/5/6=2;;2;4;2;Force Minimum:3;7;0;Traversante : cette épée traverse les alliés sans leur causer de dégâts, elle est assez grande pour frapper un ennemi derrière un allié.
 epee inegide;P:3;1/2=0|3/4=1|5/6=2;;2;4;1;Force Minimum:3;11;1;Inégide : Il est impossible de bloquer une frappe de cet épée avec un bouclier
@@ -53,7 +50,6 @@ lance de gobelin;P:5;1/2/3=0|4/5/6=1;6=>×2;3;6;1;Force Minimum:5;7;2;Toxine 2+ 
 fleau;P:3;1/2/3/4=0|5/6=3;;5;6;5;Force Minimum:5;17;3;Écacheur: ( si FFC>3 & si la cible bloque avec un bouclier )Si la cible réussi à bloquer mais qu’elle subit tout de même des dégâts  alors son bouclier est détruit. Si elle échoue à bloquer son bouclier lui échappe des mains.  
 masse d arme;P:3;1/2/3/4=0|5=2|6=3;5=>×3;5;6;1;Force Minimum:4;13;2;Saigne 6+=>2
 marteau du taureau;P:4;1/2/3=0|4/5=2|6=3;;4;6;1;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques
-zweihander;P:17;1/2=0|3/4/5/6=1;6=>2;9;6;5;Force Minimum:14;34;3;
 hache rouillee;P:7;1/2/3/4=0|5/6=1;4=>×1;3;6;1;Force Minimum:5;13;2;
 hachette double maudite;P:3;1/2=0|3/4/5/6=2;6=>×4|2pv en moins pour le porteur;4;4;3;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
 labrys gobeline;P:6;1/2/3/4=0|5/6=1;4=>×1;3;6;1;Force Minimum:5;13;2;Backswing:Si portée à deux mains et que le coup a un FCC inférieur ou égal à 0, alors tous les dés des prochaines frappes de ce tour sont augmentés de 1. Toxine 3+ => 2  
@@ -67,7 +63,6 @@ coups de sabots;P:4;1/2/3=0|4/5=1|6=2;4/5=>×4;2;6;0;;16;0;
 morsure venimeuse;P:4;1/2/3=0|4/5=1|6=2;;2;6;0;;8;0;Venin 3+=>5
 charge catoblepas;P:2;1/2=0|3/4/5/6=3;;3;0;0;;20;0;
 croc fauglir;P:3;1/2=0|3/4=2|5/6=4;;4;6;0;Force Minimum:1;15;0;Saigne 3+ => 4
-hache;P:6;1/2/3=0|4/5/6=1;6=>×2;3;5;2;Force Minimum:5;16;2;
 drain de magie;Ma:4;1=0|2/3/4/5=2|6=3;;2;6;0;Force Minimum:1;10;0;
 epee droite;P:3;1=0|2/3/4=1|5/6=2;4=>×2;4;6;2;Force Minimum:2;7;1;
 main nue;P:1;1/2/3=0|4/5/6=1;6=>×2;2;1;0;;4;1;-2 sur le dé
@@ -85,3 +80,17 @@ On ne peut pas dépenser plus d'unité de fuel qu'il en reste dans la réserve. 
 surin ensorcele;P:2;1=0|2/3/4=1|5=2|6=4;5=>×4;2;3;3;Intelligence Minimum:4;8;0;Peut voler jusqu'à sa cible. Le lanceur peut guider le surin avec les yeux tant qu'il garde le surin en visuel, sinon celui-ci tombe inerte et doit être ramassé.
 croc chien enrage;P:2;1=0|2/3/4/5=2|6=3;;2;6;0;Force Minimum:1;15;0;
 griffes morphvoreur;P:3;1/2=0|3/4=2|5=3|6=4;;4;6;0;;15;0;Peut effectuer une parade avec une énergie avec un seuil de parade à 3+.
+massue minotaurine;P:3;1/2/3/4=0|5=3|6=4;;15;4;4;Force Minimum:13
+Intelligence Minimum : 3;20;4;Impossible de bloquer ou de parer un coup de cette massue.
+Si la cible subit des dégâts elle est sonnée et passe l'entièreté de son prochain tour.
+epee large;P:4;1/2=0|3/4=1|5/6=2;;4;6;3;Force Minimum:4;8;2;
+zweihander;P:17;1/2=0|3/4/5/6=1;6=>×2;9;6;5;Force Minimum:14;34;3;
+epee lourde a deux mains;P:7;1/2/3=0|4/5=1|6=2;5/6=>×2;5;6;3;Force Minimum:7;26;3;[SIMPLE]
++1 au meilleur dé lors d'une frappe à 2 mains
+epee a deux mains;P:5;1/2/3=0|4/5=1|6=2;3=>×1;5;6;3;Force Minimum:6;19;2;[SIMPLE]+1 au moins bon dé lors d'une frappe à 2 mains
+crochet d araneide geante;P:2;1=0|2/3=1|4/5=2|6=4;;3;4;0;Niveau Minimum:2;5;0;Venin 4+ => 3
+Si le compteur de poison de la cible dépasse 6 après un coup de venin alors la cible passe son prochain tour.
+faucille gobeline;P:2;1/2=0|3/4/5=2|6=3;;2;5;1;Niveau Minimum:9;9;0;Eventreur 3
+Utilisée en arme double la faucille inflige 5 dégâts de poison imédiatement.
+hache;P:6;1/2/3=0|4/5/6=1;6=>×2;3;5;2;Force Minimum:7;16;2;
+fleche de mauvaise facture;P:1;1/2/3=0|4/5/6=1;;0;0;0;;0;0;

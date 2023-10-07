@@ -1,6 +1,4 @@
 Nom;Type;Capacite speciale 
-anneau de recuperation;ANNEAU;Cet anneau permet au porteur de ne pas voir sa récupération d’énergie diminuée de 1 lorsqu’il lève son bouclier ou qu’il a fait une roulade.
-
 anneau de nyctalopie;ANNEAU;Avec cet anneau, le joueur voit dans le noir et ne voit pas dans la lumière.
 anneau du cacochyme;ANNEAU;En défense, si vous mourrez vous pouvez rediriger toutes les blessures vers un allié proche de votre choix (celui-ci les soustraits directement les blessures à ses points de vies). Non chaînable avec plusieurs anneaux.
 anneau hematophage;ANNEAU;Cet anneau permet au porteur de regagner en point de vie toutes les blessures qu’il a infligé par saignement.
@@ -44,8 +42,6 @@ Votre jumeau inique perds 50 âmes.
 1=>la récompense d’âme est perdue. 
 
 Le premier des 2 qui enlève l’anneau perds toutes ses âmes.
-anneau opportuniste;ANNEAU;Lorsque vous réussissez une parade, vous pouvez investir autant de votre énergie restante que vous le souhaitez dans votre contre-attaque.
-( Exemple vous avez 2 d’énergie restant, vous parez avec 1, alors vous pouvez contre attaquer avec un maximum de 2).
 anneau perforant;ANNEAU;Tous les coups critiques réussis bénéficient de 
 Saignement 3+ => 2
 Seulement si l’arme ne bénéficie pas de saignement.
@@ -121,8 +117,6 @@ Utilisation : 1
 Coût : 1 action spéciale
 ambre sombre;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés : 
 Si FFC>0, la valeur du dé s’ajoute au FCC.
-ambre sanguine;AMBRE;Jetez un dé 12 faces, lors d’une frappe uniquement, en plus des autres dés :
-Si FFC>0 la cible perds ce nombre de PV avant la résolution de la frappe.
 ambre incandescente;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés. 
 Les dégâts totaux de la frappe sont convertis en dégâts :
 4:Magique
@@ -168,10 +162,6 @@ braise;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe qu
 Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
 7 : Rien
 8 : Rien
-braise amethyste;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
-Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
-7 : Lors d’une frappe:+1 au FFC
-8 : Lors d’une frappe:+2 au FFC
 braise de reviviscence;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
 Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
 7 : Rien
@@ -207,3 +197,55 @@ Ames lors de la mort.
 Ou alors peut récupérer automatiquement les âmes d’un allier proche venant de mourir.
 1 usage.
 anneau malchanceux;ANNEAU;Avec cet anneau, 1x par tour pour une frappe d’au moins 2 d’énergie, vous pouvez relancer le meilleur dé. Seul le dernier résultat compte .
+dent de  girallon;TALISMAN;Procure +2 intelligence
+Procure +2 défense magique
+corne du minotaure;OUTIL;Un forgeron compétent peut l'utiliser pour forger une massue minotaurine.
+besace profonde
+;OUTIL;Ne pèse rien.
+Permet d'entreposer 8 objets sans prendre en compte leur poids.
+besace poppins
+;OUTIL;Ne pèse rien.
+Permet d'entreposer 14 objets sans prendre en compte leur poids.
+ambre sanguine;AMBRE;Jetez un dé 12 faces, lors d’une frappe uniquement, en plus des autres dés :
+Si FFC>0 la cible perds ce nombre de PV avant la résolution de la frappe.
+[SIMPLE]
+Jetez un dé 12 faces, lors d’une frappe uniquement, en plus des autres dés :
+Si la frappe fait des dégâts > 0 alors la cible perds ce nombre de PV avant la résolution de la frappe.
+glande sericigene;OUTIL;glande qui produit des proteines necessaires à la creation de la toile d'araignee. A utiliser avec une patte d'araneide geante.
+appeau inverse;OUTIL;à appliquer contre la bouche d'un animal. si celui-ci a une intelligence de 0 alors l'appeau traduit le language de l'animal.
+anneau de recuperation;ANNEAU;Cet anneau permet au porteur de ne pas voir sa récupération d’énergie diminuée de 1 lorsqu’il lève son bouclier ou qu’il a fait une roulade.
+[SIMPLE] Le porteur regénère une énergie en fin de tour s'il n'en a plus.
+patte d araneide geante;OUTIL;Permet de lancer des sorts d'arachnomancie.
+En depensant une glande séricigène, la patte peut projeter une corde de soie d'araignée de 10m de long, cette corde reste accrochée à l'extremite de la patte.
+Max Energie : 3
+Seuil Blocage : 3+
+Blocage : 0
+Poids : 0
+[SIMPLE]
+Permet de lancer des sorts d'arachnomancie.
+En depensant une glande séricigène, la patte peut projeter une corde de soie d'araignée de 10m de long, cette corde reste accrochée à l'extremite de la patte.
+Max Energie : 3
+Poids : 0
+anneau opportuniste;ANNEAU;Lorsque vous réussissez une parade, vous pouvez investir autant de votre énergie restante que vous le souhaitez dans votre contre-attaque.
+( Exemple vous avez 2 d’énergie restant, vous parez avec 1, alors vous pouvez contre attaquer avec un maximum de 2).
+[SIMPLE]
+Si une frappe de parade inflige au moins 1 blessure alors les énergis investies dans la frappe ne sont pas perdues.
+epee double super attaque;TECHNIQUE;Effet : le joueur bénéficiant de cette technique ajoute +6 dégâts physiques à toutes ses frappes avec épées double qui dépassent le seuil de 0 dégâts
+Points de compétences : 70
+A chaque fois que le joueur tue un ennemi ses épées doubles et remporte ses âmes, il gagne ce nombre d'âme/10 en point de compétences.
+epee a 2 mains imparable;TECHNIQUE;Effet : le joueur bénéficiant de cette technique ne peut pas être paré lorsqu'il frappe à 2 mains avec une épée
+Points de compétences : 70
+A chaque fois que le joueur tue un ennemi avec une épée à 2 mains et remporte ses âmes, il gagne ce nombre d'âme/10 en point de compétences.
+repos de l epeiste;TECHNIQUE;Effet : Cette technique permet au joueur qui tient une épée à 2 mains de ne strictement rien faire pendant son tour et alors de parer automatiquement toutes les frappes qu'il recevra jusqu'à son prochain tour mais il ne peut pas contre-attaquer.
+Points de compétences : 75
+A chaque fois que le joueur tue un ennemi avec une parade et remporte ses âmes, il gagne ce nombre d'âme/10 en point de compétences.
+braise amethyste;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : Lors d’une frappe:+1 au FFC
+8 : Lors d’une frappe:+2 au FFC
+[SIMPLE]
+Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
+Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
+7 : Lors d’une frappe: le dé 8 a des degats x2
+8 : Lors d’une frappe: le dé 8 a des degats x3
+lunette de skronsskrons;OUTIL;effet loupe sur les petits objets
