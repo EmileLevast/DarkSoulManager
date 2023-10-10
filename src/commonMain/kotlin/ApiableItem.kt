@@ -167,7 +167,7 @@ abstract class ApiableItem : IListItem{
         }
 
         protected fun computeCoupCritiqueToStringSimplifie(ccStr:String, parseDegat:Map<EffectType, Int>):String{
-                val ccSplit = ccStr.split("=>�")
+                val ccSplit = ccStr.split("=>�")
                 var degatFinaux = parseDegat.mapValues { degatSeuil -> degatSeuil.value * try {
                         ccSplit.last().toInt()
                 } catch (e: Exception) {
@@ -175,5 +175,81 @@ abstract class ApiableItem : IListItem{
                 }
                 }
                 return ccSplit.first() + "=>" + degatFinaux.map{type->type.key.shortname+":"+type.value}.joinToString ("|" )
+        }
+
+        /**
+         * En sortie Pair<String,String> le premier élément correspond au textes des seuils, le deuxième au texte des coups critiques
+         */
+        protected fun simplificationTextesSeuilsEtCc(valeurTypeInitial : String, seuilsInput: Map<String, List<Int>>, coupsCritiquesInput: String): Pair<String, String> {
+            var textSeuils = ""
+
+            //on recupere la string avec la valeur de defense ou de degats de base selon le type
+            val temp = parseDefense(valeurTypeInitial.replace("P:", "Ph:"))
+                val pair = simplificationTextesSeuilsEtCCPourMap(temp, seuilsInput, coupsCritiquesInput)
+
+                return Pair(pair.first, pair.second)
+        }
+
+        /**
+         * En sortie Pair<String,String> le premier élément correspond au textes des seuils, le deuxième au texte des coups critiques
+         */
+        protected fun simplificationTextesSeuilsEtCCPourMap(
+                temp: Map<EffectType, String>,
+                seuilsInput: Map<String, List<Int>>,
+                coupsCritiquesInput: String
+        ): Pair<String, String> {
+                //dans cet Map on possède en clé le type et en valeur un entier qui correspond au degat de base
+                var textSeuils = ""
+                var parseValeurTypeInital = temp.mapValues {
+                        try {
+                                it.value.toInt()
+                        } catch (e: Exception) {
+                                -1
+                        }
+                }
+
+
+                var facteur = 0
+                var degatFinaux = mapOf<EffectType, Int>()
+                //ici on va multiplier chaque valeur des seuils par la valeur des types initiaux
+                seuilsInput.forEach {
+                        try {
+                                facteur = it.key.toInt()
+                        } catch (e: Exception) {
+                                facteur = -1
+                        }
+
+
+                        degatFinaux =
+                                parseValeurTypeInital.mapValues { valeurSelonSeuil -> valeurSelonSeuil.value * facteur }
+
+                        //dans cette liste chaque élément correspond à un seuil avec en valeur la multiplication entre le resultat du seuil et les valeurs de bases
+                        val listDegatFinaux = degatFinaux.map { type -> type.key.shortname + ":" + type.value }
+
+                        //Ici c'est une string avec tous les seuils de la liste précédente afficher sur plusieurs lignes
+                        textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString("|")}\n"
+
+                }
+
+                var coupcCritiquesCalcules = strSimplify(coupsCritiquesInput, true)
+                if (coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()) {
+
+                        if (coupcCritiquesCalcules.contains("|")) {
+                                val tempSplit = coupcCritiquesCalcules.split("|")
+                                coupcCritiquesCalcules = ""
+                                tempSplit.forEach {
+                                        coupcCritiquesCalcules += computeCoupCritiqueToStringSimplifie(
+                                                it,
+                                                parseValeurTypeInital
+                                        ) + "|"
+                                }
+                        } else {
+                                coupcCritiquesCalcules = computeCoupCritiqueToStringSimplifie(
+                                        coupcCritiquesCalcules,
+                                        parseValeurTypeInital
+                                )
+                        }
+                }
+                return Pair(textSeuils, coupcCritiquesCalcules)
         }
 }

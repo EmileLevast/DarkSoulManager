@@ -1,4 +1,3 @@
-import io.ktor.util.logging.*
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -38,50 +37,7 @@ class Arme(
     }
 
     override fun getStatsSimplifiedAsStrings(): String {
-        var textSeuils = ""
-
-        val temp = parseDefense(degat.replace("P:", "Ph:"))
-
-        var parseDegats = temp.mapValues {
-            try {
-                it.value.toInt()
-            } catch (e: Exception) {
-                -1
-            }
-        }
-
-
-        var facteur = 0
-        var degatFinaux = mapOf<EffectType, Int>()
-        seuils.forEach {
-            try {
-                facteur = it.key.toInt()
-            } catch (e: Exception) {
-                facteur = -1
-            }
-
-
-            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * facteur }
-
-            val listDegatFinaux = degatFinaux.map { type -> type.key.shortname + ":" + type.value }
-
-            textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString("|")}\n"
-
-        }
-
-        var coupcCritiquesCalcules = strSimplify(coupCritiques, true)
-        if (coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()) {
-
-            if (coupcCritiquesCalcules.contains("|")) {
-                val tempSplit = coupcCritiquesCalcules.split("|")
-                coupcCritiquesCalcules = ""
-                tempSplit.forEach {
-                    coupcCritiquesCalcules += computeCoupCritiqueToStringSimplifie(it, parseDegats) + "|"
-                }
-            } else {
-                coupcCritiquesCalcules = computeCoupCritiqueToStringSimplifie(coupcCritiquesCalcules, parseDegats)
-            }
-        }
+        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCc(degat,seuils,coupCritiques)
 
 
 
@@ -147,7 +103,7 @@ class Arme(
         )
     }
 
-    override fun getDeparsedAttributes(): List<String> {
+    fun getDeparsedAttributesOld(): List<String> {
         return listOf<String>(
             nom,
             degat,
@@ -160,6 +116,22 @@ class Arme(
             fajMax.toString(),
             poids.toString(),
             capaciteSpeciale
+        )
+    }
+
+    override fun getDeparsedAttributes(): List<String> {
+
+        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCc(degat,seuils,coupCritiques)
+
+        return listOf<String>(
+            nom,
+            textSeuils,
+            coupcCritiquesCalcules,
+            maximumEnergie.toString(),
+            contraintes,
+            fajMax.toString(),
+            poids.toString(),
+            strSimplify(capaciteSpeciale, true)
         )
     }
 }

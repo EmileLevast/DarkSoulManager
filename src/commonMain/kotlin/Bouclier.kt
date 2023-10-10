@@ -58,12 +58,10 @@ class Bouclier(
     override fun getDeparsedAttributes(): List<String> {
         return listOf(
             nom,
-            seuilParade.toString(),
-            seuilBlocage.toString(),
             deparseDefense(defense),
             contraintes,
             poids.toString(),
-            capaciteSpeciale
+            strSimplify(capaciteSpeciale,true)
         )
     }
 }

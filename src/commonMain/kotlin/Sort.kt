@@ -9,7 +9,7 @@ class Sort(
     val intelligenceMin:Int=0,
     val contraintes:String="Aucune",
     val degats:Map<EffectType,String> = mapOf(),
-    val seuils:Map<String,List<Int>> = mapOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
+    val seuils:Map<String,List<Int>> = mapOf(),//en clï¿½ c'est le facteur et en valeur c'est la liste des seuils associï¿½s
     val coupCritiques:String="",
     val iajMax:Int=0,
     val description:String=""
@@ -38,7 +38,7 @@ class Sort(
     override fun getStatsAsStrings(): String {
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   ${it.value.joinToString("/")} =>×${it.key}\n"
+            textSeuils += "|   ${it.value.joinToString("/")} =>ï¿½${it.key}\n"
         }
         val contraintesParsed = strSimplify(contraintes,false)
         val coupCritiquesParsed = strSimplify(coupCritiques,false)
@@ -56,50 +56,10 @@ class Sort(
 
     override fun getStatsSimplifiedAsStrings(): String {
 
-        var textSeuils = ""
+        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCCPourMap(degats,seuils,coupCritiques)
 
-        val parseDegats =degats.mapValues {
-            try {
-                it.value.toInt()
-            } catch (e: Exception) {
-                -1
-            }
-        }
-
-
-        var facteur = 0
-        var degatFinaux = mapOf<EffectType,Int>()
-        seuils.forEach {
-            try {
-                facteur = it.key.toInt()
-            } catch (e: Exception) {
-                facteur = -1
-            }
-
-
-            degatFinaux = parseDegats.mapValues { degatSeuil -> degatSeuil.value * facteur }
-
-            val listDegatFinaux = degatFinaux.map{type->type.key.shortname+":"+type.value}
-
-            textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString ("|" )}\n"
-
-        }
 
         val contraintesParsed = strSimplify(contraintes,true)
-
-        var coupcCritiquesCalcules = strSimplify(coupCritiques, true)
-        if (coupcCritiquesCalcules.isNotBlank() && coupcCritiquesCalcules.first().isDigit()) {
-
-            if (coupcCritiquesCalcules.contains("|")) {
-                val tempSplit = coupcCritiquesCalcules.split("|")
-                coupcCritiquesCalcules = ""
-                tempSplit.forEach {
-                    coupcCritiquesCalcules += computeCoupCritiqueToStringSimplifie(it, parseDegats) + "|"
-                }
-            } else {
-                coupcCritiquesCalcules = computeCoupCritiqueToStringSimplifie(coupcCritiquesCalcules, parseDegats)
-            }
-        }
 
         return  type.symbol+"\n"+
                 "Utilisations : $utilisation\n" +
@@ -129,7 +89,7 @@ class Sort(
         )
     }
 
-    override fun getDeparsedAttributes(): List<String> {
+    fun getDeparsedAttributesOld(): List<String> {
         return listOf<String>(
             nom,
             type.name,
@@ -145,5 +105,23 @@ class Sort(
         )
     }
 
+    override fun getDeparsedAttributes(): List<String> {
+
+        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCCPourMap(degats,seuils,coupCritiques)
+
+
+        return listOf<String>(
+            nom,
+            type.name,
+            utilisation.toString(),
+            cout,
+            intelligenceMin.toString(),
+            contraintes,
+            textSeuils,
+            coupcCritiquesCalcules,
+            iajMax.toString(),
+            strSimplify(description, true)
+        )
+    }
 
 }
