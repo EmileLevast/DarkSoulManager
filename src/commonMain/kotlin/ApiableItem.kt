@@ -39,7 +39,7 @@ abstract class ApiableItem : IListItem{
                         val listCSVElementOnLine = currentLine.split(";")
 
                         //If the line is empty we pass it
-                        if(!listCSVElementOnLine.first().isBlank()){
+                        if(listCSVElementOnLine.first().isNotBlank()){
                                 listApiableItem.add(parseFromCSV(listCSVElementOnLine))
                         }
 
@@ -227,7 +227,7 @@ abstract class ApiableItem : IListItem{
                         val listDegatFinaux = degatFinaux.map { type -> type.key.shortname + ":" + type.value }
 
                         //Ici c'est une string avec tous les seuils de la liste précédente afficher sur plusieurs lignes
-                        textSeuils += "|   ${it.value.joinToString("/")} =>${listDegatFinaux.joinToString("|")}\n"
+                        textSeuils += "|${it.value.joinToString("/")}=>${listDegatFinaux.joinToString("|")}\n"
 
                 }
 

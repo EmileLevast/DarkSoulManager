@@ -40,7 +40,6 @@ Votre jumeau inique perds 50 âmes.
 3/4=>vous recevez la moitié de la récompense d’âmes. Votre jumeau inique reçoit l’autre moitié.
 2 =>vous ne recevez pas la récompense d’âmes. Votre jumeau inique reçoit la moitié de celle-ci.
 1=>la récompense d’âme est perdue. 
-
 Le premier des 2 qui enlève l’anneau perds toutes ses âmes.
 anneau perforant;ANNEAU;Tous les coups critiques réussis bénéficient de 
 Saignement 3+ => 2
@@ -63,7 +62,6 @@ anneau protecteur;ANNEAU;Le seuil de blocage de l’arme est diminué de 2. Pour
 anneau caligineux;ANNEAU;En arrivant rapidement environné d’ un brouillard vous surprenez l’ennemi à la gorge.
 Si un ennemi ne vous a pas remarqué au début de son tour, vous pouvez tenter de faire un backstab même en arrivant de face.
 anneau moratoire
-;ANNEAU;Vous pouvez déclarer faire une parade après que les dés de l’adversaire aient été lancés.
 anneau du detrousseur;ANNEAU;Le porteur de cet anneau peut voler un item d’un ennemi au corps à corps. Cela se déroule de la même manière qu’une action de « fouille » de cadavres, si ce n’est que la fouille est considérée comme réussie et qu’il faut juste jeter un dé pour savoir quel item est volé.
 talisman de carcasse [nbr];TALISMAN;Procure +[Nbr] de vie au porteur
 talisman de thorolund [nbr];TALISMAN;Procure +[Nbr] intelligence au porteur
@@ -77,14 +75,11 @@ F: +2
 Intelligence minimum : 10
 talisman spirituel [nbr];TALISMAN;Procure +[Nbr] Intelligence
 Procure +[Nbr] défense magique
-
 Intelligence minimum : 6
 dent de  [nbr];TALISMAN;Procure +[Nbr] Intelligence
 Procure +[Nbr] défense magique
-
 Intelligence minimum : 6
 talisman de chasseur de feu;TALISMAN;Donne la direction dans laquelle se trouve les autres joueurs
-
 Intelligence minimum : 1
 main de pyromancie;OUTIL;Permet de lancer des sorts de pyromancie.
 Max Energie : 3
@@ -101,18 +96,13 @@ Seuil Blocage : 5+
 Blocage : 2
 Poids : 1
 fiole d’estus;OUTIL;Restaure toute la vie.
-
 Utilisation : 1
 Coût : 1 action spéciale
 fiole de poison;OUTIL;Ajoute Toxine 2+ => 4 sur l’arme tenue pour la prochaine frappe uniquement. 
 Ne fonctionne pas sur les armes disposant déjà de Toxine.
-
 Utilisation : 5
 gemme d’invasion
-;OUTIL;Utilisation : 1
-Permet d’envahir une partie de jdr dark soul à laquelle vous ne participez pas. 
 fiole d’antidote;OUTIL;Réinitialise le compteur de poison.
-
 Utilisation : 1
 Coût : 1 action spéciale
 ambre sombre;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés : 
@@ -166,30 +156,22 @@ braise de reviviscence;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors d
 Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
 7 : Rien
 8 : Rien
-
 Si le joueur meurt durant l’effet de la braise, ses âmes ne se répandent pas par terre. Il passe un tour mort, et revit le début de son tour d’après avec toute sa vie, humanité et âmes.
 De plus la braise s’échappe en fumée et indique la position du feu le plus proche.
 menotte annihilatrice;OUTIL;Vie: 20
 Def : Ph:10|Po:5|F:5
-
 Le porteur ne peut plus faire de magie. 
 relique de necroalgos;OUTIL;Utilisation : Apposer la relique sur un cadavre frais.
 le joueur doit lancer 1 dé 1à faces. Le résultat cumulé à l’intelligence du joueur doit dépasser 9.
-
 Le cadavre se réveille dans des spasmes de douleurs et des cris terribles
-
 Effet réussite : le joueur récupère la moitié des âmes et humanités que le cadavre avait avant de mourir.
-
 Effet échec : le cadavre se réveille avec ses statistiques de pleine forme et n’a que de la haine pour le joueur qu’il cherche à tuer immédiattement. Inraisonnable le cadavre joue immédiattement et remeurt au bout de 3 tours.
 Aucune récompense ni drop possible.
 relique necrozetetique;OUTIL;Utilisation :  le joueur doit lancer 1 dé 1à faces. Le résultat cumulé à l’intelligence du joueur doit dépasser 5.
-
 Effet Réussite : 
 Dans un nuage de fumée rouge, le joueur est téléporté au cadavre le plus proche sans que cela ne lui coûte d’action. Le cadavre doit être plus ou moins frais. C’est pas une science exacte.
 L’item disparaît après utilisation.
-
 Effet échec : un trait de fumée rouge part du joueur et s’échappe et relie le joueur à l’être le plus mauvais des environs qui se mets immédiattement à chasser le joueur en remontant le trait de fumée rouge. Le trait de fumée rouge suit le joueur mais disparaît à la mort ou si le joueur regagne des pvs.
-
 L’item disparaît après utilisation.
 anneau avilissant;ANNEAU;Cet anneau permet au joueur de diminuer de 1 son seuil de réussite de son action de backstab. (pour un minimum de 2+)
 anneau sacrificiel;ANNEAU;Le joueur ne perd pas ses
@@ -201,34 +183,18 @@ dent de  girallon;TALISMAN;Procure +2 intelligence
 Procure +2 défense magique
 corne du minotaure;OUTIL;Un forgeron compétent peut l'utiliser pour forger une massue minotaurine.
 besace profonde
-;OUTIL;Ne pèse rien.
-Permet d'entreposer 8 objets sans prendre en compte leur poids.
-besace poppins
-;OUTIL;Ne pèse rien.
-Permet d'entreposer 14 objets sans prendre en compte leur poids.
-ambre sanguine;AMBRE;Jetez un dé 12 faces, lors d’une frappe uniquement, en plus des autres dés :
-Si FFC>0 la cible perds ce nombre de PV avant la résolution de la frappe.
-[SIMPLE]
+ambre sanguine;AMBRE;
 Jetez un dé 12 faces, lors d’une frappe uniquement, en plus des autres dés :
 Si la frappe fait des dégâts > 0 alors la cible perds ce nombre de PV avant la résolution de la frappe.
 glande sericigene;OUTIL;glande qui produit des proteines necessaires à la creation de la toile d'araignee. A utiliser avec une patte d'araneide geante.
 appeau inverse;OUTIL;à appliquer contre la bouche d'un animal. si celui-ci a une intelligence de 0 alors l'appeau traduit le language de l'animal.
-anneau de recuperation;ANNEAU;Cet anneau permet au porteur de ne pas voir sa récupération d’énergie diminuée de 1 lorsqu’il lève son bouclier ou qu’il a fait une roulade.
-[SIMPLE] Le porteur regénère une énergie en fin de tour s'il n'en a plus.
-patte d araneide geante;OUTIL;Permet de lancer des sorts d'arachnomancie.
-En depensant une glande séricigène, la patte peut projeter une corde de soie d'araignée de 10m de long, cette corde reste accrochée à l'extremite de la patte.
-Max Energie : 3
-Seuil Blocage : 3+
-Blocage : 0
-Poids : 0
-[SIMPLE]
+anneau de recuperation;ANNEAU; Le porteur regénère une énergie en fin de tour s'il n'en a plus.
+patte d araneide geante;OUTIL;
 Permet de lancer des sorts d'arachnomancie.
 En depensant une glande séricigène, la patte peut projeter une corde de soie d'araignée de 10m de long, cette corde reste accrochée à l'extremite de la patte.
 Max Energie : 3
 Poids : 0
-anneau opportuniste;ANNEAU;Lorsque vous réussissez une parade, vous pouvez investir autant de votre énergie restante que vous le souhaitez dans votre contre-attaque.
-( Exemple vous avez 2 d’énergie restant, vous parez avec 1, alors vous pouvez contre attaquer avec un maximum de 2).
-[SIMPLE]
+anneau opportuniste;ANNEAU;
 Si une frappe de parade inflige au moins 1 blessure alors les énergis investies dans la frappe ne sont pas perdues.
 epee double super attaque;TECHNIQUE;Effet : le joueur bénéficiant de cette technique ajoute +6 dégâts physiques à toutes ses frappes avec épées double qui dépassent le seuil de 0 dégâts
 Points de compétences : 70
@@ -239,11 +205,7 @@ A chaque fois que le joueur tue un ennemi avec une épée à 2 mains et remporte
 repos de l epeiste;TECHNIQUE;Effet : Cette technique permet au joueur qui tient une épée à 2 mains de ne strictement rien faire pendant son tour et alors de parer automatiquement toutes les frappes qu'il recevra jusqu'à son prochain tour mais il ne peut pas contre-attaquer.
 Points de compétences : 75
 A chaque fois que le joueur tue un ennemi avec une parade et remporte ses âmes, il gagne ce nombre d'âme/10 en point de compétences.
-braise amethyste;BRAISE;Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
-Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
-7 : Lors d’une frappe:+1 au FFC
-8 : Lors d’une frappe:+2 au FFC
-[SIMPLE]
+braise amethyste;BRAISE;
 Remplacer un dé 6 faces par un dé 8 faces lors de n’importe quel lancé de dé. 
 Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
 7 : Lors d’une frappe: le dé 8 a des degats x2
