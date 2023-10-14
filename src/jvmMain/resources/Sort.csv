@@ -1,4 +1,4 @@
-Nom;Type;Utilisation ;Cout ;Intelligence Min ;contraintes ;Degats;Seuils;Coups critiques ;IAJ Max ;Description 
+Nom;Type;Utilisation ;Cout ;Intelligence Min ;contraintes ;Seuils;Coups critiques ;IAJ Max ;Description
 arme magique;AME;5;Ne coûte pas d'action;4;Distance et Cac;;;0;Ne coûte rien. Ajoute 2 de dégât magique aux dégâts totaux de vos frappes pour l’arme de votre choix.Vous ne pouvez pas désigner l’arme d’un compagnon. L’effet se termine à la fin de votre tour.
 eclairs;AME;3;;9;Distance. Max energie : 2;|1=>Ma:0
 |2/3/4/5=>Ma:4

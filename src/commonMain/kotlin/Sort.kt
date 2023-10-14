@@ -66,13 +66,13 @@ class Sort(
         return Sort(
             listCSVElement[0].cleanupForDB(),
             parseSpellType(listCSVElement[1]),
-            listCSVElement[2].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[2].getIntOrZero(),
             listCSVElement[3],
-            listCSVElement[4].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[4].getIntOrZero(),
             listCSVElement[5],
             parseSeuils(listCSVElement[7]),
             listCSVElement[8],
-            listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[9].getIntOrZero(),
             listCSVElement[10]
         )
     }

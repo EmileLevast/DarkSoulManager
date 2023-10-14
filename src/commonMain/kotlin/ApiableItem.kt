@@ -115,7 +115,7 @@ abstract class ApiableItem : IListItem {
         var valeurTypeAssocies: MutableList<Pair<EffectType, Int>> = mutableListOf()
         if (inputElement.isNotEmpty()) {
             //Si la string n'est pas vide, on supprime les passages à la ligne et on separe chaque niveau de seuil
-            inputElement.split("\n").forEach {
+            inputElement.removeSuffix("\n").split("\n").forEach {
                 //puis pour chaque niveau de seuil on sépare au niveau du =>
                 val listSeuilsParFacteur = it.split("=>")
                 listSeuilsParFacteur.first().removePrefix("|").let { itInutilise ->
