@@ -3,7 +3,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 class Arme(
     override val nom: String = "inconnu",
-    val seuils: List<Seuil> = mutableListOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
+    val seuils: List<Seuil> = mutableListOf(),
     val coupCritiques: String = "",
     val maximumEnergie: Int = 0,
     val contraintes: String = "Aucune",
@@ -61,7 +61,7 @@ class Arme(
     override fun getParsingRulesAttributesAsList(): List<String> {
         return listOf(
             "Nom: String",
-            "Seuils: Format = |Int/Int=Effect:Int|EffectType:Int...\n|Int/Int=Effect:Int|EffectType:Int ",
+            "Seuils: Format = |Int/Int=Effect:Int|EffectType:Int...\\n|Int/Int=Effect:Int|EffectType:Int ",
             "Coups critiques :String",
             "Maximum Energie : Int",
             "Contraintes : String",

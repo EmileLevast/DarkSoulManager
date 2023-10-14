@@ -8,8 +8,7 @@ class Sort(
     val cout:String="Aucune",
     val intelligenceMin:Int=0,
     val contraintes:String="Aucune",
-    val degats:Map<EffectType,String> = mapOf(),
-    val seuils:Map<String,List<Int>> = mapOf(),//en cl� c'est le facteur et en valeur c'est la liste des seuils associ�s
+    val seuils:List<Seuil> = mutableListOf(),//en cl� c'est le facteur et en valeur c'est la liste des seuils associ�s
     val coupCritiques:String="",
     val iajMax:Int=0,
     val description:String=""
@@ -17,37 +16,23 @@ class Sort(
 
     override val id: Int = nom.hashCode()
 
-    override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
-        return Sort(
-            listCSVElement[0].cleanupForDB(),
-            parseSpellType(listCSVElement[1]),
-            listCSVElement[2].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[3],
-            listCSVElement[4].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[5],
-            parseDefense(listCSVElement[6]),
-            parseSeuils(listCSVElement[7]),
-            listCSVElement[8],
-            listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[10]
-            )
-    }
+
 
     override var isAttached: Boolean = false
 
     override fun getStatsAsStrings(): String {
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   ${it.value.joinToString("/")} =>�${it.key}\n"
+            textSeuils += "|   $it\n"
         }
-        val contraintesParsed = strSimplify(contraintes,false)
+
         val coupCritiquesParsed = strSimplify(coupCritiques,false)
+
         return  type.symbol+"\n"+
                 "Utilisations : $utilisation\n" +
                 "Cout : $cout\n" +
                 "Intelligence Minimum : $intelligenceMin\n" +
-                (if(contraintesParsed.isNotBlank())"$contraintesParsed\n" else "") +
-                convertEffectTypeStatsToString(degats)+"\n"+
+                (if(contraintes.isNotBlank())"$contraintes\n" else "") +
                 "Seuils:\n" + textSeuils +
                 (if(coupCritiquesParsed.isNotBlank())"CC : $coupCritiquesParsed\n" else "") +
                 "IAJ Max : $iajMax\n" +
@@ -55,22 +40,7 @@ class Sort(
     }
 
     override fun getStatsSimplifiedAsStrings(): String {
-
-        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCCPourMap(degats,seuils,coupCritiques)
-
-
-        val contraintesParsed = strSimplify(contraintes,true)
-
-        return  type.symbol+"\n"+
-                "Utilisations : $utilisation\n" +
-                "Cout : $cout\n" +
-                "Intelligence Minimum : $intelligenceMin\n" +
-                (if(contraintesParsed.isNotBlank())"$contraintesParsed\n" else "") +
-                convertEffectTypeStatsToString(degats)+"\n"+
-                "Seuils:\n" + textSeuils +
-                (if(coupcCritiquesCalcules.isNotBlank())"CC : $coupcCritiquesCalcules\n" else "") +
-                "Intelligence Max : $iajMax\n" +
-                "${strSimplify(description,true)}\n"
+        return getStatsAsStrings()
     }
 
     override fun getParsingRulesAttributesAsList(): List<String> {
@@ -81,34 +51,19 @@ class Sort(
             "Cout : String",
             "Intelligence Min : Int",
             "contraintes : String",
-            "Degats: Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
-            "Seuils: Format = Int/Int=Int|Int/Int=Int... ",
+            "Seuils: Format = |Int/Int=Effect:Int|EffectType:Int...\\n|Int/Int=Effect:Int|EffectType:Int  ",
             "Coups critiques :String",
             "IAJ Max : Int",
             "Description : String",
         )
     }
 
-    fun getDeparsedAttributesOld(): List<String> {
-        return listOf<String>(
-            nom,
-            type.name,
-            utilisation.toString(),
-            cout,
-            intelligenceMin.toString(),
-            contraintes,
-            deparseDefense(degats),
-            deparseSeuils(seuils),
-            coupCritiques,
-            iajMax.toString(),
-            description
-        )
-    }
-
     override fun getDeparsedAttributes(): List<String> {
 
-        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCCPourMap(degats,seuils,coupCritiques)
-
+        var textSeuils = ""
+        seuils.forEach {
+            textSeuils += "|$it\n"
+        }
 
         return listOf<String>(
             nom,
@@ -118,9 +73,24 @@ class Sort(
             intelligenceMin.toString(),
             contraintes,
             textSeuils,
-            coupcCritiquesCalcules,
+            coupCritiques,
             iajMax.toString(),
             strSimplify(description, true)
+        )
+    }
+
+    override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
+        return Sort(
+            listCSVElement[0].cleanupForDB(),
+            parseSpellType(listCSVElement[1]),
+            listCSVElement[2].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[3],
+            listCSVElement[4].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[5],
+            parseSeuils(listCSVElement[7]),
+            listCSVElement[8],
+            listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[10]
         )
     }
 
