@@ -36,11 +36,11 @@ class Arme(
             textSeuils += "|   $it\n"
         }
         return "Seuils:\n" + textSeuils +
-                (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, false)}\n" else "") +
+                (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, true)}\n" else "") +
                 "FAJ Max : $fajMax\n" +
-                (if (contraintes.isNotBlank()) " ${strSimplify(contraintes, false)}\n" else "") +
+                (if (contraintes.isNotBlank()) " ${strSimplify(contraintes, true)}\n" else "") +
                 "Poids : $poids\n" +
-                "${strSimplify(capaciteSpeciale, false)}\n"
+                "${strSimplify(capaciteSpeciale, true)}\n"
     }
 
     override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
@@ -86,7 +86,7 @@ class Arme(
             contraintes,
             fajMax.toString(),
             poids.toString(),
-            strSimplify(capaciteSpeciale, true)
+            capaciteSpeciale
         )
     }
 }

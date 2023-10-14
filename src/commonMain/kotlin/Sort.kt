@@ -21,26 +21,30 @@ class Sort(
     override var isAttached: Boolean = false
 
     override fun getStatsAsStrings(): String {
+        return statsAsStringAccordingToSimplifyOrNot(false)
+    }
+
+    private fun statsAsStringAccordingToSimplifyOrNot(isSimplify:Boolean): String {
         var textSeuils = ""
         seuils.forEach {
             textSeuils += "|   $it\n"
         }
 
-        val coupCritiquesParsed = strSimplify(coupCritiques,false)
+        val coupCritiquesParsed = strSimplify(coupCritiques, isSimplify)
 
-        return  type.symbol+"\n"+
+        return type.symbol + "\n" +
                 "Utilisations : $utilisation\n" +
                 "Cout : $cout\n" +
                 "Intelligence Minimum : $intelligenceMin\n" +
-                (if(contraintes.isNotBlank())"$contraintes\n" else "") +
+                (if (contraintes.isNotBlank()) "$contraintes\n" else "") +
                 "Seuils:\n" + textSeuils +
-                (if(coupCritiquesParsed.isNotBlank())"CC : $coupCritiquesParsed\n" else "") +
+                (if (coupCritiquesParsed.isNotBlank()) "CC : $coupCritiquesParsed\n" else "") +
                 "IAJ Max : $iajMax\n" +
-                "${strSimplify(description,false)}\n"
+                "${strSimplify(description, isSimplify)}\n"
     }
 
     override fun getStatsSimplifiedAsStrings(): String {
-        return getStatsAsStrings()
+        return statsAsStringAccordingToSimplifyOrNot(true)
     }
 
     override fun getParsingRulesAttributesAsList(): List<String> {
@@ -75,7 +79,7 @@ class Sort(
             textSeuils,
             coupCritiques,
             iajMax.toString(),
-            strSimplify(description, true)
+            description
         )
     }
 
