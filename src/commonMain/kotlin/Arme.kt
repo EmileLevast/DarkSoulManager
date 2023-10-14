@@ -3,8 +3,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 class Arme(
     override val nom: String = "inconnu",
-    val degat: String = "Ph:0",
-    val seuils: Map<String, List<Int>> = mapOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
+    val seuils: List<Seuil> = mutableListOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
     val coupCritiques: String = "",
     val maximumEnergie: Int = 0,
     val seuilBlocage: Int = 0,
