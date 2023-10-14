@@ -7,7 +7,7 @@ eclairs;AME;3;;9;Distance. Max energie : 2;|1=>Ma:0
 nyctalopie;AME;2;Energies au choix;6;Minimum energie : 1;;;0;Jetez 1 dé par énergie:Si un dé dépasse 4, alors le joueur voit dans le noir et ne voit pas dans la lumière.Sinon si un dé = 1, alors le joueur est aveugle pendant 2 tours.
 petite fleche d ame;AME;13;Energies et ames;6;Maximum energie : 2;|1/2=>Ma:0
 |3/4/5/6=>Ma:2
-;6=>x2=>Ma:-2;10;Le lanceur peut décider de sacrifier 50 âmes pour ajouter 1 de dégât magique aux dégâts totaux. Il peut ainsi ajouter jusqu’à 3 points de dégâts maximum par frappe.
+;6=>Ma:4;10;Le lanceur peut décider de sacrifier 50 âmes pour ajouter 1 de dégât magique aux dégâts totaux. Il peut ainsi ajouter jusqu’à 3 points de dégâts maximum par frappe.
 dissipateur;AME;3;;3;;;;0;Le sort permet de produire un souffle avec la main, celui-ci n’est pas violent mais parfaitement sain et cela permet principalement de remplacer l’air ambiant par un air plus appréciable.
 givrant;AME;6;;4;;;;0;Le sort permet de faire fortement diminuer la température,  assez pour qu’une falque d’eau se transforme en plaque de verglas par exemple.
 retour;AME;1;;4;;;;0;Renvoie au dernier feu. Revient au feu avec toutes ses âmes (considère qu’il est mort)
@@ -61,7 +61,7 @@ Dur jusqu’au début du prochain tour du lanceur.
 Pour chacune des frappes que le lanceur fait avec une arme il relance 5x les dés de la frappe et celle-ci sont considérées comme des frappes à part, que la cible doit gérer en plus.
 fleche d ame;AME;8;Energies et ames;9;Maximum energie : 2;|1/2=>Ma:0
 |3/4/5/6=>Ma:3
-;6=>x2=>Ma:-3;10;Le lanceur peut décider de sacrifier 50 âmes pour ajouter 1 de dégât magique aux dégâts totaux. Il peut ainsi ajouter jusqu’à 4 points de dégâts maximum par frappe.
+;6=>Ma:6;10;Le lanceur peut décider de sacrifier 50 âmes pour ajouter 1 de dégât magique aux dégâts totaux. Il peut ainsi ajouter jusqu’à 4 points de dégâts maximum par frappe.
 ubiquite superieur;AME;1;;16;Minimum énergie : 1;;;0;Dépensez une énergie et jetez un dé. Sur 3+ le sort est réussit.
 A ce moment une réplique identique(sauf pour les âmes et l’humanité qui ne sont pas répliqués, les effets de braises ne sont pas réplqiués) du personnage du lanceur est créé à une position au choix du joueur. Celle-ci compte comme un nouveau joueur, qui joue juste après le tour du lanceur.
 Cette réplique disparaît au début du prochain tour du lanceur.

@@ -6,15 +6,15 @@ epee ebrechee effilee;|1/2=>Ph:0
 rapiere;|1/2=>Ph:0
 |3=>Ph:3
 |4/5/6=>Ph:6
-;6=>×4=>Ph:-3;3;Niveau Minimum:3;9;2;Parade ×1
+;6=>Ph:12;3;Niveau Minimum:3;9;2;Parade ×1
 epee ebrechee;|1/2=>Ph:0
 |3/4=>Ph:2
 |5/6=>Ph:4
-;4=>×2=>Ph:-2;3;;5;1;
+;4=>Ph:4;3;;5;1;
 epee courte;|1/2=>Ph:0
 |3/4=>Ph:3
 |5/6=>Ph:6
-;6=>×3=>Ph:-3;2;Force Minimum:3;6;1;
+;6=>Ph:9;2;Force Minimum:3;6;1;
 epee longue;|1=>Ph:0
 |2/3=>Ph:4
 |4/5/6=>Ph:8
@@ -22,19 +22,19 @@ epee longue;|1=>Ph:0
 epee barbelee;|1/2=>Ph:0
 |3=>Ph:4
 |4/5/6=>Ph:8
-;3=>×2=>Ph:-4;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4
+;3=>Ph:8;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4
 cimeterre;|6=>Ph:0
 |2/3/4=>Ph:4
 |5=>Ph:8
-;6=>×3=>Ph:-4;3;Niveau Minimum:5;10;1;Saigne 5+ => 3
+;6=>Ph:12;3;Niveau Minimum:5;10;1;Saigne 5+ => 3
 epee lourde;|1/2/3=>Ph:0
 |4/5=>Ph:5
 |6=>Ph:10
-;5/6=>×2=>Ph:-5;4;Force Minimum:5;12;2;
+;5/6=>Ph:10;4;Force Minimum:5;12;2;
 epee a double tranchant;|1/2=>Ph:0
 |3/4=>Ph:3
 |5/6=>Ph:6
-;6=>×4=>Ph:-3;3;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
+;6=>Ph:12;3;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
 epee perche;|1=>Ph:0
 |2/3=>Ph:3
 |4/5=>Ph:6
@@ -56,62 +56,62 @@ epee du chevalier noir;|1/2=>Ph:0
 epee ebrechee crenelee;|1/2=>Ph:0
 |3/4=>Ph:2
 |5/6=>Ph:4
-;4=>×2=>Ph:-2;3;;5;1;Eventreur 4
+;4=>Ph:4;3;;5;1;Eventreur 4
 uchigatana;|1=>Ph:0
 |2/3=>Ph:4
 |4/5=>Ph:6
 |6=>Ph:10
-;3=>×3=>Ph:-2;3;Niveau Minimum:7;21;1;Saigne 7+ => 4
+;3=>Ph:6;3;Niveau Minimum:7;21;1;Saigne 7+ => 4
 torche febrile;|1/2=>F:0
 |3/4/5/6=>F:1
-;6=>×2=>F:-1;1;;4;1;
+;6=>F:2;1;;4;1;
 fouet court;|1/2/3=>Ph:0
 |4/5/6=>Ph:4
-;2/3=>×1=>Ph:-2;2;;6;1;Chaire à nue => ×1
+;2/3=>Ph:2;2;;6;1;Chaire à nue => ×1
 laniere de feu;|1/2=>F:0
 |3/4/5=>F:4
 |6=>F:8
-;6=>×4=>F:-4;1;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme
+;6=>F:16;1;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme
 dague;|1=>Ph:0
 |2/3/4/5=>Ph:1
 |6=>Ph:2
-;6=>×8=>Ph:-1;2;;6;1;Backstab +1
+;6=>Ph:8;2;;6;1;Backstab +1
 poignard brise;|1/2/3=>Ph:0
 |4/5/6=>Ph:1
-;6=>×2=>Ph:-1;2;;4;1;
+;6=>Ph:2;2;;4;1;
 stylet rituel inique;|1=>Ph:0|Ma:0
 |2/3/4/5=>Ph:1|Ma:2
 |6=>Ph:2|Ma:4
-;4/5=>×2=>Ph:-1|Ma:-2;2;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dés pour résoudre l'effet d'un anneau inique, si porté.
+;4/5=>Ph:2|Ma:4;2;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dés pour résoudre l'effet d'un anneau inique, si porté.
 dague aiguisee;|1=>Ph:0
 |2/3/4/5=>Ph:1
 |6=>Ph:2
-;6=>×8=>Ph:-1;2;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
+;6=>Ph:8;2;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
 poignard dent de rat;|1=>Ph:0
 |2/3/4=>Ph:2
 |5=>Ph:4
 |6=>Ph:8
-;5=>×3=>Ph:-2;2;Niveau Minimum:4;6;1;Toxine 4+ => 2
+;5=>Ph:6;2;Niveau Minimum:4;6;1;Toxine 4+ => 2
 longue dague ciselee;|1/2=>Ph:0
 |3/4/5/6=>Ph:4
-;5/6=>×4=>Ph:-2;3;Niveau Minimum:5;8;1;Parade +1
+;5/6=>Ph:8;3;Niveau Minimum:5;8;1;Parade +1
 percemaille brulant;|1=>Ph:0|F:0
 |2=>Ph:2|F:1
 |3/4/5/6=>Ph:4|F:2
-;6=>×4=>Ph:-2|F:-1;2;Niveau Minimum:4;7;1;Pour un coût de 1 énergie supplémentaire (avant le jet de dé) la frappe ignore l'armure de l'équipement
+;6=>Ph:8|F:4;2;Niveau Minimum:4;7;1;Pour un coût de 1 énergie supplémentaire (avant le jet de dé) la frappe ignore l'armure de l'équipement
 dague crenelee;|1=>Ph:0
 |2/3/4/5=>Ph:1
 |6=>Ph:2
-;6=>×8=>Ph:-1;2;Niveau Minimum:2;6;1;Backstab +1. Eventreur 2
+;6=>Ph:8;2;Niveau Minimum:2;6;1;Backstab +1. Eventreur 2
 longue dague crenelee;|1/2=>Ph:0
 |3/4/5/6=>Ph:4
-;6=>×4=>Ph:-2;2;Niveau Minimum:6;8;1;Parade +1. Eventreur 3
+;6=>Ph:8;2;Niveau Minimum:6;8;1;Parade +1. Eventreur 3
 longue dague equilibree;|1/2=>Ph:0
 |3/4/5/6=>Ph:4
-;5=>×3=>Ph:-2|6=>×4=>Ph:-2|;3;Niveau Minimum:5;9;1;Parade +1
+;5=>Ph:6|6=>Ph:8|;3;Niveau Minimum:5;9;1;Parade +1
 longue dague;|1/2=>Ph:0
 |3/4/5/6=>Ph:4
-;6=>×4=>Ph:-2;3;Niveau Minimum:4;8;1;Parade +1
+;6=>Ph:8;3;Niveau Minimum:4;8;1;Parade +1
 ceste en cuir;|1=>Ph:0
 |2/3/4=>Ph:1
 |5=>Ph:2
@@ -125,12 +125,12 @@ poignard surinant;|1=>Ph:0
 |2/3/4=>Ph:2
 |5=>Ph:4
 |6=>Ph:8
-;5=>×4=>Ph:-2;2;Niveau Minimum:4;6;1;Acheveur : tuer un ennemi avec un coup critique regenere 3 pvs
+;5=>Ph:8;2;Niveau Minimum:4;6;1;Acheveur : tuer un ennemi avec un coup critique regenere 3 pvs
 poignard crante;|1=>Ph:0
 |2/3/4=>Ph:3
 |5=>Ph:6
 |6=>Ph:9
-;6=>×5=>Ph:-3;2;Niveau Minimum:4;6;1;Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
+;6=>Ph:15;2;Niveau Minimum:4;6;1;Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
 poignard crochet venimeux;|1=>Ph:0
 |2/3/4=>Ph:2
 |5=>Ph:4
@@ -165,46 +165,46 @@ flechette toxique;|1=>Ph:0
 bombe incendiaire;|1/2/3/4=>F:0
 |5=>F:5
 |6=>F:10
-;5=>×2=>F:-5;2;Force Minimum:1;0;1;Pas besoin d'équiper
+;5=>F:10;2;Force Minimum:1;0;1;Pas besoin d'équiper
 spear;|1/2/3=>Ph:0
 |4/5/6=>Ph:4
-;6=>×2=>Ph:-4;3;Force Minimum:4;7;3;
+;6=>Ph:8;3;Force Minimum:4;7;3;
 winged spear;|1/2/3=>Ph:0
 |4/5/6=>Ph:6
-;6=>×2=>Ph:-6;3;Niveau Minimum:6;8;1;
+;6=>Ph:12;3;Niveau Minimum:6;8;1;
 lance de gobelin;|1/2/3=>Ph:0
 |4/5/6=>Ph:5
-;6=>×2=>Ph:-5;3;Force Minimum:5;7;2;Toxine 2+ => 1
+;6=>Ph:10;3;Force Minimum:5;7;2;Toxine 2+ => 1
 fleau;|1/2/3/4=>Ph:0
 |5/6=>Ph:9
 ;;5;Force Minimum:5;17;3;Écacheur: ( si FFC>3 & si la cible bloque avec un bouclier )Si la cible réussi à bloquer mais qu’elle subit tout de même des dégâts  alors son bouclier est détruit. Si elle échoue à bloquer son bouclier lui échappe des mains.  
 masse d arme;|1/2/3/4=>Ph:0
 |5=>Ph:6
 |6=>Ph:9
-;5=>×3=>Ph:-3;5;Force Minimum:4;13;2;Saigne 6+=>2
+;5=>Ph:9;5;Force Minimum:4;13;2;Saigne 6+=>2
 marteau du taureau;|1/2/3=>Ph:0
 |4/5=>Ph:8
 |6=>Ph:12
 ;;4;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques
 hache rouillee;|1/2/3/4=>Ph:0
 |5/6=>Ph:7
-;4=>×1=>Ph:-7;3;Force Minimum:5;13;2;
+;4=>Ph:7;3;Force Minimum:5;13;2;
 hachette double maudite;|1/2=>Ph:0
 |3/4/5/6=>Ph:6
-;6=>×4=>Ph:-3|2pv en moins pour le porteur=>Ph:-3|;4;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
+;6=>Ph:12|2pv en moins pour le porteur=>Ph:-3|;4;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
 labrys gobeline;|1/2/3/4=>Ph:0
 |5/6=>Ph:6
-;4=>×1=>Ph:-6;3;Force Minimum:5;13;2;Backswing:Si portée à deux mains et que le coup a un FCC inférieur ou égal à 0, alors tous les dés des prochaines frappes de ce tour sont augmentés de 1. Toxine 3+ => 2  
+;4=>Ph:6;3;Force Minimum:5;13;2;Backswing:Si portée à deux mains et que le coup a un FCC inférieur ou égal à 0, alors tous les dés des prochaines frappes de ce tour sont augmentés de 1. Toxine 3+ => 2  
 torche;|1/2=>F:0
 |3/4/5/6=>F:2
-;6=>×2=>F:-2;1;;4;1;
+;6=>F:4;1;;4;1;
 epee acide;|1=>Po:0
 |2/3=>Po:3
 |4/5/6=>Po:6
 ;;3;Force Minimum:5;7;2;
 pioche;|1/2/3=>Ph:0
 |4/5/6=>Ph:5
-;3=>×1=>Ph:-5;3;Force Minimum:3;7;2;Foreur : la force de l'arme passe à 10 lorsque la cible est faite de pierre 
+;3=>Ph:5;3;Force Minimum:3;7;2;Foreur : la force de l'arme passe à 10 lorsque la cible est faite de pierre 
 vomi acide;|1=>Po:0
 |2/3/4/5=>Po:8
 |6=>Po:12
@@ -216,11 +216,11 @@ croc poison;|1=>Ph:0
 croc acide;|1=>Ph:0
 |2/3/4/5=>Ph:1
 |6=>Ph:6
-;4/5=>×4=>Ph:-1;2;Force Minimum:1;15;0;Devore 5+
+;4/5=>Ph:4;2;Force Minimum:1;15;0;Devore 5+
 coups de sabots;|1/2/3=>Ph:0
 |4/5=>Ph:4
 |6=>Ph:8
-;4/5=>×4=>Ph:-4;2;;16;0;
+;4/5=>Ph:16;2;;16;0;
 morsure venimeuse;|1/2/3=>Ph:0
 |4/5=>Ph:4
 |6=>Ph:8
@@ -239,20 +239,20 @@ drain de magie;|1=>Ma:0
 epee droite;|1=>Ph:0
 |2/3/4=>Ph:3
 |5/6=>Ph:6
-;4=>×2=>Ph:-3;4;Force Minimum:2;7;1;
+;4=>Ph:6;4;Force Minimum:2;7;1;
 main nue;|1/2/3=>Ph:0
 |4/5/6=>Ph:1
-;6=>×2=>Ph:-1;2;;4;1;-2 sur le dé
+;6=>Ph:2;2;;4;1;-2 sur le dé
 os coupant;|1/2=>Ph:0
 |3/4/5/6=>Ph:1
-;6=>×2=>Ph:-1;2;;4;1;-1 sur le dé
+;6=>Ph:2;2;;4;1;-1 sur le dé
 ronce de jais;|1/2=>Ph:0
 |3/4/5=>Ph:4
 |6=>Ph:8
-;4/5=>×3=>Ph:-2;2;;10;0;Saigne 3+ => 4
+;4/5=>Ph:6;2;;10;0;Saigne 3+ => 4
 canine de fauve;|1/2=>Ph:0
 |3/4/5/6=>Ph:1
-;6=>×2=>Ph:-1;2;;4;1;saignement 3+ => 1
+;6=>Ph:2;2;;4;1;saignement 3+ => 1
 ichgul;|1/2=>Ph:0
 |3/4/5=>Ph:6
 |6=>Ph:12
@@ -275,7 +275,7 @@ surin ensorcele;|1=>Ph:0
 |2/3/4=>Ph:2
 |5=>Ph:4
 |6=>Ph:8
-;5=>×4=>Ph:-2;2;Intelligence Minimum:4;8;0;Peut voler jusqu'à sa cible. Le lanceur peut guider le surin avec les yeux tant qu'il garde le surin en visuel, sinon celui-ci tombe inerte et doit être ramassé.
+;5=>Ph:8;2;Intelligence Minimum:4;8;0;Peut voler jusqu'à sa cible. Le lanceur peut guider le surin avec les yeux tant qu'il garde le surin en visuel, sinon celui-ci tombe inerte et doit être ramassé.
 croc chien enrage;|1=>Ph:0
 |2/3/4/5=>Ph:4
 |6=>Ph:6
@@ -297,16 +297,16 @@ epee large;|1/2=>Ph:0
 ;;4;Force Minimum:4;8;2;
 zweihander;|1/2=>Ph:0
 |3/4/5/6=>Ph:17
-;6=>×2=>Ph:-17;9;Force Minimum:14;34;3;
+;6=>Ph:34;9;Force Minimum:14;34;3;
 epee lourde a deux mains;|1/2/3=>Ph:0
 |4/5=>Ph:7
 |6=>Ph:14
-;5/6=>×2=>Ph:-7;5;Force Minimum:7;26;3;
+;5/6=>Ph:14;5;Force Minimum:7;26;3;
 +1 au meilleur dé lors d'une frappe à 2 mains
 epee a deux mains;|1/2/3=>Ph:0
 |4/5=>Ph:5
 |6=>Ph:10
-;3=>×1=>Ph:-5;5;Force Minimum:6;19;2;+1 au moins bon dé lors d'une frappe à 2 mains
+;3=>Ph:5;5;Force Minimum:6;19;2;+1 au moins bon dé lors d'une frappe à 2 mains
 crochet d araneide geante;|1=>Ph:0
 |2/3=>Ph:2
 |4/5=>Ph:4
@@ -320,7 +320,7 @@ faucille gobeline;|1/2=>Ph:0
 Utilisée en arme double la faucille inflige 5 dégâts de poison imédiatement.
 hache;|1/2/3=>Ph:0
 |4/5/6=>Ph:6
-;6=>×2=>Ph:-6;3;Force Minimum:7;16;2;
+;6=>Ph:12;3;Force Minimum:7;16;2;
 fleche de mauvaise facture;|1/2/3=>Ph:0
 |4/5/6=>Ph:1
 ;;0;;0;0;
