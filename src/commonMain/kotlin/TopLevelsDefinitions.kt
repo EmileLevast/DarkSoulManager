@@ -37,6 +37,9 @@ fun strSimplify(str:String, isSimpleRulesOn:Boolean):String{
     }
 }
 
+fun String.getIntOrZero(): Int = if (isNotBlank()) toInt() else { 0 }
+
+
 enum class SpellType(val shortname:String, val symbol:String){
     AME("ame","✨"),
     PYROMANCIE("pyromancie","\uD83D\uDD25"),

@@ -44,50 +44,26 @@ class Arme(
     }
 
     override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
-
         return Arme(
             listCSVElement[0].cleanupForDB(),
             parseSeuils(listCSVElement[1]),
-            listCSVElement[3],
-            listCSVElement[4].run {
-                if (isNotBlank()) toInt() else {
-                    0
-                }
-            },
-            listCSVElement[5].run {
-                if (isNotBlank()) toInt() else {
-                    0
-                }
-            },
-            listCSVElement[6].run {
-                if (isNotBlank()) toInt() else {
-                    0
-                }
-            },
-            listCSVElement[7],
-            listCSVElement[8].run {
-                if (isNotBlank()) toInt() else {
-                    0
-                }
-            },
-            listCSVElement[9].run {
-                if (isNotBlank()) toInt() else {
-                    0
-                }
-            },
-            listCSVElement[10]
-        )
+            listCSVElement[2],
+            listCSVElement[3].getIntOrZero(),
+            listCSVElement[4],
+            listCSVElement[5].getIntOrZero(),
+            listCSVElement[6].getIntOrZero(),
+            listCSVElement[7]
+            )
     }
+
+
 
     override fun getParsingRulesAttributesAsList(): List<String> {
         return listOf(
             "Nom: String",
-            "Degats: Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
-            "Seuils: Format = Int/Int=Int|Int/Int=Int... ",
+            "Seuils: Format = |Int/Int=Effect:Int|EffectType:Int...\n|Int/Int=Effect:Int|EffectType:Int ",
             "Coups critiques :String",
             "Maximum Energie : Int",
-            "Seuil Blocage : Int",
-            "Valeur Blocage : Int",
             "Contraintes : String",
             "FAJ Max : Int",
             "Poids : Int",
