@@ -7,4 +7,7 @@ import kotlinx.serialization.Serializable
 
 class Seuil(var seuils: MutableList<Int>, var degats: MutableList<Pair<EffectType, Int>>) {
 
+    override fun toString(): String {
+        return seuils.joinToString("/")+"⇒"+degats.joinToString ("|"){ it.first.shortname+":"+it.second }
+    }
 }

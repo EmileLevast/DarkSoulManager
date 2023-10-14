@@ -6,8 +6,6 @@ class Arme(
     val seuils: List<Seuil> = mutableListOf(),//en clé c'est le facteur et en valeur c'est la liste des seuils associés
     val coupCritiques: String = "",
     val maximumEnergie: Int = 0,
-    val seuilBlocage: Int = 0,
-    val valeurBlocage: Int = 0,
     val contraintes: String = "Aucune",
     val fajMax: Int = 0,
     val poids: Int = 0,
@@ -21,14 +19,11 @@ class Arme(
     override fun getStatsAsStrings(): String {
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   ${it.value.joinToString("/")} =>×${it.key}\n"
+            textSeuils += "|   $it"
         }
-        return "$degat\n" +
-                "Seuils:\n" + textSeuils +
+        return "Seuils:\n" + textSeuils +
                 (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, false)}\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
-                "Seuil de blocage : $seuilBlocage\n" +
-                "Valeur de blocage : $valeurBlocage\n" +
                 "FAJ Max : $fajMax\n" +
                 (if (contraintes.isNotBlank()) " ${strSimplify(contraintes, false)}\n" else "") +
                 "Poids : $poids\n" +
@@ -36,25 +31,23 @@ class Arme(
     }
 
     override fun getStatsSimplifiedAsStrings(): String {
-        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCc(degat,seuils,coupCritiques)
-
-
-
+        var textSeuils = ""
+        seuils.forEach {
+            textSeuils += "|   $it\n"
+        }
         return "Seuils:\n" + textSeuils +
-                (if (coupCritiques.isNotBlank()) "CC : $coupcCritiquesCalcules\n" else "") +
-                "Max énergie : $maximumEnergie\n" +
-                "Force Max : $fajMax\n" +
-                (if (contraintes.isNotBlank()) "${strSimplify(contraintes, true)}\n" else "") +
+                (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, false)}\n" else "") +
+                "FAJ Max : $fajMax\n" +
+                (if (contraintes.isNotBlank()) " ${strSimplify(contraintes, false)}\n" else "") +
                 "Poids : $poids\n" +
-                "${strSimplify(capaciteSpeciale, true)}\n"
+                "${strSimplify(capaciteSpeciale, false)}\n"
     }
 
     override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
 
         return Arme(
             listCSVElement[0].cleanupForDB(),
-            listCSVElement[1],
-            parseSeuils(listCSVElement[2]),
+            parseSeuils(listCSVElement[1]),
             listCSVElement[3],
             listCSVElement[4].run {
                 if (isNotBlank()) toInt() else {
@@ -102,30 +95,17 @@ class Arme(
         )
     }
 
-    fun getDeparsedAttributesOld(): List<String> {
-        return listOf<String>(
-            nom,
-            degat,
-            deparseSeuils(seuils),
-            coupCritiques,
-            maximumEnergie.toString(),
-            seuilBlocage.toString(),
-            valeurBlocage.toString(),
-            contraintes,
-            fajMax.toString(),
-            poids.toString(),
-            capaciteSpeciale
-        )
-    }
-
     override fun getDeparsedAttributes(): List<String> {
 
-        var (textSeuils, coupcCritiquesCalcules) = simplificationTextesSeuilsEtCc(degat,seuils,coupCritiques)
+        var textSeuils = ""
+        seuils.forEach {
+            textSeuils += "|$it\n"
+        }
 
         return listOf<String>(
             nom,
             textSeuils,
-            coupcCritiquesCalcules,
+            coupCritiques,
             maximumEnergie.toString(),
             contraintes,
             fajMax.toString(),

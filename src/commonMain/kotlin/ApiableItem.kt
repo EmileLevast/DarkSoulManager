@@ -102,30 +102,60 @@ abstract class ApiableItem : IListItem {
         return mapDrops
     }
 
-    fun parseSeuils(inputElement: String): Map<String, List<Int>> {
-        val listSeuils = mutableListOf<Int>()
-        val mapSeuils = HashMap<String, List<Int>>()
+    /**
+     * Convertit une string du format du type :
+     * |2/3=>Ph:3
+     * |4/5=>Ph:6
+     * |6=>Ph:9
+     * En une liste d'objets Seuil
+     */
+    fun parseSeuils(inputElement: String): List<Seuil> {
+        val listSeuils = mutableListOf<Seuil>()
+        val listValeurUnSeuil = mutableListOf<Int>()
+        var valeurTypeAssocies: MutableList<Pair<EffectType, Int>> = mutableListOf()
         if (inputElement.isNotEmpty()) {
-            inputElement.split("|").forEach {
-                val listSeuilsParfFacteur = it.split("=")
-                listSeuilsParfFacteur.first().let { itInutilise ->
+            //Si la string n'est pas vide, on supprime les passages à la ligne et on separe chaque niveau de seuil
+            inputElement.split("\n").forEach {
+                //puis pour chaque niveau de seuil on sépare au niveau du =>
+                val listSeuilsParFacteur = it.split("=>")
+                listSeuilsParFacteur.first().removePrefix("|").let { itInutilise ->
+                    //on regarde l'element de gauche du split, le niveau des seuils
                     itInutilise.split("/").forEach { itSeuils ->
-                        listSeuils.add(itSeuils.toInt())
+                        //on separe chaque niveau de seuil selon "/" et on les ajoute à la liste de seuils
+                        listValeurUnSeuil.add(itSeuils.toInt())
                     }
-                    mapSeuils[listSeuilsParfFacteur.last()] = listSeuils.toList()
-                    listSeuils.clear()
+
                 }
+                //on parse maintenant le type de la valeur du seuil associé
+                listSeuilsParFacteur.last().let { itValeursSelonTypes ->
+                    itValeursSelonTypes.split("|").forEach {itValeurSelonType ->
+                        //pour chaque type du seuil, on split pour recuperer le type d'un cote et la valeur de l'autre
+                        val typeValeur = itValeurSelonType.split(":")
+                        valeurTypeAssocies.add(Pair(parseEffectType(typeValeur.first()),typeValeur.last().toInt()))
+                    }
+
+                }
+
+                //on ajoute le seuil ainsi créé à la liste
+                listSeuils.add(Seuil(listValeurUnSeuil,valeurTypeAssocies))
+                valeurTypeAssocies.clear()
+                listValeurUnSeuil.clear()
+
             }
         }
-        return mapSeuils
+        return listSeuils
     }
 
     fun parseSpellType(inputElement: String): SpellType {
-        return SpellType.values().find { it.name == inputElement } ?: SpellType.AME
+        return SpellType.entries.find { it.name == inputElement } ?: SpellType.AME
+    }
+
+    fun parseEffectType(inputElement: String): EffectType {
+        return EffectType.entries.find { it.name == inputElement } ?: EffectType.PHYSICAL
     }
 
     fun parseSpecialItemType(inputElement: String): SpecialItemType {
-        return SpecialItemType.values().find { it.name == inputElement } ?: SpecialItemType.OUTIL
+        return SpecialItemType.entries.find { it.name == inputElement } ?: SpecialItemType.OUTIL
     }
 
     fun deparseSeuils(seuils: Map<String, List<Int>>): String {
