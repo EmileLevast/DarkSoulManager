@@ -16,8 +16,6 @@ class Sort(
 
     override val id: Int = nom.hashCode()
 
-
-
     override var isAttached: Boolean = false
 
     override fun getStatsAsStrings(): String {
@@ -62,6 +60,23 @@ class Sort(
         )
     }
 
+
+
+    override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
+        return Sort(
+            listCSVElement[0].cleanupForDB(),
+            parseSpellType(listCSVElement[1]),
+            listCSVElement[2].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[3],
+            listCSVElement[4].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[5],
+            parseSeuils(listCSVElement[7]),
+            listCSVElement[8],
+            listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
+            listCSVElement[10]
+        )
+    }
+
     override fun getDeparsedAttributes(): List<String> {
 
         var textSeuils = ""
@@ -80,21 +95,6 @@ class Sort(
             coupCritiques,
             iajMax.toString(),
             description
-        )
-    }
-
-    override fun parseFromCSV(listCSVElement: List<String>): ApiableItem {
-        return Sort(
-            listCSVElement[0].cleanupForDB(),
-            parseSpellType(listCSVElement[1]),
-            listCSVElement[2].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[3],
-            listCSVElement[4].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[5],
-            parseSeuils(listCSVElement[7]),
-            listCSVElement[8],
-            listCSVElement[9].run{ if(isNotBlank()) toInt() else{0} },
-            listCSVElement[10]
         )
     }
 

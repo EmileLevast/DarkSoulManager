@@ -107,7 +107,7 @@ data class Monster(
             energie.toString(),
             deparseListDrops(listDrops),
             ames.toString(),
-            strSimplify(capaciteSpeciale,true)
+            capaciteSpeciale
         )
     }
 }

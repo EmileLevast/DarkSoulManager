@@ -61,7 +61,7 @@ class Bouclier(
             deparseDefense(defense),
             contraintes,
             poids.toString(),
-            strSimplify(capaciteSpeciale,true)
+            capaciteSpeciale
         )
     }
 }

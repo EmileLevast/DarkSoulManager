@@ -38,7 +38,7 @@ class Special(
         return listOf<String>(
             nom,
             itemType.name,
-            strSimplify(capaciteSpeciale,true)
+            capaciteSpeciale
         )
     }
 }

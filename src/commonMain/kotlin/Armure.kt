@@ -53,7 +53,7 @@ class Armure(
             deparseDefense(defense),
             contraintes,
             poids.toString(),
-            strSimplify(capaciteSpeciale,true)
+            capaciteSpeciale
         )
     }
 }
