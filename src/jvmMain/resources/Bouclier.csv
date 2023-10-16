@@ -1,4 +1,4 @@
-Nom;Seuil parade;Seuil Blocage;Defense ;Contraintes ;Poids ;Capacite speciale 
+Nom;Defense ;Contraintes ;Poids ;Capacite speciale
 bouclier cible;Ph:6;Force Minimum:1;1;
 bouclier de chevalier;Ph:11;Force Minimum:7;3;
 bouclier chauffant;Ph:12;Force Minimum:3;2;

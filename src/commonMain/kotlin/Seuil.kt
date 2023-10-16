@@ -5,7 +5,16 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 
-class Seuil(var seuils: MutableList<Int>, var degats: MutableList<Pair<EffectType, Int>>) {
+class Seuil {
+
+    var seuils: MutableList<Int> = mutableListOf()
+    var degats: MutableList<Pair<EffectType, Int>> = mutableListOf()
+
+    constructor(seuils: List<Int>, degats: List<Pair<EffectType, Int>>) {
+        this.seuils.addAll(seuils)
+        this.degats.addAll(degats)
+    }
+
 
     override fun toString(): String {
         return seuils.joinToString("/")+"⇒"+degats.joinToString ("|"){ it.first.shortname+":"+it.second }

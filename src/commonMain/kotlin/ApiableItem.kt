@@ -62,7 +62,7 @@ abstract class ApiableItem : IListItem {
             inputElement.split("|").forEach { currentDefense ->
                 currentDefense.split(":").let { currentEffectType ->
                     //on check si le type correspond bien a un vrai type
-                    mapDefenseType[EffectType.values()
+                    mapDefenseType[EffectType.entries
                         .find { enumEffectType -> enumEffectType.shortname == currentEffectType.first() }!!] =
                         currentEffectType.last()
                 }
@@ -151,7 +151,7 @@ abstract class ApiableItem : IListItem {
     }
 
     fun parseEffectType(inputElement: String): EffectType {
-        return EffectType.entries.find { it.name == inputElement } ?: EffectType.PHYSICAL
+        return EffectType.entries.find { it.shortname == inputElement } ?: EffectType.PHYSICAL
     }
 
     fun parseSpecialItemType(inputElement: String): SpecialItemType {

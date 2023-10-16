@@ -70,10 +70,10 @@ class Sort(
             listCSVElement[3],
             listCSVElement[4].getIntOrZero(),
             listCSVElement[5],
-            parseSeuils(listCSVElement[7]),
-            listCSVElement[8],
-            listCSVElement[9].getIntOrZero(),
-            listCSVElement[10]
+            parseSeuils(listCSVElement[6]),
+            listCSVElement[7],
+            listCSVElement[8].getIntOrZero(),
+            listCSVElement[9]
         )
     }
 

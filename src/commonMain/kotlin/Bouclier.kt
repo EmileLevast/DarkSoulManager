@@ -3,8 +3,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 class Bouclier(
     override val nom: String ="inconnu",
-    val seuilParade:Int = 0,
-    val seuilBlocage:Int = 0,
     val defense:Map<EffectType,String> = mapOf(),
     val contraintes:String="Aucune contraintes",
     val poids:Int=0,
@@ -17,8 +15,6 @@ class Bouclier(
 
     override fun getStatsAsStrings(): String {
         return "Defense: ${convertEffectTypeStatsToString(defense)}"+"\n" +
-                "Seuil Blocage:$seuilBlocage\n"+
-                "Seuil parade:${seuilParade}\n"+
                 strSimplify(contraintes,false)+"\n" +
                 "Poids:$poids"+"\n"+
                 strSimplify(capaciteSpeciale,false)
@@ -34,20 +30,16 @@ class Bouclier(
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem {
            return Bouclier(
                listCSVElement[0].cleanupForDB(),
-               listCSVElement[1].run{ if(isNotBlank()) toInt() else{0} },
-               listCSVElement[2].run{ if(isNotBlank()) toInt() else{0} },
-               parseDefense(listCSVElement[3]),
-               listCSVElement[4],
-               listCSVElement[5].run{ if(isNotBlank()) toInt() else{0} },
-               listCSVElement[6]
+               parseDefense(listCSVElement[1]),
+               listCSVElement[2],
+               listCSVElement[3].run{ if(isNotBlank()) toInt() else{0} },
+               listCSVElement[4]
             )
     }
 
     override fun getParsingRulesAttributesAsList(): List<String> {
         return listOf(
             "Nom: String",
-            "Seuil parade: Int",
-            "Seuil Blocage: Int",
             "Defense : Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
             "Contraintes : String",
             "Poids : Int",
