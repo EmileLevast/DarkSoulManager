@@ -15,18 +15,18 @@ val jsonClient = HttpClient {
     }
 }
 
-suspend fun searchAnything(nomSearched: String) : List<IListItem> {
+suspend fun searchAnything(nomSearched: String, strict:Boolean = false) : List<IListItem> {
     val listResultsItems = mutableListOf<IListItem>()
     unmutableListApiItemDefinition.forEach {
         val res = when(it){
             //TODO ajouter le cast ici quand on cree une table
-            is Arme -> searchArme(nomSearched)
-            is Armure -> searchArmure(nomSearched)//TODO ajouter la methode de recherche
-            is Monster -> searchMonster(nomSearched)
-            is Bouclier -> searchBouclier(nomSearched)
-            is Sort -> searchSort(nomSearched)
-            is Special -> searchSpecial(nomSearched)
-            is Joueur -> searchJoueur(nomSearched)
+            is Arme -> searchArme(nomSearched, strict)
+            is Armure -> searchArmure(nomSearched, strict)//TODO ajouter la methode de recherche
+            is Monster -> searchMonster(nomSearched, strict)
+            is Bouclier -> searchBouclier(nomSearched, strict)
+            is Sort -> searchSort(nomSearched, strict)
+            is Special -> searchSpecial(nomSearched, strict)
+            is Joueur -> searchJoueur(nomSearched, strict)
             else -> null
         }
         if (res != null){
@@ -36,44 +36,44 @@ suspend fun searchAnything(nomSearched: String) : List<IListItem> {
     return listResultsItems
 }
 
-suspend fun searchArme(nomSearched: String) :List<Arme>?{
-    jsonClient.get(endpoint +"/"+ Arme().nameForApi + "/${nomSearched}").let {
+suspend fun searchArme(nomSearched: String, strict:Boolean = false) :List<Arme>?{
+    jsonClient.get(endpoint +"/"+ if(strict){ Arme().namePrecisForApi} else {Arme().nameForApi} + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Arme>>() else null
     }
 }
 
-suspend fun searchArmure(nomSearched: String) :List<Armure>?{
-    jsonClient.get(endpoint +"/"+ Armure().nameForApi + "/${nomSearched}").let {
+suspend fun searchArmure(nomSearched: String, strict:Boolean = false) :List<Armure>?{
+    jsonClient.get(endpoint +"/"+ if(strict){ Armure().namePrecisForApi} else {Armure().nameForApi} + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Armure>>() else null
     }
 }
 
-suspend fun searchBouclier(nomSearched: String) :List<Bouclier>?{
-    jsonClient.get(endpoint +"/"+ Bouclier().nameForApi + "/${nomSearched}").let {
+suspend fun searchBouclier(nomSearched: String, strict:Boolean = false) :List<Bouclier>?{
+    jsonClient.get(endpoint +"/"+ if(strict){ Bouclier().namePrecisForApi} else {Bouclier().nameForApi} + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Bouclier>>() else null
     }
 }
 
-suspend fun searchSort(nomSearched: String) :List<Sort>?{
-    jsonClient.get(endpoint +"/"+ Sort().nameForApi + "/${nomSearched}").let {
+suspend fun searchSort(nomSearched: String, strict:Boolean = false) :List<Sort>?{
+    jsonClient.get(endpoint +"/"+ if(strict){ Sort().namePrecisForApi} else {Sort().nameForApi} + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Sort>>() else null
     }
 }
 
-suspend fun searchSpecial(nomSearched: String) :List<Special>?{
-    jsonClient.get(endpoint +"/"+ Special().nameForApi + "/${nomSearched}").let {
+suspend fun searchSpecial(nomSearched: String, strict:Boolean = false) :List<Special>?{
+    jsonClient.get(endpoint +"/"+ if(strict) {Special().namePrecisForApi} else {Special().nameForApi} + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Special>>() else null
     }
 }
 
-suspend fun searchMonster(nomSearched: String) :List<Monster>?{
-    jsonClient.get(endpoint +"/"+ Monster().nameForApi + "/${nomSearched}").let {
+suspend fun searchMonster(nomSearched: String, strict:Boolean = false) :List<Monster>?{
+    jsonClient.get(endpoint +"/"+ if(strict){ Monster().namePrecisForApi} else {Monster().nameForApi} + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Monster>>() else null
     }
 }
 
-suspend fun searchJoueur(nomSearched: String) :List<Joueur>?{
-    jsonClient.get(endpoint +"/"+ Joueur().nameForApi + "/${nomSearched}").let {
+suspend fun searchJoueur(nomSearched: String, strict:Boolean = false) :List<Joueur>?{
+    jsonClient.get(endpoint +"/"+ if(strict) {Joueur().namePrecisForApi} else {Joueur().nameForApi} + "/${nomSearched}").let {
         return if (it.status != HttpStatusCode.NoContent) it.body<List<Joueur>>() else null
     }
 }

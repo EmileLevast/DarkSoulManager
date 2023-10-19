@@ -19,7 +19,7 @@ class Arme(
     override fun getStatsAsStrings(): String {
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   $it"
+            textSeuils += "|   ${it.toPrettyString()}\n"
         }
         return "Seuils:\n" + textSeuils +
                 (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, false)}\n" else "") +
@@ -33,7 +33,7 @@ class Arme(
     override fun getStatsSimplifiedAsStrings(): String {
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   $it\n"
+            textSeuils += "|   ${it.toPrettyString()}\n"
         }
         return "Seuils:\n" + textSeuils +
                 (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, true)}\n" else "") +

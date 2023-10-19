@@ -6,6 +6,7 @@ import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.eq
 import org.litote.kmongo.reactivestreams.KMongo
 import org.litote.kmongo.regex
+import kotlin.reflect.full.createInstance
 
 //val monsterList = mutableListOf<Monster>(
 //    Monster("Carcasse",11),
@@ -28,20 +29,28 @@ fun createCollectionTables(){
 }
 
 //TODO ajouter ici une ligne dans le when a chaque fois qu'eun nouvelle collection dans la bdd est cree
-suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem, nameOfItemSearched:String):List<ApiableItem>{
+/**
+ * strict est un booleen quand il est à true c'est à dire qu'on cherche exactement l'element qui matche le nom
+ */
+suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem, nameOfItemSearched:String, strict:Boolean =false):List<ApiableItem>{
     return when(instanceOfCollectionItemDefinition){
-        is Arme -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        is Armure -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        is Monster -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        is Bouclier -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        is Sort -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        is Special -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        is Joueur -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition)
-        else-> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition as Monster)
+        is Arme -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition,strict)
+        is Armure -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition,strict)
+        is Monster -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition,strict)
+        is Bouclier -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition,strict)
+        is Sort -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition,strict)
+        is Special -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition,strict)
+        is Joueur -> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition,strict)
+        else-> getElementAccordingToType(nameOfItemSearched, instanceOfCollectionItemDefinition as Monster,strict)
     }
 }
 
-suspend inline fun <reified T:ApiableItem> getElementAccordingToType(nameOfItemWanted:String, instanceOfCollectionItemDefinition:T):List<T>{
-    val regexp = if(nameOfItemWanted.contains('*')) nameOfItemWanted else ".*$nameOfItemWanted.*"
-    return database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom regex regexp).toList()
+suspend inline fun <reified T:ApiableItem> getElementAccordingToType(nameOfItemWanted:String, instanceOfCollectionItemDefinition:T, strict:Boolean,):List<T>{
+    return if(strict){
+        database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom eq nameOfItemWanted).toList()
+    }else
+    {
+        val regexp = if(nameOfItemWanted.contains('*')) nameOfItemWanted else ".*$nameOfItemWanted.*"
+        database.getCollection<T>(T::class.simpleName!!).find(ApiableItem::nom regex regexp).toList()
+    }
 }

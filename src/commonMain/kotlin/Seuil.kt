@@ -17,6 +17,13 @@ class Seuil {
 
 
     override fun toString(): String {
-        return seuils.joinToString("/")+"⇒"+degats.joinToString ("|"){ it.first.shortname+":"+it.second }
+        return toFormattedString("=>")
+    }
+
+    private fun toFormattedString(joiningChar :String ) =
+        seuils.joinToString("/") + joiningChar + degats.joinToString("|") { it.first.shortname + ":" + it.second }
+
+    fun toPrettyString(): String  {
+        return toFormattedString("⇒")
     }
 }

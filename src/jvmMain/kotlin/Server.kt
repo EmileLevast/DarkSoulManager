@@ -52,6 +52,11 @@ fun main() {
                         val itemsFound = getCollectionElements(itapiable,nom)
                         call.respond(itemsFound.ifEmpty { HttpStatusCode.NoContent })
                     }
+                    get("/$ENDPOINT_RECHERCHE_STRICTE/{nom}") {
+                        val nom = call.parameters["nom"] ?: ""
+                        val itemsFound = getCollectionElements(itapiable,nom,true)
+                        call.respond(itemsFound.ifEmpty { HttpStatusCode.NoContent })
+                    }
                     get("/"+ itapiable.uploadFileForApi) {
                         //retrieve the data from csv file
                         val parsedData = try {

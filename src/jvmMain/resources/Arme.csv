@@ -191,7 +191,7 @@ hache rouillee;|1/2/3/4=>Ph:0
 ;4=>Ph:7;3;Force Minimum:5;13;2;
 hachette double maudite;|1/2=>Ph:0
 |3/4/5/6=>Ph:6
-;6=>Ph:12|2pv en moins pour le porteur=>Ph:-3|;4;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
+;6=>Ph:12|2pv en moins pour le porteur;4;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
 labrys gobeline;|1/2/3/4=>Ph:0
 |5/6=>Ph:6
 ;4=>Ph:6;3;Force Minimum:5;13;2;Backswing:Si portée à deux mains et que le coup a un FCC inférieur ou égal à 0, alors tous les dés des prochaines frappes de ce tour sont augmentés de 1. Toxine 3+ => 2  

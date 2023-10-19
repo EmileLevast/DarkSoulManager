@@ -25,7 +25,7 @@ class Sort(
     private fun statsAsStringAccordingToSimplifyOrNot(isSimplify:Boolean): String {
         var textSeuils = ""
         seuils.forEach {
-            textSeuils += "|   $it\n"
+            textSeuils += "|   ${it.toPrettyString()}\n"
         }
 
         val coupCritiquesParsed = strSimplify(coupCritiques, isSimplify)

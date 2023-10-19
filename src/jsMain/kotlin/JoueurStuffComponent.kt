@@ -31,7 +31,7 @@ val joueurStuffComponent = FC<JoueurStuffComponentProps> { props ->
                     joueurSelected = listJoueurs.first { it.nom == joueurSelected.nom }
                     joueurSelected.chaineEquipementSerialisee.split("$CHAR_SEP_EQUIPEMENT$CHAR_SEP_EQUIPEMENT")
                         .forEach { itemSearched ->
-                            tempList.add(searchAnything(itemSearched.replace("|", "")).first())
+                            tempList.add(searchAnything(itemSearched.replace("|", ""),true).first())
                         }
                     listItem = tempList.toList()
                 }

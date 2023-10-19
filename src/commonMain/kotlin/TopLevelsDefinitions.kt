@@ -5,6 +5,7 @@ import io.ktor.util.logging.*
 val unmutableListApiItemDefinition = listOf<ApiableItem>(Arme(),Armure(),Monster(),Bouclier(),Sort(),Special(),Joueur())
 
 const val CHAR_SEP_EQUIPEMENT = "|"
+const val ENDPOINT_RECHERCHE_STRICTE = "precis"
 const val BALISE_SIMPLE_RULES = "[SIMPLE]"
 
 enum class EffectType(val shortname:String, val symbol:String){

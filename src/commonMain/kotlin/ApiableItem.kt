@@ -7,6 +7,9 @@ abstract class ApiableItem : IListItem {
     val nameForApi = this::class.simpleName
 
     @Transient
+    val namePrecisForApi = "$nameForApi/$ENDPOINT_RECHERCHE_STRICTE"
+
+    @Transient
     val uploadFileForApi = "uploadFile$nameForApi"
 
     @Transient
