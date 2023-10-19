@@ -6,18 +6,22 @@ class Carac(
     var force: Int=0,
     var defense: Map<EffectType, String> = mapOf(),
     var intelligence: Int=0,
-    var energie: Int=0
+    var energie: Int=0,
+    var humanite: Int=0,
+    var ame: Int=0,
 ) {
     fun toCSV():String{
-        return "$vie/$force/${deparseDefense(defense)}/$intelligence/$energie"
+        return "$vie/$force/${deparseDefense(defense)}/$intelligence/$energie/$humanite/$ame"
     }
 
     fun showWithComparisonOriginCarac(originCarac:Carac):String{
         return "Vie (${originCarac.vie}): $vie\n" +
                 "Force (${originCarac.force}): $force\n" +
-                "Defense : ${convertEffectTypeStatsToString(defense)}\n" +
+                "Defense : ${convertEffectTypeStatsToString(originCarac.defense)}\n" +
                 "Intelligence (${originCarac.intelligence}): $intelligence\n" +
-                "Energie (${originCarac.energie}): $energie\n"
+                "Energie (${originCarac.energie}): $energie\n" +
+                "Humanite : $humanite\n" +
+                "Ames : $ame\n"
     }
 
     companion object {
@@ -29,6 +33,8 @@ class Carac(
                 parseDefense(listCarac[2]),
                 listCarac[3].getIntOrZero(),
                 listCarac[4].getIntOrZero(),
+                listCarac[5].getIntOrZero(),
+                listCarac[6].getIntOrZero(),
             )
         }
     }

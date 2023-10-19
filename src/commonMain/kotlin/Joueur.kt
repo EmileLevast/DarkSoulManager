@@ -7,13 +7,14 @@ class Joueur(
     var details: String ="",
     var caracOrigin: Carac = Carac(),
     var caracActuel: Carac = Carac(),
+    var niveau:Int=0
 ) : ApiableItem() {
 
     override val id = nom.hashCode()
     override var isAttached = false
 
     override fun getStatsAsStrings():String{
-        return chaineEquipementSerialisee.replace(CHAR_SEP_EQUIPEMENT+CHAR_SEP_EQUIPEMENT,"\n") +
+        return "Niveau : $niveau\n"+chaineEquipementSerialisee.replace(CHAR_SEP_EQUIPEMENT+CHAR_SEP_EQUIPEMENT,"\n") +
                 "\n"+caracActuel.showWithComparisonOriginCarac(caracOrigin)+"\n"+details
     }
 
@@ -23,7 +24,8 @@ class Joueur(
             listCSVElement[1],
             listCSVElement[2],
             Carac.fromCSV(listCSVElement[3]),
-            Carac.fromCSV(listCSVElement[4])
+            Carac.fromCSV(listCSVElement[4]),
+            listCSVElement[5].getIntOrZero()
         )
     }
 
@@ -32,8 +34,9 @@ class Joueur(
             "Nom: String",
             "equipement : ${CHAR_SEP_EQUIPEMENT}String$CHAR_SEP_EQUIPEMENT${CHAR_SEP_EQUIPEMENT}String${CHAR_SEP_EQUIPEMENT}",
             "details : String",
-            "caracOrigin : vie/force/EffectType:Int|Effect:Int.../intelligence/energie",
-            "caracActuel : vie/force/EffectType:Int|Effect:Int.../intelligence/energie"
+            "caracOrigin : vie/force/EffectType:Int|Effect:Int.../intelligence/energie/humanite/ame",
+            "caracActuel : vie/force/EffectType:Int|Effect:Int.../intelligence/energie/humanite/ame",
+            "niveau : Int"
         )
     }
 
@@ -44,6 +47,7 @@ class Joueur(
             details,
             caracOrigin.toCSV(),
             caracActuel.toCSV(),
+            niveau.toString()
         )
     }
 }
