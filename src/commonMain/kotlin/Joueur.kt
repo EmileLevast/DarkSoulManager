@@ -14,7 +14,7 @@ class Joueur(
 
     override fun getStatsAsStrings():String{
         return chaineEquipementSerialisee.replace(CHAR_SEP_EQUIPEMENT+CHAR_SEP_EQUIPEMENT,"\n") +
-                "\n"+details
+                "\n"+caracActuel.showWithComparisonOriginCarac(caracOrigin)+"\n"+details
     }
 
     override fun parseFromCSV(listCSVElement : List<String>):ApiableItem{
