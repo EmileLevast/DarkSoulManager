@@ -60,3 +60,29 @@ enum class SpecialItemType{
 }
 
 val logger = KtorSimpleLogger("logger")
+
+fun deparseDefense(defense: Map<EffectType, String>): String {
+    var res = ""
+    defense.forEach {
+        res += it.key.shortname + ":" + it.value + "|"
+    }
+    return res.removeSuffix("|")
+}
+
+fun parseDefense(inputElement: String): MutableMap<EffectType, String> {
+
+    val mapDefenseType = mutableMapOf<EffectType, String>()
+
+    if (inputElement.isNotEmpty()) {
+        inputElement.split("|").forEach { currentDefense ->
+            currentDefense.split(":").let { currentEffectType ->
+                //on check si le type correspond bien a un vrai type
+                mapDefenseType[EffectType.entries
+                    .find { enumEffectType -> enumEffectType.shortname == currentEffectType.first() }!!] =
+                    currentEffectType.last()
+            }
+        }
+    }
+
+    return mapDefenseType
+}

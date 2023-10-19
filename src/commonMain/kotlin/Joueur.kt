@@ -4,7 +4,9 @@ import kotlinx.serialization.Serializable
 class Joueur(
     override val nom:String="inconnu",
     var chaineEquipementSerialisee: String ="",
-    var details: String =""
+    var details: String ="",
+    var caracOrigin: Carac = Carac(),
+    var caracActuel: Carac = Carac(),
 ) : ApiableItem() {
 
     override val id = nom.hashCode()
@@ -19,7 +21,9 @@ class Joueur(
         return Joueur(
             listCSVElement[0].cleanupForDB(),
             listCSVElement[1],
-            listCSVElement[2]
+            listCSVElement[2],
+            Carac.fromCSV(listCSVElement[3]),
+            Carac.fromCSV(listCSVElement[4])
         )
     }
 
@@ -27,7 +31,9 @@ class Joueur(
         return listOf(
             "Nom: String",
             "equipement : ${CHAR_SEP_EQUIPEMENT}String$CHAR_SEP_EQUIPEMENT${CHAR_SEP_EQUIPEMENT}String${CHAR_SEP_EQUIPEMENT}",
-            "details : String"
+            "details : String",
+            "caracOrigin : vie/force/EffectType:Int|Effect:Int.../intelligence/energie",
+            "caracActuel : vie/force/EffectType:Int|Effect:Int.../intelligence/energie"
         )
     }
 
@@ -35,7 +41,9 @@ class Joueur(
         return listOf<String>(
             nom,
             chaineEquipementSerialisee,
-            details
+            details,
+            caracOrigin.toCSV(),
+            caracActuel.toCSV(),
         )
     }
 }

@@ -57,23 +57,7 @@ abstract class ApiableItem : IListItem {
         return listApiableItem
     }
 
-    fun parseDefense(inputElement: String): MutableMap<EffectType, String> {
 
-        val mapDefenseType = mutableMapOf<EffectType, String>()
-
-        if (inputElement.isNotEmpty()) {
-            inputElement.split("|").forEach { currentDefense ->
-                currentDefense.split(":").let { currentEffectType ->
-                    //on check si le type correspond bien a un vrai type
-                    mapDefenseType[EffectType.entries
-                        .find { enumEffectType -> enumEffectType.shortname == currentEffectType.first() }!!] =
-                        currentEffectType.last()
-                }
-            }
-        }
-
-        return mapDefenseType
-    }
 
     fun parseSeuilsForce(inputElement: String): MutableMap<Int, Int> {
         val mapSeuilsForce = mutableMapOf<Int, Int>()
@@ -171,14 +155,6 @@ abstract class ApiableItem : IListItem {
             res += "=" + seuil.key + "|"
         }
 
-        return res.removeSuffix("|")
-    }
-
-    fun deparseDefense(defense: Map<EffectType, String>): String {
-        var res = ""
-        defense.forEach {
-            res += it.key.shortname + ":" + it.value + "|"
-        }
         return res.removeSuffix("|")
     }
 
