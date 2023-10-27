@@ -1,8 +1,4 @@
-Nom;Seuils;Coups critiques ;Maximum Energie ;Contraintes ;FAJ Max ;Poids ;Capacite speciale
-epee ebrechee effilee;|1/2=>Ph:0
-|3/4=>Ph:2
-|5/6=>Ph:4
-;Saigne +5 => 3;3;;5;1;
+Nom;Seuils;Coups critiques ;Maximum Energie ;Contraintes ;FAJ Max ;Poids ;Capacite speciale 
 rapiere;|1/2=>Ph:0
 |3=>Ph:3
 |4/5/6=>Ph:6
@@ -31,10 +27,6 @@ epee lourde;|1/2/3=>Ph:0
 |4/5=>Ph:5
 |6=>Ph:10
 ;5/6=>Ph:10;4;Force Minimum:5;12;2;
-epee a double tranchant;|1/2=>Ph:0
-|3/4=>Ph:3
-|5/6=>Ph:6
-;6=>Ph:12;3;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
 epee perche;|1=>Ph:0
 |2/3=>Ph:3
 |4/5=>Ph:6
@@ -44,10 +36,6 @@ epee traversante;|1/2=>Ph:0
 |3=>Ph:4
 |4/5/6=>Ph:8
 ;;2;Force Minimum:3;7;0;Traversante : cette épée traverse les alliés sans leur causer de dégâts, elle est assez grande pour frapper un ennemi derrière un allié.
-epee inegide;|1/2=>Ph:0
-|3/4=>Ph:3
-|5/6=>Ph:6
-;;2;Force Minimum:3;11;1;Inégide : Il est impossible de bloquer une frappe de cet épée avec un bouclier
 epee du chevalier noir;|1/2=>Ph:0
 |3/4=>Ph:6
 |5=>Ph:12
@@ -57,11 +45,6 @@ epee ebrechee crenelee;|1/2=>Ph:0
 |3/4=>Ph:2
 |5/6=>Ph:4
 ;4=>Ph:4;3;;5;1;Eventreur 4
-uchigatana;|1=>Ph:0
-|2/3=>Ph:4
-|4/5=>Ph:6
-|6=>Ph:10
-;3=>Ph:6;3;Niveau Minimum:7;21;1;Saigne 7+ => 4
 torche febrile;|1/2=>F:0
 |3/4/5/6=>F:1
 ;6=>F:2;1;;4;1;
@@ -72,10 +55,6 @@ laniere de feu;|1/2=>F:0
 |3/4/5=>F:4
 |6=>F:8
 ;6=>F:16;1;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme
-dague;|1=>Ph:0
-|2/3/4/5=>Ph:1
-|6=>Ph:2
-;6=>Ph:8;2;;6;1;Backstab +1
 poignard brise;|1/2/3=>Ph:0
 |4/5/6=>Ph:1
 ;6=>Ph:2;2;;4;1;
@@ -83,35 +62,15 @@ stylet rituel inique;|1=>Ph:0|Ma:0
 |2/3/4/5=>Ph:1|Ma:2
 |6=>Ph:2|Ma:4
 ;4/5=>Ph:2|Ma:4;2;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dés pour résoudre l'effet d'un anneau inique, si porté.
-dague aiguisee;|1=>Ph:0
-|2/3/4/5=>Ph:1
-|6=>Ph:2
-;6=>Ph:8;2;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
 poignard dent de rat;|1=>Ph:0
 |2/3/4=>Ph:2
 |5=>Ph:4
 |6=>Ph:8
 ;5=>Ph:6;2;Niveau Minimum:4;6;1;Toxine 4+ => 2
-longue dague ciselee;|1/2=>Ph:0
-|3/4/5/6=>Ph:4
-;5/6=>Ph:8;3;Niveau Minimum:5;8;1;Parade +1
 percemaille brulant;|1=>Ph:0|F:0
 |2=>Ph:2|F:1
 |3/4/5/6=>Ph:4|F:2
 ;6=>Ph:8|F:4;2;Niveau Minimum:4;7;1;Pour un coût de 1 énergie supplémentaire (avant le jet de dé) la frappe ignore l'armure de l'équipement
-dague crenelee;|1=>Ph:0
-|2/3/4/5=>Ph:1
-|6=>Ph:2
-;6=>Ph:8;2;Niveau Minimum:2;6;1;Backstab +1. Eventreur 2
-longue dague crenelee;|1/2=>Ph:0
-|3/4/5/6=>Ph:4
-;6=>Ph:8;2;Niveau Minimum:6;8;1;Parade +1. Eventreur 3
-longue dague equilibree;|1/2=>Ph:0
-|3/4/5/6=>Ph:4
-;5=>Ph:6|6=>Ph:8|;3;Niveau Minimum:5;9;1;Parade +1
-longue dague;|1/2=>Ph:0
-|3/4/5/6=>Ph:4
-;6=>Ph:8;3;Niveau Minimum:4;8;1;Parade +1
 ceste en cuir;|1=>Ph:0
 |2/3/4=>Ph:1
 |5=>Ph:2
@@ -189,9 +148,6 @@ marteau du taureau;|1/2/3=>Ph:0
 hache rouillee;|1/2/3/4=>Ph:0
 |5/6=>Ph:7
 ;4=>Ph:7;3;Force Minimum:5;13;2;
-hachette double maudite;|1/2=>Ph:0
-|3/4/5/6=>Ph:6
-;6=>Ph:12|2pv en moins pour le porteur;4;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
 labrys gobeline;|1/2/3/4=>Ph:0
 |5/6=>Ph:6
 ;4=>Ph:6;3;Force Minimum:5;13;2;Backswing:Si portée à deux mains et que le coup a un FCC inférieur ou égal à 0, alors tous les dés des prochaines frappes de ce tour sont augmentés de 1. Toxine 3+ => 2  
@@ -324,3 +280,48 @@ hache;|1/2/3=>Ph:0
 fleche de mauvaise facture;|1/2/3=>Ph:0
 |4/5/6=>Ph:1
 ;;0;;0;0;
+epee ebrechee effilee;|1/2=>Ph:0
+|3/4=>Ph:2
+|5/6=>Ph:4
+;Saigne +5 => 3;3;;5;1;
+epee a double tranchant;|1/2=>Ph:0
+|3/4=>Ph:3
+|5/6=>Ph:7
+;6=>Ph:10;3;Force Minimum:10;13;4;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.
+uchigatana;|1=>Ph:0
+|2/3=>Ph:4
+|4/5=>Ph:6
+|6=>Ph:10
+;6=>Ph:11;3;Niveau Minimum:8;21;1;Saigne 7+ => 10
+Seppuku : le joueur se présente dos à l'ennemi et se transperce le ventre pour atteindre l'ennemi derrière lui. Il subit la frappe lui-même et il ajoute un dé 7 à sa frappe pour résoudre la frappe pour l'ennemi
+hachette double maudite;|1/2=>Ph:0
+|3/4/5/6=>Ph:6
+;6=>Ph:12|2pv en moins pour le porteur;4;Humanite Minimum:4;10;1;Polydextrie :avoir 2 de ces hachettes en ambidextrie ajoute 2 dégâts magiques aux dégâts totaux des frappes.
+dague;|1=>Ph:0
+|2/3/4/5=>Ph:1
+|6=>Ph:2
+;6=>Ph:9;2;;6;1;Backstab +1
+dague aiguisee;|1=>Ph:0
+|2/3/4/5=>Ph:1
+|6=>Ph:2
+;6=>Ph:9;2;Niveau Minimum:3;6;1;Backstab +1. Saigne +3 => 2
+longue dague ciselee;|1/2=>Ph:0
+|3/4/5/6=>Ph:4
+;5/6=>Ph:9;3;Niveau Minimum:5;8;1;Parade +1
+dague crenelee;|1=>Ph:0
+|2/3/4/5=>Ph:1
+|6=>Ph:2
+;6=>Ph:9;2;Niveau Minimum:2;6;1;Backstab +1. Eventreur 2
+longue dague crenelee;|1/2=>Ph:0
+|3/4/5/6=>Ph:4
+;6=>Ph:9;2;Niveau Minimum:6;8;1;Parade +1. Eventreur 3
+longue dague equilibree;|1/2=>Ph:0
+|3/4/5/6=>Ph:4
+;5=>Ph:6|6=>Ph:9|;3;Niveau Minimum:5;9;1;Parade +1
+longue dague;|1/2=>Ph:0
+|3/4/5/6=>Ph:4
+;6=>Ph:9;3;Niveau Minimum:4;8;1;Parade +1
+epee inegide;|1/2=>Ph:0
+|3/4=>Ph:3
+|5/6=>Ph:6
+;;2;Force Minimum:3;11;1;Inégide : Il est impossible de bloquer une frappe de cet épée avec un bouclier (la défense ajoutée par le bouclier n'est pas prise en compte).

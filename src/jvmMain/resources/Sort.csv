@@ -1,9 +1,5 @@
-Nom;Type;Utilisation ;Cout ;Intelligence Min ;contraintes ;Seuils;Coups critiques ;IAJ Max ;Description
+Nom;Type;Utilisation ;Cout ;Intelligence Min ;contraintes ;Seuils;Coups critiques ;IAJ Max ;Description 
 arme magique;AME;5;Ne coûte pas d'action;4;Distance et Cac;;;0;Ne coûte rien. Ajoute 2 de dégât magique aux dégâts totaux de vos frappes pour l’arme de votre choix.Vous ne pouvez pas désigner l’arme d’un compagnon. L’effet se termine à la fin de votre tour.
-eclairs;AME;3;;9;Distance. Max energie : 2;|1=>Ma:0
-|2/3/4/5=>Ma:4
-|6=>Ma:12
-;;23;Après la frappe jetez un dé:\n6 => la cible et 2 autres ennemis\n5 => la cible et 1 autre ennemi \n3/4 => la cible uniquement\n2 => la cible et un allié\n1 => un allié.\nLe résultat détermine qui subit la frappe.Le MJ détermine les cibles ennemies, le lanceur détermine les cibles alliées.
 nyctalopie;AME;2;Energies au choix;6;Minimum energie : 1;;;0;Jetez 1 dé par énergie:Si un dé dépasse 4, alors le joueur voit dans le noir et ne voit pas dans la lumière.Sinon si un dé = 1, alors le joueur est aveugle pendant 2 tours.
 petite fleche d ame;AME;13;Energies et ames;6;Maximum energie : 2;|1/2=>Ma:0
 |3/4/5/6=>Ma:2
@@ -172,15 +168,6 @@ Il faut ensuite attendre qu’ un élément tierce enflamme le propane.
 Si tel est le cas, une explosion énorme se produit dans toute la pièce et tout être à l’intérieur (hormis le lanceur) est projeté violemment et subit : 20 Ph, 20 F. 
 Si le propane s’enflamme avant le début du prochain tour du lanceur alors on considère qu’il y a un retour de flamme.
 Retour de flamme: un filet de gaz qui s’échappe encore des lèvres du lanceur s’enflamme et la flamme remonte le filet de gaz pour incinérer le lanceur de l’intérieur qui subit: 20F.
-brise braisee;PYROMANCIE;10;;6;;;;8;Le pyromancien projette un nuage de braise sur une large zone devant lui (~7m), les braises virevoltent et brûle légèrement les ennemis.
-Dégâts => 1 F
-Seuils :
-6 => x2 | frappe les ennemis dans un rayon de 7m devant, baissent leur bouclier s’ils en ont.
-5=>x2 | frappe les ennemis dans un rayon de 7m devant
-4=>x1 | frappe les ennemis dans un rayon de 7m devant
-3=> x1 | frappe alliés et ennemis dans un rayon de 7m devant
-2 =>x2 | frappe les alliés dans un rayon de 7m devant
-1=> x5 | frappe le lanceur uniquement, il se débat et doit se libérer une main pour chasser les braises. Son tour est terminé.
 pluie brulante;PYROMANCIE;1;1 énergie;11;Seuil de reussite:2+;;;0;Le lanceur doit être à l’air libre pour lancer le sort. Une pluie de goutte de feu s’abat alors dans un rayon de ~15m autour du lanceur.
 Chacun des êtres présents dans cette zone doit jeter un dé pour déterminer les dégâts de feu subits:
 1/2 => 0
@@ -254,3 +241,22 @@ La cible devient nyctalope et bénéficie d'une perception accrue de son environ
 pattes ambulatoires;ARACHNOMANCIE;1;;10;;;;0;Dure tant que le lanceur tient en main son catalyseur magique (bâton, patte d'araneide...)
 La cible (peut etre le lanceur) voit pousser  6 longues pattes supplémentaires (3 sur chacun de ses flancs). Elle est absolument hideuse.
 La cible peut l'utiliser pour se déplacer très rapidement, on considère qu'elle peut monter les surfaces lisse et autre, toutefois elle doit se recroqueviller sur elle-même pour cela.
+eclairs;AME;3;;9;Distance. Max energie : 2;|1=>Ma:0
+|2/3/4/5=>Ma:4
+|6=>Ma:12
+;;23;Après la frappe jetez un dé:
+6 => la cible et 2 autres ennemis
+5 => la cible et 1 autre ennemi 
+3/4 => la cible uniquement
+2 => la cible et un allié
+1 => un allié.
+Le résultat détermine qui subit la frappe.Le MJ détermine les cibles ennemies, le lanceur détermine les cibles alliées.
+brise braisee;PYROMANCIE;10;;4;;;;6;Le pyromancien projette un nuage de braise sur une large zone devant lui (~7m), les braises virevoltent et brûle légèrement les ennemis.
+Dégâts => 1 F
+Seuils :
+6 => x2 | frappe les ennemis dans un rayon de 7m devant, leur bouclier sont inutilisables jusqu'au début du prochain tour du lanceur.
+5=>x2 | frappe les ennemis dans un rayon de 7m devant
+4=>x1 | frappe les ennemis dans un rayon de 7m devant
+3=> x1 | frappe alliés et ennemis dans un rayon de 7m devant
+2 =>x2 | frappe les alliés dans un rayon de 7m devant
+1=> x5 | frappe le lanceur uniquement, il se débat et doit se libérer une main pour chasser les braises. Son tour est terminé.
