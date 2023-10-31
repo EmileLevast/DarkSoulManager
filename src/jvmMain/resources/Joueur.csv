@@ -1,11 +1,12 @@
 Nom;equipement ;details ;caracOrigin ;caracActuel ;niveau 
 vivien;|zweihander||anneau de nyctalopie|;aucun details;1/2/Ph:3/4/5/6/7;1/2/Ph:8/4/5/6/7;11
 leon;|neodyme||petite fleche d ame||sondage cerebral||oubli||eclairs||givrant||dissipateur||corne du minotaure|;poison 12;1/2/Ph:3/4/5/6/7;1/2/Ph:8/4/5/6/7;11
-emile;|epee large||epee longue||epee courte||epee du chevalier noir||epee ebrechee crenelee|;Je m'appelle émile;1/2/Ph:3|Ma:7/4/5/6/7;1/2/Ph:8/4/5/6/7;9
-remi h;|main spirituelle||soin palliatif||os coupant||epee inegide||talisman d energie [nbr]||engourdissement|;Clerc
-Talisman d'énergie 1;14/2/Ph:1|Ma:3/3/2/1/0;14/2/Ph:1|Ma:3/3/3/1/7;1
-nathan;|paume incandescente||etreinte brulante||talisman d energie [nbr]||lance de gobelin||os coupant|;Pyromancienne
-Corde 10m
-20 carreaux;14/3/Ph:2|F:2/3/2/1/0;14/3/Ph:2|F:2/3/3/1/0;2
-remi f;|talisman d energie [nbr]||canine de fauve||longue-vue||passe-partout||armure de cuir en lambeaux|;Voleur;13/2/Ph:2|Po:3/2/2/2/0;13/2/Ph:2|Po:3/2/3/2/7;1
-doryan;|talisman d energie [nbr]||bâton de cedre||arme magique||talisman de chasseur de feu||anneau moratoire|;Mage;17/2/Ma:2/5/3/1/0;17/2/Ma:2/5/3/2/0;2
+doryan;|talisman d energie [nbr]||bâton de cedre||arme magique||talisman de chasseur de feu||anneau moratoire||os coupant||technique esquive de dague||tunique dechiree|;Mage
+Talisman energie I;17/2/Ma:2/5/3/1/0;17/2/Ma:2/5/3/2/0;2
+nathan;|paume incandescente||etreinte brulante||talisman d energie [nbr]||lance de gobelin||os coupant||arbalete grossiere||technique esquive de dague|;Pyromancienne
+20 carreaux;14/3/Ph:2|F:2/3/2/1/0;14/3/Ph:2|F:2/3/3/1/20;2
+remi h;|main spirituelle||soin palliatif||os coupant||epee inegide||talisman d energie [nbr]||engourdissement||technique esquive de dague||gorgee bienfaitrice|;Clerc
+Talisman d'énergie 1;14/2/Ph:1|Ma:3/3/2/1/0;5/2/Ph:1|Ma:3/3/3/1/27;1
+emile;|epee large||epee longue||epee courte||epee du chevalier noir||epee ebrechee crenelee|;Je m'appelle émile;1/2/Ph:3|Ma:7/4/5/6/7;1/2/Ph:8/6/3/3/2;9
+remi f;|talisman d energie [nbr]||canine de fauve||longue-vue||passe-partout||armure de cuir en lambeaux||technique esquive de dague||dague|;Voleur
+Talisman d'énergie 1;13/2/Ph:2|Po:3/2/2/2/0;13/2/Ph:2|Po:3/2/3/2/7;1
