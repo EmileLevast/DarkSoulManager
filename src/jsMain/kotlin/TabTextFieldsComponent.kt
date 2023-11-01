@@ -33,8 +33,6 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
     var listModifiedAttribute = mutableListOf<String>()
     val listDeparsedAttributes = props.itemList.getDeparsedAttributes()
 
-    var itemJoueurToList:MutableList<String>
-
     var isOpeningDialog by useState(false)
 
     var listJoueurs: List<Joueur> by useState(emptyList<Joueur>())

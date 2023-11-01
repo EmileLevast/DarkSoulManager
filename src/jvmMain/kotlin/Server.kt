@@ -96,6 +96,9 @@ fun main() {
                             is Joueur -> {
                                 call.receive<Joueur>()
                             }
+                            is Equipe -> {
+                                call.receive<Equipe>()
+                            }
                             else -> {
                                 call.receive<Armure>()
                             }
