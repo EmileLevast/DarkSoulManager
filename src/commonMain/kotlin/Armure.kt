@@ -10,7 +10,7 @@ class Armure(
 )
     :ApiableItem(){
 
-    override val id: Int = nom.hashCode()
+    override val _id: Int = nom.hashCode()
     override var isAttached: Boolean = false
 
     override fun getStatsAsStrings(): String {

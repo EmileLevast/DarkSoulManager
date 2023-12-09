@@ -1,3 +1,5 @@
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -13,7 +15,7 @@ class Arme(
 ) : ApiableItem() {
 
 
-    override val id = nom.hashCode()
+    override val _id = nom.hashCode()
     override var isAttached = false
 
     override fun getStatsAsStrings(): String {

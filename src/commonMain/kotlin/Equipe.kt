@@ -6,7 +6,7 @@ class Equipe(
     var chaineJoueurSerialisee: String ="",
 ) : ApiableItem() {
 
-    override val id = nom.hashCode()
+    override val _id = nom.hashCode()
     override var isAttached = false
 
     override fun getStatsAsStrings():String{

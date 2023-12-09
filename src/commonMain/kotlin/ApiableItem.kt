@@ -3,6 +3,7 @@ import kotlinx.serialization.Transient
 
 @Serializable
 abstract class ApiableItem : IListItem {
+
     @Transient
     val nameForApi = this::class.simpleName
 
@@ -14,6 +15,9 @@ abstract class ApiableItem : IListItem {
 
     @Transient
     val updateForApi = "update$nameForApi"
+
+    @Transient
+    val insertForApi = "insert$nameForApi"
 
     @Transient
     val deleteForApi = "delete$nameForApi"

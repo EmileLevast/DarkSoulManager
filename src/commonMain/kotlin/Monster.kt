@@ -15,7 +15,7 @@ data class Monster(
     val capaciteSpeciale:String=""
 ) : ApiableItem(){
 
-    override val id = nom.hashCode()
+    override val _id = nom.hashCode()
     override var isAttached = false
 
     private fun constructForceSeuils():String{

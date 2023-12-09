@@ -73,41 +73,26 @@ fun main() {
                     }
                     post("/"+ itapiable.updateForApi) {
                         logger.debug("post en cours")
-                        //TODO ajouter une ligne dans le when quand on ajoute un table dans la bdd
-                        val postedElement:ApiableItem = when(itapiable){
-                            is Arme -> {
-                                call.receive<Arme>()
-                            }
-                            is Monster -> {
-                                call.receive<Monster>()
-                            }
-                            is Armure -> {
-                                call.receive<Armure>()
-                            }
-                            is Bouclier -> {
-                                call.receive<Bouclier>()
-                            }
-                            is Sort -> {
-                                call.receive<Sort>()
-                            }
-                            is Special -> {
-                                call.receive<Special>()
-                            }
-                            is Joueur -> {
-                                call.receive<Joueur>()
-                            }
-                            is Equipe -> {
-                                call.receive<Equipe>()
-                            }
-                            else -> {
-                                call.receive<Armure>()
-                            }
-                        }
+                        val elementToUpdate:ApiableItem = getApiableElementAccordingToType(call, itapiable)
 
-                        collectionsApiableItem[itapiable.nameForApi]!!.deleteOne(ApiableItem::nom eq postedElement.nom)
-                        val resInsert = collectionsApiableItem[itapiable.nameForApi]!!.insertMany(listOf(postedElement) as List<Nothing>)
+                        val resInsert = collectionsApiableItem[itapiable.nameForApi]!!.updateOneById(elementToUpdate._id,elementToUpdate)
 
                         if(resInsert.wasAcknowledged()){
+                            call.respond(HttpStatusCode.OK)
+                        }else{
+                            call.respond(HttpStatusCode.ExpectationFailed)
+                        }
+                    }
+                    post("/"+ itapiable.insertForApi) {
+                        logger.debug("insert en cours")
+                        val elementToInsert:ApiableItem = getApiableElementAccordingToType(call, itapiable)
+
+                        //S'il y'a déjà un élément avec cet identifiant là, on insère pas, faut supprimer avant
+                        val resInsert =  if(collectionsApiableItem[itapiable.nameForApi]!!.countDocuments(ApiableItem::_id eq elementToInsert._id) < 1){
+                            collectionsApiableItem[itapiable.nameForApi]!!.insertMany(listOf(elementToInsert) as List<Nothing>)
+                        } else  { null }
+
+                        if(resInsert?.wasAcknowledged() == true){
                             call.respond(HttpStatusCode.OK)
                         }else{
                             call.respond(HttpStatusCode.ExpectationFailed)
@@ -140,5 +125,51 @@ fun main() {
             }
         }
     }.start(wait = true)
+}
+
+/**
+ * This function return the object deducing his type
+ */
+private suspend fun getApiableElementAccordingToType(
+    call: ApplicationCall,
+    itapiable: ApiableItem
+) = when (itapiable) {
+    //TODO ajouter une ligne dans le when quand on ajoute un table dans la bdd
+
+    is Arme -> {
+        call.receive<Arme>()
+    }
+
+    is Monster -> {
+        call.receive<Monster>()
+    }
+
+    is Armure -> {
+        call.receive<Armure>()
+    }
+
+    is Bouclier -> {
+        call.receive<Bouclier>()
+    }
+
+    is Sort -> {
+        call.receive<Sort>()
+    }
+
+    is Special -> {
+        call.receive<Special>()
+    }
+
+    is Joueur -> {
+        call.receive<Joueur>()
+    }
+
+    is Equipe -> {
+        call.receive<Equipe>()
+    }
+
+    else -> {
+        call.receive<Armure>()
+    }
 }
 

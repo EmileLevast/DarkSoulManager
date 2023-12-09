@@ -14,7 +14,7 @@ class Sort(
     val description:String=""
 ) :ApiableItem(){
 
-    override val id: Int = nom.hashCode()
+    override val _id: Int = nom.hashCode()
 
     override var isAttached: Boolean = false
 
