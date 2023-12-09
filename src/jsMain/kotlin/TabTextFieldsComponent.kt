@@ -1,28 +1,16 @@
 import csstype.Display
-import csstype.NamedColor
 import csstype.px
 import kotlinx.coroutines.launch
-import kotlinx.css.Color
-import kotlinx.css.Color.Companion.aliceBlue
-import kotlinx.html.TEXTAREA
 import mui.material.*
 import mui.material.styles.TypographyVariant
 import mui.system.sx
 import org.w3c.dom.*
 import react.*
 import react.dom.events.ChangeEventHandler
-import react.dom.events.FormEventHandler
-import react.dom.html.InputType
 import react.dom.html.ReactHTML
-import react.dom.html.ReactHTML.textarea
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.dialog
-import react.dom.html.ReactHTML.h4
-import react.dom.html.ReactHTML.h6
-import react.dom.html.ReactHTML.input
-import react.dom.html.ReactHTML.label
 import react.dom.html.ReactHTML.p
-import react.dom.onChange
 
 external interface TabTextFieldProps : Props {
     var itemList: IListItem
@@ -68,7 +56,7 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
                                         }else{
                                             it.chaineEquipementSerialisee = it.chaineEquipementSerialisee.replace("${CHAR_SEP_EQUIPEMENT}${props.itemList.nom}$CHAR_SEP_EQUIPEMENT","")
                                         }
-                                        updateItem(it)
+                                        insertItem(it)
                                     }
                                 }
                                 defaultChecked = it.chaineEquipementSerialisee.contains("${CHAR_SEP_EQUIPEMENT}${props.itemList.nom}$CHAR_SEP_EQUIPEMENT")

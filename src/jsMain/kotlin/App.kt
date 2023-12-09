@@ -1,15 +1,11 @@
-import io.ktor.util.logging.*
 import react.*
 import kotlinx.coroutines.*
 import mui.lab.TabContext
-import mui.lab.TabList
 import mui.lab.TabPanel
 import mui.material.*
 
-import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.h1
-import react.dom.html.ReactHTML.p
 
 val scope = MainScope()
 
@@ -46,7 +42,7 @@ val App = FC<Props> {
                         setTextSnack("Erreur - ${itemParsed.nom} suppression impossible")
                     }
                 }else{
-                    if(updateItem(itemParsed)){
+                    if(insertItem(itemParsed)){
                         setTextSnack("${itemParsed.nom} mis à jour")
                     }else{
                         setTextSnack("Erreur - ${itemParsed.nom} mise à jour impossible")

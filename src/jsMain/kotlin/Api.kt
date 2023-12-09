@@ -85,8 +85,8 @@ suspend fun searchEquipe(nomSearched: String, strict:Boolean = false) :List<Equi
     }
 }
 
-suspend fun updateItem(itemSelected:ApiableItem):Boolean{
-    jsonClient.post(endpoint +"/"+ itemSelected.nameForApi+"/${itemSelected.updateForApi}"){
+suspend fun insertItem(itemSelected:ApiableItem):Boolean{
+    jsonClient.post(endpoint +"/"+ itemSelected.nameForApi+"/${itemSelected.insertForApi}"){
         contentType(ContentType.Application.Json)
         setBody(itemSelected)
     }.let{
