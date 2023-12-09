@@ -15,6 +15,12 @@ val jsonClient = HttpClient {
     }
 }
 
+enum class ActionOnDb{
+    INSERT,
+    DELETE,
+    UPDATE
+}
+
 suspend fun searchAnything(nomSearched: String, strict:Boolean = false) : List<IListItem> {
     val listResultsItems = mutableListOf<IListItem>()
     unmutableListApiItemDefinition.forEach {
@@ -87,6 +93,15 @@ suspend fun searchEquipe(nomSearched: String, strict:Boolean = false) :List<Equi
 
 suspend fun insertItem(itemSelected:ApiableItem):Boolean{
     jsonClient.post(endpoint +"/"+ itemSelected.nameForApi+"/${itemSelected.insertForApi}"){
+        contentType(ContentType.Application.Json)
+        setBody(itemSelected)
+    }.let{
+        return it.status== HttpStatusCode.OK
+    }
+}
+
+suspend fun updateItem(itemSelected:ApiableItem):Boolean{
+    jsonClient.post(endpoint +"/"+ itemSelected.nameForApi+"/${itemSelected.updateForApi}"){
         contentType(ContentType.Application.Json)
         setBody(itemSelected)
     }.let{

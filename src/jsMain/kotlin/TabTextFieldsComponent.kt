@@ -14,7 +14,7 @@ import react.dom.html.ReactHTML.p
 
 external interface TabTextFieldProps : Props {
     var itemList: IListItem
-    var saveModifiedItem:(List<String>,Boolean)->Unit
+    var saveModifiedItem:(List<String>, ActionOnDb)->Unit
 }
 
 val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
@@ -56,7 +56,7 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
                                         }else{
                                             it.chaineEquipementSerialisee = it.chaineEquipementSerialisee.replace("${CHAR_SEP_EQUIPEMENT}${props.itemList.nom}$CHAR_SEP_EQUIPEMENT","")
                                         }
-                                        insertItem(it)
+                                        updateItem(it)
                                     }
                                 }
                                 defaultChecked = it.chaineEquipementSerialisee.contains("${CHAR_SEP_EQUIPEMENT}${props.itemList.nom}$CHAR_SEP_EQUIPEMENT")
@@ -92,7 +92,16 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
 
         button{
             onClick = {
-                props.saveModifiedItem(listModifiedAttribute,false)
+                props.saveModifiedItem(listModifiedAttribute,ActionOnDb.UPDATE)
+            }
+            Typography{
+                variant = TypographyVariant.h4
+                +"Update"
+            }
+        }
+        button{
+            onClick = {
+                props.saveModifiedItem(listModifiedAttribute,ActionOnDb.INSERT)
             }
             Typography{
                 variant = TypographyVariant.h4
@@ -124,7 +133,7 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
                     +"Cancel"
                 }
                 Button {
-                    onClick = { isOpeningDialog = false; props.saveModifiedItem(listModifiedAttribute,true) }
+                    onClick = { isOpeningDialog = false; props.saveModifiedItem(listModifiedAttribute,ActionOnDb.DELETE) }
                     +"Sure Delete ?"
                 }
             }

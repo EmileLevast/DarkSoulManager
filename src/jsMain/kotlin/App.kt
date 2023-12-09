@@ -30,19 +30,25 @@ val App = FC<Props> {
         activeTab="2"
     }
 
-    fun saveEditedItem(listAttributesAsString: List<String>, isDeleting:Boolean=false){
+    fun saveEditedItem(listAttributesAsString: List<String>, chosenAction:ActionOnDb){
         scope.launch {
             try {
                 val itemParsed = (currentSelectedItem as ApiableItem).parseFromCSV(listAttributesAsString)
 
-                if(isDeleting){
+                if(chosenAction == ActionOnDb.DELETE){
                     if(deleteItem(itemParsed)){
                         setTextSnack("${itemParsed.nom} Supprimé")
                     }else{
                         setTextSnack("Erreur - ${itemParsed.nom} suppression impossible")
                     }
-                }else{
+                }else if (chosenAction == ActionOnDb.INSERT){
                     if(insertItem(itemParsed)){
+                        setTextSnack("${itemParsed.nom} inséré ${itemParsed._id}")
+                    }else{
+                        setTextSnack("Erreur - ${itemParsed.nom} déjà présent")
+                    }
+                }else {
+                    if(updateItem(itemParsed)){
                         setTextSnack("${itemParsed.nom} mis à jour")
                     }else{
                         setTextSnack("Erreur - ${itemParsed.nom} mise à jour impossible")
