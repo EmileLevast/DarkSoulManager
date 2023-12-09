@@ -27,7 +27,7 @@ val tabTextFieldComponent = FC<TabTextFieldProps> { props ->
 
     useEffectOnce {
         scope.launch {
-            listJoueurs = searchJoueur(".*") ?: listOf<Joueur>(Joueur())
+            listJoueurs = searchJoueur(".*") ?: listOf<Joueur>()
         }
     }
 
