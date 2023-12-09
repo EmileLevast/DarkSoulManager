@@ -196,9 +196,6 @@ epee droite;|1=>Ph:0
 |2/3/4=>Ph:3
 |5/6=>Ph:6
 ;4=>Ph:6;4;Force Minimum:2;7;1;
-main nue;|1/2/3=>Ph:0
-|4/5/6=>Ph:1
-;6=>Ph:2;2;;4;1;-2 sur le dé
 os coupant;|1/2=>Ph:0
 |3/4/5/6=>Ph:1
 ;6=>Ph:2;2;;4;1;-1 sur le dé
@@ -325,3 +322,14 @@ epee inegide;|1/2=>Ph:0
 |3/4=>Ph:3
 |5/6=>Ph:6
 ;;2;Force Minimum:3;11;1;Inégide : Il est impossible de bloquer une frappe de cet épée avec un bouclier (la défense ajoutée par le bouclier n'est pas prise en compte).
+coups de corne;|1/2=>Ph:0
+|3/4/5=>Ph:3
+|6=>Ph:8
+;4/5=>Ph:14;2;;13;0;
+main nue;|1/2/3=>Ph:0
+|4/5/6=>Ph:1
+;6=>Ph:2;2;;100;1;-1 au degat total de la frappe
+etreinte de cerefroi;|1/2/3=>Ph:0
+|4/5=>Ph:2|Ma:3
+|6=>Ph:2|Ma:5
+;;2;;16;0;gelé : la cible est gelée. Elle est complètement paralysée jusqu'à la fin du prochain tour du MJ. Elle ne dispose ensuite plus que d'une action par tour jusqu'à ce qu'elle trouve un moyen de se réchauffer.

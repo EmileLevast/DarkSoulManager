@@ -53,3 +53,11 @@ minotaure;80;1:6|2:8|3:10;Po:3|F:8|Ph:17|Ma:3;1;4;hache:5|Armure lourde du taure
 soldat carcasse;15;1:2|2:3|3:3;Ph:3|Ma:-2;0;3;armure de carcasse:4|epee droite:5|bouclier de carcasse:6;95;
 carcasse lourde;15;1:2|2:3|3:4;Ph:2|Po:-2;0;3;armure de maille:5|hache rouillee:6;110;
 devineresse grabataire;15;1:0;F:20|Ph:-5;0;1;;40;Revit si les joueurs se reposent au feu et se souvient de l'histoire
+carcasse guetteuse;15;1:1|2:2;Ph:2;1;3;armure petromorphe usee:4|longue dague:5|50 âmes supp:6;80;Les carcasses guetteuses se positionnent à un endroit et s'emmitouflent dans leur cape petromorphe pour prendre l'apparence d'un rocher et surprendre leur cible.
+Si un joueur se trouve devant une carcasse guetteuse à ~2m max, celle-ci peut bondir et effectuer un backstab. Il est automatiquement réussi si le joueur est de dos, sinon la carcasse jette un dé, sur 10+ le backstab est réussi.
+bouquetin;13;1:1|2:2;Ph:3|Ma:1;1;2;coups de sabots:0|viande:4|humanite:5;15;
+oicta;500;1:15;Ph:30|Po:10|F:50|Ma:30;80;10;;20000;omnipotent
+cerefroi;40;3:8;Ph:15|Po:5|F:-10|Ma:7;2;4;etreinte de cerefroi:0|coups de sabots:0;310;glacial : les  joueurs proche ne peuvent pas courir (faire deux actions de déplacement)
+loup des neiges;25;1:1|2:2;Ph:2|Po:4|F:-4|Ma:4;6;2;croc chien enrage:0|humanite:4;55;rapide : leurs actions de déplacement correspondent à deux déplacement de joueur
+aux abois : impossible à prendre par surprise
+prédateur : voit leur proie de très loin et peuvent se mouvoir de manière invisible dans la neige. Un joueur sans bonus doit faire 19+ pour avoir un indice sur une forme dans la neige et 20+ pour imaginer que c'est un fauve.
