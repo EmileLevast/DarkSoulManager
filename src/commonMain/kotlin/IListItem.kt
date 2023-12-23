@@ -5,7 +5,7 @@ interface IListItem {
     val nom:String
     var isAttached:Boolean
     val imageName:String
-        get() = nom.cleanupForDB().trim()
+        get() = "${nom.cleanupForDB().replace(" ","")}.jpg"
 
     fun getStatsAsStrings():String
     fun getStatsSimplifiedAsStrings():String
