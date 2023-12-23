@@ -35,6 +35,7 @@ abstract class ApiableItem : IListItem {
 
         var i = 0
         while (i < lineFiltered.size) {
+
             var currentLine = lineFiltered[i]
 
             //recontruire la ligne si elle est ecrite sur plusieurs lignes

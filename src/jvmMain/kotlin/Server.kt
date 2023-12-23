@@ -1,3 +1,4 @@
+import com.mongodb.MongoBulkWriteException
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.engine.*
@@ -59,6 +60,7 @@ fun main() {
                     }
                     get("/"+ itapiable.uploadFileForApi) {
                         //retrieve the data from csv file
+
                         val parsedData = try {
                             itapiable.decomposeCSV(File("src/jvmMain/resources/${itapiable.nameForApi}.csv").readLines()
                                 .asSequence()) as List<Nothing>
@@ -68,7 +70,11 @@ fun main() {
                             listOf()
                         }
                         //send data to database
-                        collectionsApiableItem[itapiable.nameForApi]!!.insertMany(parsedData)
+                        try {
+                            collectionsApiableItem[itapiable.nameForApi]!!.insertMany(parsedData)
+                        } catch (e: MongoBulkWriteException) {
+                            logger.error(e.stackTraceToString())
+                        }
                         call.respond(parsedData)
                     }
                     post("/"+ itapiable.updateForApi) {

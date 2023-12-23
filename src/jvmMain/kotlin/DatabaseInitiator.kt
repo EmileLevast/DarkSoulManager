@@ -16,9 +16,6 @@ import kotlin.reflect.full.createInstance
 
 val client = KMongo.createClient().coroutine
 val database = client.getDatabase("JDRProd")
-//val collectionMonster = database.getCollection<Monster>()
-//val collectionArmes = database.getCollection<Arme>()
-//val collectionArmures = database.getCollection<Armure>()
 
 val collectionsApiableItem:MutableMap<String,CoroutineCollection<out ApiableItem>> = mutableMapOf()
 
