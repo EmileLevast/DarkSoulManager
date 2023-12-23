@@ -1,5 +1,3 @@
-import kotlinx.serialization.Contextual
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -12,6 +10,7 @@ class Arme(
     val fajMax: Int = 0,
     val poids: Int = 0,
     val capaciteSpeciale: String = "",
+    override var imageName:String = "logoArme.jpg"
 ) : ApiableItem() {
 
 
@@ -27,7 +26,7 @@ class Arme(
                 (if (coupCritiques.isNotBlank()) "CC : ${strSimplify(coupCritiques, false)}\n" else "") +
                 "Max énergie : $maximumEnergie\n" +
                 "FAJ Max : $fajMax\n" +
-                (if (contraintes.isNotBlank()) " ${strSimplify(contraintes, false)}\n" else "") +
+                (if (contraintes.isNotBlank()) "${strSimplify(contraintes, false)}\n" else "") +
                 "Poids : $poids\n" +
                 "${strSimplify(capaciteSpeciale, false)}\n"
     }
@@ -54,7 +53,8 @@ class Arme(
             listCSVElement[4],
             listCSVElement[5].getIntOrZero(),
             listCSVElement[6].getIntOrZero(),
-            listCSVElement[7]
+            listCSVElement[7],
+            listCSVElement[8]
             )
     }
 
@@ -69,7 +69,8 @@ class Arme(
             "Contraintes : String",
             "FAJ Max : Int",
             "Poids : Int",
-            "Capacite speciale : String"
+            "Capacite speciale : String",
+            "nom du fichier image : String"
         )
     }
 
@@ -88,7 +89,9 @@ class Arme(
             contraintes,
             fajMax.toString(),
             poids.toString(),
-            capaciteSpeciale
+            capaciteSpeciale,
+            imageName
         )
     }
+
 }

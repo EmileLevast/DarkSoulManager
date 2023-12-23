@@ -11,7 +11,12 @@ class Sort(
     val seuils:List<Seuil> = mutableListOf(),//en cl� c'est le facteur et en valeur c'est la liste des seuils associ�s
     val coupCritiques:String="",
     val iajMax:Int=0,
-    val description:String=""
+    val description:String="",
+    override var imageName:String = when(type){
+        SpellType.AME -> "logoMagie.jpg"
+        SpellType.PYROMANCIE -> "logoPyromancie.jpg"
+        else -> "logoMiracle.jpg"
+    }
 ) :ApiableItem(){
 
     override val _id: Int = nom.hashCode()
@@ -57,6 +62,7 @@ class Sort(
             "Coups critiques :String",
             "IAJ Max : Int",
             "Description : String",
+            "imageName : String"
         )
     }
 
@@ -73,7 +79,8 @@ class Sort(
             parseSeuils(listCSVElement[6]),
             listCSVElement[7],
             listCSVElement[8].getIntOrZero(),
-            listCSVElement[9]
+            listCSVElement[9],
+            listCSVElement[10]
         )
     }
 
@@ -94,7 +101,8 @@ class Sort(
             textSeuils,
             coupCritiques,
             iajMax.toString(),
-            description
+            description,
+            imageName
         )
     }
 

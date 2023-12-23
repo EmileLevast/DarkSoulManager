@@ -237,7 +237,7 @@ abstract class ApiableItem : IListItem {
     ): Pair<String, String> {
         //dans cet Map on possède en clé le type et en valeur un entier qui correspond au degat de base
         var textSeuils = ""
-        var parseValeurTypeInital = mapTypeValeurAssocie.mapValues {
+        val parseValeurTypeInital = mapTypeValeurAssocie.mapValues {
             try {
                 it.value.toInt()
             } catch (e: Exception) {
@@ -246,14 +246,14 @@ abstract class ApiableItem : IListItem {
         }
 
 
-        var facteur = 0
-        var degatFinaux = mapOf<EffectType, Int>()
+        var facteur: Int
+        var degatFinaux: Map<EffectType, Int>
         //ici on va multiplier chaque valeur des seuils par la valeur des types initiaux
         mapSeuilsFacteurAssocie.forEach {
-            try {
-                facteur = it.key.toInt()
+            facteur = try {
+                it.key.toInt()
             } catch (e: Exception) {
-                facteur = -1
+                -1
             }
 
 
