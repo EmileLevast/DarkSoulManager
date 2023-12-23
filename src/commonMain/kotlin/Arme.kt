@@ -9,8 +9,7 @@ class Arme(
     val contraintes: String = "Aucune",
     val fajMax: Int = 0,
     val poids: Int = 0,
-    val capaciteSpeciale: String = "",
-    override var imageName:String = "logoArme.jpg"
+    val capaciteSpeciale: String = ""
 ) : ApiableItem() {
 
 
@@ -53,8 +52,7 @@ class Arme(
             listCSVElement[4],
             listCSVElement[5].getIntOrZero(),
             listCSVElement[6].getIntOrZero(),
-            listCSVElement[7],
-            listCSVElement[8]
+            listCSVElement[7]
             )
     }
 
@@ -69,8 +67,7 @@ class Arme(
             "Contraintes : String",
             "FAJ Max : Int",
             "Poids : Int",
-            "Capacite speciale : String",
-            "nom du fichier image : String"
+            "Capacite speciale : String"
         )
     }
 
@@ -89,8 +86,7 @@ class Arme(
             contraintes,
             fajMax.toString(),
             poids.toString(),
-            capaciteSpeciale,
-            imageName
+            capaciteSpeciale
         )
     }
 

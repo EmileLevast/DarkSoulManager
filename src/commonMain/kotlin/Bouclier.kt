@@ -6,8 +6,7 @@ class Bouclier(
     val defense:Map<EffectType,String> = mapOf(),
     val contraintes:String="Aucune contraintes",
     val poids:Int=0,
-    val capaciteSpeciale:String="",
-    override var imageName:String = "logoBouclier.jpg"
+    val capaciteSpeciale:String=""
 )
     :ApiableItem(){
 
@@ -34,8 +33,7 @@ class Bouclier(
                parseDefense(listCSVElement[1]),
                listCSVElement[2],
                listCSVElement[3].run{ if(isNotBlank()) toInt() else{0} },
-               listCSVElement[4],
-               listCSVElement[5]
+               listCSVElement[4]
             )
     }
 
@@ -45,8 +43,7 @@ class Bouclier(
             "Defense : Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
             "Contraintes : String",
             "Poids : Int",
-            "Capacite speciale : String",
-            "Image name : String"
+            "Capacite speciale : String"
         )
     }
 
@@ -56,8 +53,7 @@ class Bouclier(
             deparseDefense(defense),
             contraintes,
             poids.toString(),
-            capaciteSpeciale,
-            imageName
+            capaciteSpeciale
         )
     }
 

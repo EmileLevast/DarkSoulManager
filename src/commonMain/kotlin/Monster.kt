@@ -10,8 +10,7 @@ data class Monster(
     val energie:Int = 0,
     val listDrops:Map<String,Int> = mapOf(),
     val ames:Int=0,
-    val capaciteSpeciale:String="",
-    override var imageName:String = "logoMonstre.jpg"
+    val capaciteSpeciale:String=""
 ) : ApiableItem(){
 
     override val _id = nom.hashCode()
@@ -78,8 +77,7 @@ data class Monster(
             listCSVElement[5].toInt(),
             parseDrops(listCSVElement[6]),
             listCSVElement[7].toInt(),
-            listCSVElement[8],
-            listCSVElement[9]
+            listCSVElement[8]
         )
     }
 
@@ -93,8 +91,7 @@ data class Monster(
             "Energie : Int",
             "Drops : Format = String:Int|String:Int... ",
             "Ames : Int",
-            "Capacite speciale : String",
-            "image Name : String"
+            "Capacite speciale : String"
             )
     }
 
@@ -108,8 +105,7 @@ data class Monster(
             energie.toString(),
             deparseListDrops(listDrops),
             ames.toString(),
-            capaciteSpeciale,
-            imageName
+            capaciteSpeciale
         )
     }
 }

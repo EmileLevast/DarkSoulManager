@@ -7,8 +7,7 @@ class Joueur(
     var details: String ="",
     var caracOrigin: Carac = Carac(),
     var caracActuel: Carac = Carac(),
-    var niveau:Int=0,
-    override var imageName:String = "logoJoueur.jpg"
+    var niveau:Int=0
 ) : ApiableItem() {
 
     override val _id = nom.hashCode()
@@ -21,8 +20,7 @@ class Joueur(
         details = other.details,
         caracOrigin = Carac(other.caracOrigin),  // Assuming Carac has a copy constructor
         caracActuel = Carac(other.caracActuel),  // Assuming Carac has a copy constructor
-        niveau = other.niveau,
-        imageName = other.imageName
+        niveau = other.niveau
     )
 
     override fun getStatsAsStrings():String{
@@ -37,8 +35,7 @@ class Joueur(
             listCSVElement[2],
             Carac.fromCSV(listCSVElement[3]),
             Carac.fromCSV(listCSVElement[4]),
-            listCSVElement[5].getIntOrZero(),
-            listCSVElement[6]
+            listCSVElement[5].getIntOrZero()
         )
     }
 
@@ -49,8 +46,7 @@ class Joueur(
             "details : String",
             "caracOrigin : vie/force/EffectType:Int|Effect:Int.../intelligence/energie/humanite/ame",
             "caracActuel : vie/force/EffectType:Int|Effect:Int.../intelligence/energie/humanite/ame",
-            "niveau : Int",
-            "imageName : String"
+            "niveau : Int"
         )
     }
 
@@ -61,8 +57,7 @@ class Joueur(
             details,
             caracOrigin.toCSV(),
             caracActuel.toCSV(),
-            niveau.toString(),
-            imageName
+            niveau.toString()
         )
     }
 }

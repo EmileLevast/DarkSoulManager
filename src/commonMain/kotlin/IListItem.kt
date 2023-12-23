@@ -4,7 +4,8 @@ interface IListItem {
     val _id:Int
     val nom:String
     var isAttached:Boolean
-    var imageName:String
+    val imageName:String
+        get() = nom.cleanupForDB().trim()
 
     fun getStatsAsStrings():String
     fun getStatsSimplifiedAsStrings():String
