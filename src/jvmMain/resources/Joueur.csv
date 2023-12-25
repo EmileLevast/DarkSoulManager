@@ -1,5 +1,5 @@
 Nom;equipement ;details ;caracOrigin ;caracActuel ;niveau 
-doryan;|talisman d energie [nbr]||bâton de cedre||arme magique||talisman de chasseur de feu||anneau moratoire||os coupant||technique esquive de dague||tunique dechiree|;Mage
+doryan;|talisman d energie [nbr]||baton de cedre||arme magique||talisman de chasseur de feu||anneau moratoire||os coupant||technique esquive de dague||tunique dechiree|;Mage
 Talisman energie I;17/2/Ma:2/5/3/1/0;17/2/Ma:2/5/3/2/0;2
 remi h;|main spirituelle||soin palliatif||os coupant||epee inegide||talisman d energie [nbr]||engourdissement||technique esquive de dague||gorgee bienfaitrice|;Clerc
 Talisman d'énergie 1;14/2/Ph:1|Ma:3/3/2/1/0;5/2/Ph:1|Ma:3/3/3/1/27;1
@@ -11,7 +11,7 @@ nathan;|paume incandescente||etreinte brulante||talisman d energie [nbr]||lance 
 thomas;|poignard surinant||longue-vue||talisman d energie [nbr]||ereintant||redemption||armure de cuir de carcasse||tunique dechiree||passe-partout||poignard brise|;1 flèche;13/3/Ph:2|Po:3/4/3/2/0;13/3/Ph:2|Po:3/4/3/3/0;3
 vivien;|zweihander||anneau de nyctalopie||talisman d energie [nbr]||peau de loup||ichgul||main enflammee|;aucun detail;1/2/Ph:3/4/5/6/7;2/2/Ph:8/4/5/6/7;11
 emile;|epee large||epee du chevalier noir||epee ebrechee crenelee||epee courte||epee longue||dague||emile||zairzan|;A roulette mobile ?;1/2/Ph:3|Ma:7/4/5/6/7;600/10/Ph:8/6/3/3/2;9
-ember;|bâton de cedre||arme magique||os coupant||talisman d energie [nbr]||etreinte brulante||torche||cape petromorphe usee|;Mage
+ember;|baton de cedre||arme magique||os coupant||talisman d energie [nbr]||etreinte brulante||torche||cape petromorphe usee|;Mage
 3 talismans d'energie
 chapeau trouée;17/2/Ma:2/4/2/1/0;5/2/Ma:2/4/3/1/80;1
 lyra;|main nue||epee ebrechee|;Guerrier;15/4/Ph:4/3/2/1/0;9/4/Ph:4/3/3/1/210;1
