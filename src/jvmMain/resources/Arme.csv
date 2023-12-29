@@ -85,7 +85,7 @@ poignard crante;|1=>Ph:0
 |2/3/4=>Ph:3
 |5=>Ph:6
 |6=>Ph:9
-;6=>Ph:15;2;Niveau Minimum:4;6;1;Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si FFC >  0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
+;6=>Ph:15;2;Niveau Minimum:4;6;1;Lame enfoncée: Une seule fois par frappe, avant de résoudre la défense, si la puissance de la frappe > 0 alors on peut ajouter de l’énergie dans la frappe et lancer les dés supplémentaires associés.
 poignard crochet venimeux;|1=>Ph:0
 |2/3/4=>Ph:2
 |5=>Ph:4
@@ -333,3 +333,17 @@ stylet rituel inique;|1=>Ph:0|Ma:0
 |2/3/4/5=>Ph:1|Ma:2
 |6=>Ph:2|Ma:4
 ;4/5=>Ph:2|Ma:4;2;Intelligence Minimum:7;5;1;Backstab +1. Ajoute +1 au dés pour résoudre l'effet d'un anneau inique, si porté.
+coup de griffes;|1/2/3=>Ph:0
+|4=>Ph:9
+|5/6=>Ph:11
+;;4;Force Minimum:1;20;0;
+coup de tentacule;|1=>Ph:0
+|2=>Ph:2
+|3/4=>Ph:4
+|5=>Ph:6
+|6=>Ph:10
+;;2;;15;0;Agit comme une arme de portee 3m
+poing de troll;|1/2/3/4=>Ph:0
+|5=>Ph:9
+|6=>Ph:13
+;;4;Force Minimum:1;30;0;Si le poing du troll frappe le sol (un joueur fait une roulade) alors tous les êtres vivants dans un rayon de 1m sont bousculés. chacun jette 1D20 sur 8+ ils tiennent debout, sinon ils tombent.

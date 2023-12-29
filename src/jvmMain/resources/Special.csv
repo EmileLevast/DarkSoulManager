@@ -26,7 +26,7 @@ Le joueur peut essayer de jauger le caractère de son interlocuteur pour un jet 
 3 => le joueur appelle le personnage involontairement.
 2 => le joueur insulte haut et fort le personnage.
 1 => le joueur vocifère et jette un cailloux à la figure du personnage.
-anneau du prescient;ANNEAU;Les tests d’observations ne vous donne plus d’information sur l’environnement mais indique vaguement le niveau de danger dans lequel vous vous trouvez. Si le test d’observation donne 1, alors l’anneau disparaît.
+anneau du prescient;ANNEAU;Les tests d’observations ne vous donne plus d’information sur l’environnement mais indique précisément le niveau de danger dans lequel vous vous trouvez, et ainsi que les objets, endroits , personnes dangereuses dans votre champ de vision. Si le test d’observation donne 1, alors l’anneau disparaît.
 anneau de precipitation;ANNEAU;Si vous êtes le premier à entamer les points de vie d’un adversaire, alors c’est vous qui récupérez les âmes à sa mort, sauf si vous êtes mort. En revanche la récompense d’âmes est diminuée par 2 quand vous tuez un adversaire.
 anneaux iniques;ANNEAU;Ne fonctionne que si un seul autre membre du groupe possède un anneau inique.
 Jetez un dé lorsque vous tuez un adversaire:
@@ -42,7 +42,7 @@ Saignement 3+ => 2
 Seulement si l’arme ne bénéficie pas de saignement.
 anneau oblatif;ANNEAU;Avec cet anneau, tous les dés d’une frappe donnant 1 se transforme en 6. En revanche tous les 6 retirent 2 pv au joueur (y compris les 6 issus des 1 transformés).
 anneau felide;ANNEAU;Permet de comprendre et de parler le langage des chats. Cet anneau permet aussi de se faire facilement accepter des plus primitifs.
-anneau du traître;ANNEAU;Seul le porteur à connaissance de son effet. Si un de ses alliés proches meurt, alors il restaure toute sa vie. En revanche si lui meurt alors ses âmes sont maudites et si un joueur les récupère alors celui-ci perds toutes ses âmes et ses humanités instantanément.
+anneau du traitre;ANNEAU;Seul le porteur à connaissance de son effet. Si un de ses alliés proches meurt, alors il restaure toute sa vie. En revanche si lui meurt alors ses âmes sont maudites et si un joueur les récupère alors celui-ci perds toutes ses âmes et ses humanités instantanément.
 anneau de loyaute;ANNEAU;Si vous subissez des dégâts alliés alors l’émetteur les subits aussi.
 anneau feulide.;ANNEAU;Tant que le joueur dispose d’au moins 1 d’énergie, 
 il bénéficie de +20 défense de feu.
@@ -52,7 +52,6 @@ anneau d’alienation;ANNEAU;Si vous êtes mort et qu’un de vos équipier vien
 coéquipier.
 anneau caligineux;ANNEAU;En arrivant rapidement environné d’ un brouillard vous surprenez l’ennemi à la gorge.
 Si un ennemi ne vous a pas remarqué au début de son tour, vous pouvez tenter de faire un backstab même en arrivant de face.
-anneau moratoire
 anneau du detrousseur;ANNEAU;Le porteur de cet anneau peut voler un item d’un ennemi au corps à corps. Cela se déroule de la même manière qu’une action de « fouille » de cadavres, si ce n’est que la fouille est considérée comme réussie et qu’il faut juste jeter un dé pour savoir quel item est volé.
 talisman de carcasse [nbr];TALISMAN;Procure +[Nbr] de vie au porteur
 talisman de thorolund [nbr];TALISMAN;Procure +[Nbr] intelligence au porteur
@@ -188,8 +187,8 @@ anneau de persecution;ANNEAU;Avec cet anneau, si le porteur réussit une parade 
 anneau d’extrême onction;ANNEAU;Lorsque le porteur subit une frappe qui va être fatale. Alors le meilleur dé de la frappe est ignoré. Ne fonctionne qu'une fois avant le début de son prochain tour.
 anneau de dexterite;ANNEAU;Avec cet anneau vous pouvez, une fois par tour regénérer une énergie après une frappe si celle-ci a fait des dégâts (peu importe si la cible n'a pas perdu de pvs)
 anneau obviant;ANNEAU;Lorsque vous subissez une frappe vous ajouter la valeur correspondant au seuil 3 de votre arme à votre défense équipement.
-anneau deviant;ANNEAU;Tous les dégâts bloqués par votre armure est équipement sont renvoyés à l'attaquant. Puis jeter un 1D6, sur 1,2 ou 3 l'anneau disparaît.
-anneau apotropaïque;ANNEAU;Permet de parer un sort avec un bouclier. Aucune contre-attaque n'est possible.
+anneau deviant;ANNEAU;Tous les dégâts bloqués par votre armure et équipement sont renvoyés à l'attaquant. Puis jeter un 1D6, sur 1,2 ou 3 l'anneau disparaît.
+anneau apotropaique;ANNEAU;Permet de parer un sort avec un bouclier. Aucune contre-attaque n'est possible.
 anneau protecteur;ANNEAU;Lorsque vous subissez une frappe jeter 1D4, sur 1 l'anneau disparaît sur 4 tous les dégâts de la frappe sont ignorés.
 corne du minotaure;OUTIL;Un forgeron compétent peut l'utiliser pour forger une massue minotaurine.
 dent de  [type] [nbr];TALISMAN;Procure +[Nbr] Intelligence
@@ -214,3 +213,5 @@ baton de cedre;OUTIL;Permet de lancer des sorts de magie.
 Poids : 1
 main de pyromancie;OUTIL;Permet de lancer des sorts de pyromancie.
 Blocage : 0
+technique apnee;TECHNIQUE;Effet :le joueur ne commence pas à étouffer avant 4 tours privé d'air.
+graine nyctaphage;OUTIL;Plantée dans un sous bois, elle déploie une plante nyctaphage en 2 tours.

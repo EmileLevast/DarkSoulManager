@@ -262,3 +262,4 @@ Seuils :
 1=> x5 | frappe le lanceur uniquement, il se débat et doit se libérer une main pour chasser les braises. Son tour est terminé.
 essoufflement;MIRACLE;4;2 actions;10;;;;0;Cibler un ennemi. La cible perds 1 point à sa défense physique s'il elle en a. Sinon elle perds 3pv.
 La cible régénère sa défense et sa vie au prochain repos à un feu.
+paralysie;AME;4;;8;;;;0;La cible passe son prochain tour. Elle ne peut plus parler, bouger, etc

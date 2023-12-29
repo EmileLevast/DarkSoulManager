@@ -20,7 +20,7 @@ krun;13;1:1|2:2|3:3;Ph:3|Po:3;1;2;peau de loup:3|lance de gobelin:4|humanite:5;9
 zairzan;70;1:1|2:2|3:4;Ph:3|Po:5|F:5|Ma:10;16;6;anneau de l eclipse:2|main de pyromancie:3|immolation endogene:4|robe de zairzan:5|javelots de feu:5|2 Humanite:6;1500;
 scin;60;1:3|2:4|3:7;Ph:7|Po:-1|F:2|Ma:10;25;4;anneau de l eclipse:1|anneau apotropaïque:2|Eclairs:4|robe de scin:5|grand sort d'ubiquite:5|2 humanites:6|rapiere:6;2000;Humanite : il peut utiliser une humanité max quand il le souhaite (capacité régénérée si les joueurs vont au feu)
 sarah;15;1:3|2:4;Ph:2;3;3;2 dagues aiguisees:3|1 humanite:4|2 humanites:6;150;Précise : elle peut tenter un backstab n'importe quand. Disparition : Si elle a 5 pv au début de son tour, sur 4+ elle se camoufle et disparaît de l'endroit
-scînat;10;1:3|2:4|3:5;F:10|Ma:12;10;2;sauvetage cendre:4;400; S'il réussit, scînat reste sur place et scin est téléporté..Sauveur : si scin va subir une frappe, scînat peut utiliser son sort sauvetage cendré avant. Si celui-ci rate scin peut toujours tenter de se défendre. Parlant : Scînat peut parler à son porteur. Porteur: scînat peut changer de porteur sans soucis, il change alors de nom. <nomPorteur>+<at>
+scinat;10;1:3|2:4|3:5;F:10|Ma:12;10;2;sauvetage cendre:4;400; S'il réussit, scînat reste sur place et scin est téléporté..Sauveur : si scin va subir une frappe, scînat peut utiliser son sort sauvetage cendré avant. Si celui-ci rate scin peut toujours tenter de se défendre. Parlant : Scînat peut parler à son porteur. Porteur: scînat peut changer de porteur sans soucis, il change alors de nom. <nomPorteur>+<at>
 chien enrage;15;1:2|2:3;Ph:5;1;2;croc chien enrage:0|humanite:4;30;
 elfe nu;20;1:1|2:2|3:3;Ph:1|Ma:6|Po:1|F:1;20;3;1 humanite:4|2 humanites:5;115;Télépathe de premier niveau. Peut deviner vaguement ce que veulent les joueurs.
 smith le dragon rouge;300;1:6|2:8|3:12;Ph:20|Po:10|F:50|Ma:-10;25;5;armure du chevalier:3|ignivome:4|epee lourde a deux mains:5|3 Humanite:6;2000;
@@ -61,3 +61,24 @@ cerefroi;40;3:8;Ph:15|Po:5|F:-10|Ma:7;2;4;etreinte de cerefroi:0|coups de sabots
 loup des neiges;25;1:1|2:2;Ph:2|Po:4|F:-4|Ma:4;6;2;croc chien enrage:0|humanite:4;55;rapide : leurs actions de déplacement correspondent à deux déplacement de joueur
 aux abois : impossible à prendre par surprise
 prédateur : voit leur proie de très loin et peuvent se mouvoir de manière invisible dans la neige. Un joueur sans bonus doit faire 19+ pour avoir un indice sur une forme dans la neige et 20+ pour imaginer que c'est un fauve.
+wulfstein;70;1:1|2:2|3:4;Ph:3|Po:5|F:5|Ma:10;16;6;anneau de l eclipse:2|main de pyromancie:3|immolation endogene:4|robe de zairzan:5|javelots de feu:5|2 Humanite:6;1500;
+loup;27;1:1|2:3;Ph:2|Po:4|F:-4|Ma:4;6;2;croc chien enrage:0|humanite:4;55;rapide : leurs actions de déplacement correspondent à deux déplacement de joueur
+aux abois : impossible à prendre par surprise
+ours;38;1:1|2:8;Ph:9|Po:1|F:-5|Ma:5;4;4;coup de griffes:0|humanite:4;110;charge : peut parcourir une grande distance sur une action de mouvement, tout droit. Il peut viser un joueur, s'il l'atteint et que le poids du joueur est inférieur à la force de l'ours alors le joueur est projeté 5m plus loin, il devra dépenser 2 actions à se relever.
+serpent geant;30;1:3|2:3|3:4;Po:11|F:-4|Ph:1|Ma:1;2;3;morsure venimeuse:0;130;peut se laisser tomber d'une branche très haute pour faire une attaque surprise, backstab. Pour voir le serpent un test d'observation doit faire 17+.
+brigand;24;1:1|2:3;Ph:4;5;3;armure de cuir:4|epee droite:5|bouclier de bois:6|humanite:6;80;Les brigands sont toujours à l'affut des récompenses : soit ils sont trouvés près de leur cachette, soit ils ont une carte au trésor, soit ils ont une missive avec une mission, soit ils sont sur le point d'accomplir un méfait.
+panthere;33;1:1|2:5;Ph:6|Po:2|F:0|Ma:5;8;3;croc chien enrage:0|humanite:4;77;rapide : leurs actions de déplacement correspondent à deux déplacement de joueur.
+aux abois : impossible à prendre par surprise.
+guetteuse : si l'environnement le permet, la panthere est indetectable à l'oeil nu. Un test d'observation à 17+ peut renseigner sur une ambiance étrangement calme, un animal qui s'enfuie.
+Chasseuse : Une fois dans la partie, la panthere reste cachée aussi longtemps que possible, suit les joueurs et n'attaque qu'au moment opportun.
+
+bete eclipsante;50;1:1|2:8;Ph:7|Po:-3|F:2|Ma:10;12;4;croc chien enrage:0|coup de tentacule:0|ubiquite:2|humanite:5;170;rapide : leurs actions de déplacement correspondent à deux déplacement de joueur.
+aux abois : impossible à prendre par surprise.
+Chasseuse : Une fois dans la partie, la panthere reste cachée aussi longtemps que possible, suit les joueurs et n'attaque qu'au moment opportun.
+illusion : la bete eclipsante projette son illusion systématiquement lors d'une attaque, l'illusion décale son image de 1m. L'illusion est projetée par ses tentacules. Elle ne se dévoile que lorsqu'elle frappe.
+
+troll;80;1:3|2:5|3:12;Ph:18|Po:3|F:1|Ma:-3;3;4;poing de troll:0;180;Lorsqu'il est assis il est totalement pris pour un rocher.
+Peau dure : si une frappe de plus de 10 degats physique touche le troll mais ne le blesse pas alors sur 10+(D20) l'arme est brisée.
+chenille geante;40;1:1|2:1|3:1;Po:15|F:-10|Ph:9|Ma:0;1;2;morsure venimeuse:0|humanite:2;100;Pour voir la chenille un test d'observation doit faire 17+.
+kamikaze : lorsqu'elle est frappée sur 10+(D20) la chenille projette une explosion d'acide qui inflige 1 de degat de poison et 1 de degat de feu à l'aggresseur. Lorsqu'elle meurt elle explose dans une gerbe d'acide qui cause 2 de degats de poison et 2 de degats de feu à tout être vivant dans un rayon de 3m.
+nyctaphage;35;1:0|2:0|3:0;Ph:4|Ma:5|Po:15|F:-20;0;1;graine nyctaphage:3;80;
