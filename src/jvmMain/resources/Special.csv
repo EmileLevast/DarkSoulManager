@@ -83,8 +83,6 @@ gemme d’invasion
 fiole d’antidote;OUTIL;Réinitialise le compteur de poison.
 Utilisation : 1
 Coût : 1 action spéciale
-ambre sombre;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés : 
-Si FFC>0, la valeur du dé s’ajoute au FCC.
 ambre incandescente;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés. 
 Les dégâts totaux de la frappe sont convertis en dégâts :
 4:Magique
@@ -215,3 +213,5 @@ main de pyromancie;OUTIL;Permet de lancer des sorts de pyromancie.
 Blocage : 0
 technique apnee;TECHNIQUE;Effet :le joueur ne commence pas à étouffer avant 4 tours privé d'air.
 graine nyctaphage;OUTIL;Plantée dans un sous bois, elle déploie une plante nyctaphage en 2 tours.
+fragment d eterna;OUTIL;Lorsqu'un joueur touche un fragment d'éterna, les flammes noires s'engouffrent dans le joueur et lui rappelle un souvenir (au gré du MJ) qui lui rappelle en même temps soit une technique soit un sort (au gré du MJ).
+ambre gelee;AMBRE;projette un rayon de gel très puissant autour du lanceur. Toutes les victimes sont congelées instantanément. Impossible pour elles de jouer. Chaque cible jette 1D12 à chacun de ses tours, si < au nombre de tour depuis qu'elle gelée alors elle est libérée sinon elle subit le nombre de tours depuis qu'elle est gelée en dégât magique. 

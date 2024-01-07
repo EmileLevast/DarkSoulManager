@@ -140,7 +140,8 @@ masse d arme;|1/2/3/4=>Ph:0
 marteau du taureau;|1/2/3=>Ph:0
 |4/5=>Ph:8
 |6=>Ph:12
-;;4;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques
+;;4;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques.
+Taurin : A chaque "écrasement" L'armure physique de l'équipement (pas le bouclier) de la cible diminue de 1 jusqu'à 0. Elle alors détruite et n'est plus utilisable. La vie de l'armure se régénère au feu mais ne se reconstruit pas si elle a été détruite.  
 hache rouillee;|1/2/3/4=>Ph:0
 |5/6=>Ph:7
 ;4=>Ph:7;3;Force Minimum:5;13;2;
@@ -347,3 +348,19 @@ poing de troll;|1/2/3/4=>Ph:0
 |5=>Ph:9
 |6=>Ph:13
 ;;4;Force Minimum:1;30;0;Si le poing du troll frappe le sol (un joueur fait une roulade) alors tous les êtres vivants dans un rayon de 1m sont bousculés. chacun jette 1D20 sur 8+ ils tiennent debout, sinon ils tombent.
+stylet necrophore;|1=>Ph:0|Ma:0
+|2/3/4/5=>Po:1|Ma:4
+|6=>Po:2|Ma:5
+;4/5=>Po:1|Ma:5;2;Intelligence Minimum:7;6;1;Backstab +1.
+Ajoute +1 dégât Magique, à chaque frappe, par ennemis tués, se réinitialise au feu.
+marteau de forge;|1/2/3=>Ph:0
+|4/5=>Ph:7
+|6=>Ph:10
+;;3;Niveau Minimum:4;8;3;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques.
+vortex;|6=>Ph:0
+|2/3/4=>Ph:5
+|5=>Ph:6
+;6=>Ph:13;3;Niveau Minimum:6;9;0;portailleuse : lorsqu'une cible est blessée par vortex, l'agresseur jette 1D20, si > Pv cible, alors celle-ci est téléportée 5 min dans le futur. 
+fourche;|1/2/3/4=>Ph:0
+|5/6=>Ph:6
+;4=>Ph:6;2;Force Minimum:3;12;1;Brochette : lorsque la cible est blessée, si la force de l'agresseur >= poid de la cible, alors il peut projeter la cible (1D20 pour la précision entre ce que l'agresseur veut et la réalite) à 2m maximum.
