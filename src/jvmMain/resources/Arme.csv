@@ -364,3 +364,7 @@ vortex;|6=>Ph:0
 fourche;|1/2/3/4=>Ph:0
 |5/6=>Ph:6
 ;4=>Ph:6;2;Force Minimum:3;12;1;Brochette : lorsque la cible est blessée, si la force de l'agresseur >= poid de la cible, alors il peut projeter la cible (1D20 pour la précision entre ce que l'agresseur veut et la réalite) à 2m maximum.
+lycanthrache;|1/2/3=>Ph:0
+|4/5=>Ph:7
+|6=>Ph:9
+;6=>Ph:13;4;Force Minimum:8;20;3;Lorsqu'un être vivant meurt avec cette hache sur 4+(1D4) il renaît en loup sauvage humanoïde (stat d'un loup mais sur 2 pattes) au tour d'après.

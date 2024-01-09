@@ -93,7 +93,7 @@ ambre noire;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus d
 Les dégâts totaux de la frappe sont multipliés par la valeur du dés.
 ambre pâle;AMBRE;Jetez un dé 100 faces pendant une frappe uniquement, gagnez le double du dé en nombre d’âme.
 ambre suprême;AMBRE;Jetez un dé 20 faces, lors d’une frappe uniquement, en plus des autres dés :
-Si FFC>0 la cible perds ce nombre de PV avant la résolution de la frappe.
+Si la frappe fait des dégâts la cible perds ce nombre de PV avant la résolution de la frappe.
 ambre nitide;AMBRE;Jetez un dé 100 faces pour un coût de 1 action spéciale. Le joueur dispose d’autant de seconde pour regarder le script du MJ. Il peut chercher où il le souhaite dans le document.
 Le script est susceptible de diverger du contenu actuel du jeu.
 ambre rose;AMBRE;A consommer au début du tour d’un autre joueur.
@@ -215,3 +215,5 @@ technique apnee;TECHNIQUE;Effet :le joueur ne commence pas à étouffer avant 4 
 graine nyctaphage;OUTIL;Plantée dans un sous bois, elle déploie une plante nyctaphage en 2 tours.
 fragment d eterna;OUTIL;Lorsqu'un joueur touche un fragment d'éterna, les flammes noires s'engouffrent dans le joueur et lui rappelle un souvenir (au gré du MJ) qui lui rappelle en même temps soit une technique soit un sort (au gré du MJ).
 ambre gelee;AMBRE;projette un rayon de gel très puissant autour du lanceur. Toutes les victimes sont congelées instantanément. Impossible pour elles de jouer. Chaque cible jette 1D12 à chacun de ses tours, si < au nombre de tour depuis qu'elle gelée alors elle est libérée sinon elle subit le nombre de tours depuis qu'elle est gelée en dégât magique. 
+balai volant;OUTIL;L'enfourcher permet de voler jusqu'à 10 m au-dessus du sol (subit donc la gravité mais moins).
+Intelligence Min : 5
