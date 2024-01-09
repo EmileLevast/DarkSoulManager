@@ -132,7 +132,7 @@ lance de gobelin;|1/2/3=>Ph:0
 ;6=>Ph:10;3;Force Minimum:5;7;2;Toxine 2+ => 1
 fleau;|1/2/3/4=>Ph:0
 |5/6=>Ph:9
-;;5;Force Minimum:5;17;3;Écacheur: ( si FFC>3 & si la cible bloque avec un bouclier )Si la cible réussi à bloquer mais qu’elle subit tout de même des dégâts  alors son bouclier est détruit. Si elle échoue à bloquer son bouclier lui échappe des mains.  
+;;5;Force Minimum:5;17;3;Écacheur: ( si degat de la frappe >0 & si la cible bloque avec un bouclier ) Si la cible ne réussi pas à bloquer tous les dégâts  alors son bouclier est détruit.
 masse d arme;|1/2/3/4=>Ph:0
 |5=>Ph:6
 |6=>Ph:9

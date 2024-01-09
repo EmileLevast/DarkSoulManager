@@ -87,3 +87,19 @@ vort;30;1:1|2:3;Ph:4|Po:3;9;3;longue dague ciselee:2|justaucorp tisse:3|humanite
 rerora;20;1:1|2:4;Ph:3;13;3;tunique dechiree:3|marteau de forge:4|bouclier de bois:6|humanite:6;100;Courageuse: immunisée contre les sorts, menaces, capacités qui vise à insuffler la peur.
 kerkerschaffe;15;1:1|2:3;Ph:1|F:-10;2;1;fourche:5|humanite:6;50;verbigération: grogne, menace, crache, débagoule sans sens. Pas de communication possible une fois la menace faite, la deuxième semonce est une frappe d'estoc.
 brirzurzr;30;1:3|2:3|3:5;Ph:-4|Ma:1|Po:10|F:-15;3;2;ambre gelee:2;90;Insensible au saignements et aux eventreurs. et à tous les sorts ou effets qui vise à utiliser le sang de la cible (le sien est magiquement congelé)
+kerkerschatte;15;1:1|2:1|3:1;;0;2;poignard surinant:4;200;Aucune frappe ne l'atteint.
+Les kerkerschatte frappe les ombres des êtres vivants, celles-ci ne peuvent pas se défendre sauf avec un miracle. (Cf miracle "ombre dansante" pour plus de détails).
+1x par tour la kerkerschatte peut faire une action de l'ombre, jeter 1D4:
+4+ : Kidnapping, si l'ombre arrive à toucher un être léger (poids 0) ou de petite taille (enfant), alors elle peut emporter son corps en entier dans les ombres.
+3+ : Le kerkerschatte peut voler quelque chose dans l'inventaire d'une ombre, l'element disparaît de l'inventaire du porteur de l'ombre.
+
+le trio de jehovoix;0;1:1;;0;0;;0;Michâle, Janoix, Cécilence.
+michale;20;1:1|2:2;Ph:3|Ma:1;6;2;longue dague:2|cape de pelerin:3|humanite:4;100;Désarme magiquement tout inquiétude chez son interlocuteur au premier abord.
+janoix;16;1:1|2:1;Ph:2;2;2;cape de pelerin:3|humanite:4;50;phytogéographe : connaît très bien la flore des Landes enclavées (du moins les zones les moins dangereuses)
+cecilence;70;1:1|2:4;Ph:2|Ma:11|Po:10|F:4;18;4;cape de pelerin:3|humanite:4;50;Oenomorphe : peut changer l'eau en sang d'enfant (le picotement donne l'impression d'un goût alcoolisé).
+Nyctophile : peut faire tomber la nuit en 3 tours, pour chaque tour passé dans la nuit, elle recouvre 2 pv.
+nistra;38;1:3|2:6|3:7;Ph:9|Ma:8|Po:6|F:3;18;5;armure cuir taillee:3|longue dague equilibree:4|couteau de lancer:5|anneau du lache:5|anneau du charognard sournois:6|humanite:6;340;Metamorphe: peut prendre la forme de n'importe quel humain ou humaine que son interlocuteur ne connaît pas.
+Assassin : peut effectuer des frappes précises avec un bonus de +3 sur son test de précision.
+rutap;38;1:3|2:6|3:7;Ph:9|Ma:8|Po:6|F:3;18;5;armure cuir taillee:3|poignard crochet venimeux:4|longue dague crenelee:4|couteau de lancer:5|anneau du prescient:5|humanite:6;280;Perceur d'âme : Une fois par tour, s'il peut regarder un être vivant avec son oeil alors, Il peut effectuer un sort "paralysie". Le sort réussit automatiquement s'il est plus intelligent que la cible. Le sort ne s'arrête pas s'il détourne le regard. 
+Assassin : peut effectuer des frappes précises avec un bonus de +2 sur son test de précision.
+moutoncle;75;1:1|2:9;Ph:10|F:-6|Po:13|Ma:-3;4;4;armure lourde de carcasse:4|anneau de loyauté:4|lycanthrache:5|humanite:6;300;Cornu : peut effectuer des parades avec ses cornes, ne lui coûte pas d'énergie, s'il rate il n'y a pas de malus, mais s'il réussit il ne peut pas contrattaquer.

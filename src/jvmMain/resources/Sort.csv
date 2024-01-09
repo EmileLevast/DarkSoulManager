@@ -263,3 +263,11 @@ Seuils :
 essoufflement;MIRACLE;4;2 actions;10;;;;0;Cibler un ennemi. La cible perds 1 point à sa défense physique s'il elle en a. Sinon elle perds 3pv.
 La cible régénère sa défense et sa vie au prochain repos à un feu.
 paralysie;AME;4;;8;;;;0;La cible passe son prochain tour. Elle ne peut plus parler, bouger, etc
+ombre dansante;MIRACLE;5;Le lanceur, doit s'asseoir en tailleur par terre (compris dans l'action spéciale du sort).;5;;;;0;Aussi longtemps que le sorcier reste en tailleur sans bouger les yeux fermés, alors il peut prendre le contrôle de l'ombre d'un personnage autour de lui (Si l'ombre ne se laisse pas faire il faut que le lanceur ait au moins autant d'intelligence). Il ne peut pas prendre le contrôle de plusieurs ombres en même temps.
+Les ombres ont la même vie que leur porteur, mais aucune défense. Seul les degats physiques comptent. Tout est directement soustrait aux pvs de l'ombre. 
+Une fois qu'une ombre est morte jetez 1D20:
+17+: le porteur de l'ombre meurt mais sans laisser de récompenses derrière lui (ni âmes ni drop)
+13+: le porteur ne peut plus rien faire, il reste planté debout. Attend la mort.
+8+: le porteur n'a plus d'ombre mais cela n'influence pas son corps physique.
+1+ : le porteur devient totalement fou, à chaque tour tout le monde jette 1D6, le plus haut score joue le porteur ce tour ci. (Le MJ l'emporte toujours sur 5+ et en cas d'égalité)  
+ombre dansante superieure;MIRACLE;5;Le lanceur, doit s'asseoir en tailleur par terre (compris dans l'action spéciale du sort).;7;;;;0;Cf Miracle "ombre dansante". Il peut prendre le contrôle de plusieurs ombres (une ombre =  une utilisation) en même temps.
