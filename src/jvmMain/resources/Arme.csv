@@ -96,11 +96,13 @@ serre de volucre anthropophage;|1/2/3/4=>Ph:0
 |6=>Ph:12
 ;Ignore l'armure naturelle;3;Intelligence Minimum:8;13;2;Occulte 5
 arbalete grossiere;;;2;Force Minimum:4;0;2;Nécessite les 2 mains
+Ajoute +4 dégâts physiques aux carreaux.
 couteau de lancer;|1/2=>Ph:0
 |3/4/5=>Ph:1
 |6=>Ph:3
 ;;1;Force Minimum:1;5;0;Pas besoin d'équiper
 arbalete a repercussion;;;1;Force Minimum:4|Intelligence Minimum:6;0;0;Cette arbalète tire 3 carreaux simultanément: A chaque frappe avec cette arme. Vous pouvez faire 2 frappes supplémentaires, en reprenant le même nombre de dés, sans dépenser d’énergie supplémentaire. Impossible que ces frappes frappent 2x la même cible  (les carreaux partent dans des directions différentes).
+Ajoute +3 dégâts physiques aux carreaux.
 fleche empennee;|1/2=>Ph:0
 |3/4/5=>Ph:3
 |6=>Ph:6
@@ -112,7 +114,7 @@ carreau simple;|1/2=>Ph:0
 fleche simple;|1/2/3=>Ph:0
 |4/5/6=>Ph:2
 ;;0;;0;0;
-arc;;;2;Force Minimum:2;0;1;
+arc;;;2;Force Minimum:2;0;1;Ajoute +2 dégâts physique aux flèches
 sarbacane nanosinophile;;;1;;0;0;
 flechette toxique;|1=>Ph:0
 |2/3/4/5/6=>Ph:1
@@ -368,3 +370,8 @@ lycanthrache;|1/2/3=>Ph:0
 |4/5=>Ph:7
 |6=>Ph:9
 ;6=>Ph:13;4;Force Minimum:8;20;3;Lorsqu'un être vivant meurt avec cette hache sur 4+(1D4) il renaît en loup sauvage humanoïde (stat d'un loup mais sur 2 pattes) au tour d'après.
+fleche de corbeaux;|1=>Ph:0
+|2/3/4=>Ph:5
+|5/6=>Ph:7
+;;0;;0;0;La plume de corbeaux est enchantee, la flèche vole tout droit sans jamais subir la gravité. (permet de tirer très loin)
+arc d if noir;;;4;Force Minimum:5;0;1;Le porteur peut effectuer des frappes de précision avec +3 sur son D20.
