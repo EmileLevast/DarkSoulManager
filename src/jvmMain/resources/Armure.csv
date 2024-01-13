@@ -20,7 +20,7 @@ armure de taureau;Ph:8|Ma:8;Force Minimum:9;4;A chaque fois que le porteur subit
 armure de chevalier noir;Ph:15|F:10;Force Minimum:8;4;Diminue de 1 FFC les attaques en coups critiques.
 armure de cuir en lambeaux;Ph:3;Force Minimum:1;1;
 tunique dechiree;Ph:1;;0;
-ailes de volucre anthropophage;Ma:5|Po:1|F:-3;Intelligence Minimum:5;-1;Eclamé:Lors d’une chute le joueur peut planer. Cela diminue la taille de la chute de 10m et permet d’avancer de 1m horizontalement par mètre  de chute. 
+ailes de volucre anthropophage;Ma:5|Po:1|F:-3;Intelligence Minimum:5;-1;Eclamé:Lors d’une chute le joueur peut planer. Cela réduit toutes les chutes à 15m max et permet d’avancer de 1m horizontalement par mètre  de chute. 
 guenilles du sournois;Ph:2|Po:6;;0;Lorsqu’un coup vous blesse, vous pouvez vous faire passer pour mort en dépensant votre énergie restante. Les ennemis d’une intelligence 0 ne vous frapperont pas. Cela dure tant que vous ne faites absolument rien. Vous relever coûte 1 action.
 tunique du sournois;Ma:3|Po:3;;1;Thuriféraire : lors de l’utilisation  de la marque sombre, conserver les âmes sur 4+
 armure cuir taillee;Ph:5|F:4;Force Minimum:1;1;Le porteur ne peut pas être pris pour cible d’un backstab

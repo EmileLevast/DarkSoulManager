@@ -205,7 +205,7 @@ A chaque fois que le joueur tue un ennemi avec une épée à 2 mains et remporte
 technique esquive de dague;TECHNIQUE;Effet : Si le joueur porte une dague dans une main et une arme dans l'autre alors lorsqu'il subit une frappe il ajoute 1D4 à sa défense physique.
 Points de compétences : 40
 A chaque fois que le joueur tue un ennemi en étant avec une arme dans chaque main, dont une dague, il gagne ce nombre d'âme/10 en point de compétences.
-gemme d intermonde orangee;OUTIL;Permet d'écrire des messages à l'adresse des autres joueurs des autres parties. Jeter 1D8 à chaque utilisation : sur 1 la gemme disparaît.
+gemme d intermonde orangee;OUTIL;Permet d'écrire des messages à l'adresse des autres joueurs des autres parties.
 viande;OUTIL;redonne 5 pvs lorsque consommé
 baton de cedre;OUTIL;Permet de lancer des sorts de magie.
 Poids : 1
@@ -217,3 +217,4 @@ fragment d eterna;OUTIL;Utiliser pour une action spéciale: les flammes noires s
 ambre gelee;AMBRE;projette un rayon de gel très puissant autour du lanceur. Toutes les victimes sont congelées instantanément. Impossible pour elles de jouer. Chaque cible jette 1D12 à chacun de ses tours, si < au nombre de tour depuis qu'elle gelée alors elle est libérée sinon elle subit le nombre de tours depuis qu'elle est gelée en dégât magique. 
 balai volant;OUTIL;L'enfourcher permet de voler jusqu'à 10 m au-dessus du sol (subit donc la gravité mais moins).
 Intelligence Min : 5
+potion de rechauffement;OUTIL;Ramène la température du corps du porteur à sa température normale, l'effet diminue petit à petit pour disparaître complètement au bout de quelques heures.
