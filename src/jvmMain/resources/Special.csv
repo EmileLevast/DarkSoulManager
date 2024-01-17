@@ -73,14 +73,14 @@ Max Energie : 3
 Seuil Blocage : 6+
 Blocage : 1
 Poids : 1
-fiole d’estus;OUTIL;Restaure toute la vie.
+fiole d estus;OUTIL;Restaure toute la vie.
 Utilisation : 1
 Coût : 1 action spéciale
 fiole de poison;OUTIL;Ajoute Toxine 2+ => 4 sur l’arme tenue pour la prochaine frappe uniquement. 
 Ne fonctionne pas sur les armes disposant déjà de Toxine.
 Utilisation : 5
 gemme d’invasion
-fiole d’antidote;OUTIL;Réinitialise le compteur de poison.
+fiole d antidote;OUTIL;Réinitialise le compteur de poison.
 Utilisation : 1
 Coût : 1 action spéciale
 ambre incandescente;AMBRE;Jetez un dé 4 faces lors d’une frappe uniquement, en plus des autres dés. 
