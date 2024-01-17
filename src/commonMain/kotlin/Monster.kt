@@ -109,7 +109,6 @@ data class Monster(
             deparseListDrops(listDrops),
             ames.toString(),
             capaciteSpeciale,
-            nom,
             nomComplet
         )
     }
