@@ -2,23 +2,23 @@ Nom;Seuils;Coups critiques ;Maximum Energie ;Contraintes ;FAJ Max ;Poids ;Capaci
 rapiere;|1/2=>Ph:0
 |3=>Ph:3
 |4/5/6=>Ph:6
-;6=>Ph:12;3;Niveau Minimum:3;9;2;Parade ×1;
+;6=>Ph:12;3;Niveau Minimum:3;9;2;Parade ×1;Rapière
 epee ebrechee;|1/2=>Ph:0
 |3/4=>Ph:2
 |5/6=>Ph:4
-;4=>Ph:4;3;;5;1;;
+;4=>Ph:4;3;;5;1;;épée ébréchée
 epee courte;|1/2=>Ph:0
 |3/4=>Ph:3
 |5/6=>Ph:6
-;6=>Ph:9;2;Force Minimum:3;6;1;;
+;6=>Ph:9;2;Force Minimum:3;6;1;;épée courte
 epee longue;|1=>Ph:0
 |2/3=>Ph:4
 |4/5/6=>Ph:8
-;;3;Force Minimum:5;8;2;;
+;;3;Force Minimum:5;8;2;;épée longue
 epee barbelee;|1/2=>Ph:0
 |3=>Ph:4
 |4/5/6=>Ph:8
-;3=>Ph:8;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4;
+;3=>Ph:8;3;Défense Ph. Minimum:4;16;3;Saigne 5+ => 4;épée barbelée
 cimeterre;|6=>Ph:0
 |2/3/4=>Ph:4
 |5=>Ph:8
@@ -26,38 +26,38 @@ cimeterre;|6=>Ph:0
 epee lourde;|1/2/3=>Ph:0
 |4/5=>Ph:5
 |6=>Ph:10
-;5/6=>Ph:10;4;Force Minimum:5;12;2;;
+;5/6=>Ph:10;4;Force Minimum:5;12;2;;épée lourde
 epee perche;|1=>Ph:0
 |2/3=>Ph:3
 |4/5=>Ph:6
 |6=>Ph:9
-;;5;Force Minimum:6;9;2;Perche : L’épée s’agrandit magiquement pour atteindre son adversaire, sa portée est ~5m;
+;;5;Force Minimum:6;9;2;Perche : L’épée s’agrandit magiquement pour atteindre son adversaire, sa portée est ~5m;épée perche
 epee traversante;|1/2=>Ph:0
 |3=>Ph:4
 |4/5/6=>Ph:8
-;;2;Force Minimum:3;7;0;Traversante : cette épée traverse les alliés sans leur causer de dégâts, elle est assez grande pour frapper un ennemi derrière un allié.;
+;;2;Force Minimum:3;7;0;Traversante : cette épée traverse les alliés sans leur causer de dégâts, elle est assez grande pour frapper un ennemi derrière un allié.;épée traversante
 epee du chevalier noir;|1/2=>Ph:0
 |3/4=>Ph:6
 |5=>Ph:12
 |6=>Ph:18
-;peut relancer tous les dés une fois par frappe;5;Force Minimum:10;16;5;;
+;peut relancer tous les dés une fois par frappe;5;Force Minimum:10;16;5;;épée du chevalier noir
 epee ebrechee crenelee;|1/2=>Ph:0
 |3/4=>Ph:2
 |5/6=>Ph:4
-;4=>Ph:4;3;;5;1;Eventreur 4;
+;4=>Ph:4;3;;5;1;Eventreur 4;épée ébréchée crénelée
 torche febrile;|1/2=>F:0
 |3/4/5/6=>F:1
-;6=>F:2;1;;4;1;;
+;6=>F:2;1;;4;1;;Torche fébrile
 fouet court;|1/2/3=>Ph:0
 |4/5/6=>Ph:4
 ;2/3=>Ph:2;2;;6;1;Chaire à nue => ×1;
 laniere de feu;|1/2=>F:0
 |3/4/5=>F:4
 |6=>F:8
-;6=>F:16;1;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme;
+;6=>F:16;1;;6;0;Portee ~5m, Si le FFC > 4 alors la cible est tiree vers le joueur. La main de pyromancie doit etre equipee pour utiliser cette arme;lanière de feu
 poignard brise;|1/2/3=>Ph:0
 |4/5/6=>Ph:1
-;6=>Ph:2;2;;4;1;;
+;6=>Ph:2;2;;4;1;;poignard brisé
 poignard dent de rat;|1=>Ph:0
 |2/3/4=>Ph:2
 |5=>Ph:4
