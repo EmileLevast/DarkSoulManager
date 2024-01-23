@@ -4,7 +4,8 @@ import kotlinx.serialization.Serializable
 class Special(
     override val nom:String="inconnu",
     val itemType: SpecialItemType=SpecialItemType.OUTIL,
-    val capaciteSpeciale:String=""
+    val capaciteSpeciale:String="",
+    override val nomComplet:String = ""
     ) : ApiableItem() {
 
     override val _id = nom.hashCode()
@@ -22,7 +23,8 @@ class Special(
         return Special(
             listCSVElement[0].cleanupForDB(),
             parseSpecialItemType(listCSVElement[1]),
-            listCSVElement[2]
+            listCSVElement[2],
+            listCSVElement[3]
         )
     }
 
@@ -30,7 +32,8 @@ class Special(
         return listOf(
             "Nom: String",
             "Type: SpellType = (ANNEAU, TALISMAN, OUTIL, BRAISE, AMBRE, TECHNIQUE) ",
-            "Capacite speciale : String"
+            "Capacite speciale : String",
+            "nom complet : String"
         )
     }
 
@@ -38,7 +41,8 @@ class Special(
         return listOf<String>(
             nom,
             itemType.name,
-            capaciteSpeciale
+            capaciteSpeciale,
+            nomComplet
         )
     }
 }

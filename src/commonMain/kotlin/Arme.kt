@@ -9,7 +9,8 @@ class Arme(
     val contraintes: String = "Aucune",
     val fajMax: Int = 0,
     val poids: Int = 0,
-    val capaciteSpeciale: String = ""
+    val capaciteSpeciale: String = "",
+    override val nomComplet:String = ""
 ) : ApiableItem() {
 
 
@@ -52,7 +53,8 @@ class Arme(
             listCSVElement[4],
             listCSVElement[5].getIntOrZero(),
             listCSVElement[6].getIntOrZero(),
-            listCSVElement[7]
+            listCSVElement[7],
+            listCSVElement[8]
             )
     }
 
@@ -67,7 +69,8 @@ class Arme(
             "Contraintes : String",
             "FAJ Max : Int",
             "Poids : Int",
-            "Capacite speciale : String"
+            "Capacite speciale : String",
+            "nom complet : String"
         )
     }
 
@@ -86,7 +89,8 @@ class Arme(
             contraintes,
             fajMax.toString(),
             poids.toString(),
-            capaciteSpeciale
+            capaciteSpeciale,
+            nomComplet
         )
     }
 

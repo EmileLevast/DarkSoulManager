@@ -6,7 +6,8 @@ class Armure(
     val defense:Map<EffectType,String> = mapOf(),
     val contraintes:String="Aucune contraintes",
     val poids:Int=0,
-    val capaciteSpeciale:String=""
+    val capaciteSpeciale:String="",
+    override val nomComplet:String = ""
 )
     :ApiableItem(){
 
@@ -33,7 +34,8 @@ class Armure(
                 parseDefense(listCSVElement[1]),
                listCSVElement[2],
                listCSVElement[3].run{ if(isNotBlank()) toInt() else{0} },
-               listCSVElement[4]
+               listCSVElement[4],
+               listCSVElement[5]
             )
     }
 
@@ -43,7 +45,8 @@ class Armure(
             "Defense : Format = EffectType:Int|EffectType:Int... (EffectType = Po/Ph/F/Ma)",
             "Contraintes : String",
             "Poids : Int",
-            "Capacite speciale : String"
+            "Capacite speciale : String",
+            "nom complet : String"
         )
     }
 
@@ -53,7 +56,8 @@ class Armure(
             deparseDefense(defense),
             contraintes,
             poids.toString(),
-            capaciteSpeciale
+            capaciteSpeciale,
+            nomComplet
         )
     }
 

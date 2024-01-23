@@ -11,7 +11,7 @@ data class Monster(
     val listDrops:Map<String,Int> = mapOf(),
     val ames:Int=0,
     val capaciteSpeciale:String="",
-    val nomComplet:String = ""
+    override val nomComplet:String = ""
 ) : ApiableItem(){
 
     override val _id = nom.hashCode()

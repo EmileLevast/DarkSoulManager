@@ -11,7 +11,8 @@ class Sort(
     val seuils:List<Seuil> = mutableListOf(),//en cl� c'est le facteur et en valeur c'est la liste des seuils associ�s
     val coupCritiques:String="",
     val iajMax:Int=0,
-    val description:String=""
+    val description:String="",
+    override val nomComplet:String = ""
 ) :ApiableItem(){
 
     override val _id: Int = nom.hashCode()
@@ -56,7 +57,8 @@ class Sort(
             "Seuils: Format = |Int/Int=Effect:Int|EffectType:Int...\\n|Int/Int=Effect:Int|EffectType:Int  ",
             "Coups critiques :String",
             "IAJ Max : Int",
-            "Description : String"
+            "Description : String",
+            "nom complet : String"
         )
     }
 
@@ -73,7 +75,8 @@ class Sort(
             parseSeuils(listCSVElement[6]),
             listCSVElement[7],
             listCSVElement[8].getIntOrZero(),
-            listCSVElement[9]
+            listCSVElement[9],
+            listCSVElement[10]
         )
     }
 
@@ -94,7 +97,8 @@ class Sort(
             textSeuils,
             coupCritiques,
             iajMax.toString(),
-            description
+            description,
+            nomComplet
         )
     }
 

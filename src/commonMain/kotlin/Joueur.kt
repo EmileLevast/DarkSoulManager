@@ -7,7 +7,8 @@ class Joueur(
     var details: String ="",
     var caracOrigin: Carac = Carac(),
     var caracActuel: Carac = Carac(),
-    var niveau:Int=0
+    var niveau:Int=0,
+    override val nomComplet:String = ""
 ) : ApiableItem() {
 
     override val _id = nom.hashCode()
@@ -35,7 +36,8 @@ class Joueur(
             listCSVElement[2],
             Carac.fromCSV(listCSVElement[3]),
             Carac.fromCSV(listCSVElement[4]),
-            listCSVElement[5].getIntOrZero()
+            listCSVElement[5].getIntOrZero(),
+            listCSVElement[6]
         )
     }
 
@@ -46,7 +48,8 @@ class Joueur(
             "details : String",
             "caracOrigin : vie/force/EffectType:Int|Effect:Int.../intelligence/energie/humanite/ame",
             "caracActuel : vie/force/EffectType:Int|Effect:Int.../intelligence/energie/humanite/ame",
-            "niveau : Int"
+            "niveau : Int",
+            "nom complet : String"
         )
     }
 
@@ -57,7 +60,8 @@ class Joueur(
             details,
             caracOrigin.toCSV(),
             caracActuel.toCSV(),
-            niveau.toString()
+            niveau.toString(),
+            nomComplet
         )
     }
 }

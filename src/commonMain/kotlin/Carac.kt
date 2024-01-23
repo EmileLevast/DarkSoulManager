@@ -8,7 +8,7 @@ class Carac(
     var intelligence: Int=0,
     var energie: Int=0,
     var humanite: Int=0,
-    var ame: Int=0,
+    var ame: Int=0
 ) {
 
     // Copy constructor
