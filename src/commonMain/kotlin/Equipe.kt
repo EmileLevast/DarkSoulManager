@@ -6,7 +6,8 @@ import kotlinx.serialization.Serializable
 class Equipe(
     override val nom:String="inconnu",
     var chaineJoueurSerialisee: String ="",
-    override val nomComplet:String = ""
+    override val nomComplet:String = "",
+    var chaineDecouvertSerialisee: String ="",
 ) : ApiableItem() {
 
     override val _id = nom.hashCode()
@@ -20,7 +21,8 @@ class Equipe(
         return Equipe(
             listCSVElement[0].cleanupForDB(),
             listCSVElement[1],
-            listCSVElement[2]
+            listCSVElement[2],
+            listCSVElement[3]
         )
     }
 
@@ -32,15 +34,17 @@ class Equipe(
         return listOf(
             "Nom: String",
             "membres : ${CHAR_SEP_EQUIPEMENT}String$CHAR_SEP_EQUIPEMENT${CHAR_SEP_EQUIPEMENT}String${CHAR_SEP_EQUIPEMENT}",
-            "nom complet : String"
-        )
+            "nom complet : String",
+            "elements découverts : ${CHAR_SEP_EQUIPEMENT}String$CHAR_SEP_EQUIPEMENT${CHAR_SEP_EQUIPEMENT}String${CHAR_SEP_EQUIPEMENT}",
+            )
     }
 
     override fun getDeparsedAttributes(): List<String> {
         return listOf(
             nom,
             chaineJoueurSerialisee,
-            nomComplet
+            nomComplet,
+            chaineDecouvertSerialisee
         )
     }
 }
