@@ -218,3 +218,5 @@ ambre gelee;AMBRE;projette un rayon de gel très puissant autour du lanceur. Tou
 balai volant;OUTIL;L'enfourcher permet de voler jusqu'à 10 m au-dessus du sol (subit donc la gravité mais moins).
 Intelligence Min : 5;
 potion de rechauffement;OUTIL;Ramène la température du corps du porteur à sa température normale, l'effet diminue petit à petit pour disparaître complètement au bout de quelques heures.;
+technique sonar mineur;TECHNIQUE;Effet : lorsqu'il effectue un test d'observation, un joueur peut sonder les environs. Son test d'observation peut révéler des éléments dans un rayon de 50m maximum et ce sans prendre en compte les parois physiques.;
+plume de corbeau royal;OUTIL;Lorsque tenu en main, le porteur est immunisé aux attaques psychiques. A chaque fois qu'il reçoit une attaque psychique dans cette situation il jette 1D4, sur 1 la plume est détruite.;
