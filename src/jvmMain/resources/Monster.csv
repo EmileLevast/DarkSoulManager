@@ -123,3 +123,5 @@ dorbal;70;1:2|2:4|3:4;Po:-1|F:2|Ph:12|Ma:-5;3;3;nekrotine:4|epee barbelee:5|Armu
 Chien fidèle : pour une action il peut siffler, et alphax se matérialise à ses côtés dans un nuage sombre montant du sol;Dorbal, le chasseur de tête
 lali;500;1:2|2:2|3:50;Ph:70|Po:40|F:-20|Ma:50;6;2;;10000;gel puissant : tout ce qui la touche gel instantanément et se brisera en morceaux au prochain contact subit.;lali, la murène
 volucre anthropophage;15;1:1|2:3;Ph:2|Po:6|F:-1;1;2;serre de volucre anthropophage:0|ailes de volucre anthropophage:4;35;;
+carcasse gelee;14;1:1|2:2;Ph:3|F:-4|Ma:2|Po:2;0;3;armure de cuir:4|epee large:5|bouclier de bois:6;80;friable : Les frappes de précisions bénéficie de +2 au dés contre ces carcasses (le corp se brise facilement)
+Frigorifiante : lorsqu'un joueur est blessé par une carcasse gelée, il ne peut pas se déplacer à son prochain tour.;carcasse gelée
