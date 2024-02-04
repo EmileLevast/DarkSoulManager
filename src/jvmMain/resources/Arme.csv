@@ -95,7 +95,7 @@ serre de volucre anthropophage;|1/2/3/4=>Ph:0
 |5=>Ph:5|Ma:2
 |6=>Ph:12
 ;Ignore l'armure naturelle;3;Intelligence Minimum:8;13;2;;
-arbalete grossiere;;;2;Force Minimum:4;0;2;Nécessite les 2 mains
+arbalete grossiere;;;2;Force Minimum:2;0;2;Nécessite les 2 mains
 Ajoute +4 dégâts physiques aux carreaux.;
 couteau de lancer;|1/2=>Ph:0
 |3/4/5=>Ph:1
@@ -316,7 +316,7 @@ longue dague equilibree;|1/2=>Ph:0
 ;5=>Ph:6|6=>Ph:9|;3;Niveau Minimum:5;9;1;Parade +1;
 longue dague;|1/2=>Ph:0
 |3/4/5/6=>Ph:4
-;6=>Ph:9;3;Niveau Minimum:4;8;1;Parade +1;
+;6=>Ph:9;3;Niveau Minimum:3;8;1;Parade +1;
 epee inegide;|1/2=>Ph:0
 |3/4=>Ph:3
 |5/6=>Ph:6

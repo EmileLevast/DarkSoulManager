@@ -114,7 +114,7 @@ Seuil blocage: 3+
 blocage: IAJ du lanceur (max 8)
 Si la frappe n’était pas dirigée contre le lanceur alors l’allié frappé peut se défendre en plus du blocage ajouté par le lanceur du miracle.;
 dereliction;MIRACLE;3;2 energies;9;;;;0;Le lanceur choisit une cible, alliée ou ennemie, celle-ci ne pourra pas être considérée comme étant en coup critique même si elle n’a plus d’énergie. Le sort dure jusqu’au début du prochain tour du lanceur.;
-engourdissement;MIRACLE;3;2 energies;6;;;;0;Cibler un ennemi. Jeter un dé. 
+engourdissement;MIRACLE;3;2 energies;4;;;;0;Cibler un ennemi. Jeter un dé. 
 3+ : l’ennemi ciblé subit le sort, il ne dispose plus que d’une action par tour. 
 0+ : aucun effet
 Le sort dure tant que le lanceur consacre une action par tour à maintenir le sort.;
@@ -178,11 +178,11 @@ Embrasement: si l’ennemi possède une armure faite de tissu qui ne possède pa
 traits de feu;PYROMANCIE;5;;9;Maximum energie:3
 Distance.;|1/2/3/4=>F:0|Ph:0
 |5/6=>F:9|Ph:3
-;Embrasement si FFC >4;11;;
+;Embrasement si blessures >4;11;;
 grands traits de feu;PYROMANCIE;4;;11;Maximum energie:4
 Distance.;|1/2/3/4=>F:0|Ph:0
 |5/6=>F:9|Ph:9
-;Embrasement si FFC >4;16;;
+;Embrasement si blessures >4;16;;
 regard de feu;PYROMANCIE;8;;7;Maximum energie:3
 Distance.;|1/2/3/4=>F:0
 |5=>F:4
@@ -191,13 +191,13 @@ Distance.;|1/2/3/4=>F:0
 grand regard de feu;PYROMANCIE;5;;12;Maximum energie:3
 Distance.;|1/2/3/4=>F:0
 |5=>F:6
-|6=>F:12
-;;11;;
+|6=>F:10
+;;11;Ne tient pas compte de l'armure équipement de feu;
 javelots de feu;PYROMANCIE;5;;8;Maximum energie:1
 Distance uniquement;|1/2/3/4=>F:0
 |5=>F:8
 |6=>F:12
-;;19;Transperce si FFC >2. le javelot ressort derrière la cible et continue sa course et infligera la même quantité de dégâts à une cible qu’il rencontre (ne pas relancer les dés). Transperce ne fonctionne que sur la cible originale.;
+;;19;Transperce si blessure >2. le javelot ressort derrière la cible et continue sa course et infligera la même quantité de dégâts à une cible qu’il rencontre (ne pas relancer les dés). Transperce ne fonctionne que sur la cible originale.;
 etreinte brulante;PYROMANCIE;10;;2;Maximum energie:2;|1=>F:0
 |2/3/4/5=>F:1
 |6=>F:3

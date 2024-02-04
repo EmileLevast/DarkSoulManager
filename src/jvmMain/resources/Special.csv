@@ -220,3 +220,9 @@ Intelligence Min : 5;
 potion de rechauffement;OUTIL;Ramène la température du corps du porteur à sa température normale, l'effet diminue petit à petit pour disparaître complètement au bout de quelques heures.;
 technique sonar mineur;TECHNIQUE;Effet : lorsqu'il effectue un test d'observation, un joueur peut sonder les environs. Son test d'observation peut révéler des éléments dans un rayon de 50m maximum et ce sans prendre en compte les parois physiques.;
 plume de corbeau royal;OUTIL;Lorsque tenu en main, le porteur est immunisé aux attaques psychiques. A chaque fois qu'il reçoit une attaque psychique dans cette situation il jette 1D4, sur 1 la plume est détruite.;
+technique doryan malchance;TECHNIQUE;Tous les résultats des dés 20 sont égaux à 21-le résultat.
+Nécessaire : 5 point de compétence
+1 point de compétence gagné sur chaque D20 qui donne 1.;
+technique a la lumiere du jour;TECHNIQUE;Bonus de +1 sur tous les D20 lorsque le joueur est à la lumière du soleil (joli soleil) ou feu de repos.
+Point de compétence : 40
+Point de compétence gagné quand il fait beau en extérieur à chaque D20 lancé;Technique "A la lumiere du jour"

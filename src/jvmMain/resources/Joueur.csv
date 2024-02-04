@@ -1,13 +1,18 @@
 Nom;equipement ;details ;caracOrigin ;caracActuel ;niveau ;nom complet 
-doryan;|talisman d energie [nbr]||baton de cedre||arme magique||talisman de chasseur de feu||anneau moratoire||os coupant||technique esquive de dague||tunique dechiree|;Mage
-Talisman energie I;17/2/Ma:2/5/3/1/0;17/2/Ma:2/5/3/2/0;2;
-remi h;|main spirituelle||soin palliatif||os coupant||epee inegide||talisman d energie [nbr]||engourdissement||technique esquive de dague||gorgee bienfaitrice|;Clerc
-Talisman d'énergie 1;14/2/Ph:1|Ma:3/3/2/1/0;5/2/Ph:1|Ma:3/3/3/1/27;1;
+doryan;|talisman d energie [nbr]||baton de cedre||arme magique||talisman de chasseur de feu||anneau moratoire||os coupant||technique esquive de dague||tunique dechiree||technique doryan malchance||arbalete grossiere||carreau simple||eclairs||longue dague||gemme d intermonde orangee|;Mage
+Talisman energie I
+14 carreaux;17/2/Ma:2/5/3/1/0;17/2/Ma:2/5/3/0/104;2;Doryan, prononcé à l'anglaise
+remi h;|main spirituelle||soin palliatif||talisman d energie [nbr]||engourdissement||technique esquive de dague||gorgee bienfaitrice||technique a la lumiere du jour||fragment d eterna||dague||gemme d intermonde orangee|;Clerc
+Talisman d'énergie 1;14/2/Ph:1|Ma:3/4/2/1/0;4/2/Ph:1|Ma:3/3/3/0/500;2;rha
 remi f;|talisman d energie [nbr]||canine de fauve||longue-vue||passe-partout||armure de cuir en lambeaux||technique esquive de dague||dague|;Voleur
 Talisman d'énergie 1;13/2/Ph:2|Po:3/2/2/2/0;13/2/Ph:2|Po:3/2/3/2/7;1;
 leon;|neodyme||petite fleche d ame||sondage cerebral||oubli||eclairs||givrant||dissipateur||corne du minotaure||talisman d energie [nbr]|;poison 12;1/2/Ph:3/4/5/6/7;1/2/Ph:8/4/5/6/7;11;
-nathan;|paume incandescente||etreinte brulante||talisman d energie [nbr]||lance de gobelin||os coupant||arbalete grossiere||technique esquive de dague||main de pyromancie|;Pyromancienne
-20 carreaux;14/3/Ph:2|F:2/3/2/1/0;14/3/Ph:2|F:2/3/3/1/20;2;
+nathan;|paume incandescente||etreinte brulante||talisman d energie [nbr]||lance de gobelin||os coupant||technique esquive de dague||main de pyromancie||gemme d intermonde orangee||fragment d eterna||fiole d estus||arc||fleche simple||armure de cuir en lambeaux||redemption||talisman spirituel [nbr]||traits de feu||ailes de volucre anthropophage|;Pyromancienne
+Corde de plantes sciaphiles tressees : poids max : 5, longueur 8m.
+Talisman spirituel III
+Cahier de voyage du bouquetin
+deux bouts de bois
+10 fleches simples;14/3/Ph:2|F:2/3/2/1/0;12/3/Ph:2|F:2/3/3/1/80;2;connema
 thomas;|poignard surinant||longue-vue||talisman d energie [nbr]||ereintant||redemption||armure de cuir de carcasse||tunique dechiree||passe-partout||poignard brise|;1 flèche;13/3/Ph:2|Po:3/4/3/2/0;13/3/Ph:2|Po:3/4/3/3/0;3;
 vivien;|anneau de nyctalopie||talisman d energie [nbr]||peau de loup||ichgul||main enflammee||zweihander|;aucun detail;1/2/Ph:3/4/5/6/7;2/2/Ph:8/4/5/6/7;11;
 emile;|epee large||epee du chevalier noir||epee ebrechee crenelee||epee courte||epee longue||dague||emile||zairzan||brirzurzr|;A roulette mobile ?;1/2/Ph:3|Ma:7/4/5/6/7;600/10/Ph:8/6/3/3/2;9;
@@ -30,6 +35,7 @@ rico gil sayan;|longue-vue||passe-partout||main nue||gemme d intermonde orangee|
 Talisman energie I;13/2/Po:2|Ph:1/2/2/2/0;6/2/Po:2|Ph:1/2/3/2/2;1;
 turbobalai;|epee courte||main nue||talisman d energie [nbr]||poignard crante||entrave leger|;guerrier
 Talisman energie I;15/4/Ph:4/0/2/0/0;13/4/Ph:4/0/3/0/0;1;
-luis;|talisman d energie [nbr]||technique sonar mineur|;Mage
+luis;|talisman d energie [nbr]||technique sonar mineur||baton de cedre||dissipateur||gemme d intermonde orangee||epee ebrechee||fragment d eterna|;Mage
 Est aveugle
-Talisman energie I;17/2/Ma:2/4/3/1/0;17/2/Ma:2/4/3/2/0;1;Luis, l'aveugle
+fragment eterna x1
+Talisman energie I;17/2/Ma:2/4/3/1/0;17/2/Ma:2/4/3/2/0;1;
