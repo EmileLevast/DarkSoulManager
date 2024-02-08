@@ -125,3 +125,6 @@ lali;500;1:2|2:2|3:50;Ph:70|Po:40|F:-20|Ma:50;6;2;;10000;gel puissant : tout ce 
 volucre anthropophage;15;1:1|2:3;Ph:2|Po:6|F:-1;1;2;serre de volucre anthropophage:0|ailes de volucre anthropophage:4;35;;
 carcasse gelee;14;1:1|2:2;Ph:3|F:-4|Ma:2|Po:2;0;3;armure de cuir:4|epee large:5|bouclier de bois:6;80;friable : Les frappes de précisions bénéficie de +2 au dés contre ces carcasses (le corp se brise facilement)
 Frigorifiante : lorsqu'un joueur est blessé par une carcasse gelée, il ne peut pas se déplacer à son prochain tour.;carcasse gelée
+spectre de necroclore;0;1:0;Ph:0;3;2;sort quelconque:4;150;Prend les mêmes stats que sa version physique. Seulement est invincible aux dégâts physiques et de poison. Sa stat de défense physique devient sa stat de défense magique.
+Dès qu'il subit une blessure, jeter 1D6 sur 5+ il disparaît dans un nuage de fumée verte.;
+squelette;25;1:1|2:3;Ph:5|Ma:1|Po:5|F:-4;0;3;epee lourde:3|epee barbelee:3|epee a deux mains:3|bouclier rond:4|os du retour:5|ambre noire:6;130;Revive sur 2+ (1D6) au bout de 2 tour mort. Il faut détruire leur totem pour les éliminer définitivement.;

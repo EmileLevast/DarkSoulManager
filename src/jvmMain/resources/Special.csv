@@ -44,9 +44,6 @@ anneau oblatif;ANNEAU;Avec cet anneau, tous les dés d’une frappe donnant 1 se
 anneau felide;ANNEAU;Permet de comprendre et de parler le langage des chats. Cet anneau permet aussi de se faire facilement accepter des plus primitifs.;
 anneau du traitre;ANNEAU;Seul le porteur à connaissance de son effet. Si un de ses alliés proches meurt, alors il restaure toute sa vie. En revanche si lui meurt alors ses âmes sont maudites et si un joueur les récupère alors celui-ci perds toutes ses âmes et ses humanités instantanément.;
 anneau de loyaute;ANNEAU;Si vous subissez des dégâts alliés alors l’émetteur les subits aussi.;
-anneau feulide.;ANNEAU;Tant que le joueur dispose d’au moins 1 d’énergie, 
-il bénéficie de +20 défense de feu.
-Si le joueur subit tout de meme des degats de feu, alors l’anneau disparaît.;
 anneau du charognard sournois;ANNEAU;Seul le porteur à connaissance de son effet. Si un de ses alliés proches meurt, alors il peut échanger n’importe quoi de l’équipement du joueur contre n’importe quoi de son propre équipement.;
 anneau d’alienation;ANNEAU;Si vous êtes mort et qu’un de vos équipier vient à mourir, alors vous revenez à la vie immédiatement, à l’endroit de la mort de votre 
 coéquipier.;
@@ -138,7 +135,7 @@ menotte annihilatrice;OUTIL;Vie: 20
 Def : Ph:10|Po:5|F:5
 Le porteur ne peut plus faire de magie. ;
 relique de necroalgos;OUTIL;Utilisation : Apposer la relique sur un cadavre frais.
-le joueur doit lancer 1 dé 1à faces. Le résultat cumulé à l’intelligence du joueur doit dépasser 9.
+le joueur doit lancer 1D12. Le résultat cumulé à l’intelligence du joueur doit dépasser 9.
 Le cadavre se réveille dans des spasmes de douleurs et des cris terribles
 Effet réussite : le joueur récupère la moitié des âmes et humanités que le cadavre avait avant de mourir.
 Effet échec : le cadavre se réveille avec ses statistiques de pleine forme et n’a que de la haine pour le joueur qu’il cherche à tuer immédiattement. Inraisonnable le cadavre joue immédiattement et remeurt au bout de 3 tours.
@@ -226,3 +223,6 @@ Nécessaire : 5 point de compétence
 technique a la lumiere du jour;TECHNIQUE;Bonus de +1 sur tous les D20 lorsque le joueur est à la lumière du soleil (joli soleil) ou feu de repos.
 Point de compétence : 40
 Point de compétence gagné quand il fait beau en extérieur à chaque D20 lancé;Technique "A la lumiere du jour"
+anneau feulide;ANNEAU;Tant que le joueur dispose d’au moins 1 d’énergie, 
+il bénéficie de +20 défense de feu.
+Si le joueur subit tout de meme des degats de feu, alors l’anneau disparaît.;

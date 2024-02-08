@@ -99,8 +99,8 @@ oblativite supreme;MIRACLE;1;;12;;;;0;Le lanceur meurt, mais tous les autres jou
 vigueur;MIRACLE;10;1 énergie;5;;;;0;Le lanceur choisit une cible( qui peut être lui-même), celle-ci récupère 2 énergie sans pouvoir dépasser  sa réserve d’énergie maximale.;
 verdeur;MIRACLE;3;1 énergie;8;;;;0;Le lanceur choisit une cible( qui peut être lui-même), celle-ci récupère 4 énergie et peut ainsi dépasser sa réserve d’énergie maximale.;
 leger repos;MIRACLE;8;;7;;;;0;Si le joueur dispose d’au moins 3 humanités. Il peut dépenser 2 d’énergie pour regagner un pv.;
-grand repos;MIRACLE;1;;13;;;;0;Tant que le sort est équipé et que le joueur dispose d’au moins 2 humanités. Il peut dépenser 2 d’énergie pour regagner 2 pvs.;
-repos;MIRACLE;1;;10;;;;0;Tant que le sort est équipé et que le joueur dispose d’au moins 2 humanités. Il peut dépenser 2 d’énergie pour regagner un pv.;
+grand repos;MIRACLE;1;;10;;;;0;Tant que le sort est équipé et que le joueur dispose d’au moins 2 humanités. Il peut dépenser 2 d’énergie pour regagner 2 pvs.;
+repos;MIRACLE;1;;7;;;;0;Tant que le sort est équipé et que le joueur dispose d’au moins 2 humanités. Il peut dépenser 2 d’énergie pour regagner un pv.;
 contris;MIRACLE;4;10 âmes;12;;;;0;Lors de la fin d’une action de n’importe qui (lui-même, allié, ennemi…) d’un autre joueur le lanceur peut exécuter ce sort sans dépenser d’action ni d’énergie.
 Cela a pour conséquence que l’entièreté de l’action est annulée, la cible reprend son tour de jeu au début de l’action et peut décider de faire quelque chose de complètement différent avec cette action. Il est de la responsabilité du lanceur de se souvenir du déroulé de l’action pour l’annuler correctement, sinon le sort est sans effet.;
 restauration supreme;MIRACLE;1;1 humanite;14;;;;0;Le lanceur resuscite un joueur mort. Celui-ci réapparaît à côté du lanceur avec la moitié de ses points de vie;
@@ -272,3 +272,7 @@ Une fois qu'une ombre est morte jetez 1D20:
 1+ : le porteur devient totalement fou, à chaque tour tout le monde jette 1D6, le plus haut score joue le porteur ce tour ci. (Le MJ l'emporte toujours sur 5+ et en cas d'égalité)  ;
 ombre dansante superieure;MIRACLE;5;Le lanceur, doit s'asseoir en tailleur par terre (compris dans l'action spéciale du sort).;7;;;;0;Cf Miracle "ombre dansante". Il peut prendre le contrôle de plusieurs ombres (une ombre =  une utilisation) en même temps.;
 embrouillamini de cervelle;PSIONIQUE;3;3 énergies;7;;;;0;Le lanceur choisit deux cibles quelconques, il faut que les deux cibles soient des êtres pensants. Pour chacune des cibles, le lanceur et la cible jettent 1D20+leur intelligence, si pour chacune des cibles le lanceur a un résultat strictement supérieur à la cible alors il invertit l'esprit des deux cibles. cela a pour effet que chacune des cibles jouent dorénavant dans le corps de l'autre. Le sort dure tant que le lanceur est vivant et qu'il ne quitte pas la zone.;
+souffle mortel;NECROMANCIE;3;1 humanite;8;;;;0;"Il vous souffle dessus vous mourrez" - Merlin.
+Faire perdre (1D20 pv - les humanites de la cible) à la cible. La cible ne peut pas l'éviter avec une roulade ou tout autre artifice physique. Si elle meurt de ce sort, alors elle tombe en poussière et ses âmes disparaisse.
+
+;
