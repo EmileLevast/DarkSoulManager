@@ -226,3 +226,9 @@ Point de compétence gagné quand il fait beau en extérieur à chaque D20 lanc�
 anneau feulide;ANNEAU;Tant que le joueur dispose d’au moins 1 d’énergie, 
 il bénéficie de +20 défense de feu.
 Si le joueur subit tout de meme des degats de feu, alors l’anneau disparaît.;
+technique odorat developpe;TECHNIQUE;test de reniflage : les tests d'observation donne une indication sur la présence d'une odeur, le joueur demande quelle odeur il cherche avant.
+point de compétence : 5
+Debloquer : un point de compétence à chaque fois que le joueur renifle juste.;
+technique imitation;TECHNIQUE;Effet : imite la voix de n'importe quel personnage qu'il a déjà ccroisé
+Point de competence : 5.
+A debloquer : Reussir à faire changer d'avis un PNJ par rapport au debut de la conversation = 1 pt de competence.;

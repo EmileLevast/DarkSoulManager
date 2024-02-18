@@ -6,7 +6,8 @@ armure rapiecee du taureau;Ph:6|Ma:5;Force Minimum:8;3;A chaque fois que le port
 armure de maille;Ph:9;Force Minimum:4;2;;
 armure de carcasse;Ph:6;Force Minimum:3;3;;
 armure de clerc d elite;Ph:1|Ma:4|Po:3;Niveau Minimum:3;1;;
-cape de bretteur;Ph:3|Ma:5;Intelligence Minimum:4;0;lors d’une esquive, si la roulade rate alors la cape tire le porteur en arrière, celui-ci prend les dégâts de la frappe mais n’est pas considéré en coup critique. De plus il perd une action à se relever à son prochain tour.;
+cape de bretteur;Ph:3|Ma:5;Intelligence Minimum:4;0;lors d’une esquive, si la roulade rate alors la cape tire le porteur en arrière, celui-ci prend les dégâts de la frappe mais n’est pas considéré en coup critique. De plus il perd une action à se relever à son prochain tour.
+Peut se porter au-dessus d'une armure.;
 armure lourde de carcasse;Ph:8;Force Minimum:4;4;;
 robe d aruspice;Ph:10|Ma:7|F:4;Intelligence Minimum:7;1;;
 armure d oswald;Ph:16|F:3;Force Minimum:9;4;;

@@ -50,7 +50,7 @@ torche febrile;|1/2=>F:0
 ;6=>F:2;1;;4;1;;Torche fébrile
 fouet court;|1/2/3=>Ph:0
 |4/5/6=>Ph:4
-;2/3=>Ph:2;2;;6;1;Chaire à nue => ×1;
+;2/3=>Ph:2;2;;6;1;Chaire à nue => relance le moins bon dé de la frappe.;
 laniere de feu;|1/2=>F:0
 |3/4/5=>F:4
 |6=>F:8
@@ -236,7 +236,7 @@ griffes morphvoreur;|1/2=>Ph:0
 |3/4=>Ph:6
 |5=>Ph:9
 |6=>Ph:12
-;;4;;15;0;Peut effectuer une parade avec une énergie avec un seuil de parade à 3+.;
+;;4;;15;0;Peut effectuer une parade avec une énergie avec un seuil de parade à 2+.;
 massue minotaurine;|1/2/3/4=>Ph:0
 |5=>Ph:9
 |6=>Ph:12
