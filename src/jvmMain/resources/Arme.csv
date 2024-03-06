@@ -14,7 +14,7 @@ epee courte;|1/2=>Ph:0
 epee longue;|1=>Ph:0
 |2/3=>Ph:4
 |4/5/6=>Ph:8
-;;3;Force Minimum:5;8;2;;épée longue
+;;3;Force Minimum:5;10;2;Si équipée les roulades subissent un malus de -2.;épée longue
 epee barbelee;|1/2=>Ph:0
 |3=>Ph:4
 |4/5/6=>Ph:8
@@ -26,7 +26,7 @@ cimeterre;|6=>Ph:0
 epee lourde;|1/2/3=>Ph:0
 |4/5=>Ph:5
 |6=>Ph:10
-;5/6=>Ph:10;4;Force Minimum:5;12;2;;épée lourde
+;5/6=>Ph:10;4;Force Minimum:8;12;2;Chaque frappe requiert à minima 3 d'énergies;épée lourde
 epee perche;|1=>Ph:0
 |2/3=>Ph:3
 |4/5=>Ph:6
@@ -249,12 +249,11 @@ epee large;|1/2=>Ph:0
 ;;4;Force Minimum:4;8;2;;
 zweihander;|1/2=>Ph:0
 |3/4/5/6=>Ph:17
-;6=>Ph:34;9;Force Minimum:14;34;3;;
+;6=>Ph:34;9;Force Minimum:14;34;3;Chaque frappe requiert à minima 3 d'énergies.;
 epee lourde a deux mains;|1/2/3=>Ph:0
 |4/5=>Ph:7
 |6=>Ph:14
-;5/6=>Ph:14;5;Force Minimum:7;26;3;
-+1 au meilleur dé lors d'une frappe à 2 mains;
+;5/6=>Ph:14;5;Force Minimum:10;26;3;+1 au meilleur dé lors d'une frappe à 2 mains;
 epee a deux mains;|1/2/3=>Ph:0
 |4/5=>Ph:5
 |6=>Ph:10

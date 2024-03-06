@@ -276,3 +276,6 @@ souffle mortel;NECROMANCIE;3;1 humanite;8;;;;0;"Il vous souffle dessus vous mour
 Faire perdre (1D20 pv - les humanites de la cible) à la cible. La cible ne peut pas l'éviter avec une roulade ou tout autre artifice physique. Si elle meurt de ce sort, alors elle tombe en poussière et ses âmes disparaisse.
 
 ;
+volonte sapee;PSIONIQUE;3;1 énergie;8;être plus intelligent que la cible;;Le sort est efficace si la cible n'a pas plus de 4 d'intelligence de plus que le lanceur;0;Le lanceur lance 1D6. Sur 2+ le sort est réussi.
+La cible perds sa volonté, cela signifie qu'elle ne prendra plus d'initiative et sera très influencable.
+Le sort dure jusqu'à la fin du prochain tour de la cible.;volonte sapee

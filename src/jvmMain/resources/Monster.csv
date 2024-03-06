@@ -45,8 +45,8 @@ brebere;62;1:3|2:4|3:6;Ph:3|Ma:8|F:5|Po:-5;7;3;croc fauglir:0|humanite:4;165;Reg
 boa absorbant;40;1:4|2:6|3:8;Po:15|F:15|Ph:-6|Ma:15;5;4;morsure venimeuse:0;160;Une fois que le boa fixe sa cible, celle-ci ne bénéficie plus que d'une action par tour, ne peut plus détacher son regard et finit par être aveugle au bout de 3 tours.
 Pour chaque attaque magique ou de pyromancie que le boa subit, il absorbe la frappe en résolvant les dégâts normalement. Cependant il projette un jet de salive noir écumante sur sa cible au début de son tour avec exactement les mêmes statistiques de ce qu'il a subit.;
 ionyr;50;1:1|2:1|3:3;Ph:1|Po:4|F:5|Ma:13;14;4;faucille de gobelin:1|anneau de l eclipse:2|main de pyromancie:3|boule de feu:4|robe de pyrobelin:5|propiation par le feu:5|2 Humanite:6;1200;Ionyr est aveugle il a developpe d'autre moyen de percevoir, grâce à sa langue de serpent et son audition notamment. Il est impossible de le surprendre et il sent plein de choses qui sont imperceptibles aux autres.;Ïonyr
-baraganorg;63;1:3|2:6|3:8;Ph:17|Po:8|F:5|Ma:-5;6;4;pagne inutile:0|longue dague equilibree(x2):4|anneau turpide:5|anneau opportuniste:6;220;
-Brute:pare automatiquement tous les coups dont la somme des dés fait 7, 10 ou 11, même s'il n'a plus d'énergie. Il n'est pas considéré comme ayant tenté une parade si le nombre est différent. Il n'a pas besoin d'annoncer parade, cependant s'il le souhaite il peut annoncer parade normale sur un nombre différent (si le résultat et 7, 10 ou 11 la parade réussit tout de même);
+baraganorg;63;1:3|2:6|3:8;Ph:17|Po:8|F:5|Ma:-5;6;4;pagne inutile:0|longue dague equilibree(x2):4|anneau turpide:5|anneau opportuniste:6;220;Brute:pare automatiquement tous les coups dont la somme des dés fait 7, 10 ou 11, même s'il n'a plus d'énergie. Il n'est pas considéré comme ayant tenté une parade si le nombre est différent. Il n'a pas besoin d'annoncer parade, cependant s'il le souhaite il peut annoncer parade normale sur un nombre différent (si le résultat et 7, 10 ou 11 la parade réussit tout de même)
+Vif ambidextre : S'il effectue une frappe en utilisant ses lames en ambidextri, la cible subit un malus de -3 sur ses roulades.;
 skronskrons, le pyro;23;1:2|2:3|3:6;Ph:3|Po:3;1;3;lunette de skronskorns:2|tablier ignifuge:3|Krameur:4|humanite:6;430;Ingénieur qui aime les mécanismes, la mine et surtout le feu;
 minotaure;80;1:6|2:8|3:10;Po:3|F:8|Ph:17|Ma:3;1;4;hache:5|Armure lourde du taureau:6;393;Puissant : si tous les dés utilisés dans le bloquage réussisse, le minotaure repousse ses ennemis ceux-ci tombent par terre leur tour est terminé;
 soldat carcasse;15;1:2|2:3|3:3;Ph:3|Ma:-2;0;3;armure de carcasse:4|epee droite:5|bouclier de carcasse:6;95;;
@@ -111,15 +111,16 @@ om;53;1:1|2:2|3:2;Ph:7|Po:-1|F:2|Ma:10;40;6;anneau de l eclipse:1|transport,suri
 mare;12;1:0|2:0;Ph:0;2;0;1 humanite:4|2 humanites:5;15;Très rapide et silencieux, il peut disparaître très vite en courant silencieusement pour s'enfuir.;Marë
 sulath;25;1:3|2:3|3:3;Ph:-3|Po:10|F:20|Ma:50;45;2;;1;;
 crapaud de sulath;300;1:2|2:2|3:2;Ph:15|Po:15|F:-15|Ma:15;15;2;;2300;martyre : Il expire ses exhalaisons putrides de douleur à chaque frappe, les attaquants au corps à corps subissent 15 dégâts magiques à chaque fois que le crapaud subit une blessure;
-le corblaid;32;1:1|2:2;Ph:4|Po:1|F:-7|Ma:10;13;2;embrouillamini de cervelle:0|plume de corbeau royal:4|humanite:5;170;Les attaques psioniques sont systématiquement en échec contre lui.;Le Corblaid
+le corblaid;32;1:1|2:2;Ph:4|Po:1|F:-7|Ma:10;13;2;embrouillamini de cervelle:0|plume de corbeau royal:4|humanite:5;170;Les attaques psioniques sont systématiquement en échec contre lui.
+A tire d'aile : S'il dispose d'une énergie, lorsqu'il subit une frappe il peut jeter 1D20 sur 6+ il s'envole lentement, ne fonctionne que sur pour les frappes à distances.;Le Corblaid
 prince blanc;22;1:1|2:2;Ph:1|Po:3|F:-5|Ma:6;8;3;croc chien enrage:0|humanite:4;80;Grandes oreilles : il entend les sons d'extrêment loin.
 poils chauffant : ses poils peuvent, à sa volonté, dégager une forte chaleur pour réchauffer son environnement. Cela lui permet de rester enfoui totalement sous la neige indéfiniment pour surgir au bon moment sur sa proie.;
 frimas;12;1:1|2:1;Ph:0|Po:2|F:-3|Ma:3;3;1;humanite:4;30;elle peut naviguer sous la neige de manière totalement invisible. Lorsqu'elle est en danger elle peut faire ça immédiatement. Il faut un bon flair ou une bonne ouïe pour la repérer.;
 friselis;9;1:1|2:1;Ph:0|F:-10;2;1;humanite:4;10;;
-alphax;75;1:1|2:10;Ph:14|Po:7|F:11|Ma:-3;6;4;coup de griffes:0|croc fauglir:0|humanite:4;220;Vision : voit extrêmement loin
+alphax;75;1:1|2:10;Ph:14|Po:7|F:11|Ma:-3;6;4;coup de griffes:0|croc fauglir:0|humanite:4;440;Vision : voit extrêmement loin
 caligineux : se déplace sans bruit et sans traces
-Lorsqu'il subit une frappe il peut jeter 1D6 sur 3+ la frappe traverse son corps en fumée, sans faire de dégâts.;Alphax, le fumeur.
-dorbal;70;1:2|2:4|3:4;Po:-1|F:2|Ph:12|Ma:-5;3;3;nekrotine:4|epee barbelee:5|Armure de chevalier:6;350;C'est un spectre sans tête, il ne peut pas être décapité.
+Lorsqu'il subit une frappe il peut jeter 1D6 sur 4+ la frappe traverse son corps en fumée, sans faire de dégâts.;Alphax, le fumeur.
+dorbal;110;1:2|2:4|3:4;Po:-1|F:7|Ph:12|Ma:-5;6;3;nekrotine:4|epee barbelee:5|Armure de chevalier:6;550;C'est un spectre sans tête, il ne peut pas être décapité.
 Chien fidèle : pour une action il peut siffler, et alphax se matérialise à ses côtés dans un nuage sombre montant du sol;Dorbal, le chasseur de tête
 lali;500;1:2|2:2|3:50;Ph:70|Po:40|F:-20|Ma:50;6;2;;10000;gel puissant : tout ce qui la touche gel instantanément et se brisera en morceaux au prochain contact subit.;lali, la murène
 volucre anthropophage;15;1:1|2:3;Ph:2|Po:6|F:-1;1;2;serre de volucre anthropophage:0|ailes de volucre anthropophage:4;35;;
