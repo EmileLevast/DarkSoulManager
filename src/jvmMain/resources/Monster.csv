@@ -117,11 +117,12 @@ prince blanc;22;1:1|2:2;Ph:1|Po:3|F:-5|Ma:6;8;3;croc chien enrage:0|humanite:4;8
 poils chauffant : ses poils peuvent, à sa volonté, dégager une forte chaleur pour réchauffer son environnement. Cela lui permet de rester enfoui totalement sous la neige indéfiniment pour surgir au bon moment sur sa proie.;
 frimas;12;1:1|2:1;Ph:0|Po:2|F:-3|Ma:3;3;1;humanite:4;30;elle peut naviguer sous la neige de manière totalement invisible. Lorsqu'elle est en danger elle peut faire ça immédiatement. Il faut un bon flair ou une bonne ouïe pour la repérer.;
 friselis;9;1:1|2:1;Ph:0|F:-10;2;1;humanite:4;10;;
-alphax;75;1:1|2:10;Ph:14|Po:7|F:11|Ma:-3;6;4;coup de griffes:0|croc fauglir:0|humanite:4;440;Vision : voit extrêmement loin
-caligineux : se déplace sans bruit et sans traces
+alphax;75;1:1|2:10;Ph:14|Po:7|F:11|Ma:-3;6;4;coup de griffes:0|croc fauglir:0|humanite:4;440;Vision : voit extrêmement loin, et sent extrêment loin.
+caligineux : se déplace sans bruit. Il peut choisir à son gré d'être de la fumée ou un chien géant, ou les deux. Sous forme de fumée il effectue 3 unités de déplacement en une action.
 Lorsqu'il subit une frappe il peut jeter 1D6 sur 4+ la frappe traverse son corps en fumée, sans faire de dégâts.;Alphax, le fumeur.
 dorbal;110;1:2|2:4|3:4;Po:-1|F:7|Ph:12|Ma:-5;6;3;nekrotine:4|epee barbelee:5|Armure de chevalier:6;550;C'est un spectre sans tête, il ne peut pas être décapité.
-Chien fidèle : pour une action il peut siffler, et alphax se matérialise à ses côtés dans un nuage sombre montant du sol;Dorbal, le chasseur de tête
+Chien fidèle : pour une action il peut siffler, et alphax se matérialise à ses côtés dans un nuage sombre montant du sol
+Informe : Un de ses bras peut se détacher de son corps et aller attraper quelque chose qui est à maximum 20m, leur étreinte est très puissante (8 force). En faisant un jet de lutte de force, il peut pendre un humanoïde par les pieds.;Dorbal, le chasseur de tête
 lali;500;1:2|2:2|3:50;Ph:70|Po:40|F:-20|Ma:50;6;2;;10000;gel puissant : tout ce qui la touche gel instantanément et se brisera en morceaux au prochain contact subit.;lali, la murène
 volucre anthropophage;15;1:1|2:3;Ph:2|Po:6|F:-1;1;2;serre de volucre anthropophage:0|ailes de volucre anthropophage:4;35;;
 carcasse gelee;14;1:1|2:2;Ph:3|F:-4|Ma:2|Po:2;0;3;armure de cuir:4|epee large:5|bouclier de bois:6;80;friable : Les frappes de précisions bénéficie de +2 au dés contre ces carcasses (le corp se brise facilement)
