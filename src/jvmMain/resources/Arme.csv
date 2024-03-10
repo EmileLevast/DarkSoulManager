@@ -379,3 +379,9 @@ nekrotine;|1/2/3=>Ma:0
 ;;1;Intelligence Minimum:7;1;3;Tire un trait sombre magique tout droit, ne subit pas la gravité, dans une gerbe de ténèbres nécrotique au premier impact.
 Il faut susurrer le nom de la cible à nekrotine, sans quoi elle manque toujours sa cible.
 Si la cible subit au moins une blessure alors elle subit en plus 1D20 moins son nombre d'humanité en blessure directement, si la cible en meurt alors elle disparaît dans une vision terrible où sa peau laisse place à sa chaire, puis à ses os puis à de la poussière, ses âmes sont perdues et elle ne peut d'aucune manière être ressuscitée.;
+pique de glace d heleade;|1/2/3=>Ph:0
+|4/5=>Ph:3|Ma:2
+|6=>Ph:4|Ma:3
+;coup précis possible avec bonus +2;2;;14;0;gelant : les degats magiques sont dus au froid du pique de glace, si le joueur dispose de solution face au froid, il ne subit pas les degats magiques.
+Long : les piques de glaces que projette une héléade peuvent aller jusqu'à 15m
+refroidissant : à chaque blessure le joueur disposera d'une énergie de moins à son prochain tour.;

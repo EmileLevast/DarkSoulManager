@@ -234,3 +234,4 @@ Point de competence : 5.
 A debloquer : Reussir à faire changer d'avis un PNJ par rapport au debut de la conversation = 1 pt de competence.;
 technique imperio;TECHNIQUE;Effet : le lanceur cible un ennemi, chacun fait le test 1D20+intelligence. Si le lanceur fait plus que la cible, alors il peut lui donner un ordre simple "je t'ordonne de ...". Utilisable une fois par partie. De plus l'ordre ne peut pas impliquer que la cible se fasse du mal.;
 technique de babel;TECHNIQUE;Effet : Le lanceur peut parler aux animaux et bêtes qui parlent un langage simple (bouquetin, chèvre, chien...). Les bêtes le comprennent;
+cristaux heleade;OUTIL;Pendant 2 tours, le corps du porteur se transforme en glace et en eau. IL bénéficie de +10 en défense physique et poison, mais de -3 en défense de feu et de magie.;
