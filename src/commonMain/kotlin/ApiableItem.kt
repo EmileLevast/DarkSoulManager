@@ -25,7 +25,6 @@ abstract class ApiableItem : IListItem {
     @Transient
     val downloadForApi = "download$nameForApi"
 
-
     fun decomposeCSV(sequenceLinesFile: Sequence<String>): List<ApiableItem> {
         val listApiableItem = mutableListOf<ApiableItem>()
         val numberOfSemiColonByLine = sequenceLinesFile.first().count { it == ';' }

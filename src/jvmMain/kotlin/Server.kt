@@ -15,7 +15,10 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.util.logging.*
+import org.bson.conversions.Bson
 import org.litote.kmongo.eq
+import org.litote.kmongo.setTo
+import org.litote.kmongo.setValue
 import org.slf4j.LoggerFactory
 import java.io.File
 import java.io.FileNotFoundException
@@ -137,6 +140,19 @@ fun main() {
                                 .toString()
                         )
                         call.respondFile(file)
+                    }
+                    if(itapiable is Joueur){
+                        get("/$ENDPOINT_MAJ_CARACS_JOUEUR"){
+                            val joueurToUpdateCaracs:Joueur = getApiableElementAccordingToType(call, itapiable) as Joueur
+
+                            val resInsert = database.getCollection<Joueur>().updateOne(filter = Joueur::_id eq joueurToUpdateCaracs._id, update = setValue(Joueur::caracActuel, joueurToUpdateCaracs.caracActuel))
+
+                            if(resInsert.wasAcknowledged()){
+                                call.respond(HttpStatusCode.OK)
+                            }else{
+                                call.respond(HttpStatusCode.ExpectationFailed)
+                            }
+                        }
                     }
                 }
             }
