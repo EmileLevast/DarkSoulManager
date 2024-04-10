@@ -1,10 +1,13 @@
+import ch.qos.logback.classic.Level
+import ch.qos.logback.classic.LoggerContext
 import com.mongodb.MongoBulkWriteException
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
-import io.ktor.server.engine.*
-import io.ktor.server.netty.*
 import io.ktor.server.application.*
+import io.ktor.server.engine.*
 import io.ktor.server.http.content.*
+import io.ktor.server.netty.*
+import io.ktor.server.plugins.callloging.*
 import io.ktor.server.plugins.compression.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.plugins.cors.routing.*
@@ -13,19 +16,27 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.util.logging.*
 import org.litote.kmongo.eq
+import org.slf4j.LoggerFactory
 import java.io.File
 import java.io.FileNotFoundException
+
 
 fun main() {
     val port = System.getenv("PORT")?.toInt() ?: 9090
 
     val logger = KtorSimpleLogger("logger")
 
+    (LoggerFactory.getILoggerFactory() as LoggerContext).getLogger("org.mongodb.driver").level = Level.WARN
+
+
     createCollectionTables()
 
     embeddedServer(Netty, port) {
         install(ContentNegotiation) {
             json()
+        }
+        install(CallLogging) {
+            level = org.slf4j.event.Level.INFO
         }
         install(CORS) {
             allowMethod(HttpMethod.Get)
