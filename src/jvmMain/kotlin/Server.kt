@@ -142,14 +142,19 @@ fun main() {
                         call.respondFile(file)
                     }
                     if(itapiable is Joueur){
-                        get("/$ENDPOINT_MAJ_CARACS_JOUEUR"){
+                        post("/$ENDPOINT_MAJ_CARACS_JOUEUR"){
                             val joueurToUpdateCaracs:Joueur = getApiableElementAccordingToType(call, itapiable) as Joueur
 
-                            val resInsert = database.getCollection<Joueur>().updateOne(filter = Joueur::_id eq joueurToUpdateCaracs._id, update = setValue(Joueur::caracActuel, joueurToUpdateCaracs.caracActuel))
+                            val resInsertCaracs = collectionsApiableItem[itapiable.nameForApi]!!.updateOne(filter = Joueur::_id eq joueurToUpdateCaracs._id, update = setValue(Joueur::caracActuel, joueurToUpdateCaracs.caracActuel))
+                            val resInsertDetails = collectionsApiableItem[itapiable.nameForApi]!!.updateOne(filter = Joueur::_id eq joueurToUpdateCaracs._id, update = setValue(Joueur::details, joueurToUpdateCaracs.details))
 
-                            if(resInsert.wasAcknowledged()){
+                            if(resInsertCaracs.wasAcknowledged() && resInsertDetails.wasAcknowledged()){
                                 call.respond(HttpStatusCode.OK)
-                            }else{
+                            }else if (resInsertCaracs.wasAcknowledged() || resInsertDetails.wasAcknowledged()){
+                                //dans le cas où seulement une des deux données a correctement etait mise à jour
+                                call.respond(HttpStatusCode.PartialContent)
+                            }
+                            else{
                                 call.respond(HttpStatusCode.ExpectationFailed)
                             }
                         }
