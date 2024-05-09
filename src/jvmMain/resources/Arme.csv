@@ -385,3 +385,7 @@ pique de glace d heleade;|1/2/3=>Ph:0
 ;coup précis possible avec bonus +2;2;;14;0;gelant : les degats magiques sont dus au froid du pique de glace, si le joueur dispose de solution face au froid, il ne subit pas les degats magiques.
 Long : les piques de glaces que projette une héléade peuvent aller jusqu'à 15m
 refroidissant : à chaque blessure le joueur disposera d'une énergie de moins à son prochain tour.;
+morsure buveuse;|1=>Ph:0
+|2/3/4=>Ph:3
+|5/6=>Ph:4
+;les points de vie gagnés par buveuse sont doublés.;2;;5;0;Saignement 5+=>3;buveuse : les blessures faites par saignement sont récupérés en points de vie
