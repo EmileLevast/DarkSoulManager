@@ -211,7 +211,7 @@ Blocage : 0;
 technique apnee;TECHNIQUE;Effet :le joueur ne commence pas à étouffer avant 4 tours privé d'air.;
 graine nyctaphage;OUTIL;Plantée dans un sous bois, elle déploie une plante nyctaphage en 2 tours.;
 fragment d eterna;OUTIL;Utiliser pour une action spéciale: les flammes noires s'engouffrent dans le joueur et lui rappelle un souvenir (au gré du MJ) qui lui rappelle en même temps soit une technique soit un sort (à proposer et à discuter avec le MJ).;
-ambre gelee;AMBRE;projette un rayon de gel très puissant autour du lanceur. Toutes les victimes sont congelées instantanément. Impossible pour elles de jouer. Chaque cible jette 1D12 à chacun de ses tours, si < au nombre de tour depuis qu'elle gelée alors elle est libérée sinon elle subit le nombre de tours depuis qu'elle est gelée en dégât magique. ;
+ambre gelee;AMBRE;projette un rayon de gel très puissant. Toutes les victimes sont congelées instantanément. Impossible pour elles de jouer. Chaque cible jette 1D12 à chacun de ses tours, si < au nombre de tour depuis qu'elle gelée alors elle est libérée sinon elle subit le nombre de tours depuis qu'elle est gelée en dégât magique. ;
 balai volant;OUTIL;L'enfourcher permet de voler jusqu'à 10 m au-dessus du sol (subit donc la gravité mais moins).
 Intelligence Min : 5;
 potion de rechauffement;OUTIL;Ramène la température du corps du porteur à sa température normale, l'effet diminue petit à petit pour disparaître complètement au bout de quelques heures.;
@@ -237,3 +237,5 @@ technique de babel;TECHNIQUE;Effet : Le lanceur peut parler aux animaux et bête
 cristaux heleade;OUTIL;Pendant 2 tours, le corps du porteur se transforme en glace et en eau. IL bénéficie de +10 en défense physique et poison, mais de -3 en défense de feu et de magie.;
 technique brulure apaisante;TECHNIQUE;Effet : a chaque fois qu'il subit une frappe de feu, alors il récupère un point de vie avant de résoudre les dégâts de la frappe.
 Points de compétences requis : 10. A chaque frappe de feu ennemie qui ne le blesse pas alors il débloque un point de compétence.;
+anneau coagulant;ANNEAU;Avec cet anneau le porteur ne subit pas les dégâts de saignements (immunise contre la vampirisation aussi).
+Après chaque utilisation jeter 1D6, sur 1 l'anneau est détruit.;
