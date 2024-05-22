@@ -389,3 +389,6 @@ morsure buveuse;|1=>Ph:0
 |2/3/4=>Ph:3
 |5/6=>Ph:4
 ;les points de vie gagnés par buveuse sont doublés.;2;;5;0;Saignement 5+=>3;buveuse : les blessures faites par saignement sont récupérés en points de vie
+hache double tranchant;|1/2/3=>Ph:0
+|4/5/6=>Ph:8
+;6=>Ph:12;3;Force Minimum:7;20;3;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.;

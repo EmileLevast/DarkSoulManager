@@ -123,7 +123,7 @@ caligineux : se déplace sans bruit. Il peut choisir à son gré d'être de la f
 Lorsqu'il subit une frappe il peut jeter 1D6 sur 4+ la frappe traverse son corps en fumée, sans faire de dégâts.;Alphax, le fumeur.
 dorbal;110;1:2|2:4|3:4;Po:-1|F:7|Ph:12|Ma:-5;6;3;nekrotine:4|epee barbelee:5|Armure de chevalier:6;550;C'est un spectre sans tête, il ne peut pas être décapité.
 Chien fidèle : pour une action il peut siffler, et alphax se matérialise à ses côtés dans un nuage sombre montant du sol
-Informe : Un de ses bras peut se détacher de son corps et aller attraper quelque chose qui est à maximum 20m, leur étreinte est très puissante (8 force). En faisant un jet de lutte de force, il peut pendre un humanoïde par les pieds.;Dorbal, le chasseur de tête
+Informe : Un de ses bras peut se détacher de son corps et aller attraper quelque chose qui est à maximum 20m, leur étreinte est très puissante (8 force). En faisant un jet de lutte de force (la soudaineté rend impossible de faire une roulade pour eviter), il peut pendre un humanoïde par les pieds.;Dorbal, le chasseur de tête
 lali;500;1:2|2:2|3:50;Ph:70|Po:40|F:-20|Ma:50;6;2;;10000;gel puissant : tout ce qui la touche gel instantanément et se brisera en morceaux au prochain contact subit.;lali, la murène
 volucre anthropophage;15;1:1|2:3;Ph:2|Po:6|F:-1;1;2;serre de volucre anthropophage:0|ailes de volucre anthropophage:4;35;;
 carcasse gelee;14;1:1|2:2;Ph:3|F:-4|Ma:2|Po:2;0;3;armure de cuir:4|epee large:5|bouclier de bois:6;80;friable : Les frappes de précisions bénéficie de +2 au dés contre ces carcasses (le corp se brise facilement)
@@ -162,3 +162,5 @@ Vaporeux : peut effectuer des roulades mais cela a pour effet qu'il évite juste
 Immortel : a chaque tour apres sa mort le vampire se releve avec toute sa vie si le joueur qui a porté le coup fatal perds du sang (il voit son sang défié toute loi physique et glisser pour rejoindre le corp). Pour eliminer definitivement un vampire il faut lui trancher la tete et la mettre dans le feu, ou lui transpercer le coeur d'un pieu. Au moment où le vampire se reveille il recupere ses ames du joueur.
 Pervertisseur : si la frappe "morsure buveuse" effectue des blessures par saignement, le vampire peut decider de cracher son propre sang dans les veines. La victime devient un vampire moindre (pareil que vampire moins "immortel" et "pervertisseur") dans 30 min (peut continuer à jouer mais le MJ peut lui faire subir ses instincts de vampire);datura
 lechasseuse;15;1:0;F:20|Ph:-5;0;1;;40;; A CREER
+mamba noir;30;1:3|2:3|3:3;Po:10|F:-2|Ph:3|Ma:-2;3;4;morsure venimeuse:0;160;tetanisant: si la cible subit des degats de venin, elle jette 1D4 à tous les tours où elle subit des degats de venin sur un résultat de 1 elle est paralysée (impossible de jouer ce tour);
+blupz;35;1:2|2:4|3:6;Po:-6|F:4|Ph:8|Ma:-2;0;4;bouclier de chevalier:4|epee a double tranchant:5|Armure de chevalier:6;200;Compte comme tenant ses armes à 2 mains même si tenues à 1 main;
