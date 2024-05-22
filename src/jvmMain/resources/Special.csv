@@ -239,4 +239,5 @@ technique brulure apaisante;TECHNIQUE;Effet : a chaque fois qu'il subit une frap
 Points de compétences requis : 10. A chaque frappe de feu ennemie qui ne le blesse pas alors il débloque un point de compétence.;
 anneau coagulant;ANNEAU;Avec cet anneau le porteur ne subit pas les dégâts de saignements (immunise contre la vampirisation aussi).
 Après chaque utilisation jeter 1D6, sur 1 l'anneau est détruit.;
-gemme blanche;OUTIL;tous les porteurs morts ressuscitent;
+gemme blanche;OUTIL;Si tous les porteurs d'une gemme blanche sont morts alors ils ressuscitent au dernier feu;
+coffre de padoue;OUTIL;Fonctionne par paire, semble magique.;

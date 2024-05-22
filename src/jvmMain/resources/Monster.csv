@@ -96,7 +96,7 @@ Les kerkerschatte frappe les ombres des êtres vivants, celles-ci ne peuvent pas
 le trio de jehovoix;0;1:1;;0;0;;0;Michâle, Janoix, Cécilence.;
 michale;20;1:1|2:2;Ph:3|Ma:1;6;2;longue dague:2|cape de pelerin:3|humanite:4;100;Désarme magiquement tout inquiétude chez son interlocuteur au premier abord.;
 janoix;16;1:1|2:1;Ph:2;2;2;cape de pelerin:3|humanite:4;50;phytogéographe : connaît très bien la flore des Landes enclavées (du moins les zones les moins dangereuses);
-cecilence;70;1:1|2:4;Ph:2|Ma:11|Po:10|F:4;18;4;cape de pelerin:3|humanite:4|balai volant:6;50;Oenomorphe : peut changer l'eau en sang d'enfant (le picotement donne l'impression d'un goût alcoolisé).
+cecilence;70;1:1|2:4;Ph:2|Ma:11|Po:10|F:4;18;4;cape de pelerin:3|humanite:4|balai volant:6;50;Oenomorphe : peut changer n'importe quelle boisson en sang d'enfant (le picotement donne l'impression d'un goût alcoolisé).
 Nyctophile : peut faire tomber la nuit en 3 tours, pour chaque tour passé dans la nuit, elle recouvre 2 pv.
 Manchot : elle utilise son balai comme un bâton de marche, car il faut les deux mains pour bien piloter;Cécilence
 nistra;38;1:3|2:6|3:7;Ph:9|Ma:8|Po:6|F:3;18;5;armure cuir taillee:3|longue dague equilibree:4|couteau de lancer:5|anneau du lache:5|anneau du charognard sournois:6|humanite:6;340;Metamorphe: peut prendre la forme de n'importe quel humain ou humaine que son interlocuteur ne connaît pas.
@@ -162,5 +162,5 @@ Vaporeux : peut effectuer des roulades mais cela a pour effet qu'il évite juste
 Immortel : a chaque tour apres sa mort le vampire se releve avec toute sa vie si le joueur qui a porté le coup fatal perds du sang (il voit son sang défié toute loi physique et glisser pour rejoindre le corp). Pour eliminer definitivement un vampire il faut lui trancher la tete et la mettre dans le feu, ou lui transpercer le coeur d'un pieu. Au moment où le vampire se reveille il recupere ses ames du joueur.
 Pervertisseur : si la frappe "morsure buveuse" effectue des blessures par saignement, le vampire peut decider de cracher son propre sang dans les veines. La victime devient un vampire moindre (pareil que vampire moins "immortel" et "pervertisseur") dans 30 min (peut continuer à jouer mais le MJ peut lui faire subir ses instincts de vampire);datura
 lechasseuse;15;1:0;F:20|Ph:-5;0;1;;40;; A CREER
-mamba noir;30;1:3|2:3|3:3;Po:10|F:-2|Ph:3|Ma:-2;3;4;morsure venimeuse:0;160;tetanisant: si la cible subit des degats de venin, elle jette 1D4 à tous les tours où elle subit des degats de venin sur un résultat de 1 elle est paralysée (impossible de jouer ce tour);
+mamba noir;24;1:3|2:3|3:3;Po:10|F:-2|Ph:3|Ma:-2;3;4;morsure venimeuse:0;160;tetanisant: si la cible subit des degats de venin, elle jette 1D4 à tous les tours où elle subit des degats de venin sur un résultat de 1 elle est paralysée (impossible de jouer ce tour);
 blupz;35;1:2|2:4|3:6;Po:-6|F:4|Ph:8|Ma:-2;0;4;bouclier de chevalier:4|epee a double tranchant:5|Armure de chevalier:6;200;Compte comme tenant ses armes à 2 mains même si tenues à 1 main;
