@@ -118,7 +118,7 @@ arc;;;2;Force Minimum:2;0;1;Ajoute +2 dégâts physique aux flèches;
 sarbacane nanosinophile;;;1;;0;0;;
 flechette toxique;|1=>Ph:0
 |2/3/4/5/6=>Ph:1
-;;0;;0;0;Toxine 1+ => 4. Si FFC > 1 les joueurs sont touchés par le poison psychédélique;
+;;0;;0;0;Toxine 1+ => 4.;
 bombe incendiaire;|1/2/3/4=>F:0
 |5=>F:5
 |6=>F:10
@@ -392,3 +392,17 @@ morsure buveuse;|1=>Ph:0
 hache double tranchant;|1/2/3=>Ph:0
 |4/5/6=>Ph:8
 ;6=>Ph:12;3;Force Minimum:7;20;3;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.;
+etau de troll;|1=>Ph:0
+|2/3/4=>Ph:8
+|5=>Ph:9
+|6=>Ph:15
+;;2;Force Minimum:1;30;0;Nécessaire d'attraper le joueur pour utiliser l'etau de troll.
+Pour une action le troll peut essayer d'attraper un joueur. Celui-ci peut l'eviter par une roulade (+2 pour la roulade, car le geste est lent mais le MJ ne dis pas ce qu'il va se passer il annonce juste le geste du troll).
+Si le troll attrape le joueur ensuite il tape frenetiquement le joueur 3x contre l'objet solide le plus proche. Le joueur est coincé, il ne peut utiliser aucun item de son inventaire (les passifs, les anneaux et talismans fonctionnent toujours mais pas ce qui nécessite un geste d'activation comme des sorts, des braises, des humanites);
+charge de trollon;|1/2=>Ph:0
+|3/4/5=>Ph:7
+|6=>Ph:10
+;;3;Force Minimum:1;30;0;Utiliser la charge de trollon coûte les 2 actions.
+Le trollon cible un ennemi et lui bondit dessus avec tout son poids. La roulade subit un malus de -6 pour la fulgurance.
+Si la cible est blessée alors elle est jetée au sol et lâche tout ce qu'elle tenait.
+Il peut ensuite enchainer la cible avec des frappes mains nues sur lesquelles les roulades subissent un malus de -15.;
