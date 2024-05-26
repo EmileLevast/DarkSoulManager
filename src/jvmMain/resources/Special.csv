@@ -245,3 +245,4 @@ technique dague dash;TECHNIQUE;Effet :le personnage tient une dague dans chaque 
 technique botte secrete;TECHNIQUE;Effet :si le personnage tient une arme d'un poid de 1 max alors il peut declencher une parade (cf bouclier) sur 3 nombres. Mais perds 1 point de défense naturelle après résolution de l'action. Se regénère en fin de combat.;
 flute ophiole;OUTIL;souffler dedans calme les serpents de la forêt des landes enclavées;
 poison psychedelique;OUTIL;Déclenche une folie meurtrière, 2 tours plus tard. Avec un bonus de +1 sur ses dés de frappe. Attaque avec acharnement la dernière personne à avoir parlé (dans le jeu).;
+anneau critique;ANNEAU;Avec cet anneau le porteur frappe en coup critique si la cible n'a plus d'energie;
