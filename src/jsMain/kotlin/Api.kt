@@ -6,6 +6,7 @@ import io.ktor.client.request.*
 import io.ktor.serialization.kotlinx.json.*
 
 import kotlinx.browser.window
+import kotlinx.js.import.meta.url
 
 val endpoint = window.location.origin // only needed until https://youtrack.jetbrains.com/issue/KTOR-453 is resolved
 
@@ -22,25 +23,14 @@ enum class ActionOnDb{
 }
 
 suspend fun searchAnything(nomSearched: String, strict:Boolean = false) : List<IListItem> {
-    val listResultsItems = mutableListOf<IListItem>()
-    unmutableListApiItemDefinition.forEach {
-        val res = when(it){
-            //TODO ajouter le cast ici quand on cree une table
-            is Arme -> searchArme(nomSearched, strict)
-            is Armure -> searchArmure(nomSearched, strict)//TODO ajouter la methode de recherche
-            is Monster -> searchMonster(nomSearched, strict)
-            is Bouclier -> searchBouclier(nomSearched, strict)
-            is Sort -> searchSort(nomSearched, strict)
-            is Special -> searchSpecial(nomSearched, strict)
-            is Joueur -> searchJoueur(nomSearched, strict)
-            is Equipe -> searchEquipe(nomSearched, strict)
-            else -> null
+
+    jsonClient.get(endpoint +"/$ENDPOINT_RECHERCHE_TOUT"+ "/${nomSearched}"){
+        url {
+            parameters.append(ENDPOINT_RECHERCHE_STRICTE, strict.toString())
         }
-        if (res != null){
-            listResultsItems.addAll(res)
-        }
+    }.let{
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<IListItem>>() else listOf()
     }
-    return listResultsItems
 }
 
 suspend fun searchArme(nomSearched: String, strict:Boolean = false) :List<Arme>?{

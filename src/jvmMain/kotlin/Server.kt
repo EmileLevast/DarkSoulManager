@@ -60,6 +60,20 @@ fun main() {
             static("/") {
                 resources("")
             }
+            route("/all"){
+                get("/{nom}") {
+                    val nom = call.parameters["nom"] ?: ""
+                    val rechercheStricte:Boolean = call.request.queryParameters[ENDPOINT_RECHERCHE_STRICTE] == "true"
+                    val listItemsFound = mutableListOf<IListItem>()
+                    //Pour chaque element on regarde s'il y'en a un qui matche le nom demandé
+                    for (tableObject in unmutableListApiItemDefinition){
+                        getElementAccordingToType(nom, tableObject, rechercheStricte).takeIf { it.isNotEmpty() }?.let {
+                            listItemsFound.addAll(it)
+                        }
+                    }
+                    call.respond(listItemsFound.ifEmpty { HttpStatusCode.NoContent })
+                }
+            }
             unmutableListApiItemDefinition.forEach { itapiable ->
                 route("/"+itapiable.nameForApi!!){
                     get("/{nom}") {
