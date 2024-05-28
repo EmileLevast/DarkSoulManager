@@ -15,6 +15,11 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.util.logging.*
+import kotlinx.serialization.SerializationStrategy
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.encodeToJsonElement
 import org.bson.conversions.Bson
 import org.litote.kmongo.eq
 import org.litote.kmongo.setTo
@@ -64,11 +69,13 @@ fun main() {
                 get("/{nom}") {
                     val nom = call.parameters["nom"] ?: ""
                     val rechercheStricte:Boolean = call.request.queryParameters[ENDPOINT_RECHERCHE_STRICTE] == "true"
-                    val listItemsFound = mutableListOf<IListItem>()
+                    val listItemsFound = mutableListOf<String>()
                     //Pour chaque element on regarde s'il y'en a un qui matche le nom demandé
                     for (tableObject in unmutableListApiItemDefinition){
-                        getElementAccordingToType(nom, tableObject, rechercheStricte).takeIf { it.isNotEmpty() }?.let {
-                            listItemsFound.addAll(it)
+                        getCollectionElementsAsString( tableObject,nom, rechercheStricte).let {
+                            if(it.isNotEmpty()){
+                                listItemsFound.addAll(it)
+                            }
                         }
                     }
                     call.respond(listItemsFound.ifEmpty { HttpStatusCode.NoContent })
