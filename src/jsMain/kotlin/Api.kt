@@ -7,6 +7,9 @@ import io.ktor.serialization.kotlinx.json.*
 
 import kotlinx.browser.window
 import kotlinx.js.import.meta.url
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
+import kotlin.reflect.KClass
 
 val endpoint = window.location.origin // only needed until https://youtrack.jetbrains.com/issue/KTOR-453 is resolved
 
@@ -24,12 +27,38 @@ enum class ActionOnDb{
 
 suspend fun searchAnything(nomSearched: String, strict:Boolean = false) : List<IListItem> {
 
+    val listItemsFound = mutableListOf<IListItem>()
+    for(anythingItem in searchAnythingStringEncoded(nomSearched,strict)){
+
+        if(anythingItem.itemContent!= null && anythingItem.typeItem != null){
+            // Créer une instance de la classe
+            val itemClasseReify: ApiableItem? = unmutableListApiItemDefinition.find { it.nameForApi == anythingItem.typeItem }
+
+            listItemsFound.add(when(itemClasseReify){
+                is Arme -> Json.decodeFromString<Arme>(anythingItem.itemContent!!)
+                is Armure -> Json.decodeFromString<Armure>(anythingItem.itemContent!!)
+                is Monster -> Json.decodeFromString<Monster>(anythingItem.itemContent!!)
+                is Bouclier -> Json.decodeFromString<Bouclier>(anythingItem.itemContent!!)
+                is Sort -> Json.decodeFromString<Sort>(anythingItem.itemContent!!)
+                is Special -> Json.decodeFromString<Special>(anythingItem.itemContent!!)
+                is Joueur -> Json.decodeFromString<Joueur>(anythingItem.itemContent!!)
+                is Equipe -> Json.decodeFromString<Equipe>(anythingItem.itemContent!!)
+                else-> throw IllegalArgumentException("Impossible de deserialiser l'objet json reçu, il ne fait pas parti des elements connus")
+            })
+        }
+    }
+    return  listItemsFound
+}
+
+
+suspend fun searchAnythingStringEncoded(nomSearched: String, strict:Boolean) : List<AnythingItemDTO> {
+
     jsonClient.get(endpoint +"/$ENDPOINT_RECHERCHE_TOUT"+ "/${nomSearched}"){
         url {
             parameters.append(ENDPOINT_RECHERCHE_STRICTE, strict.toString())
         }
     }.let{
-        return if (it.status != HttpStatusCode.NoContent) it.body<List<IListItem>>() else listOf()
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<AnythingItemDTO>>() else listOf()
     }
 }
 

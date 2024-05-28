@@ -69,10 +69,10 @@ fun main() {
                 get("/{nom}") {
                     val nom = call.parameters["nom"] ?: ""
                     val rechercheStricte:Boolean = call.request.queryParameters[ENDPOINT_RECHERCHE_STRICTE] == "true"
-                    val listItemsFound = mutableListOf<String>()
+                    val listItemsFound = mutableListOf<AnythingItemDTO>()
                     //Pour chaque element on regarde s'il y'en a un qui matche le nom demandé
                     for (tableObject in unmutableListApiItemDefinition){
-                        getCollectionElementsAsString( tableObject,nom, rechercheStricte).let {
+                        getCollectionElementsAsString( tableObject,nom, rechercheStricte).map { AnythingItemDTO(tableObject.nameForApi,it) }.let {
                             if(it.isNotEmpty()){
                                 listItemsFound.addAll(it)
                             }
