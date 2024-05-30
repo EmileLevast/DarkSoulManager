@@ -406,3 +406,7 @@ charge de trollon;|1/2=>Ph:0
 Le trollon cible un ennemi et lui bondit dessus avec tout son poids. La roulade subit un malus de -6 pour la fulgurance.
 Si la cible est blessée alors elle est jetée au sol et lâche tout ce qu'elle tenait.
 Il peut ensuite enchainer la cible avec des frappes mains nues sur lesquelles les roulades subissent un malus de -15.;
+lourde masse d arme;|1/2/3/4=>Ph:0
+|5=>Ph:10
+|6=>Ph:12
+;;5;Force Minimum:7;25;2;Saigne 5+=>4;

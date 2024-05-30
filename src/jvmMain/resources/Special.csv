@@ -6,7 +6,8 @@ anneau de deuil suicidant;ANNEAU;Si un de vos alliés meurt vous pouvez, immédi
 anneau du funeste initiateur;ANNEAU;Si vous mourrez en premier, vous ne perdez pas vos âmes. Si un de vos coéquipier meurt alors que vous êtes en vie, les âmes du mort sont irrécupérables. Si vous mourrez en même temps qu’un coéquipier alors les 2 effets s’appliquent.;
 anneau du vengeur ;ANNEAU;Si vous tuez l’ennemi qui vient de tuer un de vos coéquipier durant ce tour alors celui-ci ressuscite avec 50% de sa vie et sans ses âmes. En revanche si vos coéquipiers ne tuent pas l’ennemi qui vient de vous tuer, dans le même tour, alors l’allié avec le plus de vie meurt.;
 anneau du desespoir;ANNEAU;Si vous aller mourir et que vous possédez au moins 1 humanité alors vous pouvez décider de sacrifier toutes vos humanités pour éviter entièrement et magiquement tous les dégâts du coup qui était censé vous tuer.;
-anneau deshumanisant;ANNEAU;Vous pouvez utiliser l’humanité d’un allié, sans son consentement, pour regénérer votre vie entièrement.;
+anneau deshumanisant;ANNEAU;Vous pouvez utiliser l’humanité d’un allié, sans son consentement, pour regénérer votre vie entièrement.
+De plus vos dés ne peuvent pas être modifiés par une humanité sans votre consentement;
 anneau susceptible;ANNEAU;Si 2 joueur ou plus vous insultent pour le même motif dans une courte intervalle de temps, alors vous pouvez leur faire perdre jusqu’à 5 pv chacun.;
 anneau turpide;ANNEAU;A chaque fois que vous blessez un ennemi vous gagnez 10 âmes. Si vous tuez un ennemi vous perdez 5 âmes (si on le tue on le blesse pas).;
 anneau de transfert hasardeux;ANNEAU;Durant votre tour vous pouvez dépenser une action pour téléporter un coéquipier, qui équipe un autre exemplaire de cet anneau, près de vous.
