@@ -65,7 +65,27 @@ fun main() {
             static("/") {
                 resources("")
             }
-            route("/all"){
+            route("/all") {
+                put {
+                    val listNameElementsSearched = call.receive<List<String>>()
+                    val listItemsFound = mutableListOf<AnythingItemDTO>()
+
+                    for (nameElementSearched in listNameElementsSearched) {
+                        for (tableObject in unmutableListApiItemDefinition) {
+                            getCollectionElementsAsString(tableObject, nameElementSearched, true).map {
+                                AnythingItemDTO(
+                                    tableObject.nameForApi,
+                                    it
+                                )
+                            }.let {
+                                if (it.isNotEmpty()) {
+                                    listItemsFound.addAll(it)
+                                }
+                            }
+                        }
+                    }
+                    call.respond(listItemsFound.ifEmpty { HttpStatusCode.NoContent })
+                }
                 get("/{nom}") {
                     val nom = call.parameters["nom"] ?: ""
                     val rechercheStricte:Boolean = call.request.queryParameters[ENDPOINT_RECHERCHE_STRICTE] == "true"

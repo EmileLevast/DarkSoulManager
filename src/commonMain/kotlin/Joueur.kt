@@ -53,6 +53,8 @@ class Joueur(
         )
     }
 
+    fun getAllEquipmentAsList()=chaineEquipementSerialisee.removeSurrounding(CHAR_SEP_EQUIPEMENT).split("$CHAR_SEP_EQUIPEMENT$CHAR_SEP_EQUIPEMENT")
+
     override fun getDeparsedAttributes(): List<String> {
         return listOf<String>(
             nom,

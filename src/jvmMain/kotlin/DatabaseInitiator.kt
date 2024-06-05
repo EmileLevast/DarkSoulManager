@@ -45,6 +45,7 @@ suspend fun getCollectionElements(instanceOfCollectionItemDefinition:ApiableItem
     }
 }
 
+//TODO ici aussi
 /**
  * strict est un booleen quand il est à true c'est à dire qu'on cherche exactement l'element qui matche le nom
  */

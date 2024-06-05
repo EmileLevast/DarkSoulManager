@@ -26,14 +26,22 @@ enum class ActionOnDb{
 }
 
 suspend fun searchAnything(nomSearched: String, strict:Boolean = false) : List<IListItem> {
+    return  deserializeAnythingItemDTO(searchAnythingStringEncoded(nomSearched, strict))
+}
 
+suspend fun searchEverything(searchedNames: List<String>, strict:Boolean = false) : List<IListItem> {
+    return  deserializeAnythingItemDTO(searchEverythingStringEncoded(searchedNames))
+}
+
+fun deserializeAnythingItemDTO(listAnythingItem : List<AnythingItemDTO>): List<IListItem>{
     val listItemsFound = mutableListOf<IListItem>()
-    for(anythingItem in searchAnythingStringEncoded(nomSearched,strict)){
+    for(anythingItem in listAnythingItem){
 
         if(anythingItem.itemContent!= null && anythingItem.typeItem != null){
             // Créer une instance de la classe
             val itemClasseReify: ApiableItem? = unmutableListApiItemDefinition.find { it.nameForApi == anythingItem.typeItem }
 
+            //TODO ajouter ici les nouvelles tables a deserialiser
             listItemsFound.add(when(itemClasseReify){
                 is Arme -> Json.decodeFromString<Arme>(anythingItem.itemContent!!)
                 is Armure -> Json.decodeFromString<Armure>(anythingItem.itemContent!!)
@@ -50,6 +58,15 @@ suspend fun searchAnything(nomSearched: String, strict:Boolean = false) : List<I
     return  listItemsFound
 }
 
+suspend fun searchEverythingStringEncoded(searchedNames:List<String>) : List<AnythingItemDTO> {
+
+    jsonClient.put("$endpoint/$ENDPOINT_RECHERCHE_TOUT"){
+        contentType(ContentType.Application.Json)
+        setBody(searchedNames)
+    }.let{
+        return if (it.status != HttpStatusCode.NoContent) it.body<List<AnythingItemDTO>>() else listOf()
+    }
+}
 
 suspend fun searchAnythingStringEncoded(nomSearched: String, strict:Boolean) : List<AnythingItemDTO> {
 
