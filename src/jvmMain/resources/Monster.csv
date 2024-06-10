@@ -186,3 +186,7 @@ penetration nasale: si un coup de tentacule tue, alors avec 1D20 sur 5+ le proul
 leucrotta;20;1:4|2:4|3:4;Ph:8|Ma:4;2;3;charge catoblepas:0|croc chien enrage:0|humanite:4;110;appâteur: peut imiter la voix de n'importe quel humain qu'il a entendu;
 bigobelours;50;1:3|2:5|3:9;Ph:9|Po:6|F:4|Ma:-4;5;5;armure de carcasse:3|lourde masse d arme:4|anneau deshumanisant:5|humanite:6;230;Implacable : Tant qu'ils ont une énergie ils peuvent jeter un dé lorsqu'ils subissent une frappe (résoudre ce dé comme une frappe à 1 energie), ils réduisent les degats totaux de la frappe reçus par les degats totaux de leur frappe. S'ils font plus de degats que leur adversaire alors celui-ci subit la différence des dégâts et ne peut pas se défendre. Ensuite le bigobelours jette 1D20 sur 8+ il conserve son énergie.
 Masseur : ils peuvent relancer leurs dés qui font 1 lors d'une frappe.;
+necrozetete;300;1:0;Ph:0;0;30;sort quelconque:4;400;Beaucoup de pv. Meurt s'il n'a plus d'énergie. Sont toutefois soumissibles aux effets des sorts.
+Attaque de préférence les êtres morts avec des humanités, une humanité leur redonne toute leur énergie.
+Mais s'ils sont bientôt à court, ils attaquent les porteurs d'humanités.
+Nihilant: lors de n'importe quel jet de dé concernant =un necrozetete le/les joueurs concernés doivent fermer les yeux et ne peuvent donc pas voir le résultat des dés (impossible pour les autres joueurs de leur donner des indications);
