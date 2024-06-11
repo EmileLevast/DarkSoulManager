@@ -254,3 +254,5 @@ technique volage;TECHNIQUE;Le joueur peut enclencher des luttes de forces pour u
 La classe voleur bénéficie de +2 sur cette lutte.;
 technique vif ambidextre;TECHNIQUE;Si le joueur effectue une frappe en utilisant ses lames en ambidextrie (même arme dans chaque main), la cible subit un malus de -3 sur ses roulades.;
 technique brute de parade;TECHNIQUE;Le joueur pare automatiquement tous les coups dont la somme des dés fait 7, 10 ou 11, même s'il n'a plus d'énergie. Il n'est pas considéré comme ayant tenté une parade si le nombre est différent. Il n'a pas besoin d'annoncer parade, cependant s'il le souhaite il peut annoncer parade normale sur un nombre différent (si le résultat et 7, 10 ou 11 la parade réussit tout de même).;
+anneau farfouilleur;ANNEAU;Avec cet anneau le joueur connaît les seuils exacts de chaque élément à fouiller sur un cadavres.
+De plus le dé détermination de fouille réussit sur 4,5 et 6 et non plus seulement 6.;
