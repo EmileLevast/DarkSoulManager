@@ -31,7 +31,6 @@ lourde cotte de gobelin;Ph:7|Po:2|F:3;Force Minimum:6;4;Pue terriblement. Les te
 peau de loup;Ph:1|Po:3|Ma:2;Niveau Minimum:4;0;Camoufle entièrement le visage derrière les crocs et les mâchoires du loup effrayant : le porteur n'est pas reconnaissable par les PNJ et cause une peur tacite.;
 robe de pyrobelin;F:10|Po:3|Ma:-1  ;Niveau Minimum:9;1;Protege du froid peu importe la temperature exterieure.;
 robe de zairzan;Ph:2|F:10|Po:3|Ma:-2 ;Niveau Minimum:9;1;Bulle de feu protectrice : Après une frappe, et avant de résoudre la défense, le porteur peut dépenser 1 énergie : cela annule tous les dégâts physique de la frappe.;robe de zaïrzan
-encephale zetetique;Ph:-3|Po:4|Ma:15 ;Intelligence Minimum:3;0;lorsque le porteur voit un être mourir (vivant ou mort) il peut se plonger dans son âme et lire une partie ou l'entièreté de ses souvenirs. Plus l'être est intelligent plus les souvenirs sont complexes et flous ;
 armure de roncieres de jais;Ph:10|F:12|Ma:12|Po:12;Intelligence Minimum:7;3;a chaque fois qu'un ennemi attaque avec une arme de courte portee (lame de ~20 cm: dague, couteau, poignard...) l'ennemi subit 1 frappe de 1 énergie de ronce de jais, fonctionne même si le porteur n'a plus d'énergie.;
 tablier ignifuge;Ph:1|Po:1|F:10;;0;Les tentatives de backstab bénéficie de +1 au dé contre le porteur;
 chapeau d ôm;F:3|Po:-1|Ma:14|Ph:1;Intelligence Minimum:10;0;On peut y cacher des objets (non vivants) à l'infini, comme le sac de Mary poppins.;
@@ -43,3 +42,5 @@ justaucorp du vil bandit;Ph:3|Po:4;Force Minimum:1;0;Si le porteur est un voleur
 cape de pelerin;Ph:1|Ma:2|F:1;;0;Martyre : lorsque le porteur meurt il conserve une humanité s'il en avait une.;
 armure de plumes de jais;Ph:6|F:6|Ma:15|Po:15;Intelligence Minimum:8;-1;Les plumes en plaque d'armure, sont animées d'une vivre propre : toutes les frappes de précisions et backstab subissent un malus de -5 à l'encontre du porteur.;
 houppelande mephistophelique;Ph:1|Ma:7|F:-2;Intelligence Minimum:4;0;Si le porteur a du sang de vampire dans les veines alors pour un coût de 2 actions, et jette 1D6. Si le résultat < au poid du porteur alors il peut s'élancer sur ~20m dans la direction de son choix en ignorant la gravité. La gravité reprend effet à la fin de cette action.;
+encephale de demon;Ph:-3|Po:4|Ma:15 ;Intelligence Minimum:3;0;lorsque le porteur voit un être mourir (vivant ou mort) Demon donne une vision d'une partie ou l'entièreté de ses souvenirs. Plus l'être est intelligent plus les souvenirs sont complexes et flous.
+De plus a chaque fois que le joueur touche un PNJ (par l'intermédiaire d'une arme fonctionne aussi), la voix de Demon lui recite une fois toutes les stats de l'ennemi. ;

@@ -391,7 +391,9 @@ morsure buveuse;|1=>Ph:0
 ;les points de vie gagnés par buveuse sont doublés.;2;;5;0;Saignement 5+=>3;buveuse : les blessures faites par saignement sont récupérés en points de vie
 hache double tranchant;|1/2/3=>Ph:0
 |4/5/6=>Ph:8
-;6=>Ph:12;3;Force Minimum:7;20;3;Si vous blessez votre ennemi vous récupérez les pvs enlevés. Si vous tuez votre ennemi vous perdez les pvs enlevés.;
+;6=>Ph:12;3;Force Minimum:7;20;3;Il s'agit d'une hache démonique, d'une intelligence 5, et parfois des mains noires aux longs doigts crochus sortent de la lame pour caresser le porteur ou la cible.
+Si la hache blesse sa cible, alors le joueur peut déclencher l'effet suivant : la cible doit faire une lutte d'intelligence contre la hache, si la cible perds alors les mains noires de la hache caresse la cible à des endroits sensibles, la cible est alors séduite et ne peut pas frapper directement le porteur à son prochain tour, de plus elle dévoile son corps de manière à se faire frapper plus facilement et donne un bonus de +1 aux prochaines frappes de précisions ayant lieu dans ce tour du joueur (cumulable sur plusieurs frappes).
+En revanche si la cible gagne la lutte, alors les mains caressent le porteur et celui-ci ne peut plus frapper la cible ce tour-ci.;LANDMVRKS
 etau de troll;|1=>Ph:0
 |2/3/4=>Ph:8
 |5=>Ph:9
@@ -410,3 +412,7 @@ lourde masse d arme;|1/2/3/4=>Ph:0
 |5=>Ph:10
 |6=>Ph:12
 ;;5;Force Minimum:7;25;2;Saigne 5+=>4;
+morsure brulante;|1/2/3=>Ph:0
+|4/5=>F:3|Ph:3
+|6=>F:6|Ph:4
+;;2;;8;0;;
