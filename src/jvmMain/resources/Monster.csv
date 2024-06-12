@@ -192,6 +192,7 @@ Aliénable: Ils perdent 1 énergie à chaque action. C'est pour ça qu'on les vo
 Nihilant: lors de n'importe quel jet de dé concernant un necrozetete le/les joueurs concernés doivent fermer les yeux et ne peuvent donc pas voir le résultat des dés (impossible pour les autres joueurs de leur donner des indications)
 Necrophile : dans les environs de la rabouillère aux stellaranéides, lorsque quelque chose meurt un necrozetete se matérialise aspirant son dernier souffle sur 1D20 < 8;
 semence demo-nique;20;1:1|2:1;Ph:20|F:-30|Po:10|Ma:2;0;1;croc acide:0;10;brulant:consumme instantanement tout metal qui le blesse
+multi-coeur: si la semence subit une frappe fatale par des dégâts physiques, alors elle est coupée en deux créant deux nouvelles semences avec la moitié des points de vie restants de la semence avant la frappe (arrondi à l'inférieur, une semence d'1pv meurt sans se multiplier)
 insemineur:S'il touche la peau d un etre vivant, alors il peut s'implanter dans ses cellules entierement pour donner naissances a un demonique (peut effectuer une frappe de precision pour toucher la peau entre l'armure). La semence disparait alors entierment dans le corps.
 Une proeminence noire de la taille d'une tete apparait au tour prochain du joueur. Au tour d'apres la proeminence abrite un foetus de demonique qui commence a bouger. A la fin du 3 eme tour du joueur la proemeinence explose et le demonique apparait.
 Lorsque le demonique naît, il prend un item au choix du joueur, le joueur le perd.;
