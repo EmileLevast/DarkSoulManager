@@ -30,7 +30,7 @@ Jeter un dé :
 brouillard;AME;3;;5;;;;0;Le sort crée une nappe de brouillard épaisse autour du lanceur qui couvre les dizaines de mètres à la ronde. La visibilité est réduite.;
 transport;AME;3;20 âmes;13;Seuil de réussite : 3+;;;0;Le lanceur peut instantanément se téléporter à un endroit qu’il a  lui-même déjà visité.;
 levitation;AME;4;2 énergies;7;Seuil de réussite : 4+;;;0;Le lanceur peut voler sur ~15m dans la direction de son choix.;
-sauvetage cendre;AME;1;;8;Seuil réussite : 3+ (Peut dépenser 1 énergie pour faire chuter le seuil à 2+, à décider avant le jet de dé).;;;0;Le lanceur disparaît dans une grande flamme, seul un tas de cendres subsiste
+sauvetage cendre;AME;1;;8;Seuil réussite : 1D6 3+ (Peut dépenser 1 énergie pour faire chuter le seuil à 2+, à décider avant le jet de dé).;;;0;Le lanceur disparaît dans une grande flamme, seul un tas de cendres subsiste
 Si le lanceur subit une frappe qui peut le tuer, il peut alors utiliser ce sort à la place de parer ou faire une roulade.
 S’il dépasse le seuil de réussite il peut se téléporter dans n’importe quel endroit qu’il a déjà visité, sinon il subit la frappe en coup critique.;
 milles epees;AME;4;;10;;;;0;Le lanceur fait apparaître une multitude d’épée autour de sa cible qui la crible de coups.

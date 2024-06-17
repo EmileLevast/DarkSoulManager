@@ -142,7 +142,7 @@ masse d arme;|1/2/3/4=>Ph:0
 marteau du taureau;|1/2/3=>Ph:0
 |4/5=>Ph:8
 |6=>Ph:12
-;;4;Niveau Minimum:6;10;2;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques.
+;;4;Niveau Minimum:6;10;2;Ecrasement: Si la frappe blesse alors le poids de l’armure ennemie est ajoutée aux degats physiques.
 Taurin : A chaque "écrasement" L'armure physique de l'équipement (pas le bouclier) de la cible diminue de 1 jusqu'à 0. Elle alors détruite et n'est plus utilisable. La vie de l'armure se régénère au feu mais ne se reconstruit pas si elle a été détruite.  ;
 hache rouillee;|1/2/3/4=>Ph:0
 |5/6=>Ph:7
@@ -209,12 +209,12 @@ ichgul;|1/2=>Ph:0
 |3/4/5=>Ph:6
 |6=>Ph:12
 ;;3;Vie Minimum:22;12;3;Lorsqu'une frappe a un FFC superieur à 0 mais ne fait aucun dégâts (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du FFC, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...). 
-Compte comme arme double si utilisé avec Echgul.;
+Compte comme arme double si utilisé avec Echgul (permet de relancer le meilleur dé).;
 echgul;|1/2=>Ph:0
 |3/4/5=>Ph:6
 |6=>Ph:12
-;;3;Vie Minimum:22;12;3;Lorsqu'une frappe a un FFC superieur à 0 mais ne fait aucun dégâts (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du FFC, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...).
-Compte comme arme double si utilisée avec Ichgul.;
+;;3;Vie Minimum:22;12;3;Lorsqu'une frappe fait de degats à 0 mais ne fait aucune blessure (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du moins bon dé, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...).
+Compte comme arme double si utilisée avec Ichgul (permet de relancer le meilleur dé);
 krameur;|1=>F:0
 |2/3/4=>F:2
 |5=>F:4

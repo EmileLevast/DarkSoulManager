@@ -16,9 +16,6 @@ Jetez un dé
 2 => vous êtes téléporté vers votre coéquipier
 1 => vous êtes téléporté vers votre coéquipier et votre tour se termine.;
 moyen anneau du prescient;ANNEAU;Les tests d’observations ne vous donne plus d’information sur l’environnement mais indique vaguement le niveau de danger dans lequel vous vous trouvez. Si le test d’observation donne 1, alors le mj peut raconter n’importe quoi.;
-anneau de l’imposteur pernicieux;ANNEAU;Lorsque vous équipez cet anneau vous ne tenez pas compte de la limite minimale d’intelligence pour lancer un sort. Cependant (parce que c’est un peu pété quand même), tous vos alliés vivants jettent un dé: 
-Si celui qui fait le plus petit score a strictement moins d’intelligence que le lanceur alors il perds définitivement 1 en statistique de force.
-Si celui qui fait le plus gros score a strictement plus d’intelligence que le lanceur alors il perds définitivement 1 à sa statistique d’intelligence.;
 anneau du lâche;ANNEAU;Au début d’un combat avant que les premiers coups ne soient donnés. Les ennemis préfèreront attaquer vos alliés plutôt que vous.;
 anneau du provocateur;ANNEAU;Avant d’aborder un personnage quelconque (monstre ou pnj…)
 Le joueur peut essayer de jauger le caractère de son interlocuteur pour un jet de dé :
@@ -177,8 +174,6 @@ Le 7 et le 8 correspondent à un 6 avec les effets supplémentaires ci-dessous.
 7 : Lors d’une frappe: le dé 8 a des degats x2
 8 : Lors d’une frappe: le dé 8 a des degats x3;
 lunette de skronsskrons;OUTIL;effet loupe sur les petits objets;
-anneau de l’eclipse;ANNEAU;Permet d’avoir 3 sorts actifs. 
-En revanche si cet anneau est équipé aucun autre anneau ne peut être équipé.;
 anneau de persecution;ANNEAU;Avec cet anneau, si le porteur réussit une parade avec un bouclier alors il ignore aussi l'armure naturelle de l'ennemi lors de la frappe de parade.;
 anneau d’extrême onction;ANNEAU;Lorsque le porteur subit une frappe qui va être fatale. Alors le meilleur dé de la frappe est ignoré. Ne fonctionne qu'une fois avant le début de son prochain tour.;
 anneau de dexterite;ANNEAU;Avec cet anneau vous pouvez, une fois par tour regénérer une énergie après une frappe si celle-ci a fait des dégâts (peu importe si la cible n'a pas perdu de pvs);
@@ -256,3 +251,13 @@ technique vif ambidextre;TECHNIQUE;Si le joueur effectue une frappe en utilisant
 technique brute de parade;TECHNIQUE;Le joueur pare automatiquement tous les coups dont la somme des dés fait 7, 10 ou 11, même s'il n'a plus d'énergie. Il n'est pas considéré comme ayant tenté une parade si le nombre est différent. Il n'a pas besoin d'annoncer parade, cependant s'il le souhaite il peut annoncer parade normale sur un nombre différent (si le résultat et 7, 10 ou 11 la parade réussit tout de même).;
 anneau farfouilleur;ANNEAU;Avec cet anneau le joueur connaît les seuils exacts de chaque élément à fouiller sur un cadavres.
 De plus le dé détermination de fouille réussit sur 4,5 et 6 et non plus seulement 6.;
+anneau de l imposteur pernicieux;ANNEAU;Lorsque vous équipez cet anneau vous ne tenez pas compte de la limite minimale d’intelligence pour lancer un sort. Cependant (parce que c’est un peu pété quand même), tous vos alliés vivants jettent un dé: 
+Si celui qui fait le plus petit score a strictement moins d’intelligence que le lanceur alors il perds définitivement 1 en statistique de force.
+Si celui qui fait le plus gros score a strictement plus d’intelligence que le lanceur alors il perds définitivement 1 à sa statistique d’intelligence.;
+anneau de l eclipse;ANNEAU;Permet d’avoir 3 sorts actifs. 
+En revanche si cet anneau est équipé aucun autre anneau ne peut être équipé.;
+technique inspiration divine;TECHNIQUE;test de inspiration : indique au MJ ce l'inspiration qu'il souhaite, le MJ jette 1D20 caché si le test d'inspiration est ok alors il donne l'indication précise de l'inspiration "ou est baraganorg ?" : "A droite"
+Le seuil commence à 20, à chaque réussite le seuil diminue de 1, le joueur n'a pas idée de son seuil. Le seuil est plafonné à 6+
+Le joueur ne peut l'utiliser que 10x par feu.;
+technique brume;TECHNIQUE;Effet : Répand une brume autour du lanceur, il devient indétectable par tout le monde, le lanceur dispose d'une action de déplacement gratuite et peut faire un backstab automatiquement réussit sur la cible. 1 fois par feu;
+technique camouflage;TECHNIQUE;Effet :le joueur est dissimulé à la vue des regards inavertis s'il reste immobile et que l'environnement le permet (sombre caché). Cela accorde +3 au dé de tentative de backstab;
