@@ -138,7 +138,7 @@ fun main() {
 
                         val resInsert = collectionsApiableItem[itapiable.nameForApi]!!.updateOneById(elementToUpdate._id,elementToUpdate)
 
-                        if(resInsert.wasAcknowledged()){
+                        if(resInsert.modifiedCount>0){
                             call.respond(HttpStatusCode.OK)
                         }else{
                             call.respond(HttpStatusCode.ExpectationFailed)
