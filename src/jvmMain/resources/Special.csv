@@ -69,7 +69,7 @@ Seuil Blocage : 6+
 Blocage : 1
 Poids : 1;
 fiole d estus;OUTIL;Restaure toute la vie.
-Utilisation : 1
+Utilisation : 3
 Coût : 1 action spéciale;
 fiole de poison;OUTIL;Ajoute Toxine 2+ => 4 sur l’arme tenue pour la prochaine frappe uniquement. 
 Ne fonctionne pas sur les armes disposant déjà de Toxine.
@@ -261,3 +261,4 @@ Le seuil commence à 20, à chaque réussite le seuil diminue de 1, le joueur n'
 Le joueur ne peut l'utiliser que 10x par feu.;
 technique brume;TECHNIQUE;Effet : Répand une brume autour du lanceur, il devient indétectable par tout le monde, le lanceur dispose d'une action de déplacement gratuite et peut faire un backstab automatiquement réussit sur la cible. 1 fois par feu;
 technique camouflage;TECHNIQUE;Effet :le joueur est dissimulé à la vue des regards inavertis s'il reste immobile et que l'environnement le permet (sombre caché). Cela accorde +3 au dé de tentative de backstab;
+test;OUTIL;Fonctionne par paire, semble magique.;test2

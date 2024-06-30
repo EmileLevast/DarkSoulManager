@@ -293,3 +293,9 @@ On parle bien du monde métaphysique, les joueurs qui parlent autour de la table
 aspirameur;NECROMANCIE;10;;10;;;;0;Il faut touche la cible avec les mains, et celle-ci peut eviter le contact avec une roulade ou autre.
 Le lanceur dépense 2 actions et jette 1D4, il aspire ce nombre d'humanités à sa cible. Si celle-ci n'en a pas, alors elle perds 1D12 âmes.;
 avaleur de talents;NECROMANCIE;5;;6;;;;0;A lancer sur un personnage qui vient de mourrir dans le tour (avant qu'il ne commence son prochain tour). Le lanceur recupère et débloque automatiquement toutes les techniques que le mort connaissait (ne compte pas celle en cours d'apprentissage).;
+fleurs de feu;PYROMANCIE;10;;3;Maximum energie:1
+Distance.;|1/2=>F:0
+|3=>F:1
+|4/5=>F:3
+|6=>F:4
+;;10;;

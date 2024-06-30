@@ -209,12 +209,12 @@ ichgul;|1/2=>Ph:0
 |3/4/5=>Ph:6
 |6=>Ph:12
 ;;3;Vie Minimum:22;12;3;Lorsqu'une frappe a un FFC superieur à 0 mais ne fait aucun dégâts (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du FFC, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...). 
-Compte comme arme double si utilisé avec Echgul (permet de relancer le meilleur dé).;
+Compte comme arme double si utilisé avec Echgul.;
 echgul;|1/2=>Ph:0
 |3/4/5=>Ph:6
 |6=>Ph:12
 ;;3;Vie Minimum:22;12;3;Lorsqu'une frappe fait de degats à 0 mais ne fait aucune blessure (compte aussi pour les roulades, mais pas pour les blocages ni les parades) alors l'ennemi subit autant de frappe de ronces de jais que la valeur du moins bon dé, l'ennemi ne doit pas se défendre face à ces attaques (blocage, roulade...).
-Compte comme arme double si utilisée avec Ichgul (permet de relancer le meilleur dé);
+Compte comme arme double si utilisée avec Ichgul ;
 krameur;|1=>F:0
 |2/3/4=>F:2
 |5=>F:4
@@ -357,7 +357,7 @@ Ajoute +1 dégât Magique, à chaque frappe, par ennemis tués, se réinitialise
 marteau de forge;|1/2/3=>Ph:0
 |4/5=>Ph:7
 |6=>Ph:10
-;;3;Niveau Minimum:4;8;3;Ecrasement: Si FFC>1, le poids de l’armure ennemie est ajoutée aux degats physiques.;
+;;3;Niveau Minimum:4;8;3;Ecrasement: Si la cible est blessee, le poids de l’armure ennemie est ajoutée aux degats physiques.;
 vortex;|6=>Ph:0
 |2/3/4=>Ph:5
 |5=>Ph:6
@@ -368,7 +368,8 @@ fourche;|1/2/3/4=>Ph:0
 lycanthrache;|1/2/3=>Ph:0
 |4/5=>Ph:7
 |6=>Ph:9
-;6=>Ph:13;4;Force Minimum:8;20;3;Lorsqu'un être vivant meurt avec cette hache sur 4+(1D4) il renaît en loup sauvage humanoïde (stat d'un loup mais sur 2 pattes) au tour d'après.;
+;6=>Ph:13;4;Force Minimum:8;20;3;Lorsqu'un être vivant meurt avec cette hache sur 4+(1D4) il renaît en loup sauvage humanoïde (stat d'un loup mais sur 2 pattes) au tour d'après.
+S'il s'agit d'un joueur, au début de son tour il doit jeter 1D20+son intelligence et faire 22+ pour avoir le controle du loup sinon c'est le MJ qui le contrôle;
 fleche de corbeaux;|1=>Ph:0
 |2/3/4=>Ph:5
 |5/6=>Ph:7
@@ -388,7 +389,8 @@ refroidissant : à chaque blessure le joueur disposera d'une énergie de moins �
 morsure buveuse;|1=>Ph:0
 |2/3/4=>Ph:3
 |5/6=>Ph:4
-;les points de vie gagnés par buveuse sont doublés.;2;;5;0;Saignement 5+=>3;buveuse : les blessures faites par saignement sont récupérés en points de vie
+;les points de vie gagnés par buveuse sont doublés.;2;;5;0;Saignement 5+=>3
+buveuse : les blessures faites par saignement sont récupérés en points de vie;
 hache double tranchant;|1/2/3=>Ph:0
 |4/5/6=>Ph:8
 ;6=>Ph:12;3;Force Minimum:7;20;3;Il s'agit d'une hache démonique, d'une intelligence 5, et parfois des mains noires aux longs doigts crochus sortent de la lame pour caresser le porteur ou la cible.
@@ -416,3 +418,7 @@ morsure brulante;|1/2/3=>Ph:0
 |4/5=>F:3|Ph:3
 |6=>F:6|Ph:4
 ;;2;;8;0;;
+branche longue;|1/2=>Ph:0
+|3/4/5=>Ph:1
+|6=>Ph:2
+;;2;;4;1;-1 sur le dé;

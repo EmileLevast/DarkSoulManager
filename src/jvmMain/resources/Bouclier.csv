@@ -2,9 +2,11 @@ Nom;Defense ;Contraintes ;Poids ;Capacite speciale ;nom complet
 bouclier carcasse;Ph:10;Force Minimum:3;2;;
 pavois;Ph:15|F:7;Force Minimum:7;3;Couvert : pour un coût de 1 action le pavois peut être posé  et ainsi être utilisé simultanément avec une arme à 2 mains. Les autres règles s’appliquent normalement.;
 pavois leger;Ph:12|F:4;Force Minimum:5;2;Couvert : pour un coût de 1 action le pavois peut être posé  et ainsi être utilisé simultanément avec une arme à 2 mains. Les autres règles s’appliquent normalement.;
-bouclier de bretteur;Ph:5;Force Minimum:2;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.;
-bouclier equilibre de bretteur;Ph:7;Force Minimum:3;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.;
-pavois en bois;Ph:10|F:-5|Po:5;Force Minimum:5;2;Repli : Si lors d’une frappe le joueur blesse l’ennemi, alors le pavois en bois reste levé s’il l’était.;
+bouclier de bretteur;Ph:5;Force Minimum:2;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.
+Parade automatique sur 6 ou 8 (pas besoin d'annoncer la parade);
+bouclier equilibre de bretteur;Ph:7;Force Minimum:3;1;Bretteur : +1 au meilleur dé lors d’une frappe en coup critique à l’épée suite à une parade réussie.
+Parade automatique sur 6 ou 8 (pas besoin d'annoncer la parade);
+pavois en bois;Ph:10|F:-5|Po:5;Force Minimum:5;2;Repli : Si lors d’une frappe le joueur blesse l’ennemi, alors le joueur economise une energie de la frappe (une fois par tour seulement).;
 bouclier de bois;Ph:9|F:-4;Force Minimum:1;2;Lors de l'annonce d'une parade, ne pare uniquement que toutes les frappes dont la somme des dés est supérieur ou égal à 13;
 bouclier d if;Ph:7|Po:3;Force Minimum:4;1;;
 bouclier de poignet;Ph:3;Force Minimum:0;0;Léger: porté par le poignet la main reste libre de tenir autre chose;
