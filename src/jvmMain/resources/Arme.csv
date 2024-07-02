@@ -422,3 +422,13 @@ branche longue;|1/2=>Ph:0
 |3/4/5=>Ph:1
 |6=>Ph:2
 ;;2;;4;1;-1 sur le dé;
+branche de huorn;|1=>Ph:0
+|2=>Ph:2
+|3/4=>Ph:4
+|5=>Ph:6
+|6=>Ph:7
+;;2;;15;0;La branche peut s'allonger jusqu'à 10m instantanément.
+Possibilité d'une frappe de précision :
+15+ la cible est soulevée à 2m du sol, pendue par les pieds
+10+ la cible est enserrée avec une force de 15 (nécessite une lutte de force pour se libérer)
+8+ la cible est bousculée, lutte de force à 10, la victime chute par terre si elle perds, et perds une action au prochain tour.;

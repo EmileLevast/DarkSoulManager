@@ -201,3 +201,7 @@ Voleur : acharner a voler des equipements, il sait utiliser tout ce qu'il touche
 grounf;38;1:1|2:8;Ph:9|Po:1|F:-5|Ma:5;4;4;coup de griffes:0|humanite:4;110;charge : peut parcourir une grande distance sur une action de mouvement, tout droit. Il peut viser un joueur, s'il l'atteint et que le poids du joueur est inférieur à la force de l'ours alors le joueur est projeté 5m plus loin, il devra dépenser 2 actions à se relever.;
 kerkerschafe;15;1:1|2:3;Ph:1|F:-10;2;1;fourche:5|humanite:6;50;verbigération: grogne, menace, crache, débagoule sans sens. Pas de communication possible une fois la menace faite, la deuxième semonce est une frappe d'estoc.;
 nyctarame;35;1:0|2:0|3:0;Ph:4|Ma:5|Po:15|F:-20;0;1;graine nyctaphage:3;80;;
+huorn;115;1:3|2:5|3:10;Ph:18|Po:8|F:-10|Ma:8;2;5;branche de huorn:0;970;Peut apparaître comme un arbre et ne pas réagir ou peut s'éveiller à son gré: Dispose toujours de l'initiative.
+Les branches semblent balancer alors qu'il n'y a pas de vents, certaines branches suivent les joueurs.
+Jusqu'à ce que par-dessus un joueur deux branches le saisissent par les épaules et lui cache la bouche. Pour l'emmener dans les arbres. 
+MJ lance 1D20, sur 8+ réussite parfaite, sur 6+ le joueur peut crier et se débattre. ;
